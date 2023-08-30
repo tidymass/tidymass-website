@@ -1,0 +1,57 @@
+<footer class="site-footer">
+  <hr>
+
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+          <!-- container1 -->
+ <div style="flex: 1;">
+            </div>
+            
+    <!-- container2 -->
+            <div style="flex: 1;">
+  <p style="text-align:left;">
+    Find me here:
+    <br>
+    <i class="fa-brands fa-github"></i> <a href="https://github.com/tidymass" target="_blank" rel="noopener">GitHub</a>
+<br>
+        <i class="fa-brands fa-weixin"></i> <a href="https://jaspershen.github.io/image/wechat_QR.jpg" target="_blank" rel="noopener">WeChat</a>
+
+    <br>
+        <i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/xiaotaoshen1990" target="_blank" rel="noopener">Twitter</a>
+        
+   <br>
+        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>  
+        
+        <br>
+<i class="fa-solid fa-location-dot"></i> Address: <a href="https://goo.gl/maps/jSKXmNMoj1s97uQGA" target="_blank" rel="noopener">3165 Porter Drive, Palo Alto, CA 94304</a>
+   
+    </p>
+            </div>
+            
+    <!-- container3 -->
+            <div style="flex: 1;">
+            </div>
+            
+    <!-- container4 -->
+            <div style="flex: 1;">
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=e43qUF1sR8y0B12BqEm-gDwkYxSmbro-n8KEiBINpdY"></script>
+            </div>
+            
+    <!-- container5 -->
+            <div style="flex: 1;">
+            </div>
+    
+        </div>
+        
+      <hr>
+
+      {{ partial "functions/get_hook" (dict "hook" "footer-start" "context" .) }}
+  {{/* Load footer block */}}
+  {{ $footer_section_name := site.Params.footer.block | default "minimal" }}
+  {{ $footer_section_path := printf "components/footers/%s.html" $footer_section_name }}
+  {{ if not (templates.Exists (printf "partials/%s" $footer_section_path)) }}
+    {{ errorf "Check your `params.yaml`. Cannot find footer block at `layouts/partials/%s`" $footer_section_path }}
+  {{ end }}
+  {{ partial $footer_section_path . }}
+  
+  
+</footer>

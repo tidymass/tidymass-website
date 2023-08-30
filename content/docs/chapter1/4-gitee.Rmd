@@ -1,0 +1,41 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Gitee"
+linktitle: Gitee
+author: admin
+type: book
+weight: 4
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+## Update R version
+
+`tidymicrobiome` require R version > 4.1.
+
+You can check your R version in your console:
+
+```{r, echo=TRUE, eval=TRUE}
+version
+```
+
+If your R version is < 4.1, please download and install the [latest version of R](https://cran.r-project.org/mirrors.html), and then restart your R.
+
+## Install `tidymicrobiome`
+
+Copy and paste the below code in your console.
+
+```{r, echo=TRUE, eval=FALSE}
+if(!require(remotes)){
+  install.packages("remotes")
+}
+remotes::install_git(url = "https://gitee.com/tidymicrobiome/tidymicrobiome", dependencies = TRUE)
+```
+
+## Some issues
+
+1. During the installation, it will ask if you want to update some packages for few times, just enter `Enter` or `Reurn` key to skip it.
+

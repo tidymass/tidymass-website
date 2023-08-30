@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chapter 2 | My Project</title>
-    <link>https://example.com/docs/chapter2/</link>
-      <atom:link href="https://example.com/docs/chapter2/index.xml" rel="self" type="application/rss+xml" />
-    <description>Chapter 2</description>
+    <title>Chapter 2-microbiomeDataset | TidyMass</title>
+    <link>https://www.tidymass.org/docs/chapter2/</link>
+      <atom:link href="https://www.tidymass.org/docs/chapter2/index.xml" rel="self" type="application/rss+xml" />
+    <description>Chapter 2-microbiomeDataset</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
-      <title>Chapter 2</title>
-      <link>https://example.com/docs/chapter2/</link>
+      <url>https://www.tidymass.org/media/icon_hu9f34ec9ef518f99da94c07e709b9b3f3_87999_512x512_fill_lanczos_center_3.png</url>
+      <title>Chapter 2-microbiomeDataset</title>
+      <link>https://www.tidymass.org/docs/chapter2/</link>
     </image>
     
     <item>
       <title>Syllabus</title>
-      <link>https://example.com/docs/chapter2/syllabus/</link>
+      <link>https://www.tidymass.org/docs/chapter2/syllabus/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://example.com/docs/chapter2/syllabus/</guid>
+      <guid>https://www.tidymass.org/docs/chapter2/syllabus/</guid>
       <description>&lt;h2 id=&#34;goals&#34;&gt;Goals&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -34,9 +34,9 @@
     
     <item>
       <title>Reading List</title>
-      <link>https://example.com/docs/chapter2/reading-list/</link>
+      <link>https://www.tidymass.org/docs/chapter2/reading-list/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://example.com/docs/chapter2/reading-list/</guid>
+      <guid>https://www.tidymass.org/docs/chapter2/reading-list/</guid>
       <description>&lt;p&gt;A recommended reading list for the course.&lt;/p&gt;
 &lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;

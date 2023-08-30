@@ -2,10 +2,10 @@
 date: "2018-09-09T00:00:00Z"
 icon: book-reader
 icon_pack: fas
-linktitle: Chapter 2
-summary: Learn how to use Academic's docs layout for publishing online courses, software
-  documentation, and tutorials.
-title: Chapter 2
+linktitle: Chapter 2-microbiomeDataset
+summary: microbiomeDataset package to organize microbiome data.
+title: Chapter 2-microbiomeDataset
+commentable: true
 type: book
 weight: 1
 ---

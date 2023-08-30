@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multi-omics | TidyMass</title>
+    <link>https://www.tidymass.org/tag/multi-omics/</link>
+      <atom:link href="https://www.tidymass.org/tag/multi-omics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Multi-omics</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.tidymass.org/media/icon_hu9f34ec9ef518f99da94c07e709b9b3f3_87999_512x512_fill_lanczos_center_3.png</url>
+      <title>Multi-omics</title>
+      <link>https://www.tidymass.org/tag/multi-omics/</link>
+    </image>
+    
+    <item>
+      <title>TidyMicrobiome</title>
+      <link>https://www.tidymass.org/packages/tidymicrobiome-project/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/packages/tidymicrobiome-project/</guid>
+      <description>&lt;p&gt;&lt;code&gt;TidyMicrobiome&lt;/code&gt; project is a comprehensive computational framework that can process the whole workflow of data processing and analysis for microbiome data using tidyverse principles.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>laggedCor</title>
+      <link>https://www.tidymass.org/packages/laggedcor-project/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/packages/laggedcor-project/</guid>
+      <description>&lt;p&gt;&lt;code&gt;TidyMass&lt;/code&gt; project is a comprehensive computational framework that can process the whole workflow of data processing and analysis for LC-MS-based untargeted metabolomics using tidyverse principles.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

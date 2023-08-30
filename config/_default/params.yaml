@@ -6,10 +6,10 @@
 # Appearance
 
 appearance:
-  theme_day: minimal
-  theme_night: minimal
-  font: minimal
-  font_size: L
+  theme_day: forest
+  theme_night: forest
+  font: forest
+  font_size: M
 
 # SEO
 
@@ -43,9 +43,9 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© 2022-2023 Xiaotao Shen.'
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
@@ -60,24 +60,24 @@ locale:
 
 features:
   syntax_highlighter:
-    theme_light: github-light
+    theme_light: dracula
     theme_dark: dracula
   math:
     enable: false
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/wowchemy/hugo-documentation-theme'
+    url: 'https://github.com/tidymass/tidymass-website'
     content_dir: content
     branch: main
   feedback:
     responses:
-      positive: 'Glad to hear it! [Any ideas for improvements?](https://github.com/<USERNAME>/<REPO>/issues/new).'
-      negative: 'Sorry to hear that. [Please tell us how we can improve](https://github.com/<USERNAME>/<REPO>/issues/new).'
+      positive: 'Glad to hear it! [Any ideas for improvements?](https://github.com/tidymass/tidymass-website/issues/new).'
+      negative: 'Sorry to hear that. [Please tell us how we can improve](https://github.com/tidymass/tidymass-website/issues/new).'
   comment:
-    provider: ''
+    provider: 'disqus'
     disqus:
-      shortname: ''
+      shortname: 'blog-at8qrhng8b'
       show_count: true
     commento:
       url: ''
@@ -92,4 +92,4 @@ features:
       app_id: ''
       api_key: ''
       index_name: ''
-      show_logo: false
+      show_logo: true

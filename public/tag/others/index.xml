@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Others | TidyMass</title>
+    <link>https://www.tidymass.org/tag/others/</link>
+      <atom:link href="https://www.tidymass.org/tag/others/index.xml" rel="self" type="application/rss+xml" />
+    <description>Others</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.tidymass.org/media/icon_hu9f34ec9ef518f99da94c07e709b9b3f3_87999_512x512_fill_lanczos_center_3.png</url>
+      <title>Others</title>
+      <link>https://www.tidymass.org/tag/others/</link>
+    </image>
+    
+    <item>
+      <title>SCPA</title>
+      <link>https://www.tidymass.org/packages/scpa-project/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/packages/scpa-project/</guid>
+      <description>&lt;p&gt;The Stanford Chinese Postdoc Association is a vibrant community of the Chinese postdocs, across all disciplines, at Stanford University. Our mission is to create and hold a space of all Chinese postdocs, and help them in study, work and life as much as we can. We welcome all the Chinese postdocs join us!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R cookbook</title>
+      <link>https://www.tidymass.org/packages/r_cookbook/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/packages/r_cookbook/</guid>
+      <description>&lt;p&gt;This is myself note book for R study.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

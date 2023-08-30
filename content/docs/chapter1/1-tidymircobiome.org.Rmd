@@ -1,0 +1,37 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "tidymicrobiome.org"
+linktitle: tidymicrobiome.org
+author: admin
+type: book
+weight: 1
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+## Update R version
+
+`tidymicrobiome` require R version > 4.1.
+
+You can check your R version in your console:
+
+```{r, echo=TRUE, eval=TRUE}
+version
+```
+
+If your R version is < 4.1, please download and install the [latest version of R](https://cran.r-project.org/mirrors.html), and then restart your R.
+
+## Install `tidymicrobiome`
+
+Copy and paste the below code in your console.
+
+```{r, echo=TRUE, eval=FALSE}
+source("https://www.tidymicrobiome.org/tidymicrobiome-packages/install_tidymicrobiome.txt")
+```
+
+```{r, echo=TRUE, eval=FALSE}
+install_tidymass(from = "tidymicrobiome.org")
+```

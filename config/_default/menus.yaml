@@ -5,8 +5,17 @@
 
 main:
   - name: Home
-    url: /
+    url: "#hero"
     weight: 10
-  - name: Documentation
-    url: docs/
+  - name: Packages
+    url: "#packages"
     weight: 20
+  - name: Team
+    url: "#team"
+    weight: 30
+  - name: Contact
+    url: "#contact"
+    weight: 40
+  - name: Tutorials
+    url: docs/
+    weight: 50

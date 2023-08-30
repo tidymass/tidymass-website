@@ -1,31 +1,47 @@
 ---
 widget: hero
+id: home
 headless: true
 weight: 10
-title: Project Docs Template
-hero_media: book.svg
+title: TidyMass Project
+hero_media: tidymass.svg
 design:
   background:
-    gradient_start: '#4bb4e3'
-    gradient_end: '#2b94c3'
+    gradient_start: '#3ba1c5'
+    gradient_end: '#7cc0d8'
     text_color_light: true
 cta:
   url: docs/
   label: Get Started
   icon_pack: fas
   icon: download
-cta_alt:
-  url: docs/
-  label: View Documentation
-cta_note:
-  label: >-
-    <span class="js-github-release" data-repo="wowchemy/wowchemy-hugo-themes">
-      Project version will appear here<!-- Automatically filled based on data-repo value -->
-    </span>
+# cta_alt:
+#   url: docs/
+#   label: View Documentation
+# cta_note:
+#   label: >-
+#     <span class="js-github-release" data-repo="tidymass/tidymass-website">
+#       Project version will appear here<!-- Automatically filled based on data-repo value -->
+#     </span>
 ---
 
-Published with the [Wowchemy Website Builder](https://wowchemy.com/) for Hugo.
+TidyMass is a comprehensive computational framework for data processing and analysis of LC-MS data using [tidyverse](https://www.tidyverse.org/) principles.
 
-Write something interesting about your project here.
+Install tidymass:
 
-<a class="github-button" href="https://github.com/wowchemy/wowchemy-hugo-themes" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Wowchemy Website Builder for Hugo">Star Wowchemy Website Builder for Hugo</a><br><a class="github-button" href="https://github.com/wowchemy/hugo-documentation-theme" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star the Project Docs template">Star the Hugo Documentation Theme</a><script async defer src="https://buttons.github.io/buttons.js"></script>
+```
+remotes::install_gitlab("tidymass/tidymass")
+```
+
+or
+
+```
+source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
+install_tidymass(from = "tidymass.org")
+```
+
+Citation: [1 tidymass](https://pubmed.ncbi.nlm.nih.gov/35902589/)
+[2 metid](https://pubmed.ncbi.nlm.nih.gov/34432001/)
+[3 massdatabase](https://pubmed.ncbi.nlm.nih.gov/35944213/)
+
+<a class="github-button" href="https://github.com/tidymass" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Wowchemy Website Builder for Hugo">Star TidyMass project</a><br><a class="github-button" href="https://github.com/tidymass/tidymass-website" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star the Project Docs template">Star TidyMass tutorial</a><script async defer src="https://buttons.github.io/buttons.js"></script>

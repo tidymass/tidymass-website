@@ -2,49 +2,155 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/docs/chapter1/syllabus/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/</loc>
+    <lastmod>2023-08-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter2/syllabus/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/docs/chapter2/syllabus/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/1-tidymircobiome.org/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/docs/chapter1/</loc>
+    <loc>https://www.tidymass.org/docs/chapter2/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/docs/chapter2/</loc>
-    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://example.com/docs/chapter1/reading-list/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/2-github/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/docs/chapter2/reading-list/</loc>
+    <loc>https://www.tidymass.org/docs/chapter2/reading-list/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/docs/chapter1/takeaways/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/3-gitlab/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/docs/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/4-gitee/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/5-update/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/authors/</loc>
+    <loc>https://www.tidymass.org/docs/</loc>
+    <lastmod>2023-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://www.tidymass.org/</loc>
+    <lastmod>2023-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://www.tidymass.org/team/</loc>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/categories/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/post/2020-12-01-r-rmarkdown/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/tag/plot/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/post/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/category/r/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/tag/r-markdown/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/tag/regression/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/tags/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/tag/metabolomics/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/metnormalizer/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/massconverter/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/massdatabase/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/massprocesser/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/massqc/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/massstat/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/masstools/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/masscleaner/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/massdataset/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/metid/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/metpath/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/packages/tidymass/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/admin/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/authors/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/author/chuchu-wang/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/author/dr.-yan-hong/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
