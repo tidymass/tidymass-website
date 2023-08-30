@@ -12,18 +12,18 @@ commentable: true
 
 ## Check version
 
-You can use the `tidymicrobiome` to check the version of all packages and update them.
+You can use the `tidymass` to check the version of all packages and update them.
 
-If you want to check if there are updates for `tidymicrobiome` and packages in it. Just check it like this.
+If you want to check if there are updates for `tidymass` and packages in it. Just check it like this.
 
 
 ```r
 tidyicrobiome::check_tidyicrobiome_version()
 ```
 
-## Update `tidymicrobiome`
+## Update `tidymass`
 
-The update_tidymicrobiome() function can be used to update tidymicrobiome and packages in it.
+The update_tidymass() function can be used to update tidymass and packages within it.
 
 
 ```r

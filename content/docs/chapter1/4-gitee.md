@@ -12,7 +12,7 @@ commentable: true
 
 ## Update R version
 
-`tidymicrobiome` require R version > 4.1.
+`tidymass` require R version > 4.1.
 
 You can check your R version in your console:
 
@@ -38,7 +38,7 @@ version
 
 If your R version is < 4.1, please download and install the [latest version of R](https://cran.r-project.org/mirrors.html), and then restart your R.
 
-## Install `tidymicrobiome`
+## Install `tidymass`
 
 Copy and paste the below code in your console.
 
@@ -47,7 +47,7 @@ Copy and paste the below code in your console.
 if(!require(remotes)){
   install.packages("remotes")
 }
-remotes::install_git(url = "https://gitee.com/tidymicrobiome/tidymicrobiome", dependencies = TRUE)
+remotes::install_git(url = "https://gitee.com/tidymass/tidymass", dependencies = TRUE)
 ```
 
 ## Some issues

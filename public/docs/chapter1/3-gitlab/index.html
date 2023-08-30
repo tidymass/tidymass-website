@@ -274,7 +274,7 @@
 
   
 
-<meta name="description" content="Update R version tidymicrobiome require R version &gt; 4.1.
+<meta name="description" content="Update R version tidymass require R version &gt; 4.1.
 You can check your R version in your console:
 version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## system x86_64, darwin20 ## status ## major 4 ## minor 3." />
 
@@ -319,7 +319,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/docs/chapter1/3-gitlab/" />
 <meta property="og:title" content="GitLab | TidyMass" />
-<meta property="og:description" content="Update R version tidymicrobiome require R version &gt; 4.1.
+<meta property="og:description" content="Update R version tidymass require R version &gt; 4.1.
 You can check your R version in your console:
 version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## system x86_64, darwin20 ## status ## major 4 ## minor 3." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu9f34ec9ef518f99da94c07e709b9b3f3_87999_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
@@ -805,7 +805,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
       
 
 
-  <li class=""><a href="/docs/chapter1/1-tidymircobiome.org/">tidymicrobiome.org</a></li>
+  <li class=""><a href="/docs/chapter1/1-tidymass.org/">tidymass.org</a></li>
 
 
 
@@ -822,6 +822,10 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 
 
   <li class=""><a href="/docs/chapter1/5-update/">Update</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter1/6-docker_tidymass/">Install docker version of tidymass</a></li>
 
       
         </ul>
@@ -902,7 +906,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
       <nav id="TableOfContents">
   <ul>
     <li><a href="#update-r-version">Update R version</a></li>
-    <li><a href="#install-tidymicrobiome">Install <code>tidymicrobiome</code></a></li>
+    <li><a href="#install-tidymass">Install <code>tidymass</code></a></li>
     <li><a href="#some-issues">Some issues</a></li>
   </ul>
 </nav>
@@ -991,7 +995,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
           
 
           <h2 id="update-r-version">Update R version</h2>
-<p><code>tidymicrobiome</code> require R version &gt; 4.1.</p>
+<p><code>tidymass</code> require R version &gt; 4.1.</p>
 <p>You can check your R version in your console:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">version</span>
 </span></span><span class="line"><span class="cl"><span class="c1">##                _                           </span>
@@ -1010,12 +1014,12 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 </span></span><span class="line"><span class="cl"><span class="c1">## version.string R version 4.3.0 (2023-04-21)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## nickname       Already Tomorrow</span>
 </span></span></code></pre></div><p>If your R version is &lt; 4.1, please download and install the <a href="https://cran.r-project.org/mirrors.html" target="_blank" rel="noopener">latest version of R</a>, and then restart your R.</p>
-<h2 id="install-tidymicrobiome">Install <code>tidymicrobiome</code></h2>
+<h2 id="install-tidymass">Install <code>tidymass</code></h2>
 <p>Copy and paste the below code in your console.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">if</span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">remotes</span><span class="p">)){</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;remotes&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="n">remotes</span><span class="o">::</span><span class="nf">install_gitlab</span><span class="p">(</span><span class="s">&#34;tidymicrobiome/tidymicrobiome&#34;</span><span class="p">,</span> <span class="n">dependencies</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">remotes</span><span class="o">::</span><span class="nf">install_gitlab</span><span class="p">(</span><span class="s">&#34;tidymass/tidymass&#34;</span><span class="p">,</span> <span class="n">dependencies</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </span></span></code></pre></div><h2 id="some-issues">Some issues</h2>
 <ol>
 <li>During the installation, it will ask if you want to update some packages for few times, just enter <code>Enter</code> or <code>Reurn</code> key to skip it.</li>

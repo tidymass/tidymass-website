@@ -10,7 +10,7 @@
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/1-tidymircobiome.org/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/1-tidymass.org/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -35,6 +35,10 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter1/5-update/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter1/6-docker_tidymass/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
