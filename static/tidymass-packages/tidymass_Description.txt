@@ -1,0 +1,56 @@
+Package: tidymass
+Type: Package
+Title: R packages for mass spectrometry data processing and analysis
+Version: 1.0.7
+Authors@R: c(
+    person(given = "Xiaotao",
+           family = "Shen",
+           role = c("aut", "cre"),
+           email = "shenxt1990@outlook.com",
+           comment = c(ORCID = "0000-0002-9608-9964")),
+        person(given = "Hong",
+           family = "Yan",
+           role = c("ctb")),           
+        person(given = "Chuchu",
+           family = "Wang",
+           role = c("ctb"))
+           )
+Description: The 'tidymass' package is a collection of several packages for Mass Spectrometry data processing and analysis. The 'tidymass' is a set of packages that work in harmony because they share common data representations and 'API' design. This package is designed to make it easy to install and load multiple 'tidymass' packages in a single step. Learn more about the 'tidymass' at <https://tidymass.github.io/tidymass/>.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Depends: 
+    R (>= 4.1)
+Imports: 
+    crayon,
+    purrr,
+    utils,
+    stringr,
+    cli,
+    magrittr,
+    rstudioapi,
+    dplyr,
+    masstools (>= 1.0.7),
+    massdataset,
+    massprocesser,
+    masscleaner,
+    massstat,
+    metpath,
+    metid,
+    massqc,
+    remotes
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Remotes: 
+    gitlab::tidymass/masstools,
+    gitlab::tidymass/massdataset,
+    gitlab::tidymass/massprocesser,
+    gitlab::tidymass/masscleaner,
+    gitlab::tidymass/massstat,
+    gitlab::tidymass/metpath,
+    gitlab::tidymass/metid,
+    gitlab::tidymass/massqc

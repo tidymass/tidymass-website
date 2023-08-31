@@ -1,0 +1,63 @@
+Package: massdatabase
+Type: Package
+Title: Play with databases about mass spectrometry
+Version: 1.0.5
+Date: 2022-04-09
+Authors@R: c(
+    person(given = "Xiaotao",
+           family = "Shen",
+           role = c("aut", "cre"),
+           email = "shenxt1990@outlook.com",
+           comment = c(ORCID = "0000-0002-9608-9964"))
+           )
+Description: Play with databases about mass spectrometry.
+License: GPL-2 | file LICENSE
+URL: https://github.com/tidymass/massdatabase
+BugReports: https://github.com/tidymass/massdatabase/issues
+Depends: 
+    R (>= 4.1)
+Imports:
+    crayon,
+    plyr,
+    readr,
+    tidyr,
+    ggplot2,
+    dplyr,
+    utils,
+    rvest,
+    XML,
+    Rdisop,
+    stringr,
+    stringdist,
+    magrittr,
+    curl,
+    purrr,
+    metid,
+    masstools,
+    tibble,
+    xml2,
+    tidyselect,
+    progress,
+    ChemmineR,
+    KEGGREST,
+    metpath,
+    rjson,
+    rstudioapi
+Suggests: 
+    knitr,
+    rmarkdown,
+    BiocStyle,
+    RUnit,
+    BiocGenerics,
+    testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
+biocViews: Metabolomics, MassSpectrometry
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.0
+Remotes: 
+    gitlab::jaspershen/metid,
+    gitlab::jaspershen/masstools,
+    gitlab::jaspershen/metpath
+Config/testthat/edition: 3

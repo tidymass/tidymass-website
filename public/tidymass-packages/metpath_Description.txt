@@ -1,0 +1,62 @@
+Package: metpath
+Type: Package
+Title: Pathway analysis for metabolomics data
+Version: 1.0.5
+Authors@R: c(
+    person(given = "Xiaotao",
+           family = "Shen",
+           role = c("aut", "cre"),
+           email = "shenxt@stanford.edu",
+           comment = c(ORCID = "0000-0002-9608-9964")),
+        person(given = "Chuchu",
+           family = "Wang",
+           role = c("aut", "ctb"))
+           )
+Description: This package is used to do statistical data analysis for and 
+             pathway enrichment analysi for metabolomics data.
+URL: https://github.com/tidymass/metpath
+BugReports: https://github.com/tidymass/metpath/issues
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.1)
+Imports:
+    cli,
+    crayon,
+    dplyr,
+    ggplot2,
+    grDevices,
+    magrittr,
+    pbapply,
+    plyr,
+    purrr,
+    methods,
+    utils,
+    stats,
+    stringr,
+    KEGGREST,
+    metid,
+    future,
+    furrr,
+    openxlsx,
+    rstudioapi,
+    ggraph,
+    ggrepel,
+    tidygraph,
+    rlang,
+    massdataset
+License: GPL-2 | file LICENSE
+RoxygenNote: 7.2.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    BiocStyle,
+    RUnit,
+    BiocGenerics,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Note:
+biocViews: Metabolomics, MassSpectrometry
+Remotes: 
+    gitlab::jaspershen/metid,
+    gitlab::jaspershen/massdataset
+Config/testthat/edition: 3

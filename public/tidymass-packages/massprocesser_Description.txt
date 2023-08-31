@@ -1,0 +1,58 @@
+Package: massprocesser
+Type: Package
+Title: Comprehensitive tools for raw metabolomics data processing
+Version: 1.0.5
+Date: 2021-11-30
+Authors@R: c(
+    person("Xiaotao", "Shen", , "shenxt1990@163.com", role = c("aut", "cre"), 
+      comment = c(ORCID = "0000-0002-9608-9964")
+    )
+    )
+Description: This package is used to do raw data processing of LC-MS untargeted
+             metabolomics processing. This is based on the xcms algorithm.
+             Other very usefull tools are also included in this package.
+LazyData: true
+Depends: R (>= 4.1)
+Imports:
+    BiocParallel,
+    cli,
+    crayon,
+    dplyr,
+    ggplot2,
+    grDevices,
+    magrittr,
+    plyr,
+    purrr,
+    methods,
+    MSnbase,
+    utils,
+    stats,
+    readr,
+    readxl,
+    plotly,
+    stringr,
+    tibble,
+    xcms,
+    mzR,
+    masstools,
+    Biobase,
+    rstudioapi,
+    massdataset
+License: GPL-2 | file LICENSE
+URL: https://github.com/tidymass/massprocesser
+BugReports: https://github.com/tidymass/massprocesser/issues
+RoxygenNote: 7.2.0
+Suggests: 
+    knitr,
+    rmarkdown,
+    BiocStyle,
+    RUnit,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Note:
+biocViews: Metabolomics, MassSpectrometry
+Encoding: UTF-8
+Remotes: 
+    gitlab::jaspershen/masstools,
+    gitlab::jaspershen/massdataset
+Config/testthat/edition: 3

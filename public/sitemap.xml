@@ -42,6 +42,10 @@
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://www.tidymass.org/docs/chapter10/1-whole_workflow/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/docs/chapter2/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -211,10 +215,10 @@
     <loc>https://www.tidymass.org/author/chuchu-wang/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/author/dr.-yan-hong/</loc>
+    <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
+    <loc>https://www.tidymass.org/author/yan-hong/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
