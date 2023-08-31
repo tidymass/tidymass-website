@@ -1,0 +1,689 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Whole workflow using tidymass"
+linktitle: Whole workflow using tidymass
+author: admin
+type: book
+weight: 1
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+## Introduction to Metabolomics Data
+
+The Danish Project Project studies metabolic changes during human pregnancy and if these altered metabolites could be used to predict preterm. 
+
+### Referenced research
+
+1. [Liang L, Rasmussen MH, Piening B, Shen X, Chen S, Röst H, Snyder JK, Tibshirani R, Skotte L, Lee NC, Contrepois K, Feenstra B, Zackriah H, Snyder M, Melbye M. Metabolic Dynamics and Prediction of Gestational Age and Time to Delivery in Pregnant Women. Cell. 2020 Jun 25;181(7):1680-1692.e15. doi: 10.1016/j.cell.2020.05.002.](https://pubmed.ncbi.nlm.nih.gov/32589958/)
+
+## Introduction to `tidyMass` project
+
+TidyMass is an ecosystem of R packages that share an underlying design philosophy, grammar, and data structure, which provides a comprehensive, reproducible, and object-oriented computational framework. The modular architecture makes tidyMass a highly flexible and extensible tool, which other users can improve and integrate with other tools to customize their own pipeline. 
+
+More information about tidyMass could be found here: [tidymass.org](https://www.tidymass.org/).
+
+1. [Shen X, Yan H, Wang C, Gao P, Johnson CH, Snyder MP. TidyMass an object-oriented reproducible analysis framework for LC-MS data. Nat Commun. 2022 Jul 28;13(1):4365. doi: 10.1038/s41467-022-32155-w.](https://pubmed.ncbi.nlm.nih.gov/35902589/)
+
+Hopefully, at the end of this module, you will have a better sense of the metabolomics data analysis procedure and how to use R for reproducible data processing and analysis
+
+## Data preparation
+
+Download the demo data and uncompress it.
+
+1. [Google drive link](https://drive.google.com/file/d/1ZVijIzq5kmUjouBS2P4UgNfTgoDYgGyy/view?usp=sharing)
+
+2. If you can use Google drive, [download here](https://pan.baidu.com/s/1MPJyC-WqA1-xXWV5Ilm27w?pwd=2022). (code 2022)
+
+The demo data contains RPLC positive mode, with 7 participants, and two samples for each participant (Trimester 1 (< 10 weeks) and trimester 3 (> 30 weeks)). So there are 14 samples in total.
+
+![](/docs/chapter10/figures/Screen-Shot.png)
+
+1. `MS1`: MS1 is the folder contains the mzXML for 14 samples.
+
+2. `MS2`: MS2 is the folder contains the mgf for QC samples (MS2 spectra).
+
+3. `sample_info.xlsx`: it is the metadata for samples.
+
+![](/docs/chapter10/figures/Screen-Shot 1.png)
+
+---
+
+## Raw data processing
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(tidymass)
+library(tidyverse)
+```
+
+`massprocesser` package in `tidymass` is used to do the raw data processing. Please refer this [website](https://massprocesser.tidymass.org/).
+
+The code used to do raw data processing (peak picking, peak grouping).
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+massprocesser::process_data(
+  path = "cell_liang_2020/MS1/",
+  polarity = "positive",
+  ppm = 10,
+  peakwidth = c(5, 30),
+  threads = 4,
+  output_tic = TRUE,
+  output_bpc = TRUE,
+  output_rt_correction_plot = FALSE,
+  min_fraction = 0.5
+)
+```
+All the results will be placed in the folder named `MS1/Result`. More information about that can be found [here](https://tidymass.github.io/massprocesser/articles/raw_data_processing.html).
+
+![](/docs/chapter10/figures/Screen-Shot 2.png)
+
+1. BPC.pdf: BPC plot.
+
+2. TIC.pdf: TIC plot.
+
+3. RT correction plot.pdf: Retention time correction plot.
+
+4. Peak_table.csv: Peak table.
+
+5. Peak_table_for_cleaning.csv: Peak table which can be used for data cleaning.
+
+6. object: `mass_dataset` class object which can be used for subsequent analysis using tidymass.
+
+7. intermediate_data: intermediate data.
+
+You can just load the `object`, which is a `mass_dataset` class object.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("cell_liang_2020/MS1/Result/object")
+object
+dim(object)
+```
+
+We can get basic information from the object.
+
+We have 9164 variables, 14 samples.
+
+You can use the `plot_adjusted_rt()` function to get the interactive plot.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("cell_liang_2020/MS1/Result/intermediate_data/xdata2")
+####set the group_for_figure if you want to show specific groups. 
+####And set it as "all" if you want to show all samples.
+plot <-
+  plot_adjusted_rt(object = xdata2,
+                   group_for_figure = "Subject",
+                   interactive = TRUE)
+plot
+```
+
+## Explore data
+
+After the [`raw data processing`](https://tidymass.github.io/tidymass/articles/raw_data_processing.html), peak tables will be generated. 
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("cell_liang_2020/MS1/Result/object")
+dim(object)
+```
+
+We neet to update the sample_info in object.
+
+Read sample information.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+sample_info <- 
+  readxl::read_xlsx("cell_liang_2020/sample_info.xlsx")
+sample_info$sample_id <-
+  as.character(sample_info$sample_id)
+```
+
+Add `sample_info` to `object`
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object %>% 
+  extract_sample_info() %>% 
+  head()
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <-
+  object %>%
+  activate_mass_dataset(what = "sample_info") %>%
+  left_join(sample_info,
+            by = "sample_id")
+
+object %>% 
+  extract_sample_info()
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object %>% 
+  activate_mass_dataset(what = "sample_info") %>% 
+  dplyr::count(class)
+
+object %>% 
+  activate_mass_dataset(what = "sample_info") %>% 
+  dplyr::count(group)
+
+object %>% 
+  activate_mass_dataset(what = "sample_info") %>% 
+  dplyr::count(trimester)
+```
+So for the data, we have 7 subjects and 14 samples. One subject has two samples.
+
+Next, we can get the peak distributation plot.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object %>%
+  `+`(1) %>% 
+  log(10) %>%
+  show_mz_rt_plot() +
+  scale_size_continuous(range = c(0.01, 2))
+```
+
+We can explore the missing values in the data.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+get_mv_number(object = object)
+sum(is.na(object))
+```
+
+26,696 mvs in total.
+
+Missing value number in each sample.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+get_mv_number(object = object, by = "variable") %>% 
+  head()
+```
+
+Missing value number in each variable.
+
+We can use the figure to show the missing value information.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+show_missing_values(object = object, 
+                    show_column_names = FALSE, percentage = TRUE)
+```
+
+Show the mvs in samples
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+show_sample_missing_values(object = object, percentage = TRUE)
+```
+
+Show the mvs in variables
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+show_variable_missing_values(object = object, 
+                             percentage = TRUE, 
+                             show_x_text = FALSE, 
+                             show_x_ticks = FALSE) +
+  scale_size_continuous(range = c(0.01, 1))
+```
+
+## Data cleaning
+
+### Data quality assessment before data cleaning
+
+Here, we can use the `massqc` package to [assess the data quality](https://massqc.tidymass.org/).
+
+We can just use the `massqc_report()` function to get a html format quality assessment report.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+massqc::massqc_report(object = object, 
+                      path = "cell_liang_2020/data_cleaning/data_quality_before_data_cleaning")
+```
+
+A html format report and pdf figures will be placed in the folder `cell_liang_2020/data_cleaning/data_quality_before_data_cleaning/Report`.
+
+![](/docs/chapter10/figures/Screen-Shot 5.png)
+
+The html report is below:
+
+![](/docs/chapter10/figures/Screen-Shot 6.png)
+
+### Remove noisy metabolic features
+
+Remove variables which have MVs in more than 20% samples.
+
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+show_variable_missing_values(object = object, 
+                             percentage = TRUE) +
+  scale_size_continuous(range = c(0.01, 2))
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object =
+  object %>%
+  mutate_variable_na_freq()
+
+head(extract_variable_info(object))
+```
+
+Remove variables.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <- 
+  object %>% 
+  activate_mass_dataset(what = "variable_info") %>%
+  filter(na_freq < 0.2)
+dim(object)
+```
+
+Only 4,537 variables left.
+
+### Filter outlier samples
+
+We can use the `detect_outlier()` to find the outlier samples.
+
+More information about how to detect outlier samples can be found [here](https://privefl.github.io/blog/detecting-outlier-samples-in-pca/).
+
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+massdataset::show_sample_missing_values(object = object,
+                                        order_by = "injection.order",
+                                        percentage = TRUE) +
+  theme(axis.text.x = element_text(size = 2)) +
+  scale_size_continuous(range = c(0.1, 2)) +
+  ggsci::scale_color_aaas()
+```
+
+Detect outlier samples.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+outlier_samples <-
+  object %>%
+  `+`(1) %>% 
+  log(2) %>%
+  scale() %>%
+  detect_outlier()
+
+outlier_samples
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+outlier_table <-
+extract_outlier_table(outlier_samples)
+
+outlier_table %>% 
+  head()
+```
+
+No outlier samples according to NA.
+
+
+### Missing value imputation
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+get_mv_number(object)
+sum(is.na(object))
+
+object <- 
+  impute_mv(object = object, method = "knn")
+
+get_mv_number(object)
+```
+
+### Data normalization and integration
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <- 
+  normalize_data(object, method = "median")
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object %>% 
+  `+`(1) %>% 
+  log(2) %>% 
+  massqc::massqc_pca(line = FALSE)
+```
+
+### Data quality assessment after data cleaning
+
+Here, we can use the `massqc` package to [assess the data quality](https://massqc.tidymass.org/).
+
+We can just use the `massqc_report()` function to get a html format quality assessment report.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+massqc::massqc_report(object = object, 
+                      path = "cell_liang_2020/data_cleaning/data_quality_after_data_cleaning")
+```
+
+---
+
+## Metabolite annotation
+
+### Add MS2 spectra to object
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <-
+  mutate_ms2(
+    object = object,
+    column = "rp",
+    polarity = "positive",
+    ms1.ms2.match.mz.tol = 15,
+    ms1.ms2.match.rt.tol = 30,
+    path = "cell_liang_2020/MS2/"
+  )
+```
+
+### Metabolite annotation using `metid`
+
+Metabolite annotation is based on the [`metid` package](https://tidymass.github.io/metid/).
+
+#### Download database
+
+We need to download MS2 database from `metid` [website](https://tidymass.github.io/metid/articles/public_databases.html).
+
+Here we download the `Michael Snyder RPLC databases`, `Orbitrap database` and `MoNA database`. And place them in a new folder named as `metabolite_annotation`.
+
+![](/docs/chapter10/figures/fig8.png)
+
+#### Annotate features using `snyder_database_rplc0.0.3`.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("cell_liang_2020/metabolite_annotation/snyder_database_rplc0.0.3.rda")
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <- 
+  annotate_metabolites_mass_dataset(object = object, 
+                                    ms1.match.ppm = 15, 
+                                    rt.match.tol = 30, 
+                                    polarity = "positive",
+                                    database = snyder_database_rplc0.0.3)
+```
+
+#### Annotate features using `orbitrap_database0.0.3`.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("cell_liang_2020/metabolite_annotation/orbitrap_database0.0.3.rda")
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <- 
+  annotate_metabolites_mass_dataset(object = object, 
+                                    ms1.match.ppm = 15, 
+                                    polarity = "positive",
+                                    database = orbitrap_database0.0.3)
+```
+
+#### Annotate features using `mona_database0.0.3`.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("cell_liang_2020/metabolite_annotation/mona_database0.0.3.rda")
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <-
+  annotate_metabolites_mass_dataset(object = object, 
+                                    ms1.match.ppm = 15, 
+                                    polarity = "positive",
+                                    database = mona_database0.0.3)
+```
+
+### Annotation result
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+head(extract_annotation_table(object = object))
+```
+
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+variable_info <-
+  extract_variable_info(object = object)
+head(variable_info)
+table(variable_info$Level)
+table(variable_info$Database)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+ms2_plot_mass_dataset(object = object,
+                      variable_id = "M123T56_POS",
+                      database = snyder_database_rplc0.0.3)
+```
+
+---
+
+## Statistical analysis
+
+### Remove the features without annotations
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <- 
+  object %>% 
+  activate_mass_dataset(what = "annotation_table") %>% 
+  filter(!is.na(Level)) %>% 
+  filter(Level == 1 | Level == 2)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object
+```
+### Trace processing information of object
+
+Then we can use the `report_parameters()` function to trace processing information of object.
+
+All the analysis results will be placed in a folder named as `statistical_analysis`.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+dir.create(path = "cell_liang_2020/statistical_analysis", showWarnings = FALSE)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+report_parameters(object = object, path = "cell_liang_2020/statistical_analysis/")
+```
+
+A html format file named as `parameter_report.html` will be generated.
+
+![](/docs/chapter10/figures/fig9.png)
+
+### Remove redundant metabolites
+
+Remove the redundant annotated metabolites bases on `Level` and score.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <-
+  object %>% 
+  activate_mass_dataset(what = "annotation_table") %>% 
+  group_by(Compound.name) %>% 
+  filter(Level == min(Level)) %>% 
+  filter(SS == max(SS)) %>% 
+  slice_head(n = 1)
+```
+
+### Differential expression metabolites
+
+#### Calculate the fold changes.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <-
+  object %>%
+  activate_mass_dataset(what = "sample_info") %>%
+  dplyr::arrange(subject_id, trimester)
+
+control_sample_id <-
+  object %>%
+  activate_mass_dataset(what = "sample_info") %>%
+  filter(trimester == "<10") %>%
+  pull(sample_id)
+
+case_sample_id <-
+  object %>%
+  activate_mass_dataset(what = "sample_info") %>%
+  filter(trimester == ">35") %>%
+  pull(sample_id)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <-
+  mutate_fc(object = object, 
+            control_sample_id = control_sample_id, 
+            case_sample_id = case_sample_id, 
+            mean_median = "mean")
+```
+
+
+#### Calculate p values.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object <-
+  mutate_p_value(
+    object = object,
+    control_sample_id = control_sample_id,
+    case_sample_id = case_sample_id,
+    method = "wilcox.test",
+    p_adjust_methods = "BH",
+    paired = TRUE
+  )
+```
+
+#### Volcano plot.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+volcano_plot(object = object,
+             add_text = TRUE,
+             text_from = "Compound.name", 
+             point_size_scale = "p_value") +
+  scale_size_continuous(range = c(0.5, 5))
+```
+
+### Output result
+
+Output the differential expression metabolites.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+differential_metabolites <- 
+  extract_variable_info(object = object) %>% 
+  filter(fc > 2 | fc < 0.5) %>% 
+  filter(p_value_adjust < 0.05)
+
+readr::write_csv(differential_metabolites, 
+                 file = "cell_liang_2020/statistical_analysis/differential_metabolites.csv")
+```
+
+
+## Pathway enrichment analysis
+
+All the results will be placed in a folder named as `pathway_enrichment`.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+dir.create(path = "cell_liang_2020/pathway_enrichment", showWarnings = FALSE)
+```
+
+```{r,eval=FALSE,message=TRUE, cache=TRUE, R.options=""}
+diff_metabolites <-
+  object %>% 
+  activate_mass_dataset(what = "variable_info") %>% 
+  filter(p_value_adjust < 0.05) %>% 
+  extract_variable_info()
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+head(diff_metabolites)
+```
+
+### Load `KEGG` human pathway database
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data("kegg_hsa_pathway", package = "metpath")
+kegg_hsa_pathway
+```
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+get_pathway_class(kegg_hsa_pathway)
+```
+
+### Remove the disease pathways:
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+#get the class of pathways
+pathway_class <- 
+  metpath::pathway_class(kegg_hsa_pathway)
+head(pathway_class)
+```
+
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+remain_idx <-
+  pathway_class %>%
+  unlist() %>%
+  stringr::str_detect("Disease") %>%
+  `!`() %>%
+  which()
+
+remain_idx
+```
+
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+pathway_database <-
+  kegg_hsa_pathway[remain_idx]
+pathway_database
+```
+
+
+### Pathway enrichment
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+kegg_id <-
+  diff_metabolites$KEGG.ID 
+kegg_id <-
+  kegg_id[!is.na(kegg_id)]
+kegg_id
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+result <- 
+enrich_kegg(query_id = kegg_id, 
+            query_type = "compound", 
+            id_type = "KEGG",
+            pathway_database = pathway_database, 
+            p_cutoff = 0.05, 
+            p_adjust_method = "BH", 
+            threads = 3)
+```
+
+### Check the result:
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+result
+```
+
+
+### Plot to show pathway enrichment result
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+enrich_bar_plot(object = result,
+                x_axis = "p_value",
+                cutoff = 0.05)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+enrich_scatter_plot(object = result, y_axis = "p_value", y_axis_cutoff = 0.05)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+enrich_network(
+  object = result,
+  point_size = "p_value",
+  p_cutoff = 0.05,
+  only_significant_pathway = TRUE
+)
+```
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+sessionInfo()
+```
