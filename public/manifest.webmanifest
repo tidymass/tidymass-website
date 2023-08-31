@@ -2,8 +2,8 @@
   "name": "TidyMass",
   "short_name": "TidyMass",
   "lang": "en-us",
-  "theme_color": "#4caf50",
-  "background_color": "#4caf50",
+  "theme_color": "#EF525B",
+  "background_color": "#EF525B",
   "icons": [{
     "src": "/media/icon_hu9f34ec9ef518f99da94c07e709b9b3f3_87999_192x192_fill_lanczos_center_3.png",
     "sizes": "192x192",
