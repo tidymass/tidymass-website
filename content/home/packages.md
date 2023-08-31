@@ -20,5 +20,5 @@ content:
     - packages
   title: 💻 Projects
 design:
-  columns: "2"
+  columns: "1"
 ---

@@ -40,6 +40,8 @@ source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
 install_tidymass(from = "tidymass.org")
 ```
 
+[More here](https://www.tidymass.org/docs/chapter1/)
+
 Citation: [1 tidymass](https://pubmed.ncbi.nlm.nih.gov/35902589/)
 [2 metid](https://pubmed.ncbi.nlm.nih.gov/34432001/)
 [3 massdatabase](https://pubmed.ncbi.nlm.nih.gov/35944213/)
