@@ -2,7 +2,7 @@
 date: "2023-08-26T00:00:00Z"
 icon: book
 icon_pack: fas
-linktitle: Chapter 1-Installation
+linktitle: Chapter 1 Installation
 summary: How to install `tidymass`
 title: Installation
 commentable: true

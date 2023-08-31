@@ -19,7 +19,7 @@ You can use the `tidymass` to check the version of all packages and update them.
 If you want to check if there are updates for `tidymass` and packages in it. Just check it like this.
 
 ```{r, echo=TRUE, eval=FALSE}
-tidyicrobiome::check_tidyicrobiome_version()
+tidymass::check_tidymass_version()
 ```
 
 ## Update `tidymass`

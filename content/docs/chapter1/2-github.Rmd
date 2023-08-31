@@ -9,7 +9,14 @@ commentable: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs/chapter1"))
 ```
 
 ## Update R version
@@ -56,7 +63,7 @@ usethis::create_github_token()
 
 It will open a page in browser, and create a "New personal access token" and copy it.
 
-![](figures/fig3.png) 
+![test2](/docs/chapter1/figures/fig3.png) 
 
 * Then type this code:
 

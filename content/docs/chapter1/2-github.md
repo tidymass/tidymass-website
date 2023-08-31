@@ -19,21 +19,21 @@ You can check your R version in your console:
 
 ```r
 version
-##                _                           
-## platform       x86_64-apple-darwin20       
-## arch           x86_64                      
-## os             darwin20                    
-## system         x86_64, darwin20            
-## status                                     
-## major          4                           
-## minor          3.0                         
-## year           2023                        
-## month          04                          
-## day            21                          
-## svn rev        84292                       
-## language       R                           
-## version.string R version 4.3.0 (2023-04-21)
-## nickname       Already Tomorrow
+#>                _                           
+#> platform       x86_64-apple-darwin20       
+#> arch           x86_64                      
+#> os             darwin20                    
+#> system         x86_64, darwin20            
+#> status                                     
+#> major          4                           
+#> minor          3.0                         
+#> year           2023                        
+#> month          04                          
+#> day            21                          
+#> svn rev        84292                       
+#> language       R                           
+#> version.string R version 4.3.0 (2023-04-21)
+#> nickname       Already Tomorrow
 ```
 
 If your R version is < 4.1, please download and install the [latest version of R](https://cran.r-project.org/mirrors.html), and then restart your R.
@@ -72,7 +72,7 @@ usethis::create_github_token()
 
 It will open a page in browser, and create a "New personal access token" and copy it.
 
-![](figures/fig3.png) 
+![test2](/docs/chapter1/figures/fig3.png) 
 
 * Then type this code:
 

@@ -2,51 +2,39 @@
 date: "2018-09-09T00:00:00Z"
 icon: book-reader
 icon_pack: fas
-linktitle: Chapter 2-microbiomeDataset
-summary: microbiomeDataset package to organize microbiome data.
-title: Chapter 2-microbiomeDataset
+linktitle: Chapter 2 massDataset
+summary: massDataset package to organize microbiome data.
+title: massDataset
 commentable: true
 type: book
 weight: 1
 ---
 
-## Flexibility
+## About
 
-This feature can be used for publishing content such as:
+massdataset provide the mass_dataset class which is specifically developed and designed to organize the rectangular metabolomics data sets into a standard structure. massdataset package also provide a lot of base processing functions to process and operate the mass_dataset class. In additional, the mass_dataset class can be processed by all the packages from tidymass.
 
-- **Online courses**
-- **Project or software documentation**
-- **Tutorials**
-- **Notes**
+## Installation
 
-The `courses` folder may be renamed. For example, we can rename it to `docs` for software/project documentation or `tutorials` for creating an online course.
+You can install massdataset from [GitLab](https://gitlab.com/jaspershen/massdataset).
 
-## Delete courses
-
-**To remove these pages, delete the `courses` folder and see below to delete the associated menu link.**
-
-## Update site menu
-
-After renaming or deleting the `courses` folder, you may wish to update any `[[main]]` menu links to it by editing your menu configuration at `config/_default/menus.toml`.
-
-For example, if you delete this folder, you can remove the following from your menu configuration:
-
-```toml
-[[main]]
-  name = "Courses"
-  url = "courses/"
-  weight = 50
+```
+if(!require(remotes)){
+install.packages("remotes")
+}
+remotes::install_gitlab("jaspershen/massdataset")
 ```
 
-Or, if you are creating a software documentation site, you can rename the `courses` folder to `docs` and update the associated _Courses_ menu configuration to:
+or [GitHub](https://github.com/tidymass/massdataset)
 
-```toml
-[[main]]
-  name = "Docs"
-  url = "docs/"
-  weight = 50
+```
+remotes::install_github("tidymass/massdataset")
 ```
 
-## Update the docs menu
+## Citation
 
-If you use the _docs_ layout, note that the name of the menu in the front matter should be in the form `[menu.X]` where `X` is the folder name. Hence, if you rename the `courses/example/` folder, you should also rename the menu definitions in the front matter of files within `courses/example/` from `[menu.example]` to `[menu.<NewFolderName>]`.
+If you use massdataset in your publications, please cite this paper:
+
+Shen, X., Yan, H., Wang, C. et al. TidyMass an object-oriented reproducible analysis framework for LC–MS data. Nat Commun 13, 4365 (2022).
+
+[Link](https://www.nature.com/articles/s41467-022-32155-w)
