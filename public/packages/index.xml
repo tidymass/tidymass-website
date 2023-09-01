@@ -37,6 +37,14 @@
     </item>
     
     <item>
+      <title>massDataset</title>
+      <link>https://www.tidymass.org/packages/massdataset/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/packages/massdataset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>massProcesser</title>
       <link>https://www.tidymass.org/packages/massprocesser/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
@@ -73,14 +81,6 @@
       <link>https://www.tidymass.org/packages/masscleaner/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://www.tidymass.org/packages/masscleaner/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>metID</title>
-      <link>https://www.tidymass.org/packages/massdataset/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.tidymass.org/packages/massdataset/</guid>
       <description></description>
     </item>
     

@@ -1,5 +1,5 @@
 install_tidymass <-
-  function(packages = c("all", "core"),
+  function(packages = c("core", "all"),
            which_package,
            from = c("tidymass.org", "gitlab", "github", "gitee", "shen"),
            method = c("auto", "internal", "libcurl",

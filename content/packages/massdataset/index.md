@@ -1,6 +1,6 @@
 ---
 date: "2020-01-20T00:00:00Z"
-external_link: "https://metid.tidymass.org/"
+external_link: "https://massdataset.tidymass.org/"
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
@@ -8,16 +8,16 @@ links:
 - icon: house
   icon_pack: fas
   name: Link
-  url: https://metid.tidymass.org/
+  url: https://massdataset.tidymass.org/
 - icon: github
   icon_pack: fab
   name: Code
-  url: https://github.com/tidymass/metid/
+  url: https://github.com/tidymass/massdataset/
 slides: 
 summary:
 tags:
 - Metabolomics
-title: metID
+title: massDataset
 url_code: ""
 url_pdf: ""
 url_slides: ""

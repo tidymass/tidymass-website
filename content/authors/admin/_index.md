@@ -26,30 +26,24 @@ organizations:
   url: https://www.stanford.edu/
 role: Postdoctoral Research Fellow
 social:
+- icon: home
+  icon_pack: fas
+  link: https://jaspershen.github.io
 - icon: envelope
   icon_pack: fas
   link: /#contact
-- display:
-    header: true
-  icon: github
+- icon: github
   icon_pack: fab
-  # label: Follow me on GitHub
   link: https://github.com/tidymass
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?hl=en&user=3TK9yz8AAAAJ
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/xiaotaoshen1990
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/shenxt/
 - icon: weixin
   icon_pack: fab
   link: https://jaspershen.github.io/image/wechat_QR.jpg
-- icon: cv
-  icon_pack: ai
-  link: file/XiaotaoShen_CV.pdf
+# - icon: cv
+#   icon_pack: ai
+#   link: file/XiaotaoShen_CV.pdf
 status:
   icon: ☕️
 superuser: true

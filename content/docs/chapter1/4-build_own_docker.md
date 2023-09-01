@@ -39,7 +39,7 @@ RUN R -e 'install.packages("ggraph")'
 
 And you also need to copy your data to the image use the `COPY`.
 
-### Build image
+## Build image
 
 In the `terminal`, use below code to build the image.
 
@@ -67,7 +67,7 @@ Then other people can download your image which contains your code, data and ana
 
 How to pull docker image and run it can [refer this document](https://tidymass.github.io/tidymass/articles/docker.html).
 
-## **Session information**
+## Session information
 
 
 

@@ -666,13 +666,6 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
         
         
           
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="https://github.com/tidymass" target="_blank" rel="noopener" aria-label="github">
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
-          
         
 
         
@@ -803,31 +796,19 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
       
 
 
-  <li class=""><a href="/docs/chapter1/1-tidymass.org/">tidymass.org</a></li>
+  <li class=""><a href="/docs/chapter1/1-installation/">Installation</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/2-github/">GitHub</a></li>
+  <li class=""><a href="/docs/chapter1/2-update/">Update</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/3-gitlab/">GitLab</a></li>
+  <li class=""><a href="/docs/chapter1/3-docker_tidymass/">Install docker version of tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/4-gitee/">Gitee</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/5-update/">Update</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/6-docker_tidymass/">Install docker version of tidymass</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/7-build_own_docker/">Build your own docker</a></li>
+  <li class=""><a href="/docs/chapter1/4-build_own_docker/">Build your own docker</a></li>
 
       
         </ul>
@@ -1155,11 +1136,11 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#data-preparation"><strong>Data preparation</strong></a></li>
-    <li><a href="#data-organization"><strong>Data organization</strong></a></li>
-    <li><a href="#run-construct_database-function"><strong>Run <code>construct_database()</code> function</strong></a></li>
-    <li><a href="#ms1-database"><strong>MS1 database</strong></a></li>
-    <li><a href="#session-information"><strong>Session information</strong></a></li>
+    <li><a href="#data-preparation">Data preparation</a></li>
+    <li><a href="#data-organization">Data organization</a></li>
+    <li><a href="#run-construct_database-function">Run <code>construct_database()</code> function</a></li>
+    <li><a href="#ms1-database">MS1 database</a></li>
+    <li><a href="#session-information">Session information</a></li>
   </ul>
 </nav>
 
@@ -1248,7 +1229,7 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
 
           <p>If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the <code>metid</code> package.</p>
 <p>There are no specific requirements on how to run the LC/MS data for users. As the in-house database construction in metid is used for users to get the in-house databases for themselves (including m/z, retention time and MS/MS spectra of metabolites, for level 1 annotation (Sumner et al., 2007)), so the users just need to run the standards using the same column, LC-gradient, and MS settings with  their real samples in the lab</p>
-<h2 id="data-preparation"><strong>Data preparation</strong></h2>
+<h2 id="data-preparation">Data preparation</h2>
 <p>Firstly, please transform your raw standard MS data (positive and negative modes) to mzXML format using <a href="http://proteowizard.sourceforge.net/" target="_blank" rel="noopener">ProteoWizard</a>. The parameter setting is shown in the figure below:</p>
 <p>
 
@@ -1271,7 +1252,7 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
     <div class="w-100" ><img src="/docs/chapter7/figures/parameter_setting_MS_conventer.png" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<h2 id="data-organization"><strong>Data organization</strong></h2>
+<h2 id="data-organization">Data organization</h2>
 <p>Secondly, please organize your standard information as a table, and output it in a csv or xlsx format. The format of standard information can refer to our demo data in <code>demoData</code> package.</p>
 <p>From column 1 to 11, the columns are &ldquo;Lab.ID&rdquo;, &ldquo;Compound.name&rdquo;, &ldquo;mz&rdquo;, &ldquo;RT&rdquo;, &ldquo;CAS.ID&rdquo;, &ldquo;HMDB.ID&rdquo;, &ldquo;KEGG.ID&rdquo;, &ldquo;Formula&rdquo;, &ldquo;mz.pos&rdquo;, &ldquo;mz.neg&rdquo;, &ldquo;Submitter&rdquo;, respectively. It is OK if you have other information for the standards. As the demo data show, there are other additional information, namely &ldquo;Family&rdquo;, &ldquo;Sub.pathway&rdquo; and &ldquo;Note&rdquo;.</p>
 <ul>
@@ -1338,7 +1319,7 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
     <div class="w-100" ><img src="/docs/chapter7/figures/database_construction.png" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<h2 id="run-construct_database-function"><strong>Run <code>construct_database()</code> function</strong></h2>
+<h2 id="run-construct_database-function">Run <code>construct_database()</code> function</h2>
 <p>Here we use the demo data from <code>demoData</code> package to show how to use the <code>construct_database()</code> function
 to construct database.</p>
 <p>We first prepare dataset.</p>
@@ -1366,6 +1347,24 @@ Then we run <code>construct_database()</code> function and then we can get the d
 </span></span></code></pre></div><p>The arguments of <code>construct_database()</code> can be found by <code>?construct_database()</code>.</p>
 <p>test.database is a <code>databaseClass</code> object, you can print it to see its information.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">test.database</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -----------Base information------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Version:0.0.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Source:Michael Snyder lab</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Link:http://snyderlab.stanford.edu/</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Creater:Xiaotao Shen(shenxt1990@163.com)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; With RT information</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -----------Spectral information------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 14 items of metabolite information:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Lab.ID; Compound.name; mz; RT; CAS.ID; HMDB.ID; KEGG.ID; Formula; mz.pos; mz.neg (top10)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 172 metabolites in total.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 41 metabolites with spectra in positive mode.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 45 metabolites with spectra in negative mode.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Collision energy in positive mode (number:):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Total number:1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; NCE25</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Collision energy in negative mode:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Total number:1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; NCE25</span>
 </span></span></code></pre></div><blockquote>
 <p>Note:
 <code>test.database</code> is only a demo database (metIdentifyClass object). We will don&rsquo;t use it for next metabolite identification. Then please save this database in you local folder, please note that the saved file name and database name must be same. For example:</p>
@@ -1374,9 +1373,9 @@ Then we run <code>construct_database()</code> function and then we can get the d
 </span></span></code></pre></div><blockquote>
 <p>If you save the <code>test.database</code> as a different name, it will be a error when you use it.</p>
 </blockquote>
-<h2 id="ms1-database"><strong>MS1 database</strong></h2>
+<h2 id="ms1-database">MS1 database</h2>
 <p>If you do not have MS2 data, you can also use <code>construct_database()</code> function to construct MS1 database.</p>
-<h2 id="session-information"><strong>Session information</strong></h2>
+<h2 id="session-information">Session information</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>

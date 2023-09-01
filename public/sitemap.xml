@@ -26,6 +26,10 @@
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://www.tidymass.org/docs/chapter1/1-installation/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/docs/chapter7/1-metabolite_annotation/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -39,10 +43,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter8/1-statistical_analysis/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/1-tidymass.org/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -86,27 +86,15 @@
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/2-github/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/2-update/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/3-gitlab/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/3-docker_tidymass/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/4-gitee/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/5-update/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/6-docker_tidymass/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/7-build_own_docker/</loc>
+    <loc>https://www.tidymass.org/docs/chapter1/4-build_own_docker/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -174,6 +162,10 @@
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://www.tidymass.org/packages/massdataset/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/packages/massprocesser/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -191,10 +183,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/packages/masscleaner/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/packages/massdataset/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -219,10 +207,10 @@
     <loc>https://www.tidymass.org/author/chuchu-wang/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
+    <loc>https://www.tidymass.org/author/hong-yan/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/author/yan-hong/</loc>
+    <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

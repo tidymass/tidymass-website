@@ -16,9 +16,34 @@ In tidyMass, `metid` package is  used for metabolite identification based
 on in-house database and public database based on accurate mass (m/z),
 retention time (RT) and/or MS2 spectra.
 
-![](/docs/chapter7/Figure_1.png)
+![](/docs/chapter7/figures/Figure_1.png)
 
-# Citation
+## Installation
+
+You can install metid from [GitLab](https://gitlab.com/jaspershen/metid).
+
+```
+if(!require(remotes)){
+install.packages("remotes")
+}
+remotes::install_gitlab("jaspershen/metid")
+```
+
+or [GitHub](https://github.com/tidymass/metid)
+
+```
+remotes::install_github("tidymass/metid")
+```
+
+or tidymass.org
+
+```
+source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
+install_tidymass(from = "tidymass.org", which_package = "metid")
+```
+
+
+## Citation
 
 If you use `metid` in your publications, please cite this paper:
 

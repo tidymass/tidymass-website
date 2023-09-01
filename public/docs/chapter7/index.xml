@@ -19,7 +19,7 @@
       <guid>https://www.tidymass.org/docs/chapter7/1-in_house_database/</guid>
       <description>&lt;p&gt;If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the &lt;code&gt;metid&lt;/code&gt; package.&lt;/p&gt;
 &lt;p&gt;There are no specific requirements on how to run the LC/MS data for users. As the in-house database construction in metid is used for users to get the in-house databases for themselves (including m/z, retention time and MS/MS spectra of metabolites, for level 1 annotation (Sumner et al., 2007)), so the users just need to run the standards using the same column, LC-gradient, and MS settings with  their real samples in the lab&lt;/p&gt;
-&lt;h2 id=&#34;data-preparation&#34;&gt;&lt;strong&gt;Data preparation&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;data-preparation&#34;&gt;Data preparation&lt;/h2&gt;
 &lt;p&gt;Firstly, please transform your raw standard MS data (positive and negative modes) to mzXML format using &lt;a href=&#34;http://proteowizard.sourceforge.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ProteoWizard&lt;/a&gt;. The parameter setting is shown in the figure below:&lt;/p&gt;
 &lt;p&gt;
 
@@ -42,7 +42,7 @@
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/docs/chapter7/figures/parameter_setting_MS_conventer.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;data-organization&#34;&gt;&lt;strong&gt;Data organization&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;data-organization&#34;&gt;Data organization&lt;/h2&gt;
 &lt;p&gt;Secondly, please organize your standard information as a table, and output it in a csv or xlsx format. The format of standard information can refer to our demo data in &lt;code&gt;demoData&lt;/code&gt; package.&lt;/p&gt;
 &lt;p&gt;From column 1 to 11, the columns are &amp;ldquo;Lab.ID&amp;rdquo;, &amp;ldquo;Compound.name&amp;rdquo;, &amp;ldquo;mz&amp;rdquo;, &amp;ldquo;RT&amp;rdquo;, &amp;ldquo;CAS.ID&amp;rdquo;, &amp;ldquo;HMDB.ID&amp;rdquo;, &amp;ldquo;KEGG.ID&amp;rdquo;, &amp;ldquo;Formula&amp;rdquo;, &amp;ldquo;mz.pos&amp;rdquo;, &amp;ldquo;mz.neg&amp;rdquo;, &amp;ldquo;Submitter&amp;rdquo;, respectively. It is OK if you have other information for the standards. As the demo data show, there are other additional information, namely &amp;ldquo;Family&amp;rdquo;, &amp;ldquo;Sub.pathway&amp;rdquo; and &amp;ldquo;Note&amp;rdquo;.&lt;/p&gt;
 &lt;ul&gt;
@@ -109,7 +109,7 @@
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/docs/chapter7/figures/database_construction.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;run-construct_database-function&#34;&gt;&lt;strong&gt;Run &lt;code&gt;construct_database()&lt;/code&gt; function&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;run-construct_database-function&#34;&gt;Run &lt;code&gt;construct_database()&lt;/code&gt; function&lt;/h2&gt;
 &lt;p&gt;Here we use the demo data from &lt;code&gt;demoData&lt;/code&gt; package to show how to use the &lt;code&gt;construct_database()&lt;/code&gt; function
 to construct database.&lt;/p&gt;
 &lt;p&gt;We first prepare dataset.&lt;/p&gt;
@@ -137,6 +137,24 @@ Then we run &lt;code&gt;construct_database()&lt;/code&gt; function and then we c
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The arguments of &lt;code&gt;construct_database()&lt;/code&gt; can be found by &lt;code&gt;?construct_database()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;test.database is a &lt;code&gt;databaseClass&lt;/code&gt; object, you can print it to see its information.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;test.database&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; -----------Base information------------&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Version:0.0.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Source:Michael Snyder lab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Link:http://snyderlab.stanford.edu/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Creater:Xiaotao Shen(shenxt1990@163.com)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; With RT information&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; -----------Spectral information------------&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; 14 items of metabolite information:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Lab.ID; Compound.name; mz; RT; CAS.ID; HMDB.ID; KEGG.ID; Formula; mz.pos; mz.neg (top10)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; 172 metabolites in total.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; 41 metabolites with spectra in positive mode.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; 45 metabolites with spectra in negative mode.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Collision energy in positive mode (number:):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Total number:1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; NCE25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Collision energy in negative mode:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Total number:1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; NCE25&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Note:
 &lt;code&gt;test.database&lt;/code&gt; is only a demo database (metIdentifyClass object). We will don&amp;rsquo;t use it for next metabolite identification. Then please save this database in you local folder, please note that the saved file name and database name must be same. For example:&lt;/p&gt;
@@ -145,9 +163,9 @@ Then we run &lt;code&gt;construct_database()&lt;/code&gt; function and then we c
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;If you save the &lt;code&gt;test.database&lt;/code&gt; as a different name, it will be a error when you use it.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;ms1-database&#34;&gt;&lt;strong&gt;MS1 database&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ms1-database&#34;&gt;MS1 database&lt;/h2&gt;
 &lt;p&gt;If you do not have MS2 data, you can also use &lt;code&gt;construct_database()&lt;/code&gt; function to construct MS1 database.&lt;/p&gt;
-&lt;h2 id=&#34;session-information&#34;&gt;&lt;strong&gt;Session information&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; R version 4.3.0 (2023-04-21)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Platform: x86_64-apple-darwin20 (64-bit)&lt;/span&gt;

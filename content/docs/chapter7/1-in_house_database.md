@@ -14,13 +14,13 @@ If you have in-house standards which have been acquired with MS2 spectra data, t
 
 There are no specific requirements on how to run the LC/MS data for users. As the in-house database construction in metid is used for users to get the in-house databases for themselves (including m/z, retention time and MS/MS spectra of metabolites, for level 1 annotation (Sumner et al., 2007)), so the users just need to run the standards using the same column, LC-gradient, and MS settings with  their real samples in the lab
 
-## **Data preparation**
+## Data preparation
 
 Firstly, please transform your raw standard MS data (positive and negative modes) to mzXML format using [ProteoWizard](http://proteowizard.sourceforge.net/). The parameter setting is shown in the figure below:
 
 ![](/docs/chapter7/figures/parameter_setting_MS_conventer.png)
 
-## **Data organization**
+## Data organization
 
 Secondly, please organize your standard information as a table, and output it in a csv or xlsx format. The format of standard information can refer to our demo data in `demoData` package. 
 
@@ -46,7 +46,7 @@ The names of the mzXML files should be like this: `xxx_NCE25.mzXML`.
 
 ![](/docs/chapter7/figures/database_construction.png)
 
-## **Run `construct_database()` function**
+## Run `construct_database()` function
 
 Here we use the demo data from `demoData` package to show how to use the `construct_database()` function
 to construct database.
@@ -87,6 +87,24 @@ test.database is a `databaseClass` object, you can print it to see its informati
 
 ```r
 test.database
+#> -----------Base information------------
+#> Version:0.0.1
+#> Source:Michael Snyder lab
+#> Link:http://snyderlab.stanford.edu/
+#> Creater:Xiaotao Shen(shenxt1990@163.com)
+#> With RT information
+#> -----------Spectral information------------
+#> 14 items of metabolite information:
+#> Lab.ID; Compound.name; mz; RT; CAS.ID; HMDB.ID; KEGG.ID; Formula; mz.pos; mz.neg (top10)
+#> 172 metabolites in total.
+#> 41 metabolites with spectra in positive mode.
+#> 45 metabolites with spectra in negative mode.
+#> Collision energy in positive mode (number:):
+#> Total number:1
+#> NCE25
+#> Collision energy in negative mode:
+#> Total number:1
+#> NCE25
 ```
 
 > Note:
@@ -99,11 +117,11 @@ save(test.database, file = "test.database")
 
 > If you save the `test.database` as a different name, it will be a error when you use it.
 
-## **MS1 database**
+## MS1 database
 
 If you do not have MS2 data, you can also use `construct_database()` function to construct MS1 database. 
 
-## **Session information**
+## Session information
 
 
 ```r

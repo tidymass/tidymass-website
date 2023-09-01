@@ -658,13 +658,6 @@
         
         
           
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="https://github.com/tidymass" target="_blank" rel="noopener" aria-label="github">
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
-          
         
 
         
@@ -795,31 +788,19 @@
       
 
 
-  <li class=""><a href="/docs/chapter1/1-tidymass.org/">tidymass.org</a></li>
+  <li class=""><a href="/docs/chapter1/1-installation/">Installation</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/2-github/">GitHub</a></li>
+  <li class=""><a href="/docs/chapter1/2-update/">Update</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/3-gitlab/">GitLab</a></li>
+  <li class=""><a href="/docs/chapter1/3-docker_tidymass/">Install docker version of tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/4-gitee/">Gitee</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/5-update/">Update</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/6-docker_tidymass/">Install docker version of tidymass</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/7-build_own_docker/">Build your own docker</a></li>
+  <li class=""><a href="/docs/chapter1/4-build_own_docker/">Build your own docker</a></li>
 
       
         </ul>
@@ -1227,6 +1208,27 @@
 
           <h2 id="about">About</h2>
 <p>massdataset provide the mass_dataset class which is specifically developed and designed to organize the rectangular metabolomics data sets into a standard structure. massdataset package also provide a lot of base processing functions to process and operate the mass_dataset class. In additional, the mass_dataset class can be processed by all the packages from tidymass.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter2/figures/Figure.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h2 id="installation">Installation</h2>
 <p>You can install massdataset from <a href="https://gitlab.com/jaspershen/massdataset" target="_blank" rel="noopener">GitLab</a>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">if(!require(remotes)){
@@ -1235,10 +1237,12 @@
 </span></span><span class="line"><span class="cl">remotes::install_gitlab(&#34;jaspershen/massdataset&#34;)
 </span></span></code></pre></div><p>or <a href="https://github.com/tidymass/massdataset" target="_blank" rel="noopener">GitHub</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">remotes::install_github(&#34;tidymass/massdataset&#34;)
+</span></span></code></pre></div><p>or tidymass.org</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nf">source</span><span class="p">(</span><span class="s">&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">install_tidymass</span><span class="p">(</span><span class="nx">from</span> <span class="p">=</span> <span class="s">&#34;tidymass.org&#34;</span><span class="p">,</span> <span class="nx">which_package</span> <span class="p">=</span> <span class="s">&#34;massdataset&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><h2 id="citation">Citation</h2>
 <p>If you use massdataset in your publications, please cite this paper:</p>
-<p>Shen, X., Yan, H., Wang, C. et al. TidyMass an object-oriented reproducible analysis framework for LC–MS data. Nat Commun 13, 4365 (2022).</p>
-<p><a href="https://www.nature.com/articles/s41467-022-32155-w" target="_blank" rel="noopener">Link</a></p>
+<p><a href="https://www.nature.com/articles/s41467-022-32155-w" target="_blank" rel="noopener">Shen, X., Yan, H., Wang, C. et al. TidyMass an object-oriented reproducible analysis framework for LC–MS data. Nat Commun 13, 4365 (2022).</a></p>
 
 
         </article>

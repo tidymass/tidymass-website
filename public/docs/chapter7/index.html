@@ -658,13 +658,6 @@
         
         
           
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="https://github.com/tidymass" target="_blank" rel="noopener" aria-label="github">
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
-          
         
 
         
@@ -795,31 +788,19 @@
       
 
 
-  <li class=""><a href="/docs/chapter1/1-tidymass.org/">tidymass.org</a></li>
+  <li class=""><a href="/docs/chapter1/1-installation/">Installation</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/2-github/">GitHub</a></li>
+  <li class=""><a href="/docs/chapter1/2-update/">Update</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/3-gitlab/">GitLab</a></li>
+  <li class=""><a href="/docs/chapter1/3-docker_tidymass/">Install docker version of tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/4-gitee/">Gitee</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/5-update/">Update</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/6-docker_tidymass/">Install docker version of tidymass</a></li>
-
-
-
-  <li class=""><a href="/docs/chapter1/7-build_own_docker/">Build your own docker</a></li>
+  <li class=""><a href="/docs/chapter1/4-build_own_docker/">Build your own docker</a></li>
 
       
         </ul>
@@ -1148,6 +1129,8 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#citation">Citation</a></li>
   </ul>
 </nav>
 
@@ -1245,10 +1228,21 @@ retention time (RT) and/or MS2 spectra.</p>
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="/docs/chapter7/Figure_1.png" alt="" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="/docs/chapter7/figures/Figure_1.png" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<h1 id="citation">Citation</h1>
+<h2 id="installation">Installation</h2>
+<p>You can install metid from <a href="https://gitlab.com/jaspershen/metid" target="_blank" rel="noopener">GitLab</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">if(!require(remotes)){
+</span></span><span class="line"><span class="cl">install.packages(&#34;remotes&#34;)
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">remotes::install_gitlab(&#34;jaspershen/metid&#34;)
+</span></span></code></pre></div><p>or <a href="https://github.com/tidymass/metid" target="_blank" rel="noopener">GitHub</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">remotes::install_github(&#34;tidymass/metid&#34;)
+</span></span></code></pre></div><p>or tidymass.org</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nf">source</span><span class="p">(</span><span class="s">&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">install_tidymass</span><span class="p">(</span><span class="nx">from</span> <span class="p">=</span> <span class="s">&#34;tidymass.org&#34;</span><span class="p">,</span> <span class="nx">which_package</span> <span class="p">=</span> <span class="s">&#34;metid&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="citation">Citation</h2>
 <p>If you use <code>metid</code> in your publications, please cite this paper:</p>
 <ol>
 <li>
