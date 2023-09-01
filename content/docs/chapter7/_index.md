@@ -18,6 +18,8 @@ retention time (RT) and/or MS2 spectra.
 
 ![](/docs/chapter7/figures/Figure_1.png)
 
+![](figures/Figure_1.png)
+
 ## Installation
 
 You can install metid from [GitLab](https://gitlab.com/jaspershen/metid).
