@@ -2,6 +2,7 @@
 organizations:
 - name: Yale University
 role: Postdoctoral Research Fellow
+last_name: b
 social:
 - icon: link
   icon_pack: fas

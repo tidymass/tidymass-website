@@ -8,14 +8,12 @@ subtitle:
 content:
   sort_ascending: true
   sort_by: Params.last_name
-  title: 🤝 Team
-  subtitle: ""
   user_groups:
-  - Leader
+    - Leader
 design:
   columns: "1"
-  show_interests: false
-  show_role: true
+  show_interests: true
+  show_role: false
   show_social: true
   show_organization: true
 ---
