@@ -14,7 +14,7 @@ cta:
   url: docs/
   label: Get Started
   icon_pack: fas
-  icon: download
+  icon: circle-play
 # cta_alt:
 #   url: docs/
 #   label: View Documentation
