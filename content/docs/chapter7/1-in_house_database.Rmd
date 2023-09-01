@@ -66,7 +66,7 @@ Download the data [here](https://github.com/jaspershen/demoData/tree/master/inst
 
 Then there will be a folder named as `database_construction` in your work directory like below figure shows:
 
-![](/docs/chapter7/figures/Screen Shot 2021-02-26 at 9.22.52 PM.png)
+![](/docs/chapter7/figures/Screen-Shot-2021-02-26-9.22.52-PM.png)
 Then we run `construct_database()` function and then we can get the database.
 ```{r,eval=TRUE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
 library(metid)
