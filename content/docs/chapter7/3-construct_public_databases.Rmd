@@ -1,0 +1,28 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Construct public databases"
+linktitle: Construct public databases
+author: admin
+type: book
+weight: 3
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+## Introduction
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+sessionInfo()
+```

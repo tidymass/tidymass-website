@@ -12,9 +12,29 @@ commentable: true
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
+If you don't have R or Rstudio, please install them first.
+
+## Install R
+
+Download the [R](https://www.r-project.org/) and install it.
+
+## Rstudio
+
+Then install Rstudio. Download the [Rstudio](https://www.rstudio.com/products/rstudio/download/#download) here and then install it.
+
+Select the free version of RStudio Desktop.
+
+![](/docs/chapter1/figures/Screen-Shot.png) 
+
+## Open the Rstudio
+
+Then open the Rstudio.
+
+![](/docs/chapter1/figures/Screen-Shot-1.png) 
+
 ## Update R
 
-`tidymass` require R version > 4.1.
+`tidymass` require R version > 4.1. Please update your R if the version < 4.1.
 
 You can check your R version in your console:
 
@@ -33,7 +53,7 @@ source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
 install_tidymass(from = "tidymass.org")
 ```
 
-You can also use this method to install one specifice pacakge. For example, if you only want to install metID. 
+You can also use this method to install one specific package. For example, if you only want to install [metID](https://metid.tidymass.org/). 
 
 ```{r, echo=TRUE, eval=FALSE}
 install_tidymass(from = "tidymass.org", which_package = "metid")
@@ -107,7 +127,7 @@ remotes::install_gitlab("tidymass/tidymass", dependencies = TRUE)
 
 ## Install `tidymass` from Gitee
 
-Copy and paste the below code in your console.
+If you are in China, you can try to install `tidymass` from Gitee. Copy and paste the below code in your console.
 
 ```{r, echo=TRUE, eval=FALSE}
 if(!require(remotes)){

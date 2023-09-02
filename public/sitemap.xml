@@ -30,10 +30,6 @@
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/docs/chapter7/2-metabolite_annotation/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://www.tidymass.org/docs/chapter9/1-pahtway_enrichment/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -84,6 +80,22 @@
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter10/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter7/2-metid_database_structure/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter7/3-construct_public_databases/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter7/4-metabolite_annotation/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter7/5-identify_single_peak/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter1/2-update/</loc>

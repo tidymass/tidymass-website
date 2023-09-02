@@ -19,7 +19,24 @@ If you want to check if there are updates for `tidymass` and packages in it. Jus
 
 ```r
 tidymass::check_tidymass_version()
+## Registered S3 method overwritten by 'Hmisc':
+##   method       from      
+##   vcov.default fit.models
+## ##tidymass/tidymass is up-to-date devel version
+## ##tidymass/massconverter is up-to-date devel version
+## ##tidymass/massdataset is up-to-date devel version
+## ##tidymass/massprocesser is up-to-date devel version
+## ##tidymass/masscleaner is up-to-date devel version
+## ##tidymass/massstat is up-to-date devel version
+## ##tidymass/metpath is up-to-date devel version
+## ##tidymass/masstools is up-to-date devel version
+## Use update_tidymass() to update the following pacakges.
+##   package installed_version latest_version up_to_date
+## 1  massqc             1.0.6          1.0.5      FALSE
+## 2   metid            1.2.29         1.2.28      FALSE
 ```
+
+This will list all the packages version and if there are some new versions can be updated.
 
 ## Update `tidymass`
 
@@ -30,7 +47,13 @@ The update_tidymass() function can be used to update tidymass and packages withi
 tidymass::update_tidymass(from = "gitlab")
 ```
 
-> If the from = "gitlab" doesn’t work, try set it as from = "github" or from = "gitee".
+You can change the `from` argument if `gitlab` doesn't work.
+
+1. "github"
+
+2. "gitee"
+
+3. "tidymass.org"
 
 ## Session information
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: September 1, 2023 --><html lang="en-us" >
+<!-- Last Published: September 2, 2023 --><html lang="en-us" >
 
 
 <head>
@@ -998,7 +998,19 @@ If you want to check if there are updates for tidymass and packages in it." /><m
 
 
 
-  <li class=""><a href="/docs/chapter7/2-metabolite_annotation/">Metabolite annotation</a></li>
+  <li class=""><a href="/docs/chapter7/2-metid_database_structure/">Databases for metID</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/3-construct_public_databases/">Construct public databases</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/4-metabolite_annotation/">Metabolite annotation: A demo example</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/5-identify_single_peak/">Identify single peak with metid</a></li>
 
       
         </ul>
@@ -1229,12 +1241,37 @@ If you want to check if there are updates for tidymass and packages in it." /><m
 <p>You can use the <code>tidymass</code> to check the version of all packages and update them.</p>
 <p>If you want to check if there are updates for <code>tidymass</code> and packages in it. Just check it like this.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">tidymass</span><span class="o">::</span><span class="nf">check_tidymass_version</span><span class="p">()</span>
-</span></span></code></pre></div><h2 id="update-tidymass">Update <code>tidymass</code></h2>
+</span></span><span class="line"><span class="cl"><span class="c1">## Registered S3 method overwritten by &#39;Hmisc&#39;:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##   method       from      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##   vcov.default fit.models</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/tidymass is up-to-date devel version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/massconverter is up-to-date devel version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/massdataset is up-to-date devel version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/massprocesser is up-to-date devel version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/masscleaner is up-to-date devel version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/massstat is up-to-date devel version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/metpath is up-to-date devel version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/masstools is up-to-date devel version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Use update_tidymass() to update the following pacakges.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##   package installed_version latest_version up_to_date</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## 1  massqc             1.0.6          1.0.5      FALSE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## 2   metid            1.2.29         1.2.28      FALSE</span>
+</span></span></code></pre></div><p>This will list all the packages version and if there are some new versions can be updated.</p>
+<h2 id="update-tidymass">Update <code>tidymass</code></h2>
 <p>The update_tidymass() function can be used to update tidymass and packages within it.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">tidymass</span><span class="o">::</span><span class="nf">update_tidymass</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="s">&#34;gitlab&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><blockquote>
-<p>If the from = &ldquo;gitlab&rdquo; doesn’t work, try set it as from = &ldquo;github&rdquo; or from = &ldquo;gitee&rdquo;.</p>
-</blockquote>
+</span></span></code></pre></div><p>You can change the <code>from</code> argument if <code>gitlab</code> doesn&rsquo;t work.</p>
+<ol>
+<li>
+<p>&ldquo;github&rdquo;</p>
+</li>
+<li>
+<p>&ldquo;gitee&rdquo;</p>
+</li>
+<li>
+<p>&ldquo;tidymass.org&rdquo;</p>
+</li>
+</ol>
 <h2 id="session-information">Session information</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## R version 4.3.0 (2023-04-21)</span>

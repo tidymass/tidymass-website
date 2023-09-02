@@ -3,8 +3,8 @@ date: "2023-08-26T00:00:00Z"
 icon: book
 icon_pack: fas
 linktitle: Chapter 1 Installation
-summary: How to install `tidymass`
-title: Installation of tidymass
+summary: How to install tidymass
+title: Install tidymass
 commentable: true
 type: book
 weight: 1
