@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Metabolite annotation: A demo example"
-linktitle: "Metabolite annotation: A demo example"
+title: "Metabolite annotation: An example"
+linktitle: "4 Metabolite annotation: An example"
 author: admin
 type: book
 weight: 4

@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 title: "Add MS2 spectra data into mass_dataset class object"
-linktitle: Add MS2 spectra
+linktitle: "2 Add MS2 spectra"
 author: admin
 type: book
 weight: 2

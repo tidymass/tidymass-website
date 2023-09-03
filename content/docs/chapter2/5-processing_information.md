@@ -1,10 +1,10 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Processing information in `mass_data` class object"
-linktitle: Processing information
+title: "Processing information in mass_data class"
+linktitle: "5 Processing information"
 author: admin
 type: book
-weight: 4
+weight: 5
 commentable: true
 ---
 

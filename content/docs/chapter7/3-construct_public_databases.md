@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 title: "Construct public databases"
-linktitle: "Construct public databases"
+linktitle: "3 Public databases"
 author: admin
 type: book
 weight: 3
@@ -12,11 +12,11 @@ commentable: true
 
 ## Introduction
 
-If you want to construct databases for `metid`, you can use the [massDatabase](https://massdatabase.tidymass.org/) package. `massdatabase` is an R package that operates the online public databases and combines with other tools for streamlined compound annotation and pathway enrichment analysis. `massDatabase` is a flexible, simple, and powerful tool that can be installed on all platforms, allowing the users to leverage all the online public databases for biological function mining.
+If you want to construct databases for `metid`, you can use the [massDatabase](https://massdatabase.tidymass.org/) package. `massdatabase` is an R package that operates the online public databases and combines with other tools for streamlined compound annotation and pathway enrichment analysis. `massdatabase` is a flexible, simple, and powerful tool that can be installed on all platforms, allowing the users to leverage all the online public databases for biological function mining.
 
 ![](/docs/chapter7/figures/Figure_massdatabase.png)
 
-## Installation of `massdatabase`
+## Install `massdatabase`
 
 You can install `massdatabase` from [GitLab](https://gitlab.com/tidymass/massdatabase).
 

@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 title: "Identify single peak with metid"
-linktitle: "Identify single peak with metid"
+linktitle: "5 Identify single peak"
 author: admin
 type: book
 weight: 5
@@ -13,7 +13,6 @@ commentable: true
 Some times we only want to match one peak. We can use `identify_single_peak()` function to identify single peak.
 
 ## Data preparation
-
 
 
 ```r

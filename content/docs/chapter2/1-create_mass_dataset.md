@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 title: "Create mass_dataset class"
-linktitle: Create mass_dataset class
+linktitle: "1 Create mass_dataset class"
 author: admin
 type: book
 weight: 1
