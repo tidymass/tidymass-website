@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 title: "Install tidymass"
-linktitle: Install tidymass
+linktitle: "1 Install tidymass"
 author: admin
 type: book
 weight: 1
@@ -12,7 +12,7 @@ commentable: true
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
-If you don't have R or Rstudio, please install them first. Otherwise, skip these steps.
+If you don't install R or Rstudio on you PC or Mac, please install them first. Otherwise, skip these steps.
 
 {{< cta cta_text="👉 Update R" cta_link="#update-r" >}}
 

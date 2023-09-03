@@ -1,10 +1,10 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Install docker version of tidymass"
-linktitle: Install docker version of tidymass
+title: "Docker version of tidymass"
+linktitle: "3 Docker version of tidymass"
 author: admin
 type: book
-weight: 6
+weight: 3
 commentable: true
 ---
 
@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. So it is useful for people who want to share the code, data, and even analysis environment with other people to repeat their analysis and results.
+[Docker](https://www.docker.com/) is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. So it is useful for people who want to share the code, data, and even analysis environment with other people to repeat their analysis and results.
 
 We provide a docker version of `tidymass`, all the packages in `tidymass` and the dependent packages have been installed.
 
@@ -27,7 +27,7 @@ We provide a docker version of `tidymass`, all the packages in `tidymass` and th
 
 Please refer to the [offical website](https://www.docker.com/get-started) to download and install docker. And then run docker.
 
-## Pull the tidymass image
+## Pull the `tidymass` image
 
 Open you terminal and then type code below:
 
@@ -35,7 +35,7 @@ Open you terminal and then type code below:
 docker pull jaspershen/tidymass:latest
 ```
 
-## Run tidymass docker image
+## Run `tidymass` docker image
 
 In you terminal, run the code below:
 
@@ -49,7 +49,7 @@ The below command will link the RStudio home folder with the desktop of the loca
 docker run -e PASSWORD=tidymass -v ~/Desktop:/home/rstudio/ -p 8787:8787 jaspershen/tidymass:latest
 ```
 
-## Open the Rstudio server
+## Open the RStudio server
 
 Then open the browser and visit http://localhost:8787 to power on RStudio server. The user name is `rstudio` and the password is `tidymass`.
 
@@ -57,9 +57,9 @@ Then open the browser and visit http://localhost:8787 to power on RStudio server
 
 ## Demo data and example analysis code
 
-In this tidymass docker image, a folder named "demo_data" is included to help users to learn how to use `tidymass`.
+In this `tidymass` docker image, a folder named "demo_data" is included to help users to learn how to use `tidymass`.
 
-Open the `tidymass_demo.Rmd` file in `demo_data` folder, and then run it code chunk by chunk or just render it by clicking `Knit` on Rstudio, you will get a reporting result (HTML format) of all the whole workflow.
+Open the `tidymass_demo.Rmd` file in `demo_data` folder, and then run it code chunk by chunk or just render it by clicking `Knit` on RStudio, you will get a reporting result (HTML format) of all the whole workflow.
 
 ![](/docs/chapter1/figures/Untitled-2.gif) 
 

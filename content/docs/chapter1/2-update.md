@@ -1,16 +1,16 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 title: "Update tidymass"
-linktitle: Update tidymass
+linktitle: "2 Update tidymass"
 author: admin
 type: book
-weight: 5
+weight: 2
 commentable: true
 ---
 
 
 
-## Check version
+## Check `tidymass` version
 
 You can use the `tidymass` to check the version of all packages and update them.
 

@@ -1,10 +1,12 @@
 ---
 title: Preface
+linktitle: Preface
+icon: house
+icon_pack: fas
 toc: false
 type: book
-commentable: true
+commentable: false
 ---
-
 
 Here, you can learn how to use `tidyMass` to do the data processing and analysis for the metabolomics data. It contains several parts.
 

@@ -1,10 +1,10 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 title: "Build your own docker image based on tidymass"
-linktitle: Build your own docker
+linktitle: "4 Build your own docker"
 author: admin
 type: book
-weight: 7
+weight: 4
 commentable: true
 ---
 
