@@ -274,13 +274,13 @@
 
   
 
-<meta name="description" content="You can build your own docker image, which contains all your code, data and analysis environment, which is more efficient for reproducible analysis.
-Create dockerfile Create a dockerfile without extension. And then open and modify it." />
+<meta name="description" content="mass_dataset class object can also contain MS2 data.
+Data preparation mass_dataset class object We need to create a mass_dataset class object first, see this document. And here we use the data from this step as an example." />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter1/4-build_own_docker/" />
-<link rel="canonical" href="https://www.tidymass.org/docs/chapter1/4-build_own_docker/" />
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter2/2-add_ms2/" />
+<link rel="canonical" href="https://www.tidymass.org/docs/chapter2/2-add_ms2/" />
 
 
 
@@ -316,10 +316,10 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
   <meta property="twitter:creator" content="@wowchemy" />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
-<meta property="og:url" content="https://www.tidymass.org/docs/chapter1/4-build_own_docker/" />
-<meta property="og:title" content="Build your own docker image based on tidymass | TidyMass" />
-<meta property="og:description" content="You can build your own docker image, which contains all your code, data and analysis environment, which is more efficient for reproducible analysis.
-Create dockerfile Create a dockerfile without extension. And then open and modify it." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://www.tidymass.org/docs/chapter2/2-add_ms2/" />
+<meta property="og:title" content="Add MS2 spectra data into mass_dataset class object | TidyMass" />
+<meta property="og:description" content="mass_dataset class object can also contain MS2 data.
+Data preparation mass_dataset class object We need to create a mass_dataset class object first, see this document. And here we use the data from this step as an example." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -353,7 +353,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
 
   
-  <title>Build your own docker image based on tidymass | TidyMass</title>
+  <title>Add MS2 spectra data into mass_dataset class object | TidyMass</title>
 
   
   
@@ -373,7 +373,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="58cf9047524330f9d71ff0b8e9cefc6c" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="1a44bd8c831dbe76c4f73e7a2d8c5b4a" >
 
   
   
@@ -728,7 +728,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
         
-          Chapter 1 Installation
+          Chapter 2 massDataset package
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -808,7 +808,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
 
 
-  <li class="active"><a href="/docs/chapter1/4-build_own_docker/">Build your own docker</a></li>
+  <li class=""><a href="/docs/chapter1/4-build_own_docker/">Build your own docker</a></li>
 
       
         </ul>
@@ -843,7 +843,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
 
 
-  <li class=""><a href="/docs/chapter2/2-add_ms2/">Add MS2 spectra</a></li>
+  <li class="active"><a href="/docs/chapter2/2-add_ms2/">Add MS2 spectra</a></li>
 
 
 
@@ -1156,10 +1156,13 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#create-dockerfile">Create <code>dockerfile</code></a></li>
-    <li><a href="#build-image">Build image</a></li>
-    <li><a href="#use-the-docker-tag-command-to-give-the-tidymass-image-a-new-name">Use the <code>docker tag</code> command to give the <code>tidymass</code> image a new name</a></li>
-    <li><a href="#push-image-to-docker-hub">Push image to docker hub</a></li>
+    <li><a href="#data-preparation">Data preparation</a>
+      <ul>
+        <li><a href="#mass_dataset-class-object"><code>mass_dataset</code> class object</a></li>
+        <li><a href="#ms2-data">MS2 data</a></li>
+      </ul>
+    </li>
+    <li><a href="#add-ms2-to-mass_dataset-class-object">Add MS2 to <code>mass_dataset</code> class object</a></li>
     <li><a href="#session-information">Session information</a></li>
   </ul>
 </nav>
@@ -1214,16 +1217,16 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
   
 
     <li class="breadcrumb-item">
-      <a href="/docs/chapter1/">
+      <a href="/docs/chapter2/">
         
-          Chapter 1 Installation
+          Chapter 2 massDataset package
         
       </a>
     </li>
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        Build your own docker
+        Add MS2 spectra
       </li>
     </ol>
   </nav>
@@ -1240,43 +1243,92 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
       <div class="docs-article-container">
         
-        <h1>Build your own docker image based on tidymass</h1>
+        <h1>Add MS2 spectra data into mass_dataset class object</h1>
 
         <article class="article-style">
 
           
           
 
-          <p>You can build your own docker image, which contains all your <code>code</code>, <code>data</code> and <code>analysis environment</code>, which is more efficient for reproducible analysis.</p>
-<h2 id="create-dockerfile">Create <code>dockerfile</code></h2>
-<p>Create a <code>dockerfile</code> without extension. And then open and modify it.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM jaspershen/tidymass:latest
-</span></span><span class="line"><span class="cl">MAINTAINER &#34;Xiaotao Shen&#34; shenxt1990@outlook.com
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">RUN apt-get update &amp;&amp; apt-get install -y curl
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">COPY demo_data/ /home/rstudio/demo_data/
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">RUN chmod 777 /home/rstudio/demo_data/
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">RUN R -e &#39;install.packages(&#34;remotes&#34;)&#39;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">RUN R -e &#34;remotes::install_gitlab(&#39;jaspershen/tidymass&#39;)&#34;
-</span></span></code></pre></div><p>If you want to install packages (for example ggraph) which are necessary for you analysis, please add a new line:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">RUN R -e &#39;install.packages(&#34;ggraph&#34;)&#39;
-</span></span></code></pre></div><p>And you also need to copy your data to the image use the <code>COPY</code>.</p>
-<h2 id="build-image">Build image</h2>
-<p>In the <code>terminal</code>, use below code to build the image.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker build -t image-name -f Dockerfile .
-</span></span></code></pre></div><p>Change the <code>image-name</code>.</p>
-<h2 id="use-the-docker-tag-command-to-give-the-tidymass-image-a-new-name">Use the <code>docker tag</code> command to give the <code>tidymass</code> image a new name</h2>
-<p>We need to create a account on the docker hub (<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a>) and then use the next code to link the local image to our account.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker tag image-name your-account/image-name:latest
-</span></span></code></pre></div><h2 id="push-image-to-docker-hub">Push image to docker hub</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker push your-account/image-name:latest
-</span></span></code></pre></div><p>Then other people can download your image which contains your code, data and analysis environment, which make it is pretty easy to repeat your analysis and results.</p>
-<p>How to pull docker image and run it can <a href="https://tidymass.github.io/tidymass/articles/docker.html" target="_blank" rel="noopener">refer this document</a>.</p>
-<h2 id="session-information">Session information</h2>
+          <p><code>mass_dataset</code> class object can also contain MS2 data.</p>
+<h2 id="data-preparation">Data preparation</h2>
+<h3 id="mass_dataset-class-object"><code>mass_dataset</code> class object</h3>
+<p>We need to create a <code>mass_dataset</code> class object first, <a href="../../chapter2/1-create_mass_dataset/">see this document</a>. And here we use the data from this step as an example.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;feature_table/object_pos&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;feature_table/object_neg&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="ms2-data">MS2 data</h3>
+<p>The MS2 raw data should be converted to <code>mgf</code> format data. Please <a href="../../chapter3/1-data_convert/">refer this document</a>.</p>
+<p>Here we use the demo data for <code>tidymass</code>, please download it and put it in the <code>mgf_ms2_data</code> folder.</p>
+<p><a href="https://drive.google.com/file/d/1FY3x7q5i1g3oSLaVej__ZaZ4XSX-mWBQ/view?usp=sharing" target="_blank" rel="noopener">💾 Download link is here.</a></p>
+<p>Then uncompress it.</p>
+<h2 id="add-ms2-to-mass_dataset-class-object">Add MS2 to <code>mass_dataset</code> class object</h2>
+<p>Positive mode.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdataset</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">object_pos2</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate_ms2</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">object</span> <span class="o">=</span> <span class="n">object_pos</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">column</span> <span class="o">=</span> <span class="s">&#34;rp&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ms1.ms2.match.mz.tol</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ms1.ms2.match.rt.tol</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;mgf_ms2_data/POS/&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object_pos2</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; massdataset version: 1.0.25 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1.expression_data:[ 1612 x 36 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2.sample_info:[ 36 x 4 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 36 samples:bl20210902_3 bl20210902_4 bl20210902_5 ... bl20210902_37 bl20210902_38</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3.variable_info:[ 1612 x 3 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1612 variables:M86T44_POS M90T638_POS M91T631_POS ... M1197T265_POS M1198T265_POS</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4.sample_info_note:[ 4 x 2 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 5.variable_info_note:[ 3 x 2 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 6.ms2_data:[ 9 variables x 9 MS2 spectra]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Processing information</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2 processings in total</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; create_mass_dataset ---------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package         Function.used                Time</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2023-09-03 09:57:14</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; mutate_ms2 ---------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package Function.used                Time</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset  mutate_ms2() 2023-09-03 10:27:03</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object_pos2</span><span class="o">@</span><span class="n">ms2_data</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; $`QEP_SGA_QC_posi_ms2_ce25_01.mgf;QEP_SGA_QC_posi_ms2_ce25_02.mgf;QEP_SGA_QC_posi_ms2_ce50_01.mgf;QEP_SGA_QC_posi_ms2_ce50_02.mgf`</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; column: rp </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; polarity: positive </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; mz_tol: 10 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; rt_tol (second): 15 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 9 variables:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; M103T92_POS M120T92_1_POS M133T255_POS M149T93_POS M166T94_POS...</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 9 MS2 spectra.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; mz103.054814801682rt96.92601 mz120.081003145403rt103.263636 mz133.101364135742rt269.674188 mz149.059844970703rt99.091818 mz166.086254683842rt103.128918...</span>
+</span></span></code></pre></div><p>Negative mode.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object_neg2</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate_ms2</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">object</span> <span class="o">=</span> <span class="n">object_neg</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">column</span> <span class="o">=</span> <span class="s">&#34;rp&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;negative&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ms1.ms2.match.mz.tol</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ms1.ms2.match.rt.tol</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;mgf_ms2_data/NEG/&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object_neg2</span><span class="o">@</span><span class="n">ms2_data</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; $`QEP_SGA_QC_neg_ms2_ce25_01.mgf;QEP_SGA_QC_neg_ms2_ce25_02.mgf;QEP_SGA_QC_neg_ms2_ce50_01.mgf;QEP_SGA_QC_neg_ms2_ce50_02.mgf`</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; column: rp </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; polarity: negative </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; mz_tol: 10 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; rt_tol (second): 15 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 44 variables:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; M101T106_NEG M116T626_NEG M116T505_NEG M116T483_NEG M116T586_NEG...</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 43 MS2 spectra.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; mz101.023086547852rt97.383582 mz115.919448852539rt634.03908 mz115.919456481934rt515.338818 mz115.919372558594rt471.106446 mz115.919403076172rt591.442212...</span>
+</span></span></code></pre></div><h2 id="session-information">Session information</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
@@ -1295,13 +1347,64 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; other attached packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] ggplot2_3.4.2      dplyr_1.1.2        magrittr_2.0.3     masstools_1.0.10  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [5] massdataset_1.0.25</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.31   R6_2.5.1        bookdown_0.34   fastmap_1.1.1  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] xfun_0.39       blogdown_1.18.1 cachem_1.0.8    knitr_1.43     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] htmltools_0.5.5 rmarkdown_2.22  cli_3.6.1       sass_0.4.6     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] jquerylib_0.1.4 compiler_4.3.0  rstudioapi_0.14 tools_4.3.0    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] evaluate_0.21   bslib_0.5.0     yaml_2.3.7      jsonlite_1.8.5 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] rlang_1.1.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [1] bitops_1.0-7                pbapply_1.7-0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [3] remotes_2.4.2               rlang_1.1.1                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [5] clue_0.3-64                 GetoptLong_1.0.5           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [7] matrixStats_1.0.0           compiler_4.3.0             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [9] png_0.1-8                   vctrs_0.6.2                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [11] stringr_1.5.0               ProtGenerics_1.32.0        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [13] pkgconfig_2.0.3             shape_1.4.6                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [15] crayon_1.5.2                fastmap_1.1.1              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [17] XVector_0.40.0              utf8_1.2.3                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [19] rmarkdown_2.22              tzdb_0.4.0                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [21] preprocessCore_1.62.1       purrr_1.0.1                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [23] xfun_0.39                   zlibbioc_1.46.0            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [25] cachem_1.0.8                GenomeInfoDb_1.36.0        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [27] jsonlite_1.8.5              DelayedArray_0.26.3        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [29] BiocParallel_1.34.2         parallel_4.3.0             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [31] cluster_2.1.4               R6_2.5.1                   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [33] stringi_1.7.12              bslib_0.5.0                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [35] RColorBrewer_1.1-3          limma_3.56.2               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [37] GenomicRanges_1.52.0        jquerylib_0.1.4            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [39] Rcpp_1.0.10                 bookdown_0.34              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [41] SummarizedExperiment_1.30.2 iterators_1.0.14           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [43] knitr_1.43                  readr_2.1.4                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [45] IRanges_2.34.0              Matrix_1.5-4               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [47] tidyselect_1.2.0            rstudioapi_0.14            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [49] yaml_2.3.7                  doParallel_1.0.17          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [51] codetools_0.2-19            affy_1.78.0                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [53] blogdown_1.18.1             lattice_0.21-8             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [55] tibble_3.2.1                plyr_1.8.8                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [57] withr_2.5.0                 Biobase_2.60.0             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [59] evaluate_0.21               zip_2.3.0                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [61] circlize_0.4.15             pillar_1.9.0               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [63] affyio_1.70.0               BiocManager_1.30.21        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [65] MatrixGenerics_1.12.2       foreach_1.5.2              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [67] stats4_4.3.0                MSnbase_2.26.0             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [69] MALDIquant_1.22.1           ncdf4_1.21                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [71] generics_0.1.3              rprojroot_2.0.3            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [73] RCurl_1.98-1.12             hms_1.1.3                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [75] S4Vectors_0.38.1            munsell_0.5.0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [77] scales_1.2.1                glue_1.6.2                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [79] tools_4.3.0                 mzID_1.38.0                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [81] vsn_3.68.0                  mzR_2.34.0                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [83] openxlsx_4.2.5.2            XML_3.99-0.14              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [85] grid_4.3.0                  impute_1.74.1              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [87] tidyr_1.3.0                 MsCoreUtils_1.12.0         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [89] colorspace_2.1-0            GenomeInfoDbData_1.2.10    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [91] cli_3.6.1                   fansi_1.0.4                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [93] S4Arrays_1.0.4              ComplexHeatmap_2.16.0      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [95] pcaMethods_1.92.0           gtable_0.3.3               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [97] sass_0.4.6                  digest_0.6.31              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [99] BiocGenerics_0.46.0         rjson_0.2.21               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [101] htmltools_0.5.5             lifecycle_1.0.3            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [103] here_1.0.1                  GlobalOptions_0.1.2        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [105] Rdisop_1.60.0               MASS_7.3-58.4</span>
 </span></span></code></pre></div>
 
         </article>
@@ -1326,9 +1429,15 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/docs/chapter1/3-docker_tidymass/" rel="next">Install docker version of tidymass</a>
+    <a href="/docs/chapter2/1-create_mass_dataset/" rel="next">Create mass_dataset class</a>
   </div>
   
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/docs/chapter2/3-mass_dataset_other_tools/" rel="prev">Create mass_dataset class from other tools</a>
+  </div>
   
 </div>
 
@@ -1349,7 +1458,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
   
 
 <p class="edit-page">
-  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter1/4-build_own_docker.md">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter2/2-add_ms2.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>

@@ -44,4 +44,4 @@ Here, you can learn how to use `tidymass` for data processing and analysis, from
 
 The code, data and docker image of case study in [our manuscript](https://pubmed.ncbi.nlm.nih.gov/35902589/) are provided here.
 
-{{< cta cta_text="👉 Chapter 10" cta_link="chapter1" >}}
+{{< cta cta_text="👉 Chapter 10" cta_link="chapter10" >}}
