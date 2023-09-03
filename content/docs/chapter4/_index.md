@@ -7,7 +7,7 @@ summary: Raw data processing
 title: Raw data processing
 commentable: true
 type: book
-weight: 1
+weight: 4
 ---
 
 ## About 

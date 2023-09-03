@@ -4,7 +4,7 @@ title: "Create mass_dataset class from other tools"
 linktitle: Create mass_dataset class from other tools
 author: admin
 type: book
-weight: 1
+weight: 3
 commentable: true
 ---
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
@@ -892,7 +892,7 @@ object
 #> 1 processings in total
 #> create_mass_dataset ---------- 
 #>       Package                Function.used                Time
-#> 1 massdataset convet_mzmine2mass_dataset() 2023-08-30 21:46:50
+#> 1 massdataset convet_mzmine2mass_dataset() 2023-09-03 10:28:19
 ```
 
 ## MS-DIAL feature table to `mass_dataset` class
@@ -2690,7 +2690,7 @@ object
 #> 1 processings in total
 #> create_mass_dataset ---------- 
 #>       Package                 Function.used                Time
-#> 1 massdataset convert_msdial2mass_dataset() 2023-08-30 21:46:51
+#> 1 massdataset convert_msdial2mass_dataset() 2023-09-03 10:28:20
 ```
 
 ## Session information
@@ -2757,23 +2757,24 @@ sessionInfo()
 #>  [69] MatrixGenerics_1.12.2       foreach_1.5.2              
 #>  [71] stats4_4.3.0                MSnbase_2.26.0             
 #>  [73] MALDIquant_1.22.1           ncdf4_1.21                 
-#>  [75] generics_0.1.3              RCurl_1.98-1.12            
-#>  [77] hms_1.1.3                   S4Vectors_0.38.1           
-#>  [79] munsell_0.5.0               scales_1.2.1               
-#>  [81] glue_1.6.2                  tools_4.3.0                
-#>  [83] mzID_1.38.0                 vsn_3.68.0                 
-#>  [85] mzR_2.34.0                  webshot_0.5.5              
-#>  [87] openxlsx_4.2.5.2            XML_3.99-0.14              
-#>  [89] grid_4.3.0                  impute_1.74.1              
-#>  [91] tidyr_1.3.0                 MsCoreUtils_1.12.0         
-#>  [93] colorspace_2.1-0            GenomeInfoDbData_1.2.10    
-#>  [95] cli_3.6.1                   fansi_1.0.4                
-#>  [97] viridisLite_0.4.2           S4Arrays_1.0.4             
-#>  [99] svglite_2.1.1               ComplexHeatmap_2.16.0      
-#> [101] pcaMethods_1.92.0           gtable_0.3.3               
-#> [103] sass_0.4.6                  digest_0.6.31              
-#> [105] BiocGenerics_0.46.0         rjson_0.2.21               
-#> [107] htmltools_0.5.5             lifecycle_1.0.3            
-#> [109] httr_1.4.6                  GlobalOptions_0.1.2        
-#> [111] Rdisop_1.60.0               MASS_7.3-58.4
+#>  [75] generics_0.1.3              rprojroot_2.0.3            
+#>  [77] RCurl_1.98-1.12             hms_1.1.3                  
+#>  [79] S4Vectors_0.38.1            munsell_0.5.0              
+#>  [81] scales_1.2.1                glue_1.6.2                 
+#>  [83] tools_4.3.0                 mzID_1.38.0                
+#>  [85] vsn_3.68.0                  mzR_2.34.0                 
+#>  [87] webshot_0.5.5               openxlsx_4.2.5.2           
+#>  [89] XML_3.99-0.14               grid_4.3.0                 
+#>  [91] impute_1.74.1               tidyr_1.3.0                
+#>  [93] MsCoreUtils_1.12.0          colorspace_2.1-0           
+#>  [95] GenomeInfoDbData_1.2.10     cli_3.6.1                  
+#>  [97] fansi_1.0.4                 viridisLite_0.4.2          
+#>  [99] S4Arrays_1.0.4              svglite_2.1.1              
+#> [101] ComplexHeatmap_2.16.0       pcaMethods_1.92.0          
+#> [103] gtable_0.3.3                sass_0.4.6                 
+#> [105] digest_0.6.31               BiocGenerics_0.46.0        
+#> [107] rjson_0.2.21                htmltools_0.5.5            
+#> [109] lifecycle_1.0.3             httr_1.4.6                 
+#> [111] here_1.0.1                  GlobalOptions_0.1.2        
+#> [113] Rdisop_1.60.0               MASS_7.3-58.4
 ```

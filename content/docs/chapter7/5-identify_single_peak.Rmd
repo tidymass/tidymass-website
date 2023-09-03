@@ -23,7 +23,6 @@ Some times we only want to match one peak. We can use `identify_single_peak()` f
 
 ## Data preparation
 
-
 ```{r,eval = TRUE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
 library(massdataset)
 library(tidyverse)

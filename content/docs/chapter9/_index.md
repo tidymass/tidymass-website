@@ -7,7 +7,7 @@ summary: Pathway enrichment
 title: Pathway enrichment
 commentable: true
 type: book
-weight: 1
+weight: 9
 ---
 
 ## About 

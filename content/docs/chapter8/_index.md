@@ -7,7 +7,7 @@ summary: Statistical analysis
 title: Statistical analysis
 commentable: true
 type: book
-weight: 1
+weight: 8
 ---
 
 ## About 

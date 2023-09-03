@@ -4,7 +4,7 @@ title: "Create mass_dataset class from other tools"
 linktitle: Create mass_dataset class from other tools
 author: admin
 type: book
-weight: 1
+weight: 3
 commentable: true
 ---
 
@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
   message = TRUE,
   out.width = "100%"
 )
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
 ```
 
 

@@ -316,7 +316,7 @@
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/docs/chapter2/" />
-<meta property="og:title" content="massDataset | TidyMass" />
+<meta property="og:title" content="massDataset package | TidyMass" />
 <meta property="og:description" content="massDataset package to organize microbiome data." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
@@ -345,7 +345,7 @@
 
 
   
-  <title>massDataset | TidyMass</title>
+  <title>massDataset package | TidyMass</title>
 
   
   
@@ -788,11 +788,11 @@
       
 
 
-  <li class=""><a href="/docs/chapter1/1-installation/">Installation</a></li>
+  <li class=""><a href="/docs/chapter1/1-installation/">Install tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/2-update/">Update</a></li>
+  <li class=""><a href="/docs/chapter1/2-update/">Update tidymass</a></li>
 
 
 
@@ -824,14 +824,18 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset</a>
+        <a class="docs-toc-link  active" href="/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset package</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter2/1-mass_dataset_other_tools/">Create mass_dataset class from other tools</a></li>
+  <li class=""><a href="/docs/chapter2/1-create_mass_dataset/">Create mass_dataset class</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/3-mass_dataset_other_tools/">Create mass_dataset class from other tools</a></li>
 
       
         </ul>
@@ -1088,7 +1092,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Whole workflow using tidymass</a>
+        <a class="docs-toc-link " href="/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 10 Whole workflow using tidymass</a>
     
       
         <ul class="nav docs-sidenav">
@@ -1141,7 +1145,7 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#about">About</a></li>
-    <li><a href="#installation">Installation</a></li>
+    <li><a href="#install-massdataset">Install <code>massdataset</code></a></li>
     <li><a href="#citation">Citation</a></li>
   </ul>
 </nav>
@@ -1194,7 +1198,7 @@
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        Chapter 2 massDataset
+        Chapter 2 massDataset package
       </li>
     </ol>
   </nav>
@@ -1211,7 +1215,7 @@
 
       <div class="docs-article-container">
         
-        <h1>massDataset</h1>
+        <h1>massDataset package</h1>
 
         <article class="article-style">
 
@@ -1219,7 +1223,7 @@
           
 
           <h2 id="about">About</h2>
-<p>massdataset provide the mass_dataset class which is specifically developed and designed to organize the rectangular metabolomics data sets into a standard structure. massdataset package also provide a lot of base processing functions to process and operate the mass_dataset class. In additional, the mass_dataset class can be processed by all the packages from tidymass.</p>
+<p><code>massdataset</code> provide the <code>mass_dataset</code> class which is specifically developed and designed to organize the rectangular metabolomics data sets into a standard structure. <code>massdataset</code> package also provide a lot of base processing functions to process and operate the mass_dataset class. In additional, the <code>mass_dataset</code> class can be processed by all the packages from <code>tidymass</code>.</p>
 <p>
 
 
@@ -1241,8 +1245,8 @@
     <div class="w-100" ><img src="/docs/chapter2/figures/Figure.png" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<h2 id="installation">Installation</h2>
-<p>You can install massdataset from <a href="https://gitlab.com/jaspershen/massdataset" target="_blank" rel="noopener">GitLab</a>.</p>
+<h2 id="install-massdataset">Install <code>massdataset</code></h2>
+<p>You can install <code>massdataset</code> from <a href="https://gitlab.com/jaspershen/massdataset" target="_blank" rel="noopener">GitLab</a>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">if(!require(remotes)){
 </span></span><span class="line"><span class="cl">install.packages(&#34;remotes&#34;)
 </span></span><span class="line"><span class="cl">}
@@ -1253,7 +1257,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nf">source</span><span class="p">(</span><span class="s">&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">install_tidymass</span><span class="p">(</span><span class="nx">from</span> <span class="p">=</span> <span class="s">&#34;tidymass.org&#34;</span><span class="p">,</span> <span class="nx">which_package</span> <span class="p">=</span> <span class="s">&#34;massdataset&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><h2 id="citation">Citation</h2>
-<p>If you use massdataset in your publications, please cite this paper:</p>
+<p>If you use <code>massdataset</code> in your publications, please cite this paper:</p>
 <p><a href="https://www.nature.com/articles/s41467-022-32155-w" target="_blank" rel="noopener">Shen, X., Yan, H., Wang, C. et al. TidyMass an object-oriented reproducible analysis framework for LC–MS data. Nat Commun 13, 4365 (2022).</a></p>
 
 

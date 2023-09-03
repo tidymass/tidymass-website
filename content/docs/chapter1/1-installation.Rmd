@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Installation"
-linktitle: Installation
+title: "Install tidymass"
+linktitle: Install tidymass
 author: admin
 type: book
 weight: 1
@@ -12,7 +12,9 @@ commentable: true
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
-If you don't have R or Rstudio, please install them first.
+If you don't have R or Rstudio, please install them first. Otherwise, skip these steps.
+
+{{< cta cta_text="👉 Update R" cta_link="#update-r" >}}
 
 ## Install R
 
@@ -135,6 +137,11 @@ if(!require(remotes)){
 }
 remotes::install_git(url = "https://gitee.com/tidymass/tidymass", dependencies = TRUE)
 ```
+
+
+If you can't install `tidymass` successfully, please contact us:
+
+{{< cta cta_text="📥 Contact us" cta_link="https://www.tidymass.org/#contact" >}}
 
 ## Session information
 

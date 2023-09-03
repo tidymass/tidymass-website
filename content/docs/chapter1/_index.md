@@ -12,7 +12,7 @@ weight: 1
 
 You can install `tidymass` using different methods.
 
-1. Using the methods from tidymass.org.
+1. Using the methods from [tidymass.org](https://www.tidymass.org/).
 
 2. From [GitHub](https://github.com/tidymass).
 
@@ -20,4 +20,4 @@ You can install `tidymass` using different methods.
 
 4. From [Gitee (码云)](https://gitee.com/tidymass).
 
-You can also update and install docker version of tidymass.
+You can also learn how to update and install docker version of `tidymass`.

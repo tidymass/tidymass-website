@@ -7,7 +7,7 @@ summary: Metabolite annotation
 title: Metabolite annotation
 commentable: true
 type: book
-weight: 1
+weight: 7
 ---
 
 ## Introduction

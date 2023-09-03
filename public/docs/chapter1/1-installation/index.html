@@ -274,8 +274,8 @@
 
   
 
-<meta name="description" content="If you don&rsquo;t have R or Rstudio, please install them first.
-Install R Download the R and install it.
+<meta name="description" content="If you don&rsquo;t have R or Rstudio, please install them first. Otherwise, skip these steps.
+👉 Update R Install R Download the R and install it.
 Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
 
 
@@ -318,9 +318,9 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/docs/chapter1/1-installation/" />
-<meta property="og:title" content="Installation | TidyMass" />
-<meta property="og:description" content="If you don&rsquo;t have R or Rstudio, please install them first.
-Install R Download the R and install it.
+<meta property="og:title" content="Install tidymass | TidyMass" />
+<meta property="og:description" content="If you don&rsquo;t have R or Rstudio, please install them first. Otherwise, skip these steps.
+👉 Update R Install R Download the R and install it.
 Rstudio Then install Rstudio. Download the Rstudio here and then install it." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
@@ -355,7 +355,7 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
 
 
   
-  <title>Installation | TidyMass</title>
+  <title>Install tidymass | TidyMass</title>
 
   
   
@@ -798,11 +798,11 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
       
 
 
-  <li class="active"><a href="/docs/chapter1/1-installation/">Installation</a></li>
+  <li class="active"><a href="/docs/chapter1/1-installation/">Install tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/2-update/">Update</a></li>
+  <li class=""><a href="/docs/chapter1/2-update/">Update tidymass</a></li>
 
 
 
@@ -834,14 +834,18 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset</a>
+        <a class="docs-toc-link " href="/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset package</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter2/1-mass_dataset_other_tools/">Create mass_dataset class from other tools</a></li>
+  <li class=""><a href="/docs/chapter2/1-create_mass_dataset/">Create mass_dataset class</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/3-mass_dataset_other_tools/">Create mass_dataset class from other tools</a></li>
 
       
         </ul>
@@ -1098,7 +1102,7 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Whole workflow using tidymass</a>
+        <a class="docs-toc-link " href="/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 10 Whole workflow using tidymass</a>
     
       
         <ul class="nav docs-sidenav">
@@ -1222,7 +1226,7 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        Installation
+        Install tidymass
       </li>
     </ol>
   </nav>
@@ -1239,14 +1243,25 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
 
       <div class="docs-article-container">
         
-        <h1>Installation</h1>
+        <h1>Install tidymass</h1>
 
         <article class="article-style">
 
           
           
 
-          <p>If you don&rsquo;t have R or Rstudio, please install them first.</p>
+          <p>If you don&rsquo;t have R or Rstudio, please install them first. Otherwise, skip these steps.</p>
+
+
+<ul class="cta-group">
+  
+  <li>
+    <a href="#update-r"  class="btn btn-primary px-3 py-3">👉 Update R</a>
+  </li>
+  
+  
+</ul>
+
 <h2 id="install-r">Install R</h2>
 <p>Download the <a href="https://www.r-project.org/" target="_blank" rel="noopener">R</a> and install it.</p>
 <h2 id="rstudio">Rstudio</h2>
@@ -1414,7 +1429,19 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
 </span></span><span class="line"><span class="cl">  <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;remotes&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="n">remotes</span><span class="o">::</span><span class="nf">install_git</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;https://gitee.com/tidymass/tidymass&#34;</span><span class="p">,</span> <span class="n">dependencies</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="session-information">Session information</h2>
+</span></span></code></pre></div><p>If you can&rsquo;t install <code>tidymass</code> successfully, please contact us:</p>
+
+
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://www.tidymass.org/#contact"  class="btn btn-primary px-3 py-3">📥 Contact us</a>
+  </li>
+  
+  
+</ul>
+
+<h2 id="session-information">Session information</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## R version 4.3.0 (2023-04-21)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## Platform: x86_64-apple-darwin20 (64-bit)</span>
@@ -1464,7 +1491,7 @@ Rstudio Then install Rstudio. Download the Rstudio here and then install it." />
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/docs/chapter1/2-update/" rel="prev">Update</a>
+    <a href="/docs/chapter1/2-update/" rel="prev">Update tidymass</a>
   </div>
   
 </div>

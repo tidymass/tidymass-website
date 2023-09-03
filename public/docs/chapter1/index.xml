@@ -13,11 +13,22 @@
     </image>
     
     <item>
-      <title>Installation</title>
+      <title>Install tidymass</title>
       <link>https://www.tidymass.org/docs/chapter1/1-installation/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/docs/chapter1/1-installation/</guid>
-      <description>&lt;p&gt;If you don&amp;rsquo;t have R or Rstudio, please install them first.&lt;/p&gt;
+      <description>&lt;p&gt;If you don&amp;rsquo;t have R or Rstudio, please install them first. Otherwise, skip these steps.&lt;/p&gt;
+
+
+&lt;ul class=&#34;cta-group&#34;&gt;
+  
+  &lt;li&gt;
+    &lt;a href=&#34;#update-r&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;👉 Update R&lt;/a&gt;
+  &lt;/li&gt;
+  
+  
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;install-r&#34;&gt;Install R&lt;/h2&gt;
 &lt;p&gt;Download the &lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R&lt;/a&gt; and install it.&lt;/p&gt;
 &lt;h2 id=&#34;rstudio&#34;&gt;Rstudio&lt;/h2&gt;
@@ -185,7 +196,19 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;install.packages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;remotes&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;remotes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;install_git&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://gitee.com/tidymass/tidymass&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dependencies&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you can&amp;rsquo;t install &lt;code&gt;tidymass&lt;/code&gt; successfully, please contact us:&lt;/p&gt;
+
+
+&lt;ul class=&#34;cta-group&#34;&gt;
+  
+  &lt;li&gt;
+    &lt;a href=&#34;https://www.tidymass.org/#contact&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;📥 Contact us&lt;/a&gt;
+  &lt;/li&gt;
+  
+  
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## R version 4.3.0 (2023-04-21)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Platform: x86_64-apple-darwin20 (64-bit)&lt;/span&gt;
@@ -215,7 +238,7 @@
     </item>
     
     <item>
-      <title>Update</title>
+      <title>Update tidymass</title>
       <link>https://www.tidymass.org/docs/chapter1/2-update/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/docs/chapter1/2-update/</guid>
@@ -231,13 +254,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/massdataset is up-to-date devel version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/massprocesser is up-to-date devel version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/masscleaner is up-to-date devel version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/metid is up-to-date devel version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/massstat is up-to-date devel version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/metpath is up-to-date devel version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/masstools is up-to-date devel version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Use update_tidymass() to update the following pacakges.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##   package installed_version latest_version up_to_date&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 1  massqc             1.0.6          1.0.5      FALSE&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 2   metid            1.2.29         1.2.28      FALSE&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will list all the packages version and if there are some new versions can be updated.&lt;/p&gt;
 &lt;h2 id=&#34;update-tidymass&#34;&gt;Update &lt;code&gt;tidymass&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;The update_tidymass() function can be used to update tidymass and packages within it.&lt;/p&gt;

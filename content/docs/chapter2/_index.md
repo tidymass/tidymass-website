@@ -2,23 +2,23 @@
 date: "2018-09-09T00:00:00Z"
 icon: book-reader
 icon_pack: fas
-linktitle: Chapter 2 massDataset
+linktitle: Chapter 2 massDataset package
 summary: massDataset package to organize microbiome data.
-title: massDataset
+title: massDataset package
 commentable: true
 type: book
-weight: 1
+weight: 2
 ---
 
 ## About
 
-massdataset provide the mass_dataset class which is specifically developed and designed to organize the rectangular metabolomics data sets into a standard structure. massdataset package also provide a lot of base processing functions to process and operate the mass_dataset class. In additional, the mass_dataset class can be processed by all the packages from tidymass.
+`massdataset` provide the `mass_dataset` class which is specifically developed and designed to organize the rectangular metabolomics data sets into a standard structure. `massdataset` package also provide a lot of base processing functions to process and operate the mass_dataset class. In additional, the `mass_dataset` class can be processed by all the packages from `tidymass`.
 
 ![](/docs/chapter2/figures/Figure.png)
 
-## Installation
+## Install `massdataset`
 
-You can install massdataset from [GitLab](https://gitlab.com/jaspershen/massdataset).
+You can install `massdataset` from [GitLab](https://gitlab.com/jaspershen/massdataset).
 
 ```
 if(!require(remotes)){
@@ -42,6 +42,6 @@ install_tidymass(from = "tidymass.org", which_package = "massdataset")
 
 ## Citation
 
-If you use massdataset in your publications, please cite this paper:
+If you use `massdataset` in your publications, please cite this paper:
 
 [Shen, X., Yan, H., Wang, C. et al. TidyMass an object-oriented reproducible analysis framework for LC–MS data. Nat Commun 13, 4365 (2022).](https://www.nature.com/articles/s41467-022-32155-w)

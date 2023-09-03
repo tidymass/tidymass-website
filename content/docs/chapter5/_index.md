@@ -7,7 +7,7 @@ summary: Explore data
 title: Explore data
 commentable: true
 type: book
-weight: 1
+weight: 5
 ---
 
 ## About 

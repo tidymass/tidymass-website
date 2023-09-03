@@ -7,7 +7,7 @@ summary: Data cleaning
 title: Data cleaning
 commentable: true
 type: book
-weight: 1
+weight: 6
 ---
 
 ## About 

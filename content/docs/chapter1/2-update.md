@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Update"
-linktitle: Update
+title: "Update tidymass"
+linktitle: Update tidymass
 author: admin
 type: book
 weight: 5
@@ -27,13 +27,13 @@ tidymass::check_tidymass_version()
 ## ##tidymass/massdataset is up-to-date devel version
 ## ##tidymass/massprocesser is up-to-date devel version
 ## ##tidymass/masscleaner is up-to-date devel version
+## ##tidymass/metid is up-to-date devel version
 ## ##tidymass/massstat is up-to-date devel version
 ## ##tidymass/metpath is up-to-date devel version
 ## ##tidymass/masstools is up-to-date devel version
 ## Use update_tidymass() to update the following pacakges.
 ##   package installed_version latest_version up_to_date
 ## 1  massqc             1.0.6          1.0.5      FALSE
-## 2   metid            1.2.29         1.2.28      FALSE
 ```
 
 This will list all the packages version and if there are some new versions can be updated.

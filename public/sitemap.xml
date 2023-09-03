@@ -14,7 +14,11 @@
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/docs/chapter2/1-mass_dataset_other_tools/</loc>
+    <loc>https://www.tidymass.org/docs/chapter2/1-create_mass_dataset/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter2/3-mass_dataset_other_tools/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -46,24 +50,52 @@
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://www.tidymass.org/docs/chapter7/1-metid_database_structure/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/docs/chapter2/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter7/3-construct_public_databases/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter3/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://www.tidymass.org/docs/chapter7/4-metabolite_annotation/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/docs/chapter4/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter7/5-identify_single_peak/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter1/2-update/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter5/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://www.tidymass.org/docs/chapter1/3-docker_tidymass/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/docs/chapter6/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/docs/chapter1/4-build_own_docker/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter7/</loc>
@@ -80,34 +112,6 @@
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter10/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter7/1-metid_database_structure/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter7/3-construct_public_databases/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter7/4-metabolite_annotation/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter7/5-identify_single_peak/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/2-update/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/3-docker_tidymass/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/docs/chapter1/4-build_own_docker/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/docs/</loc>
