@@ -17,7 +17,7 @@
       <link>https://www.tidymass.org/docs/chapter1/1-installation/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/docs/chapter1/1-installation/</guid>
-      <description>&lt;p&gt;If you don&amp;rsquo;t have R or Rstudio, please install them first. Otherwise, skip these steps.&lt;/p&gt;
+      <description>&lt;p&gt;If you don&amp;rsquo;t install R or Rstudio on you PC or Mac, please install them first. Otherwise, skip these steps.&lt;/p&gt;
 
 
 &lt;ul class=&#34;cta-group&#34;&gt;
@@ -242,7 +242,7 @@
       <link>https://www.tidymass.org/docs/chapter1/2-update/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/docs/chapter1/2-update/</guid>
-      <description>&lt;h2 id=&#34;check-version&#34;&gt;Check version&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;check-tidymass-version&#34;&gt;Check &lt;code&gt;tidymass&lt;/code&gt; version&lt;/h2&gt;
 &lt;p&gt;You can use the &lt;code&gt;tidymass&lt;/code&gt; to check the version of all packages and update them.&lt;/p&gt;
 &lt;p&gt;If you want to check if there are updates for &lt;code&gt;tidymass&lt;/code&gt; and packages in it. Just check it like this.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tidymass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;check_tidymass_version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
@@ -307,23 +307,23 @@
     </item>
     
     <item>
-      <title>Install docker version of tidymass</title>
+      <title>Docker version of tidymass</title>
       <link>https://www.tidymass.org/docs/chapter1/3-docker_tidymass/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/docs/chapter1/3-docker_tidymass/</guid>
-      <description>&lt;p&gt;Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. So it is useful for people who want to share the code, data, and even analysis environment with other people to repeat their analysis and results.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.docker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker&lt;/a&gt; is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. So it is useful for people who want to share the code, data, and even analysis environment with other people to repeat their analysis and results.&lt;/p&gt;
 &lt;p&gt;We provide a docker version of &lt;code&gt;tidymass&lt;/code&gt;, all the packages in &lt;code&gt;tidymass&lt;/code&gt; and the dependent packages have been installed.&lt;/p&gt;
 &lt;h2 id=&#34;install-docker&#34;&gt;Install docker&lt;/h2&gt;
 &lt;p&gt;Please refer to the &lt;a href=&#34;https://www.docker.com/get-started&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;offical website&lt;/a&gt; to download and install docker. And then run docker.&lt;/p&gt;
-&lt;h2 id=&#34;pull-the-tidymass-image&#34;&gt;Pull the tidymass image&lt;/h2&gt;
+&lt;h2 id=&#34;pull-the-tidymass-image&#34;&gt;Pull the &lt;code&gt;tidymass&lt;/code&gt; image&lt;/h2&gt;
 &lt;p&gt;Open you terminal and then type code below:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull jaspershen/tidymass:latest
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;run-tidymass-docker-image&#34;&gt;Run tidymass docker image&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;run-tidymass-docker-image&#34;&gt;Run &lt;code&gt;tidymass&lt;/code&gt; docker image&lt;/h2&gt;
 &lt;p&gt;In you terminal, run the code below:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -e PASSWORD=tidymass -p 8787:8787 jaspershen/tidymass:latest
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The below command will link the RStudio home folder with the desktop of the local machine running the container. Anything saved or edited in the home folder when using the container will be stored on the local desktop.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -e PASSWORD=tidymass -v ~/Desktop:/home/rstudio/ -p 8787:8787 jaspershen/tidymass:latest
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;open-the-rstudio-server&#34;&gt;Open the Rstudio server&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;open-the-rstudio-server&#34;&gt;Open the RStudio server&lt;/h2&gt;
 &lt;p&gt;Then open the browser and visit http://localhost:8787 to power on RStudio server. The user name is &lt;code&gt;rstudio&lt;/code&gt; and the password is &lt;code&gt;tidymass&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;
 
@@ -347,8 +347,8 @@
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;demo-data-and-example-analysis-code&#34;&gt;Demo data and example analysis code&lt;/h2&gt;
-&lt;p&gt;In this tidymass docker image, a folder named &amp;ldquo;demo_data&amp;rdquo; is included to help users to learn how to use &lt;code&gt;tidymass&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Open the &lt;code&gt;tidymass_demo.Rmd&lt;/code&gt; file in &lt;code&gt;demo_data&lt;/code&gt; folder, and then run it code chunk by chunk or just render it by clicking &lt;code&gt;Knit&lt;/code&gt; on Rstudio, you will get a reporting result (HTML format) of all the whole workflow.&lt;/p&gt;
+&lt;p&gt;In this &lt;code&gt;tidymass&lt;/code&gt; docker image, a folder named &amp;ldquo;demo_data&amp;rdquo; is included to help users to learn how to use &lt;code&gt;tidymass&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Open the &lt;code&gt;tidymass_demo.Rmd&lt;/code&gt; file in &lt;code&gt;demo_data&lt;/code&gt; folder, and then run it code chunk by chunk or just render it by clicking &lt;code&gt;Knit&lt;/code&gt; on RStudio, you will get a reporting result (HTML format) of all the whole workflow.&lt;/p&gt;
 &lt;p&gt;
 
 

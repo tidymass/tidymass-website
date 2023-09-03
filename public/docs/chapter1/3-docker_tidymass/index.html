@@ -316,7 +316,7 @@
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/docs/chapter1/3-docker_tidymass/" />
-<meta property="og:title" content="Install docker version of tidymass | TidyMass" />
+<meta property="og:title" content="Docker version of tidymass | TidyMass" />
 <meta property="og:description" content="Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. So it is useful for people who want to share the code, data, and even analysis environment with other people to repeat their analysis and results." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
@@ -351,7 +351,7 @@
 
 
   
-  <title>Install docker version of tidymass | TidyMass</title>
+  <title>Docker version of tidymass | TidyMass</title>
 
   
   
@@ -794,19 +794,19 @@
       
 
 
-  <li class=""><a href="/docs/chapter1/1-installation/">Install tidymass</a></li>
+  <li class=""><a href="/docs/chapter1/1-installation/">1 Install tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/2-update/">Update tidymass</a></li>
+  <li class=""><a href="/docs/chapter1/2-update/">2 Update tidymass</a></li>
 
 
 
-  <li class="active"><a href="/docs/chapter1/3-docker_tidymass/">Install docker version of tidymass</a></li>
+  <li class="active"><a href="/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/4-build_own_docker/">Build your own docker</a></li>
+  <li class=""><a href="/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
 
       
         </ul>
@@ -837,23 +837,23 @@
       
 
 
-  <li class=""><a href="/docs/chapter2/1-create_mass_dataset/">Create mass_dataset class</a></li>
+  <li class=""><a href="/docs/chapter2/1-create_mass_dataset/">1 Create mass_dataset class</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter2/2-add_ms2/">Add MS2 spectra</a></li>
+  <li class=""><a href="/docs/chapter2/2-add_ms2/">2 Add MS2 spectra</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter2/3-mass_dataset_other_tools/">Create mass_dataset class from other tools</a></li>
+  <li class=""><a href="/docs/chapter2/3-mass_dataset_other_tools/">3 Create mass_dataset class from other tools</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter2/4-extract/">Extract data from mass_dataset</a></li>
+  <li class=""><a href="/docs/chapter2/4-extract/">4 Extract data</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter2/5-processing_information/">Processing information</a></li>
+  <li class=""><a href="/docs/chapter2/5-processing_information/">5 Processing information</a></li>
 
       
         </ul>
@@ -1008,23 +1008,23 @@
       
 
 
-  <li class=""><a href="/docs/chapter7/2-in_house_database/">Construct in-house MS2 datbase</a></li>
+  <li class=""><a href="/docs/chapter7/1-metid_database_structure/">1 Databases for metID</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/1-metid_database_structure/">Databases for metID</a></li>
+  <li class=""><a href="/docs/chapter7/2-in_house_database/">2 In-house MS2 datbase</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/3-construct_public_databases/">Construct public databases</a></li>
+  <li class=""><a href="/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/4-metabolite_annotation/">Metabolite annotation: A demo example</a></li>
+  <li class=""><a href="/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/5-identify_single_peak/">Identify single peak with metid</a></li>
+  <li class=""><a href="/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
 
       
         </ul>
@@ -1163,9 +1163,9 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#install-docker">Install docker</a></li>
-    <li><a href="#pull-the-tidymass-image">Pull the tidymass image</a></li>
-    <li><a href="#run-tidymass-docker-image">Run tidymass docker image</a></li>
-    <li><a href="#open-the-rstudio-server">Open the Rstudio server</a></li>
+    <li><a href="#pull-the-tidymass-image">Pull the <code>tidymass</code> image</a></li>
+    <li><a href="#run-tidymass-docker-image">Run <code>tidymass</code> docker image</a></li>
+    <li><a href="#open-the-rstudio-server">Open the RStudio server</a></li>
     <li><a href="#demo-data-and-example-analysis-code">Demo data and example analysis code</a></li>
     <li><a href="#session-information">Session information</a></li>
   </ul>
@@ -1230,7 +1230,7 @@
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        Install docker version of tidymass
+        3 Docker version of tidymass
       </li>
     </ol>
   </nav>
@@ -1247,26 +1247,26 @@
 
       <div class="docs-article-container">
         
-        <h1>Install docker version of tidymass</h1>
+        <h1>Docker version of tidymass</h1>
 
         <article class="article-style">
 
           
           
 
-          <p>Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. So it is useful for people who want to share the code, data, and even analysis environment with other people to repeat their analysis and results.</p>
+          <p><a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a> is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. So it is useful for people who want to share the code, data, and even analysis environment with other people to repeat their analysis and results.</p>
 <p>We provide a docker version of <code>tidymass</code>, all the packages in <code>tidymass</code> and the dependent packages have been installed.</p>
 <h2 id="install-docker">Install docker</h2>
 <p>Please refer to the <a href="https://www.docker.com/get-started" target="_blank" rel="noopener">offical website</a> to download and install docker. And then run docker.</p>
-<h2 id="pull-the-tidymass-image">Pull the tidymass image</h2>
+<h2 id="pull-the-tidymass-image">Pull the <code>tidymass</code> image</h2>
 <p>Open you terminal and then type code below:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull jaspershen/tidymass:latest
-</span></span></code></pre></div><h2 id="run-tidymass-docker-image">Run tidymass docker image</h2>
+</span></span></code></pre></div><h2 id="run-tidymass-docker-image">Run <code>tidymass</code> docker image</h2>
 <p>In you terminal, run the code below:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -e PASSWORD=tidymass -p 8787:8787 jaspershen/tidymass:latest
 </span></span></code></pre></div><p>The below command will link the RStudio home folder with the desktop of the local machine running the container. Anything saved or edited in the home folder when using the container will be stored on the local desktop.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -e PASSWORD=tidymass -v ~/Desktop:/home/rstudio/ -p 8787:8787 jaspershen/tidymass:latest
-</span></span></code></pre></div><h2 id="open-the-rstudio-server">Open the Rstudio server</h2>
+</span></span></code></pre></div><h2 id="open-the-rstudio-server">Open the RStudio server</h2>
 <p>Then open the browser and visit http://localhost:8787 to power on RStudio server. The user name is <code>rstudio</code> and the password is <code>tidymass</code>.</p>
 <p>
 
@@ -1290,8 +1290,8 @@
   </div></figure>
 </p>
 <h2 id="demo-data-and-example-analysis-code">Demo data and example analysis code</h2>
-<p>In this tidymass docker image, a folder named &ldquo;demo_data&rdquo; is included to help users to learn how to use <code>tidymass</code>.</p>
-<p>Open the <code>tidymass_demo.Rmd</code> file in <code>demo_data</code> folder, and then run it code chunk by chunk or just render it by clicking <code>Knit</code> on Rstudio, you will get a reporting result (HTML format) of all the whole workflow.</p>
+<p>In this <code>tidymass</code> docker image, a folder named &ldquo;demo_data&rdquo; is included to help users to learn how to use <code>tidymass</code>.</p>
+<p>Open the <code>tidymass_demo.Rmd</code> file in <code>demo_data</code> folder, and then run it code chunk by chunk or just render it by clicking <code>Knit</code> on RStudio, you will get a reporting result (HTML format) of all the whole workflow.</p>
 <p>
 
 
