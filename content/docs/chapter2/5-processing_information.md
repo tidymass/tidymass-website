@@ -127,6 +127,22 @@ process_info$mutate_median_intensity@parameter
 #> [8] "PS4P4"
 ```
 
+## Output html processing information
+
+We can output the `process_info` into a html format file, so we can know what processing steps have been made to this object and the accurate parameters.
+
+Then we can use `report_parameters()` to output this into a html file.
+
+
+```r
+report_parameters(object = object, 
+                  path = "data_cleaning")
+```
+
+A html file named as `parameter_report.html` will be generated and saved in `data_cleaning` folder. 
+
+![](/docs/chapter2/figures/Screen7.png)
+
 ## Session information
 
 
