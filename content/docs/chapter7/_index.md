@@ -20,7 +20,7 @@ retention time (RT) and/or MS2 spectra.
 
 ## Installation
 
-You can install metid from [GitLab](https://gitlab.com/jaspershen/metid).
+You can install `metid` from [GitLab](https://gitlab.com/tidymass/metid).
 
 ```
 if(!require(remotes)){
@@ -41,7 +41,6 @@ or tidymass.org
 source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
 install_tidymass(from = "tidymass.org", which_package = "metid")
 ```
-
 
 ## Citation
 
