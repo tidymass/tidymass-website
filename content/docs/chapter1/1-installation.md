@@ -4,13 +4,14 @@ title: "Install tidymass"
 linktitle: "1 Install tidymass"
 author: admin
 type: book
+toc: true
 weight: 1
 commentable: true
 ---
 
 
 
-If you don't install R or Rstudio on you PC or Mac, please install them first. Otherwise, skip these steps.
+If you don't install R or RStudio on you PC or Mac, please install them first. Otherwise, skip these steps.
 
 {{< cta cta_text="👉 Update R" cta_link="#update-r" >}}
 
@@ -18,17 +19,21 @@ If you don't install R or Rstudio on you PC or Mac, please install them first. O
 
 Download the [R](https://www.r-project.org/) and install it.
 
-## Rstudio
+[👉 Refer this blog](https://www.dataquest.io/blog/installing-r-on-your-computer/)
 
-Then install Rstudio. Download the [Rstudio](https://www.rstudio.com/products/rstudio/download/#download) here and then install it.
+## Install RStudio
+
+Then install RStudio. Download the [RStudio](https://www.rstudio.com/products/rstudio/download/#download) and then install it.
 
 Select the free version of RStudio Desktop.
 
 ![](/docs/chapter1/figures/Screen-Shot.png) 
 
-## Open the Rstudio
+[👉 Refer this blog](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/installRStudio.html)
 
-Then open the Rstudio.
+## Open the RStudio
+
+Then open the RStudio
 
 ![](/docs/chapter1/figures/Screen-Shot-1.png) 
 
@@ -60,7 +65,7 @@ version
 
 If your R version is < 4.1, please download and install the [latest version of R](https://cran.r-project.org/mirrors.html), and then restart your R.
 
-## Install `tidymass` from tidymass.org
+## Install `tidymass` from `tidymass.org`
 
 Copy and paste the below code in your console.
 
@@ -81,7 +86,19 @@ Demo video is bellow:
 
 ![](/docs/chapter1/figures/pull_case_study.gif) 
 
-## Install `tidymass` from GitHub
+If above code doesn't work, try to change the `method` argument.
+
+1. "auto"
+
+2. "internal"
+
+3. "libcurl"
+
+4. "wget"
+
+5. "curl"
+
+## Install `tidymass` from `GitHub`
 
 Copy and paste the below code in your console.
 
@@ -135,7 +152,7 @@ GITHUB_PAT=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
 
 And then restart R session and try again.
 
-## Install `tidymass` from GitLab
+## Install `tidymass` from `GitLab`
 
 Copy and paste the below code in your console.
 
@@ -148,7 +165,7 @@ remotes::install_gitlab("tidymass/tidymass", dependencies = TRUE)
 ```
 
 
-## Install `tidymass` from Gitee
+## Install `tidymass` from `Gitee`
 
 If you are in China, you can try to install `tidymass` from Gitee. Copy and paste the below code in your console.
 
@@ -161,9 +178,11 @@ remotes::install_git(url = "https://gitee.com/tidymass/tidymass", dependencies =
 ```
 
 
-If you can't install `tidymass` successfully, please contact us:
+If you can't install `tidymass` successfully, please contact us by
 
 {{< cta cta_text="📥 Contact us" cta_link="https://www.tidymass.org/#contact" >}}
+
+or leave me a comment below.
 
 ## Session information
 

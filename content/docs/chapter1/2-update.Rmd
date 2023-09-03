@@ -26,19 +26,26 @@ This will list all the packages version and if there are some new versions can b
 
 ## Update `tidymass`
 
-The update_tidymass() function can be used to update tidymass and packages within it.
+The `update_tidymass()` function can be used to update `tidymass` and packages within it.
 
 ```{r, echo=TRUE, eval=FALSE}
 tidymass::update_tidymass(from = "gitlab")
 ```
 
-You can change the `from` argument if `gitlab` doesn't work.
+You can change the `from` argument if `from = "gitlab"` doesn't work.
 
 1. "github"
 
 2. "gitee"
 
 3. "tidymass.org"
+
+If all the options of `from` don't work, you can try to set `fastgit` as `TRUE`.
+
+```{r, echo=TRUE, eval=FALSE}
+tidymass::update_tidymass(from = "gitlab",
+                          fastgit = TRUE)
+```
 
 ## Session information
 

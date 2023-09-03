@@ -3,12 +3,12 @@ title: Preface
 linktitle: Preface
 icon: house
 icon_pack: fas
-toc: false
+toc: true
 type: book
 commentable: false
 ---
 
-Here, you can learn how to use `tidyMass` to do the data processing and analysis for the metabolomics data. It contains several parts.
+Here, you can learn how to use `tidyMass` to do the data processing and analysis for the LC-MS metabolomics data. It contains several parts.
 
 <img src="figures/packages.png" alt="packages" style="width:60%;height:60%;">
 
