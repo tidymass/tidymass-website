@@ -1,0 +1,81 @@
+Type: Package
+Package: metid
+Title: Metabolite identification based on MS1 and MS2 spectra
+Version: 1.2.30
+Date: 2023-09-02
+Authors@R: c(
+    person(given = "Xiaotao",
+           family = "Shen",
+           role = c("aut", "cre"),
+           email = "shenxt1990@outlook.com",
+           comment = c(ORCID = "0000-0002-9608-9964")),
+        person(given = "Si",
+           family = "Wu",
+           role = c("ctb")),
+           person(given = "Hanyah",
+           family = "Zackriah",
+           role = c("ctb")),
+           person(given = "Liang",
+           family = "Liang",
+           role = c("ctb")),
+           person(given = "Songjie",
+           family = "Chen",
+           role = c("ctb"))
+           )
+Description: Metabolite identification using MS1 and MS2 databases. 
+             metid is an R package that combines information from all major 
+             databases for comprehensive and streamlined compound annotation. 
+             metid is a flexible, simple and powerful tool that can be 
+             installed on all platforms, 
+             allowing the compound annotation process to be fully automatic 
+             and reproducible.
+License: GPL-2 | file LICENSE
+URL: https://github.com/tidymass/metid
+BugReports: https://github.com/tidymass/metid/issues
+Depends: 
+    R (>= 4.1)
+Imports:
+    BiocParallel,
+    crayon,
+    dplyr,
+    future,
+    furrr,
+    tidyr,
+    ggplot2,
+    pbapply,
+    grDevices,
+    utils,
+    stats,
+    readr,
+    readxl,
+    stringr,
+    tibble,
+    magrittr,
+    masstools (>= 1.0.7),
+    purrr,
+    plyr,
+    MSnbase,
+    ProtGenerics,
+    plotly,
+    cli,
+    rstudioapi,
+    rlang,
+    progress,
+    massdataset
+Suggests: 
+    knitr,
+    rmarkdown,
+    BiocStyle,
+    RUnit,
+    testthat (>= 3.0.0),
+    methods
+VignetteBuilder: 
+    knitr
+biocViews: Metabolomics, MassSpectrometry
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Remotes: 
+    gitlab::tidymass/masstools,
+    gitlab::tidymass/massdataset
+Config/testthat/edition: 3
