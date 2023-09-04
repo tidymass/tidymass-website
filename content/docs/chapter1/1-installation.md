@@ -11,7 +11,7 @@ commentable: true
 
 
 
-If you don't install R or RStudio on you PC or Mac, please install them first. Otherwise, skip these steps.
+If you don't have R or RStudio on you PC or Mac, please install them first. Otherwise, skip these steps.
 
 {{< cta cta_text="👉 Update R" cta_link="#update-r" >}}
 

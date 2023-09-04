@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Convert raw data to mzXML/mgf"
-linktitle: Convert raw data to mzXML/mgf
+title: "Convert data using proteowizard"
+linktitle: "1 proteowizard"
 author: admin
 type: book
 weight: 1
@@ -17,28 +17,26 @@ getwd()
 #> [1] "/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3"
 ```
 
+## Install `Proteowizard`
+
+`Proteowizard` only supports Windows OS. So if you don't use Windows OS, consider [massconverter](../2-data_convert).
+
+Download [Proteowizard](https://proteowizard.sourceforge.io/) and install it.
+
 ## Data preparation
 
-Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using `Proteowizard` or `massconverter` package.
+Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using `Proteowizard` package.
 
-## Proteowizard
-
-### Convert MS1 data to `mzXML` format data
+## Convert MS1 data to `mzXML` format data
 
 Just convert data into `mzXML` format data according to the parameters below:
 
 ![](/docs/chapter3/figures/fig1.png)
-### Convert MS2 data to `mzXML` or `mgf` format data
+## Convert MS2 data to `mzXML` or `mgf` format data
 
 Just convert data into `mzXML` or `mgf` format data according to the parameters below:
 
 ![](/docs/chapter3/figures/fig2.png)
-
-## Convert data using `massconverter`
-
-`massconverter` is a package in `tidymass` project which can be used to convert mass spectrometry raw data based on docker image of [`pwid`](https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses). See more information [here](https://massconverter.tidymass.org/).
-
-More information can be found [here](https://massconverter.tidymass.org/articles/convert_data).
 
 ## Session information
 

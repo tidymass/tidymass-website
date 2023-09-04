@@ -878,7 +878,11 @@
       
 
 
-  <li class=""><a href="/docs/chapter3/1-data_convert/">Convert raw data to mzXML/mgf</a></li>
+  <li class=""><a href="/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter3/2-data_convert/">2 massconverter</a></li>
 
       
         </ul>
@@ -1158,6 +1162,7 @@
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#installation">Installation</a></li>
+    <li><a href="#citation">Citation</a></li>
   </ul>
 </nav>
 
@@ -1234,20 +1239,28 @@
           
 
           <h2 id="about">About</h2>
-<p>massconverter can be used to convert mass spectrometry data to other format data based on msconvert docker image.</p>
+<p><code>massconverter</code> can be used to convert mass spectrometry data to other format data based on msconvert docker image.</p>
 <blockquote>
 <p>Now this is only supports mac or Linux OS.</p>
 </blockquote>
-<p>More information can be found <a href="https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses" target="_blank" rel="noopener">here</a>.</p>
 <h2 id="installation">Installation</h2>
-<p>You can install massconverter from <a href="https://gitlab.com/jaspershen/massconverter" target="_blank" rel="noopener">GitLab</a></p>
+<p>You can install <code>massconverter</code> from <a href="https://gitlab.com/tidymass/massconverter" target="_blank" rel="noopener">GitLab</a>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">if(!require(remotes)){
 </span></span><span class="line"><span class="cl">install.packages(&#34;remotes&#34;)
 </span></span><span class="line"><span class="cl">}
 </span></span><span class="line"><span class="cl">remotes::install_gitlab(&#34;jaspershen/massconverter&#34;)
 </span></span></code></pre></div><p>or <a href="https://github.com/tidymass/massconverter" target="_blank" rel="noopener">GitHub</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">remotes::install_github(&#34;tidymass/massconverter&#34;)
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>or tidymass.org</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nf">source</span><span class="p">(</span><span class="s">&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">install_tidymass</span><span class="p">(</span><span class="nx">from</span> <span class="p">=</span> <span class="s">&#34;tidymass.org&#34;</span><span class="p">,</span> <span class="nx">which_package</span> <span class="p">=</span> <span class="s">&#34;massconverter&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="citation">Citation</h2>
+<p>If you use <code>massconverter</code> in your publications, please cite this paper:</p>
+<ol>
+<li>Shen, X., Yan, H., Wang, C. et al. TidyMass an object-oriented reproducible analysis framework for LC–MS data. Nat Commun 13, 4365 (2022). <a href="https://www.nature.com/articles/s41467-022-32155-w" target="_blank" rel="noopener">Weblink</a></li>
+</ol>
+<p>Thanks very much!</p>
+
 
         </article>
 

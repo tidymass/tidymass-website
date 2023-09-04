@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: September 3, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.4b7280f12f476311af2218ec632c93a2.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Xiaotao Shen" />
+
+
+
+
+
+  
+
+<meta name="description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Introduction massconverter is a package in tidymass project which can be used to convert mass spectrometry raw data based on docker image of pwid.
+Now massconverter is only supports mac or Linux OS." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter3/2-data_convert/" />
+<link rel="canonical" href="https://www.tidymass.org/docs/chapter3/2-data_convert/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#EF525B" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="TidyMass" />
+<meta property="og:url" content="https://www.tidymass.org/docs/chapter3/2-data_convert/" />
+<meta property="og:title" content="Convert data using massconverter | TidyMass" />
+<meta property="og:description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Introduction massconverter is a package in tidymass project which can be used to convert mass spectrometry raw data based on docker image of pwid.
+Now massconverter is only supports mac or Linux OS." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2019-05-05T00:00:00&#43;01:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Convert data using massconverter | TidyMass</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="6190ec2e6b613decdc0718606d4ee9fd" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.bc584d8639f6412fc553d13c23e02e8a.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">TidyMass</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">TidyMass</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#hero"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#packages"><span>Packages</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#team"><span>Team</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/docs/"><span>Tutorials</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+        
+          Chapter 3 Data format converter
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/docs/"><i class="fas fa-house pr-1"></i>Preface</a></li>
+    
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter1/"><i class="fas fa-book pr-1"></i>Chapter 1 Installation</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter1/1-installation/">1 Install tidymass</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter1/2-update/">2 Update tidymass</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset package</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter2/1-create_mass_dataset/">1 Create mass_dataset class</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/2-add_ms2/">2 Add MS2 spectra</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/3-mass_dataset_other_tools/">3 Create mass_dataset class from other tools</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/4-extract/">4 Extract data</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/5-processing_information/">5 Processing information</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter3/"><i class="fas fa-book-reader pr-1"></i>Chapter 3 Data format converter</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
+
+
+
+  <li class="active"><a href="/docs/chapter3/2-data_convert/">2 massconverter</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter4/"><i class="fas fa-book-reader pr-1"></i>Chapter 4 Raw data processing</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter4/1-raw_data_processing/">Raw data processing</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter5/"><i class="fas fa-book-reader pr-1"></i>Chapter 5 Explore data</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter5/1-data_explore/">Explore data</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter6/"><i class="fas fa-book-reader pr-1"></i>Chapter 6 Data cleaning</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter6/1-data_cleaning/">Data cleaning</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter7/"><i class="fas fa-book-reader pr-1"></i>Chapter 7 Metabolite annotation</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter7/1-metid_database_structure/">1 Databases for metID</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/2-in_house_database/">2 In-house MS2 datbase</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter8/"><i class="fas fa-book-reader pr-1"></i>Chapter 8 Statistical analysis</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter8/1-statistical_analysis/">Statistical analysis</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter9/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Pathway enrichment</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter9/1-pahtway_enrichment/">Pathway enrichment</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 10 Whole workflow using tidymass</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter10/1-whole_workflow/">Whole workflow using tidymass</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#data-preparation">Data preparation</a></li>
+    <li><a href="#pull-pwiz-docker">Pull <code>pwiz</code> docker</a></li>
+    <li><a href="#set-massconvert-parameters">Set <code>massconvert</code> parameters</a></li>
+    <li><a href="#convert-data">Convert data</a></li>
+    <li><a href="#bash-code">Bash code</a></li>
+    <li><a href="#pwiz">pwiz</a></li>
+    <li><a href="#detailed-help-of-msconvert">Detailed help of <code>msconvert</code></a></li>
+    <li><a href="#example-of-docker">Example of docker</a></li>
+    <li><a href="#other-links">Other links</a></li>
+    <li><a href="#session-information">Session information</a></li>
+  </ul>
+</nav>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+        
+          
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/docs/">
+        
+          Preface
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/docs/chapter3/">
+        
+          Chapter 3 Data format converter
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        2 massconverter
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+        
+      </div>
+
+      
+      
+      
+
+      <div class="docs-article-container">
+        
+        <h1>Convert data using massconverter</h1>
+
+        <article class="article-style">
+
+          
+          
+
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">getwd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34;</span>
+</span></span></code></pre></div><h2 id="introduction">Introduction</h2>
+<p><code>massconverter</code> is a package in <code>tidymass</code> project which can be used to convert mass spectrometry raw data based on docker image of <a href="https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses" target="_blank" rel="noopener"><code>pwid</code></a>.</p>
+<blockquote>
+<p>Now <code>massconverter</code> is only supports mac or Linux OS.</p>
+</blockquote>
+<h2 id="data-preparation">Data preparation</h2>
+<p>Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using <code>massconverter</code> package.</p>
+<h2 id="pull-pwiz-docker">Pull <code>pwiz</code> docker</h2>
+<p>Please run docker first.</p>
+<p>We need the docker image:
+<a href="https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses" target="_blank" rel="noopener">https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses</a>. So first we need use the <code>docker_pull_pwiz()</code> to pull this image.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massconverter</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">docker_pull_pwiz</span><span class="p">()</span>
+</span></span></code></pre></div><p>If you want to pull the latest version, set <code>force = TRUE</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">docker_pull_pwiz</span><span class="p">(</span><span class="n">force</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="set-massconvert-parameters">Set <code>massconvert</code> parameters</h2>
+<p>The we need to set parameters for <code>massconvert</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"> <span class="n">parameter</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">   <span class="n">massconverter</span><span class="o">::</span><span class="nf">create_msconvert_parameter</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">     <span class="n">output_format</span> <span class="o">=</span> <span class="s">&#34;mzXML&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">binary_encoding_precision</span> <span class="o">=</span> <span class="s">&#34;32&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">zlib</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">write_index</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">peak_picking_algorithm</span> <span class="o">=</span> <span class="s">&#34;cwt&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">vendor_mslevels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="kc">NA</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="n">cwt_mslevels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="kc">NA</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="n">cwt_min_snr</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">cwt_min_peak_spacing</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">subset_polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">subset_scan_number</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span> <span class="kc">NA</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="n">subset_scan_time</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">60</span><span class="p">,</span> <span class="m">300</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="n">subset_mslevels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="n">zero_samples_mode</span> <span class="o">=</span> <span class="s">&#34;removeExtra&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="n">zero_samples_mslevels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="kc">NA</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="n">zero_samples_add_missing_flanking_zero_count</span> <span class="o">=</span> <span class="m">5</span>
+</span></span><span class="line"><span class="cl">   <span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">parameter</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; pacakge_name: massconverter </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; function_name: create_msconvert_parameter </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time: 2023-09-03 20:09:02.150448 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; parameters:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; output_format : mzXML </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; binary_encoding_precision : 32 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; zlib : TRUE </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; write_index : TRUE </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; peak_picking_algorithm : cwt </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; vendor_mslevels : c(1, NA) </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; cwt_mslevels : c(1, NA) </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; cwt_min_snr : 0.1 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; cwt_min_peak_spacing : 0.1 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; subset_polarity : positive </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; subset_scan_number : c(NA, NA) </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; subset_scan_time : c(60, 300) </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; subset_mslevels : c(1, 2) </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; zero_samples_mode : removeExtra </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; zero_samples_mslevels : c(1, NA) </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; zero_samples_add_missing_flanking_zero_count : 5</span>
+</span></span></code></pre></div><h2 id="convert-data">Convert data</h2>
+<p>Just put the raw data into one folder, and then begin to convert data.</p>
+<p>Here we use the demo data, please download them <a href="">here</a>. And then put them in one folder named as <code>demo_data/raw_data</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">convert_raw_data</span><span class="p">(</span><span class="n">input_path</span> <span class="o">=</span> <span class="s">&#34;demo_data/raw_data&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                 <span class="n">output_path</span> <span class="o">=</span> <span class="s">&#34;demo_data/mzxml&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                 <span class="n">msconvert_parameter</span> <span class="o">=</span> <span class="n">parameter</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                 <span class="n">docker_parameters</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">process_all</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><p>Then the converted data will be in the <code>demo_data/mzxml</code></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter3/figures/Screen1.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="bash-code">Bash code</h2>
+<p>If you want to run it in bash, you can also use the <code>get_run_code()</code> to get the code that can run in bash.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">get_run_code</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">input_path</span> <span class="o">=</span> <span class="s">&#34;demo_data/raw_data&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">output_path</span> <span class="o">=</span> <span class="s">&#34;demo_data/mzxml&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">msconvert_parameter</span> <span class="o">=</span> <span class="n">parameter</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">docker_parameters</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">  <span class="n">process_all</span> <span class="o">=</span> <span class="kc">FALSE</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; NULL</span>
+</span></span></code></pre></div><h2 id="pwiz">pwiz</h2>
+<p>This is a docker image of of <code>proteowizard</code>.</p>
+<p>Just type this in terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -it --rm chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert --help
+</span></span></code></pre></div><h2 id="detailed-help-of-msconvert">Detailed help of <code>msconvert</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Convert mass spec data file formats.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Return value: # of failed files.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Options:
+</span></span><span class="line"><span class="cl">  -f [ --filelist ] arg              : specify text file containing filenames
+</span></span><span class="line"><span class="cl">  -o [ --outdir ] arg (=.)           : set output directory (&#39;-&#39; for stdout) 
+</span></span><span class="line"><span class="cl">                                     [.]
+</span></span><span class="line"><span class="cl">  -c [ --config ] arg                : configuration file (optionName=value)
+</span></span><span class="line"><span class="cl">  --outfile arg                      : Override the name of output file.
+</span></span><span class="line"><span class="cl">  -e [ --ext ] arg                   : set extension for output files 
+</span></span><span class="line"><span class="cl">                                     [mzML|mzXML|mgf|txt|mz5]
+</span></span><span class="line"><span class="cl">  --mzML                             : write mzML format [default]
+</span></span><span class="line"><span class="cl">  --mzXML                            : write mzXML format
+</span></span><span class="line"><span class="cl">  --mz5                              : write mz5 format
+</span></span><span class="line"><span class="cl">  --mgf                              : write Mascot generic format
+</span></span><span class="line"><span class="cl">  --text                             : write ProteoWizard internal text format
+</span></span><span class="line"><span class="cl">  --ms1                              : write MS1 format
+</span></span><span class="line"><span class="cl">  --cms1                             : write CMS1 format
+</span></span><span class="line"><span class="cl">  --ms2                              : write MS2 format
+</span></span><span class="line"><span class="cl">  --cms2                             : write CMS2 format
+</span></span><span class="line"><span class="cl">  -v [ --verbose ]                   : display detailed progress information
+</span></span><span class="line"><span class="cl">  --64                               : set default binary encoding to 64-bit 
+</span></span><span class="line"><span class="cl">                                     precision [default]
+</span></span><span class="line"><span class="cl">  --32                               : set default binary encoding to 32-bit 
+</span></span><span class="line"><span class="cl">                                     precision
+</span></span><span class="line"><span class="cl">  --mz64                             : encode m/z values in 64-bit precision 
+</span></span><span class="line"><span class="cl">                                     [default]
+</span></span><span class="line"><span class="cl">  --mz32                             : encode m/z values in 32-bit precision
+</span></span><span class="line"><span class="cl">  --inten64                          : encode intensity values in 64-bit 
+</span></span><span class="line"><span class="cl">                                     precision
+</span></span><span class="line"><span class="cl">  --inten32                          : encode intensity values in 32-bit 
+</span></span><span class="line"><span class="cl">                                     precision [default]
+</span></span><span class="line"><span class="cl">  --noindex                          : do not write index
+</span></span><span class="line"><span class="cl">  -i [ --contactInfo ] arg           : filename for contact info
+</span></span><span class="line"><span class="cl">  -z [ --zlib ]                      : use zlib compression for binary data
+</span></span><span class="line"><span class="cl">  --numpressLinear [=arg(=2e-09)]    : use numpress linear prediction 
+</span></span><span class="line"><span class="cl">                                     compression for binary mz and rt data 
+</span></span><span class="line"><span class="cl">                                     (relative accuracy loss will not exceed 
+</span></span><span class="line"><span class="cl">                                     given tolerance arg, unless set to 0)
+</span></span><span class="line"><span class="cl">  --numpressLinearAbsTol [=arg(=-1)] : desired absolute tolerance for linear 
+</span></span><span class="line"><span class="cl">                                     numpress prediction (e.g. use 1e-4 for a 
+</span></span><span class="line"><span class="cl">                                     mass accuracy of 0.2 ppm at 500 m/z, 
+</span></span><span class="line"><span class="cl">                                     default uses -1.0 for maximal accuracy). 
+</span></span><span class="line"><span class="cl">                                     Note: setting this value may substantially
+</span></span><span class="line"><span class="cl">                                     reduce file size, this overrides relative 
+</span></span><span class="line"><span class="cl">                                     accuracy tolerance.
+</span></span><span class="line"><span class="cl">  --numpressPic                      : use numpress positive integer 
+</span></span><span class="line"><span class="cl">                                     compression for binary intensities 
+</span></span><span class="line"><span class="cl">                                     (absolute accuracy loss will not exceed 
+</span></span><span class="line"><span class="cl">                                     0.5)
+</span></span><span class="line"><span class="cl">  --numpressSlof [=arg(=0.0002)]     : use numpress short logged float 
+</span></span><span class="line"><span class="cl">                                     compression for binary intensities 
+</span></span><span class="line"><span class="cl">                                     (relative accuracy loss will not exceed 
+</span></span><span class="line"><span class="cl">                                     given tolerance arg, unless set to 0)
+</span></span><span class="line"><span class="cl">  -n [ --numpressAll ]               : same as --numpressLinear --numpressSlof 
+</span></span><span class="line"><span class="cl">                                     (see https://github.com/fickludd/ms-numpre
+</span></span><span class="line"><span class="cl">                                     ss for more info)
+</span></span><span class="line"><span class="cl">  -g [ --gzip ]                      : gzip entire output file (adds .gz to 
+</span></span><span class="line"><span class="cl">                                     filename)
+</span></span><span class="line"><span class="cl">  --filter arg                       : add a spectrum list filter
+</span></span><span class="line"><span class="cl">  --chromatogramFilter arg           : add a chromatogram list filter
+</span></span><span class="line"><span class="cl">  --merge                            : create a single output file from 
+</span></span><span class="line"><span class="cl">                                     multiple input files by merging file-level
+</span></span><span class="line"><span class="cl">                                     metadata and concatenating spectrum lists
+</span></span><span class="line"><span class="cl">  --runIndexSet arg                  : for multi-run sources, select only the 
+</span></span><span class="line"><span class="cl">                                     specified run indices
+</span></span><span class="line"><span class="cl">  --simAsSpectra                     : write selected ion monitoring as 
+</span></span><span class="line"><span class="cl">                                     spectra, not chromatograms
+</span></span><span class="line"><span class="cl">  --srmAsSpectra                     : write selected reaction monitoring as 
+</span></span><span class="line"><span class="cl">                                     spectra, not chromatograms
+</span></span><span class="line"><span class="cl">  --combineIonMobilitySpectra        : write all ion mobility or Waters SONAR 
+</span></span><span class="line"><span class="cl">                                     bins/scans in a frame/block as one 
+</span></span><span class="line"><span class="cl">                                     spectrum instead of individual spectra
+</span></span><span class="line"><span class="cl">  --acceptZeroLengthSpectra          : some vendor readers have an efficient 
+</span></span><span class="line"><span class="cl">                                     way of filtering out empty spectra, but it
+</span></span><span class="line"><span class="cl">                                     takes more time to open the file
+</span></span><span class="line"><span class="cl">  --ignoreMissingZeroSamples         : some vendor readers do not include zero 
+</span></span><span class="line"><span class="cl">                                     samples in their profile data; the default
+</span></span><span class="line"><span class="cl">                                     behavior is to add the zero samples but 
+</span></span><span class="line"><span class="cl">                                     this option disables that
+</span></span><span class="line"><span class="cl">  --ignoreUnknownInstrumentError     : if true, if an instrument cannot be 
+</span></span><span class="line"><span class="cl">                                     determined from a vendor file, it will not
+</span></span><span class="line"><span class="cl">                                     be an error
+</span></span><span class="line"><span class="cl">  --stripLocationFromSourceFiles     : if true, sourceFile elements will be 
+</span></span><span class="line"><span class="cl">                                     stripped of location information, so the 
+</span></span><span class="line"><span class="cl">                                     same file converted from different 
+</span></span><span class="line"><span class="cl">                                     locations will produce the same mzML
+</span></span><span class="line"><span class="cl">  --stripVersionFromSoftware         : if true, software elements will be 
+</span></span><span class="line"><span class="cl">                                     stripped of version information, so the 
+</span></span><span class="line"><span class="cl">                                     same file converted with different 
+</span></span><span class="line"><span class="cl">                                     versions will produce the same mzML
+</span></span><span class="line"><span class="cl">  --singleThreaded [=arg(=1)] (=2)   : if true, reading and writing spectra 
+</span></span><span class="line"><span class="cl">                                     will be done on a single thread
+</span></span><span class="line"><span class="cl">  --help                             : show this message, with extra detail on 
+</span></span><span class="line"><span class="cl">                                     filter options
+</span></span><span class="line"><span class="cl">  --help-filter arg                  : name of a single filter to get detailed 
+</span></span><span class="line"><span class="cl">                                     help for
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">FILTER OPTIONS
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Note: Filters are applied sequentially in the order that you list them, and the
+</span></span><span class="line"><span class="cl">sequence order
+</span></span><span class="line"><span class="cl">can make a large difference in your output.  In particular, the peakPicking
+</span></span><span class="line"><span class="cl">filter must be first
+</span></span><span class="line"><span class="cl">in line if you wish to use the vendor-supplied centroiding algorithms since
+</span></span><span class="line"><span class="cl">these use the vendor
+</span></span><span class="line"><span class="cl">DLLs, which only operate on raw untransformed data.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Many filters take &#39;int_set&#39; arguments.  An &#39;int_set&#39; is a list of intervals of
+</span></span><span class="line"><span class="cl">the form [a,b] or a[-][b].
+</span></span><span class="line"><span class="cl">For example &#39;[0,3]&#39; and &#39;0-3&#39; both mean &#39;the set of integers from 0 to 3
+</span></span><span class="line"><span class="cl">inclusive&#39;.
+</span></span><span class="line"><span class="cl">&#39;1-&#39; means &#39;the set of integers from 1 to the largest allowable number&#39;.  
+</span></span><span class="line"><span class="cl">&#39;9&#39; is also an integer set, equivalent to &#39;[9,9]&#39;.
+</span></span><span class="line"><span class="cl">&#39;[0,2] 5-7&#39; is the set &#39;0 1 2 5 6 7&#39;. 
+</span></span><span class="line"><span class="cl">index &lt;index_value_set&gt;
+</span></span><span class="line"><span class="cl">Selects spectra by index - an index value 0-based numerical order in which the
+</span></span><span class="line"><span class="cl">spectrum appears in the input.
+</span></span><span class="line"><span class="cl">  &lt;index_value_set&gt; is an int_set of indexes.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">id &lt;id_set&gt;
+</span></span><span class="line"><span class="cl">Selects one or more spectra by native IDs separated by semicolon (;).
+</span></span><span class="line"><span class="cl">  &lt;id_set&gt; is a semicolon-delimited set of ids.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">msLevel &lt;mslevels&gt;
+</span></span><span class="line"><span class="cl">This filter selects only spectra with the indicated &lt;mslevels&gt;, expressed as an
+</span></span><span class="line"><span class="cl">int_set.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">chargeState &lt;charge_states&gt;
+</span></span><span class="line"><span class="cl">This filter keeps spectra that match the listed charge state(s), expressed as an
+</span></span><span class="line"><span class="cl">int_set.  Both known/single and possible/multiple charge states are tested.  Use
+</span></span><span class="line"><span class="cl">0 to include spectra with no charge state at all.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">precursorRecalculation 
+</span></span><span class="line"><span class="cl">This filter recalculates the precursor m/z and charge for MS2 spectra. It looks
+</span></span><span class="line"><span class="cl">at the prior MS1 scan to better infer the parent mass.  However, it only works
+</span></span><span class="line"><span class="cl">on orbitrap and FT data,although it does not use any 3rd party (vendor DLL)
+</span></span><span class="line"><span class="cl">code.  Since the time the code was written, Thermo has since fixed up its own
+</span></span><span class="line"><span class="cl">estimation in response, so it&#39;s less critical than it used to be (though can
+</span></span><span class="line"><span class="cl">still be useful).
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mzRefiner input1.pepXML input2.mzid [msLevels=&lt;1-&gt;]
+</span></span><span class="line"><span class="cl">[thresholdScore=&lt;CV_Score_Name&gt;] [thresholdValue=&lt;floatset&gt;]
+</span></span><span class="line"><span class="cl">[thresholdStep=&lt;float&gt;] [maxSteps=&lt;count&gt;]
+</span></span><span class="line"><span class="cl">This filter recalculates the m/z and charges, adjusting precursors for MS2
+</span></span><span class="line"><span class="cl">spectra and spectra masses for MS1 spectra. It uses an ident file with a
+</span></span><span class="line"><span class="cl">threshold field and value to calculate the error and will then choose a shifting
+</span></span><span class="line"><span class="cl">mechanism to correct masses throughout the file. It only works on orbitrap, FT,
+</span></span><span class="line"><span class="cl">and TOF data. It is designed to work on mzML files created by msconvert from a
+</span></span><span class="line"><span class="cl">single dataset (single run), and with an identification file created using that
+</span></span><span class="line"><span class="cl">mzML file. It does not use any 3rd party (vendor DLL) code. Recommended Scores
+</span></span><span class="line"><span class="cl">and thresholds: MS-GF:SpecEValue,-1e-10 (&lt;1e-10); MyriMatch:MVH,35- (&gt;35);
+</span></span><span class="line"><span class="cl">xcorr,3- (&gt;3)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">lockmassRefiner mz=&lt;real&gt; mzNegIons=&lt;real (mz)&gt; tol=&lt;real (1.0 Daltons)&gt;
+</span></span><span class="line"><span class="cl">For Waters data, adjusts m/z values according to the specified lockmass m/z and
+</span></span><span class="line"><span class="cl">tolerance. Distinct m/z value for negative ions is optional and defaults to the
+</span></span><span class="line"><span class="cl">given mz value. For other data, currently does nothing.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">precursorRefine 
+</span></span><span class="line"><span class="cl">This filter recalculates the precursor m/z and charge for MS2 spectra. It looks
+</span></span><span class="line"><span class="cl">at the prior MS1 scan to better infer the parent mass.  It only works on
+</span></span><span class="line"><span class="cl">orbitrap, FT, and TOF data. It does not use any 3rd party (vendor DLL) code.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">peakPicking [&lt;PickerType&gt; [snr=&lt;minimum signal-to-noise ratio&gt;]
+</span></span><span class="line"><span class="cl">[peakSpace=&lt;minimum peak spacing&gt;] [msLevel=&lt;ms_levels&gt;]]
+</span></span><span class="line"><span class="cl">This filter performs centroiding on spectrawith the selected &lt;ms_levels&gt;,
+</span></span><span class="line"><span class="cl">expressed as an int_set.  The value for &lt;PickerType&gt; must be &#34;cwt&#34; or &#34;vendor&#34;:
+</span></span><span class="line"><span class="cl">when &lt;PickerType&gt; = &#34;vendor&#34;, vendor (Windows DLL) code is used if available. 
+</span></span><span class="line"><span class="cl">IMPORTANT NOTE: since this filter operates on the raw data through the vendor
+</span></span><span class="line"><span class="cl">DLLs, IT MUST BE THE FIRST FILTER IN ANY LIST OF FILTERS when &#34;vendor&#34; is used.
+</span></span><span class="line"><span class="cl">The other option for PickerType is &#34;cwt&#34;, which uses ProteoWizard&#39;s
+</span></span><span class="line"><span class="cl">wavelet-based algorithm for performing peak-picking with a wavelet-space
+</span></span><span class="line"><span class="cl">signal-to-noise ratio of &lt;signal-to-noise ratio&gt;.
+</span></span><span class="line"><span class="cl">Defaults:
+</span></span><span class="line"><span class="cl"> &lt;PickerType&gt; is a low-quality (non-vendor) local maxima algorithm
+</span></span><span class="line"><span class="cl"> &lt;signal-to-noise ratio&gt; = 1.0
+</span></span><span class="line"><span class="cl"> &lt;minimum peak spacing&gt; = 0.1
+</span></span><span class="line"><span class="cl"> &lt;ms_levels&gt; = 1-
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scanNumber &lt;scan_numbers&gt;
+</span></span><span class="line"><span class="cl">This filter selects spectra by scan number.  Depending on the input data type,
+</span></span><span class="line"><span class="cl">scan number and spectrum index are not always the same thing - scan numbers are
+</span></span><span class="line"><span class="cl">not always contiguous, and are usually 1-based.
+</span></span><span class="line"><span class="cl">&lt;scan_numbers&gt; is an int_set of scan numbers to be kept.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scanEvent &lt;scan_event_set&gt;
+</span></span><span class="line"><span class="cl">This filter selects spectra by scan event.  For example, to include all scan
+</span></span><span class="line"><span class="cl">events except scan event 5, use filter &#34;scanEvent 1-4 6-&#34;.  A &#34;scan event&#34; is a
+</span></span><span class="line"><span class="cl">preset scan configuration: a user-defined scan configuration that specifies the
+</span></span><span class="line"><span class="cl">instrumental settings in which a spectrum is acquired. An instrument may cycle
+</span></span><span class="line"><span class="cl">through a list of preset scan configurations to acquire data. This is a more
+</span></span><span class="line"><span class="cl">generic term for the Thermo &#34;scan event&#34;, which is defined in the Thermo
+</span></span><span class="line"><span class="cl">Xcalibur glossary as: &#34;a mass spectrometer scan that is defined by choosing the
+</span></span><span class="line"><span class="cl">necessary scan parameter settings. Multiple scan events can be defined for each
+</span></span><span class="line"><span class="cl">segment of time.&#34;.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scanTime &lt;scan_time_range&gt;
+</span></span><span class="line"><span class="cl">This filter selects only spectra within a given time range.
+</span></span><span class="line"><span class="cl">  &lt;scan_time_range&gt; is a time range, specified in seconds.  For example, to
+</span></span><span class="line"><span class="cl">select only spectra within the second minute of the run, use &#34;scanTime
+</span></span><span class="line"><span class="cl">[60-119.99]&#34;.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sortByScanTime 
+</span></span><span class="line"><span class="cl">This filter reorders spectra, sorting them by ascending scan start time.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">stripIT 
+</span></span><span class="line"><span class="cl">This filter rejects ion trap data spectra with MS level 1.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">metadataFixer 
+</span></span><span class="line"><span class="cl">This filter is used to add or replace a spectra&#39;s TIC/BPI metadata, usually
+</span></span><span class="line"><span class="cl">after peakPicking where the change from profile to centroided data may make the
+</span></span><span class="line"><span class="cl">TIC and BPI values inconsistent with the revised scan data.  The filter
+</span></span><span class="line"><span class="cl">traverses the m/z intensity arrays to find the sum and max. For example, in
+</span></span><span class="line"><span class="cl">msconvert it can be used as: --filter &#34;peakPicking true 1-&#34; --filter
+</span></span><span class="line"><span class="cl">metadataFixer.  It can also be used without peak picking for some strange
+</span></span><span class="line"><span class="cl">results. Certainly adding up all the samples of profile data to get the TIC is
+</span></span><span class="line"><span class="cl">just wrong, but we do it anyway.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">titleMaker &lt;format_string&gt;
+</span></span><span class="line"><span class="cl">This filter adds or replaces spectrum titles according to specified
+</span></span><span class="line"><span class="cl">&lt;format_string&gt;. You can use it, for example, to customize the TITLE line in MGF
+</span></span><span class="line"><span class="cl">output in msconvert.  The following keywords are recognized: 
+</span></span><span class="line"><span class="cl">   &#34;&lt;RunId&gt;&#34; - prints the spectrum&#39;s Run id - for example, &#34;Data.d&#34; from
+</span></span><span class="line"><span class="cl">&#34;C:/Agilent/Data.d/AcqData/mspeak.bin&#34;
+</span></span><span class="line"><span class="cl">   &#34;&lt;Index&gt;&#34; - prints the spectrum&#39;s index
+</span></span><span class="line"><span class="cl">   &#34;&lt;Id&gt;&#34; - prints the spectrum&#39;s nativeID
+</span></span><span class="line"><span class="cl">   &#34;&lt;SourcePath&gt;&#34; - prints the path of the spectrum&#39;s source data
+</span></span><span class="line"><span class="cl">   &#34;&lt;ScanNumber&gt;&#34; - if the nativeID can be represented as a single number,
+</span></span><span class="line"><span class="cl">prints that number, else index+1
+</span></span><span class="line"><span class="cl">   &#34;&lt;ActivationType&gt;&#34; - for the first precursor, prints the spectrum&#39;s
+</span></span><span class="line"><span class="cl">&#34;dissociation method&#34; value
+</span></span><span class="line"><span class="cl">   &#34;&lt;IsolationMz&gt;&#34; - for the first precursor, prints the the spectrum&#39;s
+</span></span><span class="line"><span class="cl">&#34;isolation target m/z&#34; value
+</span></span><span class="line"><span class="cl">   &#34;&lt;PrecursorSpectrumId&gt;&#34; - prints the nativeID of the spectrum of the first
+</span></span><span class="line"><span class="cl">precursor
+</span></span><span class="line"><span class="cl">   &#34;&lt;SelectedIonMz&gt;&#34; - prints the m/z value of the first selected ion of the
+</span></span><span class="line"><span class="cl">first precursor
+</span></span><span class="line"><span class="cl">   &#34;&lt;ChargeState&gt;&#34; - prints the charge state for the first selected ion of the
+</span></span><span class="line"><span class="cl">first precursor
+</span></span><span class="line"><span class="cl">   &#34;&lt;SpectrumType&gt;&#34; - prints the spectrum type
+</span></span><span class="line"><span class="cl">   &#34;&lt;ScanStartTimeInSeconds&gt;&#34; - prints the spectrum&#39;s first scan&#39;s start time,
+</span></span><span class="line"><span class="cl">in seconds
+</span></span><span class="line"><span class="cl">   &#34;&lt;ScanStartTimeInMinutes&gt;&#34; - prints the spectrum&#39;s first scan&#39;s start time,
+</span></span><span class="line"><span class="cl">in minutes
+</span></span><span class="line"><span class="cl">   &#34;&lt;BasePeakMz&gt;&#34; - prints the spectrum&#39;s base peak m/z
+</span></span><span class="line"><span class="cl">   &#34;&lt;BasePeakIntensity&gt;&#34; - prints the spectrum&#39;s base peak intensity
+</span></span><span class="line"><span class="cl">   &#34;&lt;TotalIonCurrent&gt;&#34; - prints the spectrum&#39;s total ion current
+</span></span><span class="line"><span class="cl">   &#34;&lt;MsLevel&gt;&#34; - prints the spectrum&#39;s MS level
+</span></span><span class="line"><span class="cl">For example, to create a TITLE line in msconvert MGF output with the
+</span></span><span class="line"><span class="cl">&#34;name.first_scan.last_scan.charge&#34; style (eg. &#34;mydata.145.145.2&#34;), use
+</span></span><span class="line"><span class="cl">--filter &#34;titleMaker &lt;RunId&gt;.&lt;ScanNumber&gt;.&lt;ScanNumber&gt;.&lt;ChargeState&gt;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">threshold &lt;type&gt; &lt;threshold&gt; &lt;orientation&gt; [&lt;mslevels&gt;]
+</span></span><span class="line"><span class="cl">This filter keeps data whose values meet various threshold criteria.
+</span></span><span class="line"><span class="cl">   &lt;type&gt; must be one of:
+</span></span><span class="line"><span class="cl">      count - keep the n=&lt;threshold&gt; [most|least] intense data points, where n
+</span></span><span class="line"><span class="cl">is an integer.  Any data points with the same intensity as the nth [most|least]
+</span></span><span class="line"><span class="cl">intense data point are removed.
+</span></span><span class="line"><span class="cl">      count-after-ties - like &#34;count&#34;, except that any data points with the same
+</span></span><span class="line"><span class="cl">intensity as the nth [most|least] data point are retained.
+</span></span><span class="line"><span class="cl">      absolute - keep data whose absolute intensity is [more|less] than
+</span></span><span class="line"><span class="cl">&lt;threshold&gt;
+</span></span><span class="line"><span class="cl">      bpi-relative - keep data whose intensity is [more|less] than &lt;threshold&gt;
+</span></span><span class="line"><span class="cl">percent of the base peak intensity.  Percentage is expressed as a number between
+</span></span><span class="line"><span class="cl">0 and 1, for example 75 percent is &#34;0.75&#34;.
+</span></span><span class="line"><span class="cl">      tic-relative - keep data whose individual intensities are [more|less] than
+</span></span><span class="line"><span class="cl">&lt;threshold&gt; percent of the total ion current for the scan. Again, precentage is
+</span></span><span class="line"><span class="cl">expressed as a number between 0 and 1.
+</span></span><span class="line"><span class="cl">      tic-cutoff - keep the [most|least] intense data points up to &lt;threshold&gt;
+</span></span><span class="line"><span class="cl">percent of the total ion current.  That is, the TIC of the retained points is
+</span></span><span class="line"><span class="cl">&lt;threshold&gt; percent (expressed as a number between 0 and 1) of the original TIC.
+</span></span><span class="line"><span class="cl">   &lt;orientation&gt; must be one of:
+</span></span><span class="line"><span class="cl">      most-intense (keep m/z-intensity pairs above the threshold)
+</span></span><span class="line"><span class="cl">      least-intense (keep m/z-intensity pairs below the threshold)
+</span></span><span class="line"><span class="cl">   &lt;mslevels&gt; is an optional int_set of MS levels - if provided, only scans with
+</span></span><span class="line"><span class="cl">those MS levels will be filtered, and others left untouched.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mzWindow &lt;mzrange&gt;
+</span></span><span class="line"><span class="cl">keeps mz/intensity pairs whose m/z values fall within the specified range.
+</span></span><span class="line"><span class="cl">  &lt;mzrange&gt; is formatted as [mzLow,mzHigh].  For example, in msconvert to retain
+</span></span><span class="line"><span class="cl">data in the m/z range 100.1 to 307.5, use --filter &#34;mzWindow [100.1,307.5]&#34; .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mzPrecursors &lt;precursor_mz_list&gt; [mzTol=&lt;mzTol (10 ppm)&gt;]
+</span></span><span class="line"><span class="cl">[target=&lt;selected|isolated&gt; (selected)] [mode=&lt;include|exclude (include)&gt;]
+</span></span><span class="line"><span class="cl">Filters spectra based on precursor m/z values found in the &lt;precursor_mz_list&gt;,
+</span></span><span class="line"><span class="cl">with &lt;mzTol&gt; m/z tolerance. To retain only spectra with precursor m/z values of
+</span></span><span class="line"><span class="cl">123.4 and 567.8, use --filter &#34;mzPrecursors [123.4,567.8]&#34;. Note that this
+</span></span><span class="line"><span class="cl">filter will drop MS1 scans unless you include 0.0 in the list of precursor
+</span></span><span class="line"><span class="cl">values.   &lt;mzTol&gt; is optional and must be specified as a number and units (PPM
+</span></span><span class="line"><span class="cl">or MZ). For example, &#34;5 PPM&#34; or &#34;2.1 MZ&#34;.
+</span></span><span class="line"><span class="cl">   &lt;target&gt; is optional and must be either &#34;selected&#34; (the default) or
+</span></span><span class="line"><span class="cl">&#34;isolated&#34;. It determines whether the isolated m/z or the selected m/z is used
+</span></span><span class="line"><span class="cl">for the &#34;precursor m/z&#34;
+</span></span><span class="line"><span class="cl">   &lt;mode&gt; is optional and must be either &#34;include&#34; (the default) or &#34;exclude&#34;. 
+</span></span><span class="line"><span class="cl">If &#34;exclude&#34; is used, the filter drops spectra that match the various criteria
+</span></span><span class="line"><span class="cl">instead of keeping them.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">defaultArrayLength &lt;peak_count_range&gt;
+</span></span><span class="line"><span class="cl">Keeps only spectra with peak counts within &lt;peak_count_range&gt;, expressed as an
+</span></span><span class="line"><span class="cl">int_set. (In mzML the peak list length is expressed as &#34;defaultArrayLength&#34;,
+</span></span><span class="line"><span class="cl">hence the name.)  For example, to include only spectra with 100 or more peaks,
+</span></span><span class="line"><span class="cl">you would use filter &#34;defaultArrayLength 100-&#34; .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">zeroSamples &lt;mode&gt; [&lt;MS_levels&gt;]
+</span></span><span class="line"><span class="cl">This filter deals with zero values in spectra - either removing them, or adding
+</span></span><span class="line"><span class="cl">them where they are missing.
+</span></span><span class="line"><span class="cl">  &lt;mode&gt; is either removeExtra or addMissing[=&lt;flankingZeroCount&gt;] .
+</span></span><span class="line"><span class="cl">  &lt;MS_levels&gt; is optional, when provided (as an int_set) the filter is applied
+</span></span><span class="line"><span class="cl">only to spectra with those MS levels.
+</span></span><span class="line"><span class="cl">When &lt;mode&gt; is &#34;removeExtra&#34;, consecutive zero intensity peaks are removed from
+</span></span><span class="line"><span class="cl">spectra.  For example, a peak list
+</span></span><span class="line"><span class="cl">  &#34;100.1,1000 100.2,0 100.3,0 100.4,0 100.5,0 100.6,1030&#34;
+</span></span><span class="line"><span class="cl">would become 
+</span></span><span class="line"><span class="cl">  &#34;100.1,1000 100.2,0 100.5,0 100.6,1030&#34;
+</span></span><span class="line"><span class="cl">and a peak list 
+</span></span><span class="line"><span class="cl">  &#34;100.1,0 100.2,0 100.3,0 100.4,0 100.5,0 100.6,1030 100.7,0 100.8,1020 100.9,0
+</span></span><span class="line"><span class="cl">101.0,0&#34;
+</span></span><span class="line"><span class="cl">would become 
+</span></span><span class="line"><span class="cl">  &#34;100.5,0 100.6,1030 100.7,0 100.8,1020 100.9,0&#34;
+</span></span><span class="line"><span class="cl">When &lt;mode&gt; is &#34;addMissing&#34;, each spectrum&#39;s sample rate is automatically
+</span></span><span class="line"><span class="cl">determined (the rate can change but only gradually) and flanking zeros are
+</span></span><span class="line"><span class="cl">inserted around non-zero data points.  The optional [=&lt;flankingZeroCount&gt;] value
+</span></span><span class="line"><span class="cl">can be used to limit the number of flanking zeros, otherwise the spectrum is
+</span></span><span class="line"><span class="cl">completely populated between nonzero points. For example, to make sure spectra
+</span></span><span class="line"><span class="cl">have at least 5 flanking zeros around runs on nonzero points, use filter
+</span></span><span class="line"><span class="cl">&#34;addMissing=5&#34;.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mzPresent &lt;mz_list&gt; [mzTol=&lt;tolerance&gt; (0.5 mz)] [type=&lt;type&gt; (count)]
+</span></span><span class="line"><span class="cl">[threshold=&lt;threshold&gt; (10000)] [orientation=&lt;orientation&gt; (most-intense)]
+</span></span><span class="line"><span class="cl">[mode=&lt;include|exclude (include)&gt;]
+</span></span><span class="line"><span class="cl">This filter includes or excludes spectra depending on whether the specified
+</span></span><span class="line"><span class="cl">peaks are present.
+</span></span><span class="line"><span class="cl">   &lt;mz_list&gt; is a list of mz values of the form [mz1,mz2, ... mzn] (for example,
+</span></span><span class="line"><span class="cl">&#34;[100, 300, 405.6]&#34;). Spectra which contain peaks within &lt;tolerance&gt; of any of
+</span></span><span class="line"><span class="cl">these values will be kept.
+</span></span><span class="line"><span class="cl">   &lt;tolerance&gt; is specified as a number and units (PPM or MZ). For example, &#34;5
+</span></span><span class="line"><span class="cl">PPM&#34; or &#34;2.1 MZ&#34;.
+</span></span><span class="line"><span class="cl">   &lt;type&gt;, &lt;threshold&gt;, and &lt;orientation&gt; operate as in the &#34;threshold&#34; filter
+</span></span><span class="line"><span class="cl">(see above).
+</span></span><span class="line"><span class="cl">   &lt;include|exclude&gt; is optional and has value &#34;include&#34; (the default) or
+</span></span><span class="line"><span class="cl">&#34;exclude&#34;.  If &#34;exclude&#34; is used the filter drops spectra that match the various
+</span></span><span class="line"><span class="cl">criteria instead of keeping them.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scanSumming [precursorTol=&lt;precursor tolerance&gt;] [scanTimeTol=&lt;scan time
+</span></span><span class="line"><span class="cl">tolerance in seconds&gt;] [ionMobilityTol=&lt;ion mobility tolerance&gt;]
+</span></span><span class="line"><span class="cl">This filter sums MS2 sub-scans whose precursors are within &lt;precursor tolerance&gt;
+</span></span><span class="line"><span class="cl">(default: 0.05 m/z), &lt;scan time tolerance&gt; (default: 10 s), and for ion mobility
+</span></span><span class="line"><span class="cl">data, &lt;ion mobility tolerance&gt; (default 0.01 ms or vs/cm^2). It is intended for
+</span></span><span class="line"><span class="cl">some Waters DDA data and Bruker PASEF data, where sub-scans should be summed
+</span></span><span class="line"><span class="cl">together to increase the SNR.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">thermoScanFilter &lt;exact|contains&gt; &lt;include|exclude&gt; &lt;match string&gt;
+</span></span><span class="line"><span class="cl">   Includes or excludes scans based on the scan filter (Thermo instrumentation
+</span></span><span class="line"><span class="cl">only).
+</span></span><span class="line"><span class="cl">   &lt;exact|contains&gt;: If &#34;exact&#34; is set, spectra only match the search string if
+</span></span><span class="line"><span class="cl">there is an exact match.
+</span></span><span class="line"><span class="cl">                     If &#34;contains&#34; is set, spectra match the search string if
+</span></span><span class="line"><span class="cl">the search string is 
+</span></span><span class="line"><span class="cl">                     contained somewhere in the scan filter.
+</span></span><span class="line"><span class="cl">   &lt;include|exclude&gt;: If &#34;include&#34; is set, only spectra that match the filter
+</span></span><span class="line"><span class="cl">will be kept.
+</span></span><span class="line"><span class="cl">                      If &#34;exclude&#34; is set, only spectra that do NOT match the
+</span></span><span class="line"><span class="cl">filter will be kept.
+</span></span><span class="line"><span class="cl">                     used the filter drops data points that match the various
+</span></span><span class="line"><span class="cl">criteria instead of keeping them.   &lt;match string&gt; specifies the search string
+</span></span><span class="line"><span class="cl">to be compared to each scan filter (it may contain spaces)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MS2Denoise [&lt;peaks_in_window&gt; [&lt;window_width_Da&gt;
+</span></span><span class="line"><span class="cl">[multicharge_fragment_relaxation]]]
+</span></span><span class="line"><span class="cl">Noise peak removal for spectra with precursor ions.
+</span></span><span class="line"><span class="cl">   &lt;peaks_in_window&gt; - the number peaks to select in moving window, default is
+</span></span><span class="line"><span class="cl">6.
+</span></span><span class="line"><span class="cl">   &lt;window_width_Da&gt; - the width of the window in Da, default is 30.
+</span></span><span class="line"><span class="cl">   &lt;multicharge_fragment_relaxation&gt; - if &#34;true&#34; (the default), allows more data
+</span></span><span class="line"><span class="cl">below multiply charged precursors.
+</span></span><span class="line"><span class="cl">The filter first removes any m/z values above the precursor mass minus the mass
+</span></span><span class="line"><span class="cl">of glycine.
+</span></span><span class="line"><span class="cl">It then removes any m/z values within .5 Da of the unfragmented precursor mass.
+</span></span><span class="line"><span class="cl">Finally it retains only the &lt;peaks_in_window&gt; most intense ions within a sliding
+</span></span><span class="line"><span class="cl">window of &lt;window_width_Da&gt;.
+</span></span><span class="line"><span class="cl">If &lt;multicharge_fragment_relaxation&gt; is true, allows more peaks at lower mass
+</span></span><span class="line"><span class="cl">(i.e. below precursor).
+</span></span><span class="line"><span class="cl">If &lt;window_width_Da&gt; is set to 0, the window size defaults to the highest
+</span></span><span class="line"><span class="cl">observed mass in the spectrum (this leaving only &lt;peaks_in_window&gt; ions in the
+</span></span><span class="line"><span class="cl">output spectrum).
+</span></span><span class="line"><span class="cl">Reference: &#34;When less can yield more - Computational preprocessing of MS/MS
+</span></span><span class="line"><span class="cl">spectra for peptide identification&#34;, Bernhard Y. Renard, Marc Kirchner, Flavio
+</span></span><span class="line"><span class="cl">Monigatti, Alexander R. Ivanov, Juri Rappsilber, Dominic Winter, Judith A. J.
+</span></span><span class="line"><span class="cl">Steen, Fred A. Hamprecht and Hanno Steen  Proteomics, 9, 4978-4984, 2009.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MS2Deisotope [hi_res [mzTol=&lt;mzTol&gt;]] [Poisson [minCharge=&lt;minCharge&gt;]
+</span></span><span class="line"><span class="cl">[maxCharge=&lt;maxCharge&gt;]]
+</span></span><span class="line"><span class="cl">Deisotopes ms2 spectra using the Markey method or a Poisson model.
+</span></span><span class="line"><span class="cl">  For the Markey method, hi_res sets high resolution mode to &#34;false&#34; (the
+</span></span><span class="line"><span class="cl">default) or &#34;true&#34;.
+</span></span><span class="line"><span class="cl">  &lt;mzTol&gt; sets the mz tolerance.  It defaults to .01 in high resoltion mode,
+</span></span><span class="line"><span class="cl">otherwise it defaults to 0.5.
+</span></span><span class="line"><span class="cl">  Poisson activates a Poisson model based on the relative intensity
+</span></span><span class="line"><span class="cl">distribution.
+</span></span><span class="line"><span class="cl">  &lt;minCharge&gt; (default: 1) and &lt;maxCharge&gt; (default: 3) define the charge search
+</span></span><span class="line"><span class="cl">range within the Poisson deisotoper. (default: 1)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ETDFilter [&lt;removePrecursor&gt; [&lt;removeChargeReduced&gt; [&lt;removeNeutralLoss&gt;
+</span></span><span class="line"><span class="cl">[&lt;blanketRemoval&gt; [&lt;matchingTolerance&gt; ]]]]]
+</span></span><span class="line"><span class="cl">Filters ETD MSn spectrum data points, removing unreacted precursors,
+</span></span><span class="line"><span class="cl">charge-reduced precursors, and neutral losses.
+</span></span><span class="line"><span class="cl">  &lt;removePrecursor&gt; - if &#34;true&#34;, remove unreacted precursor (default is &#34;true&#34;)
+</span></span><span class="line"><span class="cl">  &lt;removeChargeReduced&gt; - if &#34;true&#34;, remove charge reduced precursor (default is
+</span></span><span class="line"><span class="cl">&#34;true&#34;)
+</span></span><span class="line"><span class="cl">  &lt;removeNeutralLoss&gt; - if &#34;true&#34;, remove neutral loss species from charge
+</span></span><span class="line"><span class="cl">reduced precursor (default is &#34;true&#34;)
+</span></span><span class="line"><span class="cl">  &lt;blanketRemoval&gt; - if &#34;true&#34;, remove neutral losses in a charge-scaled 60 Da
+</span></span><span class="line"><span class="cl">swath rather than only around known loss species (default is &#34;true&#34;)
+</span></span><span class="line"><span class="cl">  &lt;matchingTolerance&gt; - specify matching tolerance in m/z or ppm (examples: &#34;3.1
+</span></span><span class="line"><span class="cl">mz&#34; (the default) or &#34;2.2 ppm&#34;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">demultiplex massError=&lt;tolerance and units, eg 0.5Da (default 10ppm)&gt;
+</span></span><span class="line"><span class="cl">nnlsMaxIter=&lt;int (50)&gt; nnlsEps=&lt;real (1e-10)&gt; noWeighting=&lt;bool (false)&gt;
+</span></span><span class="line"><span class="cl">demuxBlockExtra=&lt;real (0)&gt; variableFill=&lt;bool (false)&gt; noSumNormalize=&lt;bool
+</span></span><span class="line"><span class="cl">(false)&gt; optimization=&lt;(none)|overlap_only&gt; interpolateRT=&lt;bool (true)&gt;
+</span></span><span class="line"><span class="cl">minWindowSize=&lt;real (0.2)&gt;
+</span></span><span class="line"><span class="cl">Separates overlapping or MSX multiplexed spectra into several demultiplexed
+</span></span><span class="line"><span class="cl">spectra by inferring from adjacent multiplexed spectra. Optionally handles
+</span></span><span class="line"><span class="cl">variable fill times (for Thermo).
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">chargeStatePredictor [overrideExistingCharge=&lt;true|false (false)&gt;]
+</span></span><span class="line"><span class="cl">[maxMultipleCharge=&lt;int (3)&gt;] [minMultipleCharge=&lt;int (2)&gt;]
+</span></span><span class="line"><span class="cl">[singleChargeFractionTIC=&lt;real (0.9)&gt;] [maxKnownCharge=&lt;int (0)&gt;]
+</span></span><span class="line"><span class="cl">[makeMS2=&lt;true|false (false)&gt;]
+</span></span><span class="line"><span class="cl">Predicts MSn spectrum precursors to be singly or multiply charged depending on
+</span></span><span class="line"><span class="cl">the ratio of intensity above and below the precursor m/z, or optionally using
+</span></span><span class="line"><span class="cl">the &#34;makeMS2&#34; algorithm
+</span></span><span class="line"><span class="cl">  &lt;overrideExistingCharge&gt; : always override existing charge information
+</span></span><span class="line"><span class="cl">(default:&#34;false&#34;)
+</span></span><span class="line"><span class="cl">  &lt;maxMultipleCharge&gt; (default 3) and &lt;minMultipleCharge&gt; (default 2): range of
+</span></span><span class="line"><span class="cl">values to add to the spectrum&#39;s existing &#34;MS_possible_charge_state&#34; values.If
+</span></span><span class="line"><span class="cl">these are the same values, the spectrum&#39;s MS_possible_charge_state values are
+</span></span><span class="line"><span class="cl">removed and replaced with this single value.
+</span></span><span class="line"><span class="cl">  &lt;singleChargeFractionTIC&gt; : is a percentage expressed as a value between 0 and
+</span></span><span class="line"><span class="cl">1 (the default is 0.9, or 90 percent). This is the value used as the previously
+</span></span><span class="line"><span class="cl">mentioned ratio of intensity above and below the precursor m/z.
+</span></span><span class="line"><span class="cl">  &lt;maxKnownCharge&gt; (default is 0, meaning no maximum): the maximum charge
+</span></span><span class="line"><span class="cl">allowed for &#34;known&#34; charges even if override existing charge is false. This
+</span></span><span class="line"><span class="cl">allows overriding junk charge calls like +15 peptides.
+</span></span><span class="line"><span class="cl">  &lt;algorithmMakeMS2&gt; : default is &#34;false&#34;, when set to &#34;true&#34; the &#34;makeMS2&#34;
+</span></span><span class="line"><span class="cl">algorithm is used instead of the one described above.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">turbocharger [minCharge=&lt;minCharge&gt;] [maxCharge=&lt;maxCharge&gt;]
+</span></span><span class="line"><span class="cl">[precursorsBefore=&lt;before&gt;] [precursorsAfter=&lt;after&gt;] [halfIsoWidth=&lt;half-width
+</span></span><span class="line"><span class="cl">of isolation window&gt;] [defaultMinCharge=&lt;defaultMinCharge&gt;]
+</span></span><span class="line"><span class="cl">[defaultMaxCharge=&lt;defaultMaxCharge&gt;] [useVendorPeaks=&lt;useVendorPeaks&gt;]
+</span></span><span class="line"><span class="cl">Predicts MSn spectrum precursor charge based on the isotopic distribution
+</span></span><span class="line"><span class="cl">associated with the survey scan(s) of the selected precursor
+</span></span><span class="line"><span class="cl">  &lt;maxCharge&gt; (default: 8) and &lt;minCharge&gt; (default 1): defines range of
+</span></span><span class="line"><span class="cl">possible precursor charge states.
+</span></span><span class="line"><span class="cl">  &lt;before&gt; (default: 2) and &lt;after&gt; (default 0): number of survey (MS1) scans to
+</span></span><span class="line"><span class="cl">check for precursor isotopes, before and after a MS/MS in retention time.
+</span></span><span class="line"><span class="cl">  &lt;half-width of isolation window&gt; (default: 1.25): half-width of the isolation
+</span></span><span class="line"><span class="cl">window (in Th.) from which precursor is derived. Window is centered at target
+</span></span><span class="line"><span class="cl">m/z with a total size of +/- the value entered.
+</span></span><span class="line"><span class="cl">  &lt;defaultMinCharge&gt; (default: 0) and &lt;defaultMaxCharge&gt; (default: 0): in the
+</span></span><span class="line"><span class="cl">event that no isotope is found in the isolation window, a range of charges
+</span></span><span class="line"><span class="cl">between these two values will be assigned to the spectrum. If both values are
+</span></span><span class="line"><span class="cl">left at zero, no charge will be assigned to the spectrum.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">activation &lt;precursor_activation_type&gt;
+</span></span><span class="line"><span class="cl">Keeps only spectra whose precursors have the specifed activation type.  It
+</span></span><span class="line"><span class="cl">doesn&#39;t affect non-MS spectra, and doesn&#39;t affect MS1 spectra. Use it to create
+</span></span><span class="line"><span class="cl">output files containing only ETD or CID MSn data where both activation modes
+</span></span><span class="line"><span class="cl">have been interleaved within a given input vendor data file (eg: Thermo&#39;s
+</span></span><span class="line"><span class="cl">Decision Tree acquisition mode).
+</span></span><span class="line"><span class="cl">   &lt;precursor_activation_type&gt; is any one of: ETD CID SA HCD HECID BIRD ECD
+</span></span><span class="line"><span class="cl">IRMPD PD PSD PQD SID or SORI.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">collisionEnergy low=&lt;real&gt; high=&lt;real&gt; [mode=&lt;include|exclude (include)&gt;]
+</span></span><span class="line"><span class="cl">[acceptNonCID=&lt;true|false (true)] [acceptMissingCE=&lt;true|false (false)]
+</span></span><span class="line"><span class="cl">Includes/excludes MSn spectra with CID collision energy within the specified
+</span></span><span class="line"><span class="cl">range [&lt;low&gt;, &lt;high&gt;].
+</span></span><span class="line"><span class="cl">   Non-MS and MS1 spectra are always included. Non-CID MS2s and MS2s with
+</span></span><span class="line"><span class="cl">missing CE are optionally included/excluded.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">analyzer &lt;analyzer&gt;
+</span></span><span class="line"><span class="cl">This filter keeps only spectra with the indicated mass analyzer type. 
+</span></span><span class="line"><span class="cl">  &lt;analyzer&gt; is any one of &#34;quad&#34; &#34;orbi&#34; &#34;FT&#34; &#34;IT&#34; or &#34;TOF&#34;.
+</span></span><span class="line"><span class="cl">Sometimes people use the terms FT and Orbi interchangeably, which is OK because
+</span></span><span class="line"><span class="cl">there are no hybrid FT+Orbi instruments - so this filter does too.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">analyzerType &lt;analyzer&gt;
+</span></span><span class="line"><span class="cl">This is deprecated syntax for filtering by mass analyzer type.
+</span></span><span class="line"><span class="cl">  &lt;analyzer&gt; can be &#34;FTMS&#34; or &#34;ITMS&#34;.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">polarity &lt;polarity&gt;
+</span></span><span class="line"><span class="cl">Keeps only spectra with scan of the selected &lt;polarity&gt;.
+</span></span><span class="line"><span class="cl">   &lt;polarity&gt; is any one of &#34;positive&#34; &#34;negative&#34; &#34;+&#34; or &#34;-&#34;.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">diaUmpire params=&lt;filepath to DiaUmpire .params file&gt;
+</span></span><span class="line"><span class="cl">Separates DIA spectra into pseudo-DDA spectra using the DIA Umpire algorithm.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Examples:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># convert data.RAW to data.mzML
+</span></span><span class="line"><span class="cl">msconvert data.RAW
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># convert data.RAW to data.mzXML
+</span></span><span class="line"><span class="cl">msconvert data.RAW --mzXML
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># put output file in my_output_dir
+</span></span><span class="line"><span class="cl">msconvert data.RAW -o my_output_dir
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># combining options to create a smaller mzML file, much like the old ReAdW converter program
+</span></span><span class="line"><span class="cl">msconvert data.RAW --32 --zlib --filter &#34;peakPicking true 1-&#34; --filter &#34;zeroSamples removeExtra&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># extract scan indices 5...10 and 20...25
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;index [5,10] [20,25]&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># extract MS1 scans only
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;msLevel 1&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># extract MS2 and MS3 scans only
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;msLevel 2-3&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># extract MSn scans for n&gt;1
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;msLevel 2-&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># apply ETD precursor mass filter
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter ETDFilter
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># remove non-flanking zero value samples
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;zeroSamples removeExtra&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># remove non-flanking zero value samples in MS2 and MS3 only
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;zeroSamples removeExtra 2 3&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># add missing zero value samples (with 5 flanking zeros) in MS2 and MS3 only
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;zeroSamples addMissing=5 2 3&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># keep only HCD spectra from a decision tree data file
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;activation HCD&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># keep the top 42 peaks or samples (depending on whether spectra are centroid or profile):
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;threshold count 42 most-intense&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># multiple filters: select scan numbers and recalculate precursors
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;scanNumber [500,1000]&#34; --filter &#34;precursorRecalculation&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># multiple filters: apply peak picking and then keep the bottom 100 peaks:
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;peakPicking true 1-&#34; --filter &#34;threshold count 100 least-intense&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># multiple filters: apply peak picking and then keep all peaks that are at least 50% of the intensity of the base peak:
+</span></span><span class="line"><span class="cl">msconvert data.RAW --filter &#34;peakPicking true 1-&#34; --filter &#34;threshold bpi-relative .5 most-intense&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># use a configuration file
+</span></span><span class="line"><span class="cl">msconvert data.RAW -c config.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># example configuration file
+</span></span><span class="line"><span class="cl">mzXML=true
+</span></span><span class="line"><span class="cl">zlib=true
+</span></span><span class="line"><span class="cl">filter=&#34;index [3,7]&#34;
+</span></span><span class="line"><span class="cl">filter=&#34;precursorRecalculation&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Questions, comments, and bug reports:
+</span></span><span class="line"><span class="cl">https://github.com/ProteoWizard
+</span></span><span class="line"><span class="cl">support@proteowizard.org
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ProteoWizard release: 3.0.21354 (9ee14c7)
+</span></span><span class="line"><span class="cl">Build date: Dec 20 2021 16:00:06
+</span></span></code></pre></div><h2 id="example-of-docker">Example of docker</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run --rm -e WINEDEBUG=-all -v /Users/xiaotaoshen/tidymass/massconverter/vignettes/demo_data:/data -v /Users/xiaotaoshen/tidymass/massconverter/vignettes/demo_data/mzxml:/outpath chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert /data/3.raw --ignoreUnknownInstrumentError --mzML --32 --zlib  --filter \&#34;peakPicking true 1-\&#34; --filter \&#34;msLevel 1\&#34;  -o /outpath/
+</span></span></code></pre></div><h2 id="other-links">Other links</h2>
+<ol>
+<li>
+<p><a href="https://fragpipe.nesvilab.org/docs/tutorial_convert.html" target="_blank" rel="noopener">https://fragpipe.nesvilab.org/docs/tutorial_convert.html</a></p>
+</li>
+<li>
+<p><a href="https://currentprotocols.onlinelibrary.wiley.com/doi/10.1002/0471250953.bi1324s46" target="_blank" rel="noopener">https://currentprotocols.onlinelibrary.wiley.com/doi/10.1002/0471250953.bi1324s46</a></p>
+</li>
+<li>
+<p><a href="https://proteowizard.sourceforge.io/tools/filters.html" target="_blank" rel="noopener">https://proteowizard.sourceforge.io/tools/filters.html</a></p>
+</li>
+<li>
+<p><a href="https://ccms-ucsd.github.io/GNPSDocumentation/fileconversion/" target="_blank" rel="noopener">https://ccms-ucsd.github.io/GNPSDocumentation/fileconversion/</a></p>
+</li>
+<li>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/28188540/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/28188540/</a></p>
+</li>
+<li>
+<p><a href="https://rickhelmus.github.io/patRoon/reference/convertMSFiles.html" target="_blank" rel="noopener">https://rickhelmus.github.io/patRoon/reference/convertMSFiles.html</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=xnjvZlSlp40" target="_blank" rel="noopener">https://www.youtube.com/watch?v=xnjvZlSlp40</a></p>
+</li>
+<li>
+<p><a href="https://github.com/pwilmart/PAW_pipeline/blob/master/docs/MSConvert.md" target="_blank" rel="noopener">https://github.com/pwilmart/PAW_pipeline/blob/master/docs/MSConvert.md</a></p>
+</li>
+<li>
+<p><a href="https://link.springer.com/protocol/10.1007/978-1-4939-6747-6_23" target="_blank" rel="noopener">https://link.springer.com/protocol/10.1007/978-1-4939-6747-6_23</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cran/MetabolomicsBasics/blob/master/R/msconvert.R" target="_blank" rel="noopener">https://github.com/cran/MetabolomicsBasics/blob/master/R/msconvert.R</a></p>
+</li>
+</ol>
+<h2 id="session-information">Session information</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; other attached packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] magrittr_2.0.3      massconverter_1.0.3</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] crayon_1.5.2     vctrs_0.6.2      cli_3.6.1        knitr_1.43      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] rlang_1.1.1      xfun_0.39        stringi_1.7.12   purrr_1.0.1     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] jsonlite_1.8.5   glue_1.6.2       rprojroot_2.0.3  htmltools_0.5.5 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] sass_0.4.6       rmarkdown_2.22   evaluate_0.21    jquerylib_0.1.4 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] fastmap_1.1.1    lifecycle_1.0.3  yaml_2.3.7       stevedore_0.9.5 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] bookdown_0.34    stringr_1.5.0    compiler_4.3.0   codetools_0.2-19</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [25] here_1.0.1       rstudioapi_0.14  blogdown_1.18.1  digest_0.6.31   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [29] R6_2.5.1         curl_5.0.1       bslib_0.5.0      tools_4.3.0     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [33] cachem_1.0.8</span>
+</span></span></code></pre></div>
+
+        </article>
+
+        
+
+
+
+
+
+        
+
+
+
+        
+        
+        <div class="article-widget">
+          
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/docs/chapter3/1-proteowizard/" rel="next">Convert data using proteowizard</a>
+  </div>
+  
+  
+</div>
+
+        </div>
+        
+      </div>
+
+      <div class="body-footer">
+        <p>Last updated on May 5, 2019</p>
+
+        
+
+
+
+
+
+
+  
+
+<p class="edit-page">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter3/2-data_convert.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+        
+
+
+  
+  
+  
+
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "blog-at8qrhng8b" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+        
+
+
+      </div>
+
+      <footer class="site-footer">
+  <hr>
+
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+          
+ <div style="flex: 1;">
+            </div>
+            
+    
+            <div style="flex: 1;">
+  <p style="text-align:left;">
+    Find me here:
+    <br>
+    <i class="fa-brands fa-github"></i> <a href="https://github.com/tidymass" target="_blank" rel="noopener">GitHub</a>
+<br>
+        <i class="fa-brands fa-weixin"></i> <a href="https://jaspershen.github.io/image/wechat_QR.jpg" target="_blank" rel="noopener">WeChat</a>
+
+    <br>
+        <i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/xiaotaoshen1990" target="_blank" rel="noopener">Twitter</a>
+        
+   <br>
+        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>  
+        
+        <br>
+<i class="fa-solid fa-location-dot"></i> Address: <a href="https://goo.gl/maps/jSKXmNMoj1s97uQGA" target="_blank" rel="noopener">3165 Porter Drive, Palo Alto, CA 94304</a>
+   
+    </p>
+            </div>
+            
+    
+            <div style="flex: 1;">
+            </div>
+            
+    
+            <div style="flex: 1;">
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=e43qUF1sR8y0B12BqEm-gDwkYxSmbro-n8KEiBINpdY"></script>
+            </div>
+            
+    
+            <div style="flex: 1;">
+            </div>
+    
+        </div>
+        
+      <hr>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022-2023 Xiaotao Shen.
+  </p>
+  
+
+
+
+
+  
+  
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://blog-at8qrhng8b.disqus.com/count.js" async></script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.3322c0d94f0e691b0b24c63f4c41064b.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
