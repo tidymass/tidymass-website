@@ -12,7 +12,7 @@ Here, you can learn how to use `tidyMass` to do the data processing and analysis
 
 <img src="figures/packages.png" alt="packages" style="width:60%;height:60%;">
 
-# If you are new to R or the tidyverse
+# If you are new to R or the `tidyverse`
 
 We recommend that you start by learning some basics about R and the [tidyverse](https://www.tidyverse.org/) first, then return here when you feel ready. Here are some resources to start learning:
 
@@ -26,7 +26,7 @@ You can learn how to install `tidymass`, and update it. You can also find here h
 
 {{< cta cta_text="👉 Chapter 1" cta_link="chapter1" >}}
 
-# Part 2. massDatabase package and `mass_dataset`
+# Part 2. `massdatabase` package and `mass_dataset` class
 
 You can find here how to download the demo data and create `mass_dataset` class by yourself. And how to use `mass_dataset` class organize your omics data and process it.
 

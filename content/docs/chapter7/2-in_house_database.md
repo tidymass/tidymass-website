@@ -1,14 +1,12 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Construct in-house MS2 datbase"
-linktitle: "2 In-house MS2 datbase"
+title: "Construct in-house MS2 database"
+linktitle: "2 In-house MS2 database"
 author: admin
 type: book
 weight: 2
 commentable: true
 ---
-
-
 
 If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the `metid` package. 
 
