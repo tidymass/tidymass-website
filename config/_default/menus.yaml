@@ -16,6 +16,9 @@ main:
   - name: Contact
     url: "#contact"
     weight: 40
+  - name: Contribution
+    url: "#contribution"
+    weight: 50
   - name: Tutorials
     url: docs/
-    weight: 50
+    weight: 60
