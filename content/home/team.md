@@ -4,12 +4,12 @@ id: team
 headless: true
 weight: 30
 title: 🤝 Team
-subtitle: 
+subtitle: "[All team members](team)"
 content:
   sort_ascending: true
   sort_by: Params.last_name
   user_groups:
-    - Leader
+    - authors
 design:
   columns: "1"
   show_interests: true

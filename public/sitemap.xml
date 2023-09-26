@@ -236,13 +236,25 @@
     <loc>https://www.tidymass.org/authors/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://www.tidymass.org/authors/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/author/chuchu-wang/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/author/hanxiang-li/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/author/hong-yan/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/author/xiuqiang-chen/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/author/yuhang-wu/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

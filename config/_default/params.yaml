@@ -43,7 +43,7 @@ header:
 
 footer:
   copyright:
-    notice: '© 2022-2023 Xiaotao Shen.'
+    notice: '© 2022-2023 Xiaotao Shen'
     license:
       enable: false
       allow_derivatives: false
