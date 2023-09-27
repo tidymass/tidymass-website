@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lu Zhang | TidyMass</title>
+    <link>https://www.tidymass.org/author/lu-zhang/</link>
+      <atom:link href="https://www.tidymass.org/author/lu-zhang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Lu Zhang</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.tidymass.org/author/lu-zhang/avatar_hu9d864e150e0beb351121fc4d6c3ed44d_4188077_270x270_fill_q75_lanczos_center.jpg</url>
+      <title>Lu Zhang</title>
+      <link>https://www.tidymass.org/author/lu-zhang/</link>
+    </image>
+    
+  </channel>
+</rss>
