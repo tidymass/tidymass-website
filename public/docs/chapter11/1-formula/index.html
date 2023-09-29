@@ -274,14 +274,12 @@
 
   
 
-<meta name="description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Install Proteowizard Proteowizard only supports Windows OS. So if you don&rsquo;t use Windows OS, consider massconverter.
-Download Proteowizard and install it.
-Data preparation Please place the raw data in one folder according to MS1 and MS2." />
+<meta name="description" content="Introduction In the realm of computational chemistry and bioinformatics, handling and analyzing chemical formulae is a frequent task. While R provides extensive capabilities for data manipulation and analysis, specific tools tailored to chemical formulae can simplify the process." />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter3/1-proteowizard/" />
-<link rel="canonical" href="https://www.tidymass.org/docs/chapter3/1-proteowizard/" />
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter11/1-formula/" />
+<link rel="canonical" href="https://www.tidymass.org/docs/chapter11/1-formula/" />
 
 
 
@@ -317,11 +315,9 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
   <meta property="twitter:creator" content="@wowchemy" />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
-<meta property="og:url" content="https://www.tidymass.org/docs/chapter3/1-proteowizard/" />
-<meta property="og:title" content="Convert data using proteowizard | TidyMass" />
-<meta property="og:description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Install Proteowizard Proteowizard only supports Windows OS. So if you don&rsquo;t use Windows OS, consider massconverter.
-Download Proteowizard and install it.
-Data preparation Please place the raw data in one folder according to MS1 and MS2." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://www.tidymass.org/docs/chapter11/1-formula/" />
+<meta property="og:title" content="Formula function | TidyMass" />
+<meta property="og:description" content="Introduction In the realm of computational chemistry and bioinformatics, handling and analyzing chemical formulae is a frequent task. While R provides extensive capabilities for data manipulation and analysis, specific tools tailored to chemical formulae can simplify the process." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -355,7 +351,7 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
 
 
   
-  <title>Convert data using proteowizard | TidyMass</title>
+  <title>Formula function | TidyMass</title>
 
   
   
@@ -375,7 +371,7 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0562319301706b6ddfba2f69be19cf03" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="6170435c971afc05ccc7a7ccb38fe042" >
 
   
   
@@ -767,7 +763,7 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
         
-          Chapter 3 Data format converter
+          Chapter 11 Some function in tidymass
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -925,7 +921,7 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
       
 
 
-  <li class="active"><a href="/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
+  <li class=""><a href="/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
 
 
 
@@ -1193,7 +1189,7 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
       
 
 
-  <li class=""><a href="/docs/chapter11/1-formula/">Formula function</a></li>
+  <li class="active"><a href="/docs/chapter11/1-formula/">Formula function</a></li>
 
       
         </ul>
@@ -1238,11 +1234,11 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#install-proteowizard">Install <code>Proteowizard</code></a></li>
-    <li><a href="#data-preparation">Data preparation</a></li>
-    <li><a href="#convert-ms1-data-to-mzxml-format-data">Convert MS1 data to <code>mzXML</code> format data</a></li>
-    <li><a href="#convert-ms2-data-to-mzxml-or-mgf-format-data">Convert MS2 data to <code>mzXML</code> or <code>mgf</code> format data</a></li>
-    <li><a href="#session-information">Session information</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#checking-the-validity-of-a-chemical-formula">Checking the Validity of a Chemical Formula</a></li>
+    <li><a href="#parsing-chemical-formulae">Parsing Chemical Formulae</a></li>
+    <li><a href="#calculating-mass-of-chemical-formulae">Calculating Mass of Chemical Formulae</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
 
@@ -1296,16 +1292,16 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
   
 
     <li class="breadcrumb-item">
-      <a href="/docs/chapter3/">
+      <a href="/docs/chapter11/">
         
-          Chapter 3 Data format converter
+          Chapter 11 Some function in tidymass
         
       </a>
     </li>
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        1 proteowizard
+        Formula function
       </li>
     </ol>
   </nav>
@@ -1322,93 +1318,59 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
 
       <div class="docs-article-container">
         
-        <h1>Convert data using proteowizard</h1>
+        <h1>Formula function</h1>
 
         <article class="article-style">
 
           
           
 
-          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">getwd</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34;</span>
-</span></span></code></pre></div><h2 id="install-proteowizard">Install <code>Proteowizard</code></h2>
-<p><code>Proteowizard</code> only supports Windows OS. So if you don&rsquo;t use Windows OS, consider <a href="../2-data_convert">massconverter</a>.</p>
-<p>Download <a href="https://proteowizard.sourceforge.io/" target="_blank" rel="noopener">Proteowizard</a> and install it.</p>
-<h2 id="data-preparation">Data preparation</h2>
-<p>Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using <code>Proteowizard</code> package.</p>
-<h2 id="convert-ms1-data-to-mzxml-format-data">Convert MS1 data to <code>mzXML</code> format data</h2>
-<p>Just convert data into <code>mzXML</code> format data according to the parameters below:</p>
-<p>
+          <h2 id="introduction">Introduction</h2>
+<p>In the realm of computational chemistry and bioinformatics, handling and analyzing chemical formulae is a frequent task. While R provides extensive capabilities for data manipulation and analysis, specific tools tailored to chemical formulae can simplify the process. In this post, we introduce three new functions: <code>is_valid_chemical_formula</code>, <code>parse_chemical_formula</code>, and <code>get_mass</code>. Let&rsquo;s dive into their usage and benefits.</p>
+<blockquote>
+<p>Please update your <code>masstools</code> package before use these functions.</p>
+</blockquote>
+<h2 id="checking-the-validity-of-a-chemical-formula">Checking the Validity of a Chemical Formula</h2>
+<p>The <code>is_valid_chemical_formula</code> function allows users to quickly verify if a given formula is valid based on known chemical elements.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">masstools</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; masstools 1.0.11 (2023-09-29 11:09:36.494214)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Function definition here...</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Copy and paste the &#39;is_valid_chemical_formula&#39; function here</span>
+</span></span><span class="line"><span class="cl"><span class="nf">is_valid_chemical_formula</span><span class="p">(</span><span class="s">&#34;H2O&#34;</span><span class="p">)</span>      <span class="c1"># TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="nf">is_valid_chemical_formula</span><span class="p">(</span><span class="s">&#34;H2ZO4&#34;</span><span class="p">)</span>    <span class="c1"># FALSE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] FALSE</span>
+</span></span></code></pre></div><p>This function returns TRUE if all elements in the formula are recognized and FALSE otherwise.</p>
+<h2 id="parsing-chemical-formulae">Parsing Chemical Formulae</h2>
+<p>With the <code>parse_chemical_formula</code> function, you can break down a chemical formula into its individual elements and their respective counts.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Function definition here...</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Copy and paste the &#39;parse_chemical_formula&#39; function here</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">parse_chemical_formula</span><span class="p">(</span><span class="s">&#34;H2O&#34;</span><span class="p">)</span>       <span class="c1"># Returns H:2 and O:1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   Element Count</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1       H     2</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2       O     1</span>
+</span></span><span class="line"><span class="cl"><span class="nf">parse_chemical_formula</span><span class="p">(</span><span class="s">&#34;C6H12O6&#34;</span><span class="p">)</span>   <span class="c1"># Returns C:6, H:12, and O:6</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   Element Count</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1       C     6</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2       H    12</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3       O     6</span>
+</span></span></code></pre></div><p>The result is presented in a user-friendly data frame format.</p>
+<h2 id="calculating-mass-of-chemical-formulae">Calculating Mass of Chemical Formulae</h2>
+<p>The <code>get_mass</code> function computes the mass of a given formula based on either its exact mass or its average mass.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Function definition here...</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Copy and paste the &#39;get_mass&#39; function here</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">get_mass</span><span class="p">(</span><span class="s">&#34;H2O&#34;</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="s">&#34;exact_mass&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;      H2O </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 18.01056</span>
+</span></span><span class="line"><span class="cl"><span class="nf">get_mass</span><span class="p">(</span><span class="s">&#34;C6H12O6&#34;</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="s">&#34;average_mass&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; C6H12O6 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 180.156</span>
+</span></span></code></pre></div><p>You can specify the type of mass calculation by setting the which parameter to either &ldquo;exact_mass&rdquo; or &ldquo;average_mass&rdquo;.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>These new functions simplify common tasks related to chemical formulae in R. Whether you&rsquo;re verifying the validity of a formula, parsing it, or computing its mass, these tools make the process efficient and user-friendly. We hope they&rsquo;ll be a valuable addition to your R toolkit, especially if you work frequently with chemical data!</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="/docs/chapter3/figures/fig1.png" alt="" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<h2 id="convert-ms2-data-to-mzxml-or-mgf-format-data">Convert MS2 data to <code>mzXML</code> or <code>mgf</code> format data</h2>
-<p>Just convert data into <code>mzXML</code> or <code>mgf</code> format data according to the parameters below:</p>
-<p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="/docs/chapter3/figures/fig2.png" alt="" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<h2 id="session-information">Session information</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.31    R6_2.5.1         codetools_0.2-19 bookdown_0.34   </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] fastmap_1.1.1    xfun_0.39        blogdown_1.18.1  cachem_1.0.8    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] knitr_1.43       htmltools_0.5.5  rmarkdown_2.22   cli_3.6.1       </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] sass_0.4.6       jquerylib_0.1.4  compiler_4.3.0   rprojroot_2.0.3 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] here_1.0.1       rstudioapi_0.14  tools_4.3.0      evaluate_0.21   </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] bslib_0.5.0      yaml_2.3.7       jsonlite_1.8.5   rlang_1.1.1</span>
-</span></span></code></pre></div>
 
         </article>
 
@@ -1429,12 +1391,6 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
 <div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/docs/chapter3/2-data_convert/" rel="prev">Convert data using massconverter</a>
-  </div>
-  
 </div>
 
         </div>
@@ -1454,7 +1410,7 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
   
 
 <p class="edit-page">
-  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter3/1-proteowizard.md">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter11/1-formula.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>

@@ -30,6 +30,10 @@
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://www.tidymass.org/docs/chapter11/1-formula/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/docs/chapter9/1-pahtway_enrichment/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -295,6 +299,12 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/author/yukang-wu/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/author/yunong-yang/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/author/zhonghua-lu/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
