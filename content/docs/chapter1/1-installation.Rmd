@@ -13,7 +13,7 @@ commentable: true
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
-If you don't install R or RStudio on you PC or Mac, please install them first. Otherwise, skip these steps.
+If you haven't installed R or RStudio on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.
 
 {{< cta cta_text="👉 Update R" cta_link="#update-r" >}}
 

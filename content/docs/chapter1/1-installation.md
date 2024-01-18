@@ -11,7 +11,7 @@ commentable: true
 
 
 
-If you don't have R or RStudio on you PC or Mac, please install them first. Otherwise, skip these steps.
+If you do not have R or RStudio installed on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.
 
 {{< cta cta_text="👉 Update R" cta_link="#update-r" >}}
 
@@ -39,7 +39,7 @@ Then open the RStudio
 
 ## Update R
 
-`tidymass` require R version > 4.1. Please update your R if the version < 4.1.
+To use `tidymass`, your R version must be greater than 4.1. If your R version is lower than 4.1, please update it.
 
 You can check your R version in your console:
 

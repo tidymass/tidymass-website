@@ -15358,7 +15358,7 @@
       <link>https://www.tidymass.org/docs/chapter1/1-installation/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/docs/chapter1/1-installation/</guid>
-      <description>&lt;p&gt;If you don&amp;rsquo;t have R or RStudio on you PC or Mac, please install them first. Otherwise, skip these steps.&lt;/p&gt;
+      <description>&lt;p&gt;If you do not have R or RStudio installed on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.&lt;/p&gt;
 
 
 &lt;ul class=&#34;cta-group&#34;&gt;
@@ -15422,7 +15422,7 @@
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;update-r&#34;&gt;Update R&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;tidymass&lt;/code&gt; require R version &amp;gt; 4.1. Please update your R if the version &amp;lt; 4.1.&lt;/p&gt;
+&lt;p&gt;To use &lt;code&gt;tidymass&lt;/code&gt;, your R version must be greater than 4.1. If your R version is lower than 4.1, please update it.&lt;/p&gt;
 &lt;p&gt;You can check your R version in your console:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##                _                           &lt;/span&gt;
