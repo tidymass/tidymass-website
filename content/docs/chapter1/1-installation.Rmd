@@ -15,17 +15,23 @@ knitr::opts_chunk$set(collapse = TRUE)
 
 If you haven't installed R or RStudio on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.
 
+如果您尚未在您的PC或Mac上安装R或RStudio，请在继续之前先安装它们。否则，您可以跳过这些步骤。
+
 {{< cta cta_text="👉 Update R" cta_link="#update-r" >}}
 
 ## Install R
 
 Download the [R](https://www.r-project.org/) and install it.
 
+下载[R](https://www.r-project.org/)并安装。
+
 [👉 Refer this blog](https://www.dataquest.io/blog/installing-r-on-your-computer/)
 
 ## Install RStudio
 
 Then install RStudio. Download the [RStudio](https://www.rstudio.com/products/rstudio/download/#download) and then install it.
+
+然后安装RStudio。下载[RStudio](https://www.rstudio.com/products/rstudio/download/#download)，然后进行安装。
 
 Select the free version of RStudio Desktop.
 
