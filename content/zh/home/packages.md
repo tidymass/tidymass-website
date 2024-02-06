@@ -2,7 +2,7 @@
 widget: portfolio
 headless: true
 weight: 20
-title: 💻 Packages
+title: 💻 R包
 subtitle: 
 content:
   buttons:

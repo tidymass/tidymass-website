@@ -3,7 +3,7 @@ widget: people
 id: team
 headless: true
 weight: 30
-title: 🤝 Team
+title: 🤝 团队
 subtitle: "[All team members](team)"
 content:
   sort_ascending: true

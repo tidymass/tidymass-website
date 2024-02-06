@@ -3,7 +3,7 @@ widget: hero
 id: contribution
 headless: true
 weight: 50
-title: Want to contribute?
+title: 想要做贡献吗？
 hero_media: we-want-you.jpg
 # design:
 cta:
@@ -13,19 +13,19 @@ cta:
   icon: envolope
 ---
 
-We still need more volunteers to help use to maintain and improve this open project. If you are interested, please don't hesitate to contact us!
+我们仍然需要更多志愿者来帮助我们维护和改进这个开源项目。如果您有兴趣，请随时与我们联系！
 
-📕 You need to:
+📕 您需要：
 
-1. Know basic knowledge of R and tidymas.
+1. 掌握基本的R和tidymass知识。
 
-2. Be interested in method development for mass spectrometry data.
+2. 对质谱数据的方法开发感兴趣。
 
-🏆 You can get:
+🏆 您将获得：
 
-1. An active community of tidymass.
+1. 一个活跃的tidymass社区。
 
-2. Co-authorship of new version of tidymass.
+2. tidymass新版本的共同作者身份。
 
 
 

@@ -3,7 +3,7 @@ widget: hero
 id: home
 headless: true
 weight: 10
-title: TidyMass Project
+title: TidyMass项目
 hero_media: tidymass.svg
 design:
   background:
@@ -25,24 +25,26 @@ cta:
 #     </span>
 ---
 
-TidyMass is a comprehensive computational framework for data processing and analysis of LC-MS data using [tidyverse](https://www.tidyverse.org/) principles.
+TidyMass 是一个基于 [tidyverse](https://www.tidyverse.org/) 原则的用于 LC-MS 数据处理和分析的综合性计算框架。
 
-Install tidymass:
+安装 tidymass:
 
 ```
 remotes::install_gitlab("tidymass/tidymass")
 ```
 
-or
+或者
 
 ```
 source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
 install_tidymass(from = "tidymass.org")
 ```
 
-[More here](https://www.tidymass.org/docs/chapter1/)
+[更多内容](https://www.tidymass.org/docs/chapter1/)
 
-Citation: [1 tidymass](https://pubmed.ncbi.nlm.nih.gov/35902589/)
+引用文献: 
+
+[1 tidymass](https://pubmed.ncbi.nlm.nih.gov/35902589/)
 [2 metid](https://pubmed.ncbi.nlm.nih.gov/34432001/)
 [3 massdatabase](https://pubmed.ncbi.nlm.nih.gov/35944213/)
 

@@ -2,7 +2,7 @@
 widget: contact
 headless: true
 weight: 40
-title: 📥 Contact
+title: 📥 联系我们
 subtitle: 
 content:
   email: shenxt1990@outlook.com
