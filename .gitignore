@@ -132,7 +132,46 @@ content/zh/docs/feature_table/
 
 
 
-
+##for public content
+public/zh/docs/create_mass_dataset/index_cache
+public/zh/docs/chapter1/index_cache
+public/zh/docs/chapter2/index_cache
+public/zh/docs/chapter3/index_cache
+public/zh/docs/chapter4/index_cache
+public/zh/docs/chapter5/index_cache
+public/zh/docs/chapter6/index_cache
+public/zh/docs/chapter7/index_cache
+public/zh/docs/chapter8/index_cache
+public/zh/docs/chapter9/index_cache
+public/zh/docs/chapter10/index_cache
+public/zh/docs/mzxml_ms1_data
+public/zh/docs/mzxml_ms1_data/
+public/zh/docs/data_cleaning
+public/zh/docs/data_cleaning/
+public/zh/docs/figures
+public/zh/docs/figures/
+public/zh/docs/metabolite_annotation
+public/zh/docs/metabolite_annotation/
+public/zh/docs/mgf_ms2_data
+public/zh/docs/mgf_ms2_data/
+public/zh/docs/statistical_analysis
+public/zh/docs/statistical_analysis/
+public/zh/docs/pathway_enrichment
+public/zh/docs/pathway_enrichment/
+public/zh/docs/sample_info
+public/zh/docs/sample_info/
+public/zh/docs/metabolite_annotation
+public/zh/docs/metabolite_annotation/
+public/zh/docs/statistical_analysis
+public/zh/docs/statistical_analysis/
+public/zh/docs/pathway_enrichment
+public/zh/docs/pathway_enrichment/
+public/zh/docs/cell_liang_2020
+public/zh/docs/cell_liang_2020/
+public/zh/docs/database_construction
+public/zh/docs/database_construction/
+public/zh/docs/feature_table
+public/zh/docs/feature_table/
 
 
 
