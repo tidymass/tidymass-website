@@ -1,0 +1,178 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Create mass_dataset class"
+linktitle: "1 Create mass_dataset class"
+author: admin
+type: book
+weight: 1
+commentable: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+Here, you can learn how to create `mass_dataset` class object using `tidymass`.
+
+## Data preparation
+
+The `massdataset` class object can be used to store the untargeted metabolomics data.
+
+Let's first prepare the data objects according to the attached figure for each file.
+
+### 1. `sample_info` (required)
+
+The columns `sample_id` (sample ID), `injection.order` (injection order of samples), `class` (Blank, QC, Subject, etc), `group` (case, control, etc) are required.
+
+![](/docs/chapter2/figures/Screen1.png)
+
+### 2. `variable_info` (required)
+
+The columns `variable_id` (variable ID), `mz` (mass to charge ratio), `rt` (retention time, unit is second) are required.
+
+![](/docs/chapter2/figures/Screen2.png)
+
+### 3. `expression_data` (required)
+
+Columns are samples are rows are features (variables). 
+
+> The column names of expression_data should be completely same with sample_id in `sample_info`, and the row names of expression_data should be completely same with variable_id in `variable_info`.
+
+![](/docs/chapter2/figures/Screen3.png)
+
+### 4. `sample_info_note` (optional)
+
+This is the metadata for `sample_info`. 
+
+![](/docs/chapter2/figures/Screen4.png)
+
+### 5. `variable_info_note` (optional)
+
+This is the metadata for `variable_info`.
+
+![](/docs/chapter2/figures/Screen5.png)
+
+## Download demo data
+
+Here we use the demo data from `masssprocesser` package. The demo data can be [downloaded here.](https://drive.google.com/file/d/1KV_1gEGevHJUtgoAY7BNv0ALvz3vCucX/view?usp=sharing)
+
+Download this data and uncompress it. And then set the path where you put the folder as working directory.
+
+Then prepare data.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(tidyverse)
+peak_table_pos = readr::read_csv("feature_table/Peak_table_pos.csv")
+peak_table_neg = readr::read_csv("feature_table/Peak_table_neg.csv")
+
+sample_info_pos = readr::read_csv("feature_table/sample_info_pos.csv")
+sample_info_neg = readr::read_csv("feature_table/sample_info_neg.csv")
+```
+
+Variable information and expression data are in the peak table. Let's separate them.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+expression_data_pos = 
+  peak_table_pos %>% 
+  dplyr::select(-c(variable_id:rt)) %>% 
+  as.data.frame()
+
+variable_info_pos = 
+  peak_table_pos %>% 
+  dplyr::select(variable_id:rt) %>% 
+  as.data.frame()
+
+rownames(expression_data_pos) = variable_info_pos$variable_id
+
+expression_data_neg = 
+  peak_table_neg %>% 
+  dplyr::select(-c(variable_id:rt)) %>% 
+  as.data.frame()
+
+variable_info_neg = 
+  peak_table_neg %>% 
+  dplyr::select(variable_id:rt) %>% 
+  as.data.frame()
+
+rownames(expression_data_neg) = variable_info_neg$variable_id
+
+colnames(expression_data_pos) == sample_info_pos$sample_id
+colnames(expression_data_neg) == sample_info_neg$sample_id
+```
+
+The orders of `sample_id` in `sample_info` and column names of `expression_data` are different.
+
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+expression_data_pos = 
+  expression_data_pos[,sample_info_pos$sample_id]
+
+expression_data_neg = 
+  expression_data_neg[,sample_info_neg$sample_id]
+
+colnames(expression_data_pos) == sample_info_pos$sample_id
+colnames(expression_data_neg) == sample_info_neg$sample_id
+```
+
+## Create `mass_data` class object
+
+Then we can create `mass_data` class object using `create_mass_dataset()` function.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdataset)
+
+object_pos =
+  create_mass_dataset(
+    expression_data = expression_data_pos,
+    sample_info = sample_info_pos,
+    variable_info = variable_info_pos
+  )
+  
+object_pos
+```
+
+Then negative mode.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_neg =
+  create_mass_dataset(
+    expression_data = expression_data_neg,
+    sample_info = sample_info_neg,
+    variable_info = variable_info_neg
+  )
+  
+object_neg
+```
+
+Then save them for next analysis.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(object_pos, file = "feature_table/object_pos")
+save(object_neg, file = "feature_table/object_neg")
+```
+
+
+## Export `mass_dataset` class object to csv for xlsx
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+export_mass_dataset(object = object_pos,
+                    file_type = "xlsx",
+                    path = "feature_table/demo_data_pos")
+```
+
+Then all the data will be in the `feature_table/demo_data_pos` folder.
+
+![](/docs/chapter2/figures/Screen6.png)
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+sessionInfo()
+```

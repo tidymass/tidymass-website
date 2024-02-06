@@ -1,0 +1,401 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Construct public databases"
+linktitle: "3 Public databases"
+author: admin
+type: book
+weight: 3
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+## Introduction
+
+If you want to construct databases for `metid`, you can use the [massDatabase](https://massdatabase.tidymass.org/) package. `massdatabase` is an R package that operates the online public databases and combines with other tools for streamlined compound annotation and pathway enrichment analysis. `massdatabase` is a flexible, simple, and powerful tool that can be installed on all platforms, allowing the users to leverage all the online public databases for biological function mining.
+
+![](/docs/chapter7/figures/Figure_massdatabase.png)
+
+## Install `massdatabase`
+
+You can install `massdatabase` from [GitLab](https://gitlab.com/tidymass/massdatabase).
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+if(!require(remotes)){
+install.packages("remotes")
+}
+remotes::install_gitlab("jaspershen/massdatabase")
+```
+
+or [GitHub](https://github.com/tidymass/massdatabase)
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+remotes::install_github("tidymass/massdatabase")
+```
+
+or tidymass.org
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
+install_tidymass(from = "tidymass.org", which_package = "massdatabase")
+```
+
+## BIGG database
+
+[BIGG model](http://bigg.ucsd.edu/)is a knowledge base of genome-scale metabolic network reconstructions.
+
+Download the BIGG universal metabolite database:
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdatabase)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+download_bigg_universal_metabolite(path = "database_construction/", 
+                                   sleep = 1)
+```
+
+Then read and convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data <- 
+  read_bigg_universal_metabolite(path = ".")
+```
+
+> It may take a while to download the database.
+
+Then convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+bigg_database <- 
+  convert_bigg_universal2metid(data = data, path = ".")
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+bigg_database
+```
+
+You can save the database to use later.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(bigg_database, file = "database_construction/bigg_database")
+```
+
+## ChEBI database
+
+Chemical Entities of Biological Interest ([ChEBI](https://www.ebi.ac.uk/chebi/)) is a freely available dictionary of molecular entities focused on ‘small’ chemical compounds.
+
+Download the ChEBI compound database:
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdatabase)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+download_chebi_compound(path = "database_construction/")
+```
+
+Then read and convert it to `databaseClass` format.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data <-
+  read_chebi_compound(path = "database_construction")
+```
+
+Then convert it to `databaseClass` format.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+chebi_database <-
+  convert_chebi2metid(data = data, path = "database_construction")
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+chebi_database
+```
+
+You can save the database to use later.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(chebi_database, file = "database_construction/chebi_database")
+```
+
+## FooDB database
+
+[FooDB](https://foodb.ca/) is the world’s largest and most comprehensive resource on food constituents, chemistry and biology.
+
+Download the FooDB database:
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdatabase)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+download_foodb_compound(compound_id = "all", path = "database_construction/")
+```
+
+> It may take a while to download the database.
+
+Then read and convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data <- 
+  read_foodb_compound(path = "database_construction")
+```
+
+Then convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+foodb_dataabse <- 
+  convert_foodb2metid(data = data, path = "database_construction")
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+foodb_dataabse
+```
+
+You can save the database to use later.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(foodb_dataabse, file = "database_construction/foodb_dataabse")
+```
+
+
+## GNPS database
+
+The [GNPS](https://gnps-external.ucsd.edu/gnpslibrary) GNPS is a web-based mass spectrometry ecosystem that aims to be an open-access knowledge base for community-wide organization and sharing of raw, processed, or annotated fragmentation mass spectrometry data (MS/MS). GNPS aids in identification and discovery throughout the entire life cycle of data; from initial data acquisition/analysis to post publication.
+
+
+Download the database:
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdatabase)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+download_gnps_spectral_library(gnps_library = "HMDB", 
+                               path = "database_construction")
+```
+
+The argument `gnps_library` should be one of the `GNPS Library` one this website.
+
+https://gnps-external.ucsd.edu/gnpslibrary
+
+![](/docs/chapter7/figures/Screen-Shot.png)
+
+> It may take a while to download the database.
+
+Then read and convert it to `databaseClass` format.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data <-
+  read_msp_data_gnps(file = "database_construction/HMDB.msp")
+```
+
+Then convert it to `databaseClass` format.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+gnps_database <- 
+  convert_gnps2metid(data = data, path = "database_construction/")
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+gnps_database
+```
+
+You can save the database to use later.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(gnps_database, file = "database_construction/gnps_database")
+```
+
+
+## KEGG database
+
+[KEGG](https://www.genome.jp/kegg/) is a database resource for understanding high-level functions and utilities of the biological system, such as the cell, the organism and the ecosystem, from molecular-level information, especially large-scale molecular datasets generated by genome sequencing and other high-throughput experimental technologies.
+
+Download the database:
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdatabase)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+download_kegg_compound(path = "database_construction/")
+```
+
+> It may take a while to download the database.
+
+Then read and convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data <- 
+  read_kegg_compound(path = "database_construction/")
+```
+
+Then convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+kegg_database <-
+  convert_kegg2metid(data = data, path = "database_construction")
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+kegg_database
+```
+
+You can save the database to use later.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(kegg_database, file = "database_construction/kegg_database")
+```
+
+## LipidMaps
+
+[LIPID MAPS Lipidomics Gateway](https://www.lipidmaps.org/) was created in 2003 via an NIH “Glue Grant” to provide access to lipid nomenclature, databases, tools, protocols, standards, tutorials, meetings, publications, and other resources and serving the international lipid research community.
+
+Download the database:
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdatabase)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+download_lipidmaps_lipid(path = "database_construction")
+```
+
+> It may take a while to download the database.
+
+Uncompress the downloaded zip file.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+unzip(zipfile = "database_construction/LMSD.sdf.zip", 
+      exdir = "database_construction/")
+```
+
+Then read and convert it to `databaseClass` format.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data <-
+  read_sdf_data_lipidmaps(file = "database_construction/structures.sdf")
+```
+
+Then convert it to `databaseClass` format.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+lipidmaps_database <-
+  convert_lipidmaps2metid(data = data, path = "database_construction/")
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+lipidmaps_database
+```
+
+You can save the database to use later.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(lipidmaps_database, file = "database_construction/lipidmaps_database")
+```
+
+## MassBank
+
+[MassBank](https://massbank.eu/MassBank/) is a community effort and you are invited to contribute. Please refer to our contributor documentation and get in touch via github or email.
+
+Download the database:
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdatabase)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+download_massbank_compound(source = "nist", path = "database_construction/")
+```
+
+> It may take a while to download the database.
+
+Then read and convert it to `databaseClass` format.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data <- read_msp_data_massbank(file = "database_construction/massbank_compound/MassBank_NIST.msp")
+```
+
+> It may take a while to read the data.
+
+Then convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+massbank_database <- 
+  convert_massbank2metid_nist(data = data, path = "database_construction/")
+```
+
+> It may take a while to convert the data.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+massbank_database
+```
+
+You can save the database to use later.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(massbank_database, file = "database_construction/massbank_database")
+```
+
+## SMPDB
+
+[SMPDB](https://www.smpdb.ca/) is an interactive, visual database containing more than 30000 small molecule pathways found in humans only.
+
+Download the database:
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(massdatabase)
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+download_smpdb_pathway(path = "database_construction/")
+```
+
+> It may take a while to download the database.
+
+Then read and convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+data <- 
+  read_smpdb_pathway(path = "database_construction/", only_primarity_pathway = TRUE)
+```
+
+Then convert it to `databaseClass` format.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+smpdb_pathway_database <-
+  convert_smpdb2metpath(data = data, path = "database_construction/")
+```
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+smpdb_pathway_database
+```
+
+You can save the database to use later.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(smpdb_pathway_database, file = "database_construction/smpdb_pathway_database")
+```
+
+## Citation
+
+If you use `massdatabase` in your studies, please cite this paper:
+
+[massDatabase: utilities for the operation of the public compound and pathway database. Bioinformatics (2022).](https://academic.oup.com/bioinformatics/article/38/19/4650/6659093)
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+sessionInfo()
+```

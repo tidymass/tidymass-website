@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Preface | TidyMass</title>
+    <link>https://www.tidymass.org/zh/docs/</link>
+      <atom:link href="https://www.tidymass.org/zh/docs/index.xml" rel="self" type="application/rss+xml" />
+    <description>Preface</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 29 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png</url>
+      <title>Preface</title>
+      <link>https://www.tidymass.org/zh/docs/</link>
+    </image>
+    
+  </channel>
+</rss>

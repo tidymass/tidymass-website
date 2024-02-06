@@ -1,0 +1,300 @@
+sample_id,injection.order,class,batch,subject_id,group
+men_normal_166,21,control,1,men_normal_166,male control
+men_normal_2332,220,control,1,men_normal_2332,male control
+men_normal_2357,222,control,1,men_normal_2357,male control
+men_normal_2371,223,control,1,men_normal_2371,male control
+men_normal_2407,224,control,1,men_normal_2407,male control
+men_normal_2409,226,control,1,men_normal_2409,male control
+men_normal_2422,228,control,1,men_normal_2422,male control
+men_normal_2424,229,control,1,men_normal_2424,male control
+men_normal_2477,230,control,1,men_normal_2477,male control
+men_normal_2480,233,control,1,men_normal_2480,male control
+men_normal_2518,237,control,1,men_normal_2518,male control
+men_normal_2521,239,control,1,men_normal_2521,male control
+men_normal_2560,244,control,1,men_normal_2560,male control
+men_normal_2569,245,control,1,men_normal_2569,male control
+men_normal_2612,248,control,1,men_normal_2612,male control
+men_normal_2627,250,control,1,men_normal_2627,male control
+men_normal_2632,251,control,1,men_normal_2632,male control
+men_normal_2659,255,control,1,men_normal_2659,male control
+men_normal_2663,257,control,1,men_normal_2663,male control
+men_normal_2665,258,control,1,men_normal_2665,male control
+men_normal_2673,260,control,1,men_normal_2673,male control
+men_normal_2676,261,control,1,men_normal_2676,male control
+men_normal_2691,263,control,1,men_normal_2691,male control
+men_normal_2700,264,control,1,men_normal_2700,male control
+men_normal_363,39,control,1,men_normal_363,male control
+men_normal_374,41,control,1,men_normal_374,male control
+men_normal_50,8,control,1,men_normal_50,male control
+men_normal_6,3,control,1,men_normal_6,male control
+menLCCstage1_1122,117,case,1,menLCCstage1_1122,male LCC
+menLCCstage1_1487,156,case,1,menLCCstage1_1487,male LCC
+menLCCstage1_1532,186,case,1,menLCCstage1_1532,male LCC
+menLCCstage1_1941,190,case,1,menLCCstage1_1941,male LCC
+menLCCstage1_1969,236,case,1,menLCCstage1_1969,male LCC
+menLCCstage1_2516,6,case,1,menLCCstage1_2516,male LCC
+menLCCstage1_26,252,case,1,menLCCstage1_26,male LCC
+menLCCstage1_2634,30,case,1,menLCCstage1_2634,male LCC
+menLCCstage1_270,51,case,1,menLCCstage1_270,male LCC
+menLCCstage1_507,60,case,1,menLCCstage1_507,male LCC
+menLCCstage1_543,66,case,1,menLCCstage1_543,male LCC
+menLCCstage1_614,73,case,1,menLCCstage1_614,male LCC
+menLCCstage1_679,74,case,1,menLCCstage1_679,male LCC
+menLCCstage1_688,75,case,1,menLCCstage1_688,male LCC
+menLCCstage1_699,83,case,1,menLCCstage1_699,male LCC
+menLCCstage1_755,107,case,1,menLCCstage1_755,male LCC
+menLCCstage2_1011,115,case,1,menLCCstage2_1011,male LCC
+menLCCstage2_1063,135,case,1,menLCCstage2_1063,male LCC
+menLCCstage2_1333,17,case,1,menLCCstage2_1333,male LCC
+menLCCstage2_134,139,case,1,menLCCstage2_134,male LCC
+menLCCstage2_1374,141,case,1,menLCCstage2_1374,male LCC
+menLCCstage2_1402,145,case,1,menLCCstage2_1402,male LCC
+menLCCstage2_1415,168,case,1,menLCCstage2_1415,male LCC
+menLCCstage2_1458,174,case,1,menLCCstage2_1458,male LCC
+menLCCstage2_1723,22,case,1,menLCCstage2_1723,male LCC
+menLCCstage2_1788,182,case,1,menLCCstage2_1788,male LCC
+menLCCstage2_181,25,case,1,menLCCstage2_181,male LCC
+menLCCstage2_1894,198,case,1,menLCCstage2_1894,male LCC
+menLCCstage2_1966,204,case,1,menLCCstage2_1966,male LCC
+menLCCstage2_203,213,case,1,menLCCstage2_203,male LCC
+menLCCstage2_2070,27,case,1,menLCCstage2_2070,male LCC
+menLCCstage2_2154,227,case,1,menLCCstage2_2154,male LCC
+menLCCstage2_2247,35,case,1,menLCCstage2_2247,male LCC
+menLCCstage2_240,40,case,1,menLCCstage2_240,male LCC
+menLCCstage2_2421,54,case,1,menLCCstage2_2421,male LCC
+menLCCstage2_295,57,case,1,menLCCstage2_295,male LCC
+menLCCstage2_373,70,case,1,menLCCstage2_373,male LCC
+menLCCstage2_525,76,case,1,menLCCstage2_525,male LCC
+menLCCstage2_531,89,case,1,menLCCstage2_531,male LCC
+menLCCstage2_597,93,case,1,menLCCstage2_597,male LCC
+menLCCstage2_625,102,case,1,menLCCstage2_625,male LCC
+menLCCstage2_714,112,case,1,menLCCstage2_714,male LCC
+menLCCstage2_868,113,case,1,menLCCstage2_868,male LCC
+menLCCstage2_893,163,case,1,menLCCstage2_893,male LCC
+menLCCstage2_971,167,case,1,menLCCstage2_971,male LCC
+menLCCstage3_1030,202,case,1,menLCCstage3_1030,male LCC
+menLCCstage3_1042,26,case,1,menLCCstage3_1042,male LCC
+menLCCstage3_1550,218,case,1,menLCCstage3_1550,male LCC
+menLCCstage3_1638,242,case,1,menLCCstage3_1638,male LCC
+menLCCstage3_1709,28,case,1,menLCCstage3_1709,male LCC
+menLCCstage3_1881,59,case,1,menLCCstage3_1881,male LCC
+menLCCstage3_1982,71,case,1,menLCCstage3_1982,male LCC
+menLCCstage3_2124,11,case,1,menLCCstage3_2124,male LCC
+menLCCstage3_2167,77,case,1,menLCCstage3_2167,male LCC
+menLCCstage3_229,105,case,1,menLCCstage3_229,male LCC
+menLCCstage3_2297,126,case,1,menLCCstage3_2297,male LCC
+menLCCstage3_2559,151,case,1,menLCCstage3_2559,male LCC
+menLCCstage3_258,154,case,1,menLCCstage3_258,male LCC
+menLCCstage3_537,157,case,1,menLCCstage3_537,male LCC
+menLCCstage3_664,183,case,1,menLCCstage3_664,male LCC
+menLCCstage3_67,193,case,1,menLCCstage3_67,male LCC
+menLCCstage3_717,205,case,1,menLCCstage3_717,male LCC
+menLCCstage3_988,241,case,1,menLCCstage3_988,male LCC
+menRCCstage1_1266,249,case,1,menRCCstage1_1266,male RCC
+menRCCstage1_1475,7,case,1,menRCCstage1_1475,male RCC
+menRCCstage1_1528,15,case,1,menRCCstage1_1528,male RCC
+menRCCstage1_1543,119,case,1,menRCCstage1_1543,male RCC
+menRCCstage1_1902,127,case,1,menRCCstage1_1902,male RCC
+menRCCstage1_2034,16,case,1,menRCCstage1_2034,male RCC
+menRCCstage1_2163,134,case,1,menRCCstage1_2163,male RCC
+menRCCstage1_2205,140,case,1,menRCCstage1_2205,male RCC
+menRCCstage1_2554,148,case,1,menRCCstage1_2554,male RCC
+menRCCstage1_2622,152,case,1,menRCCstage1_2622,male RCC
+menRCCstage1_47,159,case,1,menRCCstage1_47,male RCC
+menRCCstage2_113,195,case,1,menRCCstage2_113,male RCC
+menRCCstage2_1193,196,case,1,menRCCstage2_1193,male RCC
+menRCCstage2_1278,208,case,1,menRCCstage2_1278,male RCC
+menRCCstage2_1288,225,case,1,menRCCstage2_1288,male RCC
+menRCCstage2_130,235,case,1,menRCCstage2_130,male RCC
+menRCCstage2_1331,238,case,1,menRCCstage2_1331,male RCC
+menRCCstage2_1379,240,case,1,menRCCstage2_1379,male RCC
+menRCCstage2_1452,256,case,1,menRCCstage2_1452,male RCC
+menRCCstage2_1501,262,case,1,menRCCstage2_1501,male RCC
+menRCCstage2_1770,38,case,1,menRCCstage2_1770,male RCC
+menRCCstage2_2041,58,case,1,menRCCstage2_2041,male RCC
+menRCCstage2_2054,84,case,1,menRCCstage2_2054,male RCC
+menRCCstage2_2220,85,case,1,menRCCstage2_2220,male RCC
+menRCCstage2_2320,90,case,1,menRCCstage2_2320,male RCC
+menRCCstage2_2408,104,case,1,menRCCstage2_2408,male RCC
+menRCCstage2_2498,106,case,1,menRCCstage2_2498,male RCC
+menRCCstage2_2520,14,case,1,menRCCstage2_2520,male RCC
+menRCCstage2_2551,138,case,1,menRCCstage2_2551,male RCC
+menRCCstage2_2662,171,case,1,menRCCstage2_2662,male RCC
+menRCCstage2_2683,172,case,1,menRCCstage2_2683,male RCC
+menRCCstage2_329,175,case,1,menRCCstage2_329,male RCC
+menRCCstage2_534,180,case,1,menRCCstage2_534,male RCC
+menRCCstage2_797,187,case,1,menRCCstage2_797,male RCC
+menRCCstage2_810,192,case,1,menRCCstage2_810,male RCC
+menRCCstage2_885,201,case,1,menRCCstage2_885,male RCC
+menRCCstage2_981,209,case,1,menRCCstage2_981,male RCC
+menRCCstage2_991,216,case,1,menRCCstage2_991,male RCC
+menRCCstage3_102,37,case,1,menRCCstage3_102,male RCC
+menRCCstage3_1369,61,case,1,menRCCstage3_1369,male RCC
+menRCCstage3_1648,65,case,1,menRCCstage3_1648,male RCC
+menRCCstage3_1737,72,case,1,menRCCstage3_1737,male RCC
+menRCCstage3_1749,2,case,1,menRCCstage3_1749,male RCC
+menRCCstage3_1831,9,case,1,menRCCstage3_1831,male RCC
+menRCCstage3_1877,20,case,1,menRCCstage3_1877,male RCC
+menRCCstage3_1960,31,case,1,menRCCstage3_1960,male RCC
+menRCCstage3_1997,43,case,1,menRCCstage3_1997,male RCC
+menRCCstage3_2113,55,case,1,menRCCstage3_2113,male RCC
+menRCCstage3_2148,68,case,1,menRCCstage3_2148,male RCC
+menRCCstage3_2223,80,case,1,menRCCstage3_2223,male RCC
+menRCCstage3_2270,91,case,1,menRCCstage3_2270,male RCC
+menRCCstage3_2613,103,case,1,menRCCstage3_2613,male RCC
+menRCCstage3_326,114,case,1,menRCCstage3_326,male RCC
+menRCCstage3_546,125,case,1,menRCCstage3_546,male RCC
+menRCCstage3_605,137,case,1,menRCCstage3_605,male RCC
+menRCCstage3_667,149,case,1,menRCCstage3_667,male RCC
+QC01,1,QC,1,QC01,QC
+QC02,12,QC,1,QC02,QC
+QC03,23,QC,1,QC03,QC
+QC04,34,QC,1,QC04,QC
+QC05,45,QC,1,QC05,QC
+QC06,56,QC,1,QC06,QC
+QC07,67,QC,1,QC07,QC
+QC08,78,QC,1,QC08,QC
+QC09,88,QC,1,QC09,QC
+QC10,100,QC,1,QC10,QC
+QC11,111,QC,1,QC11,QC
+QC12,122,QC,1,QC12,QC
+QC13,133,QC,1,QC13,QC
+QC14,144,QC,1,QC14,QC
+QC15,155,QC,1,QC15,QC
+QC16,166,QC,1,QC16,QC
+QC17,177,QC,1,QC17,QC
+QC18,188,QC,1,QC18,QC
+QC19,199,QC,1,QC19,QC
+QC20,210,QC,1,QC20,QC
+QC21,221,QC,1,QC21,QC
+QC22,232,QC,1,QC22,QC
+QC23,243,QC,1,QC23,QC
+QC24,254,QC,1,QC24,QC
+QC25,268,QC,1,QC25,QC
+QC26,278,QC,1,QC26,QC
+QC27,290,QC,1,QC27,QC
+QC28,299,QC,1,QC28,QC
+women_normal_11,130,control,1,women_normal_11,female control
+women_normal_2316,158,control,1,women_normal_2316,female control
+women_normal_2478,179,control,1,women_normal_2478,female control
+women_normal_2495,215,control,1,women_normal_2495,female control
+women_normal_2550,48,control,1,women_normal_2550,female control
+women_normal_264,63,control,1,women_normal_264,female control
+women_normal_2655,82,control,1,women_normal_2655,female control
+women_normal_2670,109,control,1,women_normal_2670,female control
+women_normal_2696,110,control,1,women_normal_2696,female control
+women_normal_2705,129,control,1,women_normal_2705,female control
+women_normal_30,143,control,1,women_normal_30,female control
+women_normal_4,146,control,1,women_normal_4,female control
+women_normal_834,18,control,1,women_normal_834,female control
+women_normal_9,160,control,1,women_normal_9,female control
+womenLCCstage1_1037,4,case,1,womenLCCstage1_1037,female LCC
+womenLCCstage1_110,203,case,1,womenLCCstage1_110,female LCC
+womenLCCstage1_1221,32,case,1,womenLCCstage1_1221,female LCC
+womenLCCstage1_1313,44,case,1,womenLCCstage1_1313,female LCC
+womenLCCstage1_1591,47,case,1,womenLCCstage1_1591,female LCC
+womenLCCstage1_1858,50,case,1,womenLCCstage1_1858,female LCC
+womenLCCstage1_2261,62,case,1,womenLCCstage1_2261,female LCC
+womenLCCstage1_2314,64,case,1,womenLCCstage1_2314,female LCC
+womenLCCstage1_488,69,case,1,womenLCCstage1_488,female LCC
+womenLCCstage1_577,13,case,1,womenLCCstage1_577,female LCC
+womenLCCstage1_743,116,case,1,womenLCCstage1_743,female LCC
+womenLCCstage2_1026,142,case,1,womenLCCstage2_1026,female LCC
+womenLCCstage2_1029,147,case,1,womenLCCstage2_1029,female LCC
+womenLCCstage2_1310,162,case,1,womenLCCstage2_1310,female LCC
+womenLCCstage2_1407,173,case,1,womenLCCstage2_1407,female LCC
+womenLCCstage2_1427,24,case,1,womenLCCstage2_1427,female LCC
+womenLCCstage2_146,181,case,1,womenLCCstage2_146,female LCC
+womenLCCstage2_1601,200,case,1,womenLCCstage2_1601,female LCC
+womenLCCstage2_1917,217,case,1,womenLCCstage2_1917,female LCC
+womenLCCstage2_1972,5,case,1,womenLCCstage2_1972,female LCC
+womenLCCstage2_20,246,case,1,womenLCCstage2_20,female LCC
+womenLCCstage2_2151,46,case,1,womenLCCstage2_2151,female LCC
+womenLCCstage2_276,52,case,1,womenLCCstage2_276,female LCC
+womenLCCstage2_434,53,case,1,womenLCCstage2_434,female LCC
+womenLCCstage2_468,81,case,1,womenLCCstage2_468,female LCC
+womenLCCstage2_504,92,case,1,womenLCCstage2_504,female LCC
+womenLCCstage2_574,95,case,1,womenLCCstage2_574,female LCC
+womenLCCstage2_581,97,case,1,womenLCCstage2_581,female LCC
+womenLCCstage2_618,121,case,1,womenLCCstage2_618,female LCC
+womenLCCstage2_95,161,case,1,womenLCCstage2_95,female LCC
+womenLCCstage3_1097,189,case,1,womenLCCstage3_1097,female LCC
+womenLCCstage3_1404,194,case,1,womenLCCstage3_1404,female LCC
+womenLCCstage3_1440,206,case,1,womenLCCstage3_1440,female LCC
+womenLCCstage3_1631,211,case,1,womenLCCstage3_1631,female LCC
+womenLCCstage3_1783,214,case,1,womenLCCstage3_1783,female LCC
+womenLCCstage3_189,247,case,1,womenLCCstage3_189,female LCC
+womenLCCstage3_1890,259,case,1,womenLCCstage3_1890,female LCC
+womenLCCstage3_192,49,case,1,womenLCCstage3_192,female LCC
+womenLCCstage3_2105,96,case,1,womenLCCstage3_2105,female LCC
+womenLCCstage3_2291,98,case,1,womenLCCstage3_2291,female LCC
+womenLCCstage3_23,108,case,1,womenLCCstage3_23,female LCC
+womenLCCstage3_2594,118,case,1,womenLCCstage3_2594,female LCC
+womenLCCstage3_439,120,case,1,womenLCCstage3_439,female LCC
+womenLCCstage3_515,128,case,1,womenLCCstage3_515,female LCC
+womenLCCstage3_522,153,case,1,womenLCCstage3_522,female LCC
+womenLCCstage3_734,164,case,1,womenLCCstage3_734,female LCC
+womenLCCstage3_771,165,case,1,womenLCCstage3_771,female LCC
+womenLCCstage3_888,169,case,1,womenLCCstage3_888,female LCC
+womenLCCstage3_903,170,case,1,womenLCCstage3_903,female LCC
+womenLCCstage3_938,176,case,1,womenLCCstage3_938,female LCC
+womenRCCstage_1216,185,case,1,womenRCCstage_1216,female RCC
+womenRCCstage1_1617,191,case,1,womenRCCstage1_1617,female RCC
+womenRCCstage1_1779,197,case,1,womenRCCstage1_1779,female RCC
+womenRCCstage1_1963,231,case,1,womenRCCstage1_1963,female RCC
+womenRCCstage1_2038,29,case,1,womenRCCstage1_2038,female RCC
+womenRCCstage1_2202,253,case,1,womenRCCstage1_2202,female RCC
+womenRCCstage1_2235,36,case,1,womenRCCstage1_2235,female RCC
+womenRCCstage1_2258,42,case,1,womenRCCstage1_2258,female RCC
+womenRCCstage1_2596,10,case,1,womenRCCstage1_2596,female RCC
+womenRCCstage1_2600,87,case,1,womenRCCstage1_2600,female RCC
+womenRCCstage1_2668,94,case,1,womenRCCstage1_2668,female RCC
+womenRCCstage1_491,123,case,1,womenRCCstage1_491,female RCC
+womenRCCstage1_910,124,case,1,womenRCCstage1_910,female RCC
+womenRCCstage1_941,131,case,1,womenRCCstage1_941,female RCC
+womenRCCstage2_1014,132,case,1,womenRCCstage2_1014,female RCC
+womenRCCstage2_1171,136,case,1,womenRCCstage2_1171,female RCC
+womenRCCstage2_1190,150,case,1,womenRCCstage2_1190,female RCC
+womenRCCstage2_1196,19,case,1,womenRCCstage2_1196,female RCC
+womenRCCstage2_1304,178,case,1,womenRCCstage2_1304,female RCC
+womenRCCstage2_1387,184,case,1,womenRCCstage2_1387,female RCC
+womenRCCstage2_1514,207,case,1,womenRCCstage2_1514,female RCC
+womenRCCstage2_1643,212,case,1,womenRCCstage2_1643,female RCC
+womenRCCstage2_1665,219,case,1,womenRCCstage2_1665,female RCC
+womenRCCstage2_1683,234,case,1,womenRCCstage2_1683,female RCC
+womenRCCstage2_1728,33,case,1,womenRCCstage2_1728,female RCC
+womenRCCstage2_1733,79,case,1,womenRCCstage2_1733,female RCC
+womenRCCstage2_1846,86,case,1,womenRCCstage2_1846,female RCC
+womenRCCstage2_1937,99,case,1,womenRCCstage2_1937,female RCC
+womenRCCstage2_1987,101,case,1,womenRCCstage2_1987,female RCC
+womenRCCstage2_2066,265,case,1,womenRCCstage2_2066,female RCC
+womenRCCstage2_2427,266,case,1,womenRCCstage2_2427,female RCC
+womenRCCstage2_2479,267,case,1,womenRCCstage2_2479,female RCC
+womenRCCstage2_261,269,case,1,womenRCCstage2_261,female RCC
+womenRCCstage2_2654,270,case,1,womenRCCstage2_2654,female RCC
+womenRCCstage2_315,271,case,1,womenRCCstage2_315,female RCC
+womenRCCstage2_419,272,case,1,womenRCCstage2_419,female RCC
+womenRCCstage2_482,273,case,1,womenRCCstage2_482,female RCC
+womenRCCstage2_64,274,case,1,womenRCCstage2_64,female RCC
+womenRCCstage2_830,275,case,1,womenRCCstage2_830,female RCC
+womenRCCstage2_88,276,case,1,womenRCCstage2_88,female RCC
+womenRCCstage2_896,277,case,1,womenRCCstage2_896,female RCC
+womenRCCstage3_1224,279,case,1,womenRCCstage3_1224,female RCC
+womenRCCstage3_1237,280,case,1,womenRCCstage3_1237,female RCC
+womenRCCstage3_1316,281,case,1,womenRCCstage3_1316,female RCC
+womenRCCstage3_1327,282,case,1,womenRCCstage3_1327,female RCC
+womenRCCstage3_1363,283,case,1,womenRCCstage3_1363,female RCC
+womenRCCstage3_1455,284,case,1,womenRCCstage3_1455,female RCC
+womenRCCstage3_149,285,case,1,womenRCCstage3_149,female RCC
+womenRCCstage3_1855,286,case,1,womenRCCstage3_1855,female RCC
+womenRCCstage3_1924,287,case,1,womenRCCstage3_1924,female RCC
+womenRCCstage3_2208,288,case,1,womenRCCstage3_2208,female RCC
+womenRCCstage3_2244,289,case,1,womenRCCstage3_2244,female RCC
+womenRCCstage3_2249,291,case,1,womenRCCstage3_2249,female RCC
+womenRCCstage3_2303,292,case,1,womenRCCstage3_2303,female RCC
+womenRCCstage3_2494,293,case,1,womenRCCstage3_2494,female RCC
+womenRCCstage3_289,294,case,1,womenRCCstage3_289,female RCC
+womenRCCstage3_377,295,case,1,womenRCCstage3_377,female RCC
+womenRCCstage3_721,296,case,1,womenRCCstage3_721,female RCC
+womenRCCstage3_955,297,case,1,womenRCCstage3_955,female RCC
+womenRCCstage3_958,298,case,1,womenRCCstage3_958,female RCC

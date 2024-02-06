@@ -1,0 +1,52 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Update tidymass"
+linktitle: "2 Update tidymass"
+author: admin
+type: book
+weight: 2
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+## Check `tidymass` version
+
+The `tidymass` package allows you to check the version of all packages and update them. To check for updates specifically for `tidymass` and its associated packages, you can use the following code.
+
+```{r, echo=TRUE, eval=TRUE}
+tidymass::check_tidymass_version()
+```
+
+This will list all the packages version and if there are some new versions can be updated.
+
+## Update `tidymass`
+
+The `update_tidymass()` function can be used to update `tidymass` and packages within it.
+
+```{r, echo=TRUE, eval=FALSE}
+tidymass::update_tidymass(from = "gitlab")
+```
+
+You can change the `from` argument if `from = "gitlab"` doesn't work.
+
+1. "github"
+
+2. "gitee"
+
+3. "tidymass.org"
+
+If all the options of `from` don't work, you can try to set `fastgit` as `TRUE`.
+
+```{r, echo=TRUE, eval=FALSE}
+tidymass::update_tidymass(from = "gitlab",
+                          fastgit = TRUE)
+```
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+sessionInfo()
+```

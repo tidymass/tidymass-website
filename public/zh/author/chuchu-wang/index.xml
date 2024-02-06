@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chuchu Wang | TidyMass</title>
+    <link>https://www.tidymass.org/zh/author/chuchu-wang/</link>
+      <atom:link href="https://www.tidymass.org/zh/author/chuchu-wang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Chuchu Wang</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language>
+    <image>
+      <url>https://www.tidymass.org/zh/author/chuchu-wang/avatar_hu51215c0a8bbc964456e2ad085fdf2525_17439_270x270_fill_q75_lanczos_center.jpg</url>
+      <title>Chuchu Wang</title>
+      <link>https://www.tidymass.org/zh/author/chuchu-wang/</link>
+    </image>
+    
+  </channel>
+</rss>

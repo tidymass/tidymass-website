@@ -1,0 +1,97 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Processing information in mass_data class"
+linktitle: "5 Processing information"
+author: admin
+type: book
+weight: 5
+commentable: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+
+## Data preparation
+
+In `mass_dataset` class object, it contains all the processing information in it. We can trace the analysis and parameters so we can do the reproducible analysis.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+library(massdataset)
+
+data("expression_data")
+data("sample_info")
+data("variable_info")
+
+object =
+  create_mass_dataset(
+    expression_data = expression_data,
+    sample_info = sample_info,
+    variable_info = variable_info
+  )
+
+library(tidyverse)
+
+object =
+  object %>%
+  activate_mass_dataset(what = "expression_data") %>%
+  filter(!is.na(QC_1))
+
+object =
+  object %>%
+  activate_mass_dataset(what = "expression_data") %>%
+  filter(!is.na(QC_2))
+
+object =
+  object %>%
+  mutate_mean_intensity()
+
+object =
+  object %>%
+  mutate_median_intensity() %>%
+  mutate_rsd()
+```
+
+## `process_info`
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+process_info = extract_process_info(object)
+process_info
+```
+
+The process_info contains all the steps which are ordered by time.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+process_info$mutate_median_intensity
+process_info$mutate_median_intensity@parameter
+```
+
+## Output html processing information
+
+We can output the `process_info` into a html format file, so we can know what processing steps have been made to this object and the accurate parameters.
+
+Then we can use `report_parameters()` to output this into a html file.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+report_parameters(object = object, 
+                  path = "data_cleaning")
+```
+
+A html file named as `parameter_report.html` will be generated and saved in `data_cleaning` folder. 
+
+![](/docs/chapter2/figures/Screen7.png)
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+sessionInfo()
+```

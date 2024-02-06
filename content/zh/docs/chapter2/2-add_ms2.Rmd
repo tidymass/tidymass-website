@@ -1,0 +1,93 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Add MS2 spectra data into mass_dataset class object"
+linktitle: "2 Add MS2 spectra"
+author: admin
+type: book
+weight: 2
+commentable: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+`mass_dataset` class object can also contain MS2 data. 
+
+## Data preparation
+
+### `mass_dataset` class object
+
+We need to create a `mass_dataset` class object first, [see this document](../../chapter2/1-create_mass_dataset/). And here we use the data from this step as an example.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+load("feature_table/object_pos")
+load("feature_table/object_neg")
+```
+
+### MS2 data
+
+The MS2 raw data should be converted to `mgf` format data. Please [refer this document](../../chapter3/1-data_convert/).
+
+Here we use the demo data for `tidymass`, please download it and put it in the `mgf_ms2_data` folder.
+
+[💾 Download link is here.](https://drive.google.com/file/d/1FY3x7q5i1g3oSLaVej__ZaZ4XSX-mWBQ/view?usp=sharing)
+
+Then uncompress it.
+
+## Add MS2 to `mass_dataset` class object
+
+Positive mode.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+library(massdataset)
+object_pos2 =
+  mutate_ms2(
+    object = object_pos,
+    column = "rp",
+    polarity = "positive",
+    ms1.ms2.match.mz.tol = 10,
+    ms1.ms2.match.rt.tol = 15,
+    path = "mgf_ms2_data/POS/"
+  )
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+object_pos2
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+object_pos2@ms2_data
+```
+
+Negative mode.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+object_neg2 =
+  mutate_ms2(
+    object = object_neg,
+    column = "rp",
+    polarity = "negative",
+    ms1.ms2.match.mz.tol = 10,
+    ms1.ms2.match.rt.tol = 15,
+    path = "mgf_ms2_data/NEG/"
+  )
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+object_neg2@ms2_data
+```
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+sessionInfo()
+```

@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: 2024年2月6日 --><html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.4b7280f12f476311af2218ec632c93a2.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Xiaotao Shen" />
+
+
+
+
+
+  
+
+<meta name="description" content="Introduction to Metabolomics Data The Danish Project Project studies metabolic changes during human pregnancy and if these altered metabolites could be used to predict preterm.
+Referenced research Liang L, Rasmussen MH, Piening B, Shen X, Chen S, Röst H, Snyder JK, Tibshirani R, Skotte L, Lee NC, Contrepois K, Feenstra B, Zackriah H, Snyder M, Melbye M." />
+
+
+
+  <link rel="alternate" hreflang="en" href="https://www.tidymass.org/docs/chapter10/1-whole_workflow/" />
+
+<link rel="alternate" hreflang="zh-Hans" href="https://www.tidymass.org/zh/docs/chapter10/1-whole_workflow/" />
+<link rel="canonical" href="https://www.tidymass.org/zh/docs/chapter10/1-whole_workflow/" />
+
+
+
+  <link rel="manifest" href="/zh/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#EF525B" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="TidyMass" />
+<meta property="og:url" content="https://www.tidymass.org/zh/docs/chapter10/1-whole_workflow/" />
+<meta property="og:title" content="Whole workflow using tidymass | TidyMass" />
+<meta property="og:description" content="Introduction to Metabolomics Data The Danish Project Project studies metabolic changes during human pregnancy and if these altered metabolites could be used to predict preterm.
+Referenced research Liang L, Rasmussen MH, Piening B, Shen X, Chen S, Röst H, Snyder JK, Tibshirani R, Skotte L, Lee NC, Contrepois K, Feenstra B, Zackriah H, Snyder M, Melbye M." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2019-05-05T00:00:00&#43;01:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Whole workflow using tidymass | TidyMass</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="eb881b3c04fda0c2af05107b91469981" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.bc584d8639f6412fc553d13c23e02e8a.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>搜索</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="搜索...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/zh/">TidyMass</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/zh/">TidyMass</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#hero"><span>主页</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#packages"><span>R包</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#team"><span>团队</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#contact"><span>联系</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#contribution"><span>贡献</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/zh/docs/"><span>文档</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="搜索"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>浅色</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>深色</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>自动</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="语言">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>中文 (简体)</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://www.tidymass.org/docs/chapter10/1-whole_workflow/">
+              <span>English</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+        
+          Chapter 10 Whole workflow using tidymass
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">搜索...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/zh/docs/"><i class="fas fa-house pr-1"></i>Preface</a></li>
+    
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter1/"><i class="fas fa-book pr-1"></i>Chapter 1 Installation</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter1/1-installation/">1 Install tidymass</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter1/2-update/">2 Update tidymass</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset package</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter2/1-create_mass_dataset/">1 Create mass_dataset class</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter2/2-add_ms2/">2 Add MS2 spectra</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter2/3-mass_dataset_other_tools/">3 Create mass_dataset class from other tools</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter2/4-extract/">4 Extract data</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter2/5-processing_information/">5 Processing information</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter3/"><i class="fas fa-book-reader pr-1"></i>Chapter 3 Data format converter</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter3/2-data_convert/">2 massconverter</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter4/"><i class="fas fa-book-reader pr-1"></i>Chapter 4 Raw data processing</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter4/1-raw_data_processing/">Raw data processing</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter5/"><i class="fas fa-book-reader pr-1"></i>Chapter 5 Explore data</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter5/1-data_explore/">Explore data</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter6/"><i class="fas fa-book-reader pr-1"></i>Chapter 6 Data cleaning</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter6/1-data_cleaning/">Data cleaning</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter7/"><i class="fas fa-book-reader pr-1"></i>Chapter 7 Metabolite annotation</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter7/1-metid_database_structure/">1 Databases for metID</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 In-house MS2 database</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter8/"><i class="fas fa-book-reader pr-1"></i>Chapter 8 Statistical analysis</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter8/1-statistical_analysis/">Statistical analysis</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter9/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Pathway enrichment</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter9/1-pahtway_enrichment/">Pathway enrichment</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 10 Whole workflow using tidymass</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/zh/docs/chapter10/1-whole_workflow/">Whole workflow using tidymass</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/zh/docs/chapter11/"><i class="fas fa-book-reader pr-1"></i>Chapter 11 Some function in tidymass</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/zh/docs/chapter11/1-formula/">Formula function</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">在本页</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-metabolomics-data">Introduction to Metabolomics Data</a>
+      <ul>
+        <li><a href="#referenced-research">Referenced research</a></li>
+      </ul>
+    </li>
+    <li><a href="#introduction-to-tidymass-project">Introduction to <code>tidyMass</code> project</a></li>
+    <li><a href="#data-preparation">Data preparation</a></li>
+    <li><a href="#raw-data-processing">Raw data processing</a></li>
+    <li><a href="#explore-data">Explore data</a></li>
+    <li><a href="#data-cleaning">Data cleaning</a>
+      <ul>
+        <li><a href="#data-quality-assessment-before-data-cleaning">Data quality assessment before data cleaning</a></li>
+        <li><a href="#remove-noisy-metabolic-features">Remove noisy metabolic features</a></li>
+        <li><a href="#filter-outlier-samples">Filter outlier samples</a></li>
+        <li><a href="#missing-value-imputation">Missing value imputation</a></li>
+        <li><a href="#data-normalization-and-integration">Data normalization and integration</a></li>
+        <li><a href="#data-quality-assessment-after-data-cleaning">Data quality assessment after data cleaning</a></li>
+      </ul>
+    </li>
+    <li><a href="#metabolite-annotation">Metabolite annotation</a>
+      <ul>
+        <li><a href="#add-ms2-spectra-to-object">Add MS2 spectra to object</a></li>
+        <li><a href="#metabolite-annotation-using-metid">Metabolite annotation using <code>metid</code></a></li>
+        <li><a href="#annotation-result">Annotation result</a></li>
+      </ul>
+    </li>
+    <li><a href="#statistical-analysis">Statistical analysis</a>
+      <ul>
+        <li><a href="#remove-the-features-without-annotations">Remove the features without annotations</a></li>
+        <li><a href="#trace-processing-information-of-object">Trace processing information of object</a></li>
+        <li><a href="#remove-redundant-metabolites">Remove redundant metabolites</a></li>
+        <li><a href="#differential-expression-metabolites">Differential expression metabolites</a></li>
+        <li><a href="#output-result">Output result</a></li>
+      </ul>
+    </li>
+    <li><a href="#pathway-enrichment-analysis">Pathway enrichment analysis</a>
+      <ul>
+        <li><a href="#load-kegg-human-pathway-database">Load <code>KEGG</code> human pathway database</a></li>
+        <li><a href="#remove-the-disease-pathways">Remove the disease pathways:</a></li>
+        <li><a href="#pathway-enrichment">Pathway enrichment</a></li>
+        <li><a href="#check-the-result">Check the result:</a></li>
+        <li><a href="#plot-to-show-pathway-enrichment-result">Plot to show pathway enrichment result</a></li>
+      </ul>
+    </li>
+    <li><a href="#session-information">Session information</a></li>
+  </ul>
+</nav>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+        
+          
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/zh/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/zh/docs/">
+        
+          Preface
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/zh/docs/chapter10/">
+        
+          Chapter 10 Whole workflow using tidymass
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Whole workflow using tidymass
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+        
+      </div>
+
+      
+      
+      
+
+      <div class="docs-article-container">
+        
+        <h1>Whole workflow using tidymass</h1>
+
+        <article class="article-style">
+
+          
+          
+
+          <h2 id="introduction-to-metabolomics-data">Introduction to Metabolomics Data</h2>
+<p>The Danish Project Project studies metabolic changes during human pregnancy and if these altered metabolites could be used to predict preterm.</p>
+<h3 id="referenced-research">Referenced research</h3>
+<ol>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/32589958/" target="_blank" rel="noopener">Liang L, Rasmussen MH, Piening B, Shen X, Chen S, Röst H, Snyder JK, Tibshirani R, Skotte L, Lee NC, Contrepois K, Feenstra B, Zackriah H, Snyder M, Melbye M. Metabolic Dynamics and Prediction of Gestational Age and Time to Delivery in Pregnant Women. Cell. 2020 Jun 25;181(7):1680-1692.e15. doi: 10.1016/j.cell.2020.05.002.</a></li>
+</ol>
+<h2 id="introduction-to-tidymass-project">Introduction to <code>tidyMass</code> project</h2>
+<p>TidyMass is an ecosystem of R packages that share an underlying design philosophy, grammar, and data structure, which provides a comprehensive, reproducible, and object-oriented computational framework. The modular architecture makes tidyMass a highly flexible and extensible tool, which other users can improve and integrate with other tools to customize their own pipeline.</p>
+<p>More information about tidyMass could be found here: <a href="https://www.tidymass.org/" target="_blank" rel="noopener">tidymass.org</a>.</p>
+<ol>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/35902589/" target="_blank" rel="noopener">Shen X, Yan H, Wang C, Gao P, Johnson CH, Snyder MP. TidyMass an object-oriented reproducible analysis framework for LC-MS data. Nat Commun. 2022 Jul 28;13(1):4365. doi: 10.1038/s41467-022-32155-w.</a></li>
+</ol>
+<p>Hopefully, at the end of this module, you will have a better sense of the metabolomics data analysis procedure and how to use R for reproducible data processing and analysis</p>
+<h2 id="data-preparation">Data preparation</h2>
+<p>Download the demo data and uncompress it.</p>
+<ol>
+<li>
+<p><a href="https://drive.google.com/file/d/1ZVijIzq5kmUjouBS2P4UgNfTgoDYgGyy/view?usp=sharing" target="_blank" rel="noopener">Google drive link</a></p>
+</li>
+<li>
+<p>If you can use Google drive, <a href="https://pan.baidu.com/s/1MPJyC-WqA1-xXWV5Ilm27w?pwd=2022" target="_blank" rel="noopener">download here</a>. (code 2022)</p>
+</li>
+</ol>
+<p>The demo data contains RPLC positive mode, with 7 participants, and two samples for each participant (Trimester 1 (&lt; 10 weeks) and trimester 3 (&gt; 30 weeks)). So there are 14 samples in total.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter10/figures/Screen-Shot.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<ol>
+<li>
+<p><code>MS1</code>: MS1 is the folder contains the mzXML for 14 samples.</p>
+</li>
+<li>
+<p><code>MS2</code>: MS2 is the folder contains the mgf for QC samples (MS2 spectra).</p>
+</li>
+<li>
+<p><code>sample_info.xlsx</code>: it is the metadata for samples.</p>
+</li>
+</ol>
+<p>![](/docs/chapter10/figures/Screen-Shot 1.png)</p>
+<hr>
+<h2 id="raw-data-processing">Raw data processing</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidymass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Registered S3 method overwritten by &#39;Hmisc&#39;:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   method       from      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   vcov.default fit.models</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ── Attaching packages ──────────────────────────────────────── tidymass 1.0.8 ──</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ massdataset   1.0.25     ✔ metid         1.2.28</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ massprocesser 1.0.10     ✔ masstools     1.0.10</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ masscleaner   1.0.11     ✔ dplyr         1.1.2 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ massqc        1.0.6      ✔ ggplot2       3.4.2 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ massstat      1.0.5      ✔ magrittr      2.0.3 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ metpath       1.0.8</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ forcats   1.0.0     ✔ readr     2.1.4</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ lubridate 1.9.2     ✔ stringr   1.5.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✔ purrr     1.0.1     ✔ tibble    3.2.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ xcms::collect()          masks dplyr::collect()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ MSnbase::combine()       masks Biobase::combine(), BiocGenerics::combine(), dplyr::combine()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ tidyr::expand()          masks S4Vectors::expand()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ tidyr::extract()         masks magrittr::extract()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ metid::filter()          masks metpath::filter(), dplyr::filter(), massdataset::filter(), stats::filter()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ S4Vectors::first()       masks dplyr::first()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ xcms::groups()           masks dplyr::groups()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ dplyr::lag()             masks stats::lag()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ purrr::map()             masks mixOmics::map()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ BiocGenerics::Position() masks ggplot2::Position(), base::Position()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ purrr::reduce()          masks MSnbase::reduce()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ S4Vectors::rename()      masks dplyr::rename(), massdataset::rename()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ lubridate::second()      masks S4Vectors::second()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ lubridate::second&lt;-()    masks S4Vectors::second&lt;-()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ MASS::select()           masks dplyr::select(), massdataset::select()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ✖ purrr::set_names()       masks magrittr::set_names()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</span>
+</span></span></code></pre></div><p><code>massprocesser</code> package in <code>tidymass</code> is used to do the raw data processing. Please refer this <a href="https://massprocesser.tidymass.org/" target="_blank" rel="noopener">website</a>.</p>
+<p>The code used to do raw data processing (peak picking, peak grouping).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">massprocesser</span><span class="o">::</span><span class="nf">process_data</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;cell_liang_2020/MS1/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ppm</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">peakwidth</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">30</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="n">threads</span> <span class="o">=</span> <span class="m">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">output_tic</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">output_bpc</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">output_rt_correction_plot</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">min_fraction</span> <span class="o">=</span> <span class="m">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>All the results will be placed in the folder named <code>MS1/Result</code>. More information about that can be found <a href="https://tidymass.github.io/massprocesser/articles/raw_data_processing.html" target="_blank" rel="noopener">here</a>.</p>
+<p>![](/docs/chapter10/figures/Screen-Shot 2.png)</p>
+<ol>
+<li>
+<p>BPC.pdf: BPC plot.</p>
+</li>
+<li>
+<p>TIC.pdf: TIC plot.</p>
+</li>
+<li>
+<p>RT correction plot.pdf: Retention time correction plot.</p>
+</li>
+<li>
+<p>Peak_table.csv: Peak table.</p>
+</li>
+<li>
+<p>Peak_table_for_cleaning.csv: Peak table which can be used for data cleaning.</p>
+</li>
+<li>
+<p>object: <code>mass_dataset</code> class object which can be used for subsequent analysis using tidymass.</p>
+</li>
+<li>
+<p>intermediate_data: intermediate data.</p>
+</li>
+</ol>
+<p>You can just load the <code>object</code>, which is a <code>mass_dataset</code> class object.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;cell_liang_2020/MS1/Result/object&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">object</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; massdataset version: 1.0.12 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1.expression_data:[ 9164 x 14 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2.sample_info:[ 14 x 4 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 14 samples:184 214 289 ... 528 739</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3.variable_info:[ 9164 x 3 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 9164 variables:M71T823_POS M72T34_POS M72T822_POS ... M994T593_POS M995T593_POS</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4.sample_info_note:[ 4 x 2 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 5.variable_info_note:[ 3 x 2 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 6.ms2_data:[ 0 variables x 0 MS2 spectra]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Processing information</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2 processings in total</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; create_mass_dataset ---------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package         Function.used                Time</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2022-08-07 16:44:32</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; process_data ---------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;         Package Function.used                Time</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massprocesser  process_data 2022-08-07 16:44:28</span>
+</span></span><span class="line"><span class="cl"><span class="nf">dim</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; variables   samples </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;      9164        14</span>
+</span></span></code></pre></div><p>We can get basic information from the object.</p>
+<p>We have 9164 variables, 14 samples.</p>
+<p>You can use the <code>plot_adjusted_rt()</code> function to get the interactive plot.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;cell_liang_2020/MS1/Result/intermediate_data/xdata2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">####set the group_for_figure if you want to show specific groups. </span>
+</span></span><span class="line"><span class="cl"><span class="c1">####And set it as &#34;all&#34; if you want to show all samples.</span>
+</span></span><span class="line"><span class="cl"><span class="n">plot</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">plot_adjusted_rt</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">xdata2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                   <span class="n">group_for_figure</span> <span class="o">=</span> <span class="s">&#34;Subject&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                   <span class="n">interactive</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plot</span>
+</span></span></code></pre></div><h2 id="explore-data">Explore data</h2>
+<p>After the <a href="https://tidymass.github.io/tidymass/articles/raw_data_processing.html" target="_blank" rel="noopener"><code>raw data processing</code></a>, peak tables will be generated.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;cell_liang_2020/MS1/Result/object&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">dim</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; variables   samples </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;      9164        14</span>
+</span></span></code></pre></div><p>We neet to update the sample_info in object.</p>
+<p>Read sample information.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">sample_info</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">readxl</span><span class="o">::</span><span class="nf">read_xlsx</span><span class="p">(</span><span class="s">&#34;cell_liang_2020/sample_info.xlsx&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">sample_info</span><span class="o">$</span><span class="n">sample_id</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">as.character</span><span class="p">(</span><span class="n">sample_info</span><span class="o">$</span><span class="n">sample_id</span><span class="p">)</span>
+</span></span></code></pre></div><p>Add <code>sample_info</code> to <code>object</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">extract_sample_info</span><span class="p">()</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">head</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   sample_id   group   class injection.order</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1       184 Subject Subject               1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2       214 Subject Subject               2</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3       289 Subject Subject               3</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4       317 Subject Subject               4</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 5       320 Subject Subject               5</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 6       327 Subject Subject               6</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;sample_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span><span class="n">sample_info</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">by</span> <span class="o">=</span> <span class="s">&#34;sample_id&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">extract_sample_info</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;    sample_id   group   class injection.order subject_id trimester</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1        184 Subject Subject               1        aaf       &gt;35</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2        214 Subject Subject               2        aaf       &lt;10</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3        289 Subject Subject               3        ace       &gt;35</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4        317 Subject Subject               4        acb       &lt;10</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 5        320 Subject Subject               5        abb       &lt;10</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 6        327 Subject Subject               6        aci       &lt;10</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 7        348 Subject Subject               7        abi       &gt;35</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 8        353 Subject Subject               8        abg       &gt;35</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 9        373 Subject Subject               9        aci       &gt;35</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 10       387 Subject Subject              10        abg       &lt;10</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 11       408 Subject Subject              11        abi       &lt;10</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 12       461 Subject Subject              12        acb       &gt;35</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 13       528 Subject Subject              13        abb       &gt;35</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 14       739 Subject Subject              14        ace       &lt;10</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;sample_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">dplyr</span><span class="o">::</span><span class="nf">count</span><span class="p">(</span><span class="n">class</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;     class  n</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 Subject 14</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;sample_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">dplyr</span><span class="o">::</span><span class="nf">count</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;     group  n</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 Subject 14</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;sample_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">dplyr</span><span class="o">::</span><span class="nf">count</span><span class="p">(</span><span class="n">trimester</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   trimester n</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1       &lt;10 7</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2       &gt;35 7</span>
+</span></span></code></pre></div><p>So for the data, we have 7 subjects and 14 samples. One subject has two samples.</p>
+<p>Next, we can get the peak distributation plot.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">`+`</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">log</span><span class="p">(</span><span class="m">10</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">show_mz_rt_plot</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_size_continuous</span><span class="p">(</span><span class="n">range</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
+</span></span></code></pre></div><img src="/docs/chapter10/1-whole_workflow_files/figure-html/unnamed-chunk-10-1.png" width="100%" />
+<p>We can explore the missing values in the data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">get_mv_number</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] 26696</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">object</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] 26696</span>
+</span></span></code></pre></div><p>26,696 mvs in total.</p>
+<p>Missing value number in each sample.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">get_mv_number</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&#34;variable&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">head</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; M71T823_POS  M72T34_POS M72T822_POS  M73T36_POS M74T584_POS  M75T47_POS </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;           0           6           0           0           5           7</span>
+</span></span></code></pre></div><p>Missing value number in each variable.</p>
+<p>We can use the figure to show the missing value information.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">show_missing_values</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                    <span class="n">show_column_names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">percentage</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></div><img src="/docs/chapter10/1-whole_workflow_files/figure-html/unnamed-chunk-13-1.png" width="100%" />
+<p>Show the mvs in samples</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">show_sample_missing_values</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> <span class="n">percentage</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></div><img src="/docs/chapter10/1-whole_workflow_files/figure-html/unnamed-chunk-14-1.png" width="100%" />
+<p>Show the mvs in variables</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">show_variable_missing_values</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                             <span class="n">percentage</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                             <span class="n">show_x_text</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                             <span class="n">show_x_ticks</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_size_continuous</span><span class="p">(</span><span class="n">range</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span>
+</span></span></code></pre></div><img src="/docs/chapter10/1-whole_workflow_files/figure-html/unnamed-chunk-15-1.png" width="100%" />
+<h2 id="data-cleaning">Data cleaning</h2>
+<h3 id="data-quality-assessment-before-data-cleaning">Data quality assessment before data cleaning</h3>
+<p>Here, we can use the <code>massqc</code> package to <a href="https://massqc.tidymass.org/" target="_blank" rel="noopener">assess the data quality</a>.</p>
+<p>We can just use the <code>massqc_report()</code> function to get a html format quality assessment report.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">massqc</span><span class="o">::</span><span class="nf">massqc_report</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                      <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;cell_liang_2020/data_cleaning/data_quality_before_data_cleaning&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>A html format report and pdf figures will be placed in the folder <code>cell_liang_2020/data_cleaning/data_quality_before_data_cleaning/Report</code>.</p>
+<p>![](/docs/chapter10/figures/Screen-Shot 5.png)</p>
+<p>The html report is below:</p>
+<p>![](/docs/chapter10/figures/Screen-Shot 6.png)</p>
+<h3 id="remove-noisy-metabolic-features">Remove noisy metabolic features</h3>
+<p>Remove variables which have MVs in more than 20% samples.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">show_variable_missing_values</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                             <span class="n">percentage</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_size_continuous</span><span class="p">(</span><span class="n">range</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
+</span></span></code></pre></div><img src="/docs/chapter10/1-whole_workflow_files/figure-html/unnamed-chunk-17-1.png" width="100%" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate_variable_na_freq</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="nf">extract_variable_info</span><span class="p">(</span><span class="n">object</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   variable_id       mz        rt   na_freq</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 M71T823_POS 70.98037 823.24475 0.0000000</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2  M72T34_POS 71.90757  33.84428 0.4285714</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3 M72T822_POS 71.98733 822.28662 0.0000000</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4  M73T36_POS 73.02834  36.06493 0.0000000</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 5 M74T584_POS 73.70056 584.35419 0.3571429</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 6  M75T47_POS 74.81906  46.72005 0.5000000</span>
+</span></span></code></pre></div><p>Remove variables.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;variable_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">na_freq</span> <span class="o">&lt;</span> <span class="m">0.2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">dim</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; variables   samples </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;      4537        14</span>
+</span></span></code></pre></div><p>Only 4,537 variables left.</p>
+<h3 id="filter-outlier-samples">Filter outlier samples</h3>
+<p>We can use the <code>detect_outlier()</code> to find the outlier samples.</p>
+<p>More information about how to detect outlier samples can be found <a href="https://privefl.github.io/blog/detecting-outlier-samples-in-pca/" target="_blank" rel="noopener">here</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">massdataset</span><span class="o">::</span><span class="nf">show_sample_missing_values</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                        <span class="n">order_by</span> <span class="o">=</span> <span class="s">&#34;injection.order&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                        <span class="n">percentage</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">2</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_size_continuous</span><span class="p">(</span><span class="n">range</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ggsci</span><span class="o">::</span><span class="nf">scale_color_aaas</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/docs/chapter10/1-whole_workflow_files/figure-html/unnamed-chunk-20-1.png" width="100%" />
+<p>Detect outlier samples.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">outlier_samples</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">`+`</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">log</span><span class="p">(</span><span class="m">2</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale</span><span class="p">()</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">detect_outlier</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">outlier_samples</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; masscleaner </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 according_to_na : 0 outlier samples.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2 according_to_pc_sd : 0 outlier samples.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3 according_to_pc_mad : 1 outlier samples.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 184 .</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4 accordint_to_distance : 2 outlier samples.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 184,214 .</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; extract all outlier table using extract_outlier_table()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">outlier_table</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl"><span class="nf">extract_outlier_table</span><span class="p">(</span><span class="n">outlier_samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">outlier_table</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">head</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;     according_to_na pc_sd pc_mad accordint_to_distance</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 184           FALSE FALSE   TRUE                  TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 214           FALSE FALSE  FALSE                  TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 289           FALSE FALSE  FALSE                 FALSE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 317           FALSE FALSE  FALSE                 FALSE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 320           FALSE FALSE  FALSE                 FALSE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 327           FALSE FALSE  FALSE                 FALSE</span>
+</span></span></code></pre></div><p>No outlier samples according to NA.</p>
+<h3 id="missing-value-imputation">Missing value imputation</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">get_mv_number</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] 3224</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">object</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] 3224</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">impute_mv</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;knn&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Cluster size 4537 broken into 86 4451 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 86 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Cluster size 4451 broken into 4168 283 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Cluster size 4168 broken into 541 3627 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 541 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Cluster size 3627 broken into 719 2908 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 719 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Cluster size 2908 broken into 22 2886 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 22 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Cluster size 2886 broken into 2097 789 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Cluster size 2097 broken into 1365 732 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 1365 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 732 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 2097 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 789 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 2886 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 2908 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 3627 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 4168 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 283 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done cluster 4451</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">get_mv_number</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] 0</span>
+</span></span></code></pre></div><h3 id="data-normalization-and-integration">Data normalization and integration</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">normalize_data</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;median&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">`+`</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">log</span><span class="p">(</span><span class="m">2</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">massqc</span><span class="o">::</span><span class="nf">massqc_pca</span><span class="p">(</span><span class="n">line</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><img src="/docs/chapter10/1-whole_workflow_files/figure-html/unnamed-chunk-25-1.png" width="100%" />
+<h3 id="data-quality-assessment-after-data-cleaning">Data quality assessment after data cleaning</h3>
+<p>Here, we can use the <code>massqc</code> package to <a href="https://massqc.tidymass.org/" target="_blank" rel="noopener">assess the data quality</a>.</p>
+<p>We can just use the <code>massqc_report()</code> function to get a html format quality assessment report.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">massqc</span><span class="o">::</span><span class="nf">massqc_report</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                      <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;cell_liang_2020/data_cleaning/data_quality_after_data_cleaning&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h2 id="metabolite-annotation">Metabolite annotation</h2>
+<h3 id="add-ms2-spectra-to-object">Add MS2 spectra to object</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate_ms2</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">column</span> <span class="o">=</span> <span class="s">&#34;rp&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ms1.ms2.match.mz.tol</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ms1.ms2.match.rt.tol</span> <span class="o">=</span> <span class="m">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;cell_liang_2020/MS2/&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><h3 id="metabolite-annotation-using-metid">Metabolite annotation using <code>metid</code></h3>
+<p>Metabolite annotation is based on the <a href="https://tidymass.github.io/metid/" target="_blank" rel="noopener"><code>metid</code> package</a>.</p>
+<h4 id="download-database">Download database</h4>
+<p>We need to download MS2 database from <code>metid</code> <a href="https://tidymass.github.io/metid/articles/public_databases.html" target="_blank" rel="noopener">website</a>.</p>
+<p>Here we download the <code>Michael Snyder RPLC databases</code>, <code>Orbitrap database</code> and <code>MoNA database</code>. And place them in a new folder named as <code>metabolite_annotation</code>.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter10/figures/fig8.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h4 id="annotate-features-using-snyder_database_rplc003">Annotate features using <code>snyder_database_rplc0.0.3</code>.</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;cell_liang_2020/metabolite_annotation/snyder_database_rplc0.0.3.rda&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">annotate_metabolites_mass_dataset</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                    <span class="n">ms1.match.ppm</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                    <span class="n">rt.match.tol</span> <span class="o">=</span> <span class="m">30</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                    <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                    <span class="n">database</span> <span class="o">=</span> <span class="n">snyder_database_rplc0.0.3</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="annotate-features-using-orbitrap_database003">Annotate features using <code>orbitrap_database0.0.3</code>.</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;cell_liang_2020/metabolite_annotation/orbitrap_database0.0.3.rda&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">annotate_metabolites_mass_dataset</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                    <span class="n">ms1.match.ppm</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                    <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                    <span class="n">database</span> <span class="o">=</span> <span class="n">orbitrap_database0.0.3</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="annotate-features-using-mona_database003">Annotate features using <code>mona_database0.0.3</code>.</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;cell_liang_2020/metabolite_annotation/mona_database0.0.3.rda&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">annotate_metabolites_mass_dataset</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                    <span class="n">ms1.match.ppm</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                    <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                    <span class="n">database</span> <span class="o">=</span> <span class="n">mona_database0.0.3</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="annotation-result">Annotation result</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="nf">extract_annotation_table</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; data frame with 0 columns and 0 rows</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">variable_info</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">extract_variable_info</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="n">variable_info</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   variable_id       mz        rt    na_freq</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 M71T823_POS 70.98037 823.24475 0.00000000</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2 M72T822_POS 71.98733 822.28662 0.00000000</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3  M73T36_POS 73.02834  36.06493 0.00000000</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4 M76T812_POS 76.10571 812.14087 0.14285714</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 5  M77T33_POS 77.03845  32.64994 0.00000000</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 6  M78T47_POS 77.96823  47.00970 0.07142857</span>
+</span></span><span class="line"><span class="cl"><span class="nf">table</span><span class="p">(</span><span class="n">variable_info</span><span class="o">$</span><span class="n">Level</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; &lt; table of extent 0 &gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">table</span><span class="p">(</span><span class="n">variable_info</span><span class="o">$</span><span class="n">Database</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; &lt; table of extent 0 &gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">ms2_plot_mass_dataset</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                      <span class="n">variable_id</span> <span class="o">=</span> <span class="s">&#34;M123T56_POS&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                      <span class="n">database</span> <span class="o">=</span> <span class="n">snyder_database_rplc0.0.3</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h2 id="statistical-analysis">Statistical analysis</h2>
+<h3 id="remove-the-features-without-annotations">Remove the features without annotations</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;annotation_table&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Level</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">Level</span> <span class="o">==</span> <span class="m">1</span> <span class="o">|</span> <span class="n">Level</span> <span class="o">==</span> <span class="m">2</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; massdataset version: 1.0.12 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1.expression_data:[ 4537 x 14 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2.sample_info:[ 14 x 6 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 14 samples:184 214 289 ... 528 739</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 3.variable_info:[ 4537 x 4 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4537 variables:M71T823_POS M72T822_POS M73T36_POS ... M993T593_POS M994T593_POS</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 4.sample_info_note:[ 6 x 2 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 5.variable_info_note:[ 4 x 2 data.frame]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 6.ms2_data:[ 0 variables x 0 MS2 spectra]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Processing information</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 6 processings in total</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Latest 3 processings show</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; filter ---------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package Function.used                Time</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset      filter() 2023-08-31 00:20:28</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; impute_mv ---------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package Function.used                Time</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 masscleaner   impute_mv() 2023-08-31 00:20:29</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; normalize_data ---------- </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package    Function.used                Time</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 masscleaner normalize_data() 2023-08-31 00:20:29</span>
+</span></span></code></pre></div><h3 id="trace-processing-information-of-object">Trace processing information of object</h3>
+<p>Then we can use the <code>report_parameters()</code> function to trace processing information of object.</p>
+<p>All the analysis results will be placed in a folder named as <code>statistical_analysis</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">dir.create</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;cell_liang_2020/statistical_analysis&#34;</span><span class="p">,</span> <span class="n">showWarnings</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">report_parameters</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;cell_liang_2020/statistical_analysis/&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>A html format file named as <code>parameter_report.html</code> will be generated.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter10/figures/fig9.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h3 id="remove-redundant-metabolites">Remove redundant metabolites</h3>
+<p>Remove the redundant annotated metabolites bases on <code>Level</code> and score.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;annotation_table&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">Compound.name</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">Level</span> <span class="o">==</span> <span class="nf">min</span><span class="p">(</span><span class="n">Level</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">SS</span> <span class="o">==</span> <span class="nf">max</span><span class="p">(</span><span class="n">SS</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">slice_head</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="differential-expression-metabolites">Differential expression metabolites</h3>
+<h4 id="calculate-the-fold-changes">Calculate the fold changes.</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;sample_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dplyr</span><span class="o">::</span><span class="nf">arrange</span><span class="p">(</span><span class="n">subject_id</span><span class="p">,</span> <span class="n">trimester</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">control_sample_id</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;sample_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">trimester</span> <span class="o">==</span> <span class="s">&#34;&lt;10&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">pull</span><span class="p">(</span><span class="n">sample_id</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">case_sample_id</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;sample_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">trimester</span> <span class="o">==</span> <span class="s">&#34;&gt;35&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">pull</span><span class="p">(</span><span class="n">sample_id</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate_fc</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">control_sample_id</span> <span class="o">=</span> <span class="n">control_sample_id</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">case_sample_id</span> <span class="o">=</span> <span class="n">case_sample_id</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">mean_median</span> <span class="o">=</span> <span class="s">&#34;mean&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="calculate-p-values">Calculate p values.</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate_p_value</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">control_sample_id</span> <span class="o">=</span> <span class="n">control_sample_id</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">case_sample_id</span> <span class="o">=</span> <span class="n">case_sample_id</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;wilcox.test&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_adjust_methods</span> <span class="o">=</span> <span class="s">&#34;BH&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">paired</span> <span class="o">=</span> <span class="kc">TRUE</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><h4 id="volcano-plot">Volcano plot.</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">volcano_plot</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="n">add_text</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="n">text_from</span> <span class="o">=</span> <span class="s">&#34;Compound.name&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">             <span class="n">point_size_scale</span> <span class="o">=</span> <span class="s">&#34;p_value&#34;</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_size_continuous</span><span class="p">(</span><span class="n">range</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span> <span class="m">5</span><span class="p">))</span>
+</span></span></code></pre></div><h3 id="output-result">Output result</h3>
+<p>Output the differential expression metabolites.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">differential_metabolites</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">extract_variable_info</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">object</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">fc</span> <span class="o">&gt;</span> <span class="m">2</span> <span class="o">|</span> <span class="n">fc</span> <span class="o">&lt;</span> <span class="m">0.5</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">p_value_adjust</span> <span class="o">&lt;</span> <span class="m">0.05</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">readr</span><span class="o">::</span><span class="nf">write_csv</span><span class="p">(</span><span class="n">differential_metabolites</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                 <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;cell_liang_2020/statistical_analysis/differential_metabolites.csv&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="pathway-enrichment-analysis">Pathway enrichment analysis</h2>
+<p>All the results will be placed in a folder named as <code>pathway_enrichment</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">dir.create</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;cell_liang_2020/pathway_enrichment&#34;</span><span class="p">,</span> <span class="n">showWarnings</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">diff_metabolites</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">activate_mass_dataset</span><span class="p">(</span><span class="n">what</span> <span class="o">=</span> <span class="s">&#34;variable_info&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">p_value_adjust</span> <span class="o">&lt;</span> <span class="m">0.05</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">extract_variable_info</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="n">diff_metabolites</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="load-kegg-human-pathway-database">Load <code>KEGG</code> human pathway database</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">data</span><span class="p">(</span><span class="s">&#34;kegg_hsa_pathway&#34;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s">&#34;metpath&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">kegg_hsa_pathway</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">get_pathway_class</span><span class="p">(</span><span class="n">kegg_hsa_pathway</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="remove-the-disease-pathways">Remove the disease pathways:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">#get the class of pathways</span>
+</span></span><span class="line"><span class="cl"><span class="n">pathway_class</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">metpath</span><span class="o">::</span><span class="nf">pathway_class</span><span class="p">(</span><span class="n">kegg_hsa_pathway</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="n">pathway_class</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">remain_idx</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pathway_class</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">unlist</span><span class="p">()</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="n">stringr</span><span class="o">::</span><span class="nf">str_detect</span><span class="p">(</span><span class="s">&#34;Disease&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">`!`</span><span class="p">()</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">which</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">remain_idx</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">pathway_database</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">kegg_hsa_pathway[remain_idx]</span>
+</span></span><span class="line"><span class="cl"><span class="n">pathway_database</span>
+</span></span></code></pre></div><h3 id="pathway-enrichment">Pathway enrichment</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">kegg_id</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">diff_metabolites</span><span class="o">$</span><span class="n">KEGG.ID</span> 
+</span></span><span class="line"><span class="cl"><span class="n">kegg_id</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">kegg_id[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">kegg_id</span><span class="p">)</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">kegg_id</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">result</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">enrich_kegg</span><span class="p">(</span><span class="n">query_id</span> <span class="o">=</span> <span class="n">kegg_id</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">query_type</span> <span class="o">=</span> <span class="s">&#34;compound&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">id_type</span> <span class="o">=</span> <span class="s">&#34;KEGG&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pathway_database</span> <span class="o">=</span> <span class="n">pathway_database</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">p_cutoff</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">p_adjust_method</span> <span class="o">=</span> <span class="s">&#34;BH&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">threads</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="check-the-result">Check the result:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">result</span>
+</span></span></code></pre></div><h3 id="plot-to-show-pathway-enrichment-result">Plot to show pathway enrichment result</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">enrich_bar_plot</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">result</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x_axis</span> <span class="o">=</span> <span class="s">&#34;p_value&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">cutoff</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">enrich_scatter_plot</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">result</span><span class="p">,</span> <span class="n">y_axis</span> <span class="o">=</span> <span class="s">&#34;p_value&#34;</span><span class="p">,</span> <span class="n">y_axis_cutoff</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">enrich_network</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">=</span> <span class="n">result</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">point_size</span> <span class="o">=</span> <span class="s">&#34;p_value&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">p_cutoff</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">only_significant_pathway</span> <span class="o">=</span> <span class="kc">TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><h2 id="session-information">Session information</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] grid      stats4    stats     graphics  grDevices utils     datasets </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [8] methods   base     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; other attached packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] lubridate_1.9.2       forcats_1.0.0         stringr_1.5.0        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [4] purrr_1.0.1           readr_2.1.4           tibble_3.2.1         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [7] tidyverse_2.0.0       metid_1.2.28          metpath_1.0.8        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [10] ComplexHeatmap_2.16.0 mixOmics_6.24.0       lattice_0.21-8       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] MASS_7.3-58.4         massstat_1.0.5        tidyr_1.3.0          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [16] ggfortify_0.4.16      massqc_1.0.6          masscleaner_1.0.11   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [19] xcms_3.22.0           MSnbase_2.26.0        ProtGenerics_1.32.0  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [22] S4Vectors_0.38.1      mzR_2.34.0            Rcpp_1.0.10          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [25] Biobase_2.60.0        BiocGenerics_0.46.0   BiocParallel_1.34.2  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [28] massprocesser_1.0.10  ggplot2_3.4.2         dplyr_1.1.2          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [31] magrittr_2.0.3        masstools_1.0.10      massdataset_1.0.25   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [34] tidymass_1.0.8       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [1] splines_4.3.0               bitops_1.0-7               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [3] cellranger_1.1.0            polyclip_1.10-4            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [5] preprocessCore_1.62.1       XML_3.99-0.14              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [7] rpart_4.1.19                fastDummies_1.6.3          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [9] lifecycle_1.0.3             doParallel_1.0.17          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [11] rprojroot_2.0.3             globals_0.16.2             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [13] backports_1.4.1             plotly_4.10.2              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [15] openxlsx_4.2.5.2            limma_3.56.2               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [17] Hmisc_5.1-0                 sass_0.4.6                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [19] rmarkdown_2.22              jquerylib_0.1.4            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [21] yaml_2.3.7                  remotes_2.4.2              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [23] doRNG_1.8.6                 zip_2.3.0                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [25] MsCoreUtils_1.12.0          pbapply_1.7-0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [27] RColorBrewer_1.1-3          zlibbioc_1.46.0            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [29] GenomicRanges_1.52.0        ggraph_2.1.0               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [31] itertools_0.1-3             RCurl_1.98-1.12            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [33] nnet_7.3-18                 tweenr_2.0.2               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [35] circlize_0.4.15             GenomeInfoDbData_1.2.10    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [37] IRanges_2.34.0              ggrepel_0.9.3              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [39] listenv_0.9.0               ellipse_0.4.5              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [41] RSpectra_0.16-1             missForest_1.5             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [43] parallelly_1.36.0           ncdf4_1.21                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [45] codetools_0.2-19            DelayedArray_0.26.3        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [47] ggforce_0.4.1               tidyselect_1.2.0           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [49] shape_1.4.6                 farver_2.1.1               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [51] viridis_0.6.3               matrixStats_1.0.0          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [53] base64enc_0.1-3             jsonlite_1.8.5             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [55] GetoptLong_1.0.5            multtest_2.56.0            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [57] e1071_1.7-13                tidygraph_1.2.3            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [59] Formula_1.2-5               survival_3.5-5             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [61] iterators_1.0.14            foreach_1.5.2              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [63] progress_1.2.2              tools_4.3.0                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [65] glue_1.6.2                  rARPACK_0.11-0             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [67] gridExtra_2.3               xfun_0.39                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [69] here_1.0.1                  MatrixGenerics_1.12.2      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [71] GenomeInfoDb_1.36.0         withr_2.5.0                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [73] BiocManager_1.30.21         fastmap_1.1.1              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [75] fansi_1.0.4                 blogdown_1.18.1            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [77] digest_0.6.31               timechange_0.2.0           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [79] R6_2.5.1                    colorspace_2.1-0           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [81] utf8_1.2.3                  generics_0.1.3             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [83] data.table_1.14.8           corpcor_1.6.10             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [85] robustbase_0.95-1           class_7.3-21               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [87] graphlayouts_1.0.0          prettyunits_1.1.1          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [89] httr_1.4.6                  htmlwidgets_1.6.2          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [91] S4Arrays_1.0.4              pkgconfig_2.0.3            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [93] gtable_0.3.3                robust_0.7-1               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [95] impute_1.74.1               MassSpecWavelet_1.66.0     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [97] XVector_0.40.0              furrr_0.3.1                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [99] pcaPP_2.0-3                 htmltools_0.5.5            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [101] bookdown_0.34               MALDIquant_1.22.1          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [103] clue_0.3-64                 scales_1.2.1               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [105] png_0.1-8                   knitr_1.43                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [107] rstudioapi_0.14             reshape2_1.4.4             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [109] tzdb_0.4.0                  rjson_0.2.21               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [111] checkmate_2.2.0             ggcorrplot_0.1.4           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [113] proxy_0.4-27                cachem_1.0.8               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [115] GlobalOptions_0.1.2         parallel_4.3.0             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [117] foreign_0.8-84              mzID_1.38.0                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [119] vsn_3.68.0                  pillar_1.9.0               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [121] vctrs_0.6.2                 MsFeatures_1.8.0           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [123] RANN_2.6.1                  pcaMethods_1.92.0          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [125] randomForest_4.7-1.1        cluster_2.1.4              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [127] htmlTable_2.4.1             evaluate_0.21              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [129] mvtnorm_1.2-2               cli_3.6.1                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [131] compiler_4.3.0              rlang_1.1.1                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [133] crayon_1.5.2                rngtools_1.5.2             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [135] Rdisop_1.60.0               rrcov_1.7-3                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [137] affy_1.78.0                 plyr_1.8.8                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [139] stringi_1.7.12              viridisLite_0.4.2          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [141] Biostrings_2.68.1           munsell_0.5.0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [143] lazyeval_0.2.2              fit.models_0.64            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [145] Matrix_1.5-4                hms_1.1.3                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [147] patchwork_1.1.2             future_1.32.0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [149] KEGGREST_1.40.0             SummarizedExperiment_1.30.2</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [151] igraph_1.4.3                affyio_1.70.0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [153] bslib_0.5.0                 DEoptimR_1.0-14            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [155] readxl_1.4.2</span>
+</span></span></code></pre></div>
+
+        </article>
+
+        
+
+
+
+
+
+        
+
+
+
+        
+        
+        <div class="article-widget">
+          
+<div class="post-nav">
+  
+  
+</div>
+
+        </div>
+        
+      </div>
+
+      <div class="body-footer">
+        <p>最近更新于 5月 5, 2019</p>
+
+        
+
+
+
+
+
+
+  
+
+<p class="edit-page">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter10/1-whole_workflow.md">
+    <i class="fas fa-pen pr-2"></i>编辑本页
+  </a>
+</p>
+
+
+
+        
+
+
+  
+  
+  
+
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "blog-at8qrhng8b" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+        
+
+
+      </div>
+
+      <footer class="site-footer">
+  <hr>
+
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+          
+ <div style="flex: 1;">
+            </div>
+            
+    
+            <div style="flex: 1;">
+  <p style="text-align:left;">
+    Find me here:
+    <br>
+    <i class="fa-brands fa-github"></i> <a href="https://github.com/tidymass" target="_blank" rel="noopener">GitHub</a>
+<br>
+        <i class="fa-brands fa-weixin"></i> <a href="https://jaspershen.github.io/image/wechat_QR.jpg" target="_blank" rel="noopener">WeChat</a>
+
+    <br>
+        <i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/xiaotaoshen1990" target="_blank" rel="noopener">Twitter</a>
+        
+   <br>
+        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>  
+        
+        <br>
+<i class="fa-solid fa-location-dot"></i> Address: <a href="https://goo.gl/maps/jSKXmNMoj1s97uQGA" target="_blank" rel="noopener">3165 Porter Drive, Palo Alto, CA 94304</a>
+   
+    </p>
+            </div>
+            
+    
+            <div style="flex: 1;">
+            </div>
+            
+    
+            <div style="flex: 1;">
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=e43qUF1sR8y0B12BqEm-gDwkYxSmbro-n8KEiBINpdY"></script>
+            </div>
+            
+    
+            <div style="flex: 1;">
+            </div>
+    
+        </div>
+        
+      <hr>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022-2023 Xiaotao Shen
+  </p>
+  
+
+
+
+
+  
+  
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://blog-at8qrhng8b.disqus.com/count.js" async></script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/zh/js/wowchemy.min.a019a8d0a4e912d4764e429825411dad.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

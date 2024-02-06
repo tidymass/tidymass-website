@@ -1,0 +1,52 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Convert data using proteowizard"
+linktitle: "1 proteowizard"
+author: admin
+type: book
+weight: 1
+commentable: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs/chapter3"))
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+getwd()
+```
+
+## Install `Proteowizard`
+
+`Proteowizard` only supports Windows OS. So if you don't use Windows OS, consider [massconverter](../2-data_convert).
+
+Download [Proteowizard](https://proteowizard.sourceforge.io/) and install it.
+
+## Data preparation
+
+Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using `Proteowizard` package.
+
+## Convert MS1 data to `mzXML` format data
+
+Just convert data into `mzXML` format data according to the parameters below:
+
+![](/docs/chapter3/figures/fig1.png)
+## Convert MS2 data to `mzXML` or `mgf` format data
+
+Just convert data into `mzXML` or `mgf` format data according to the parameters below:
+
+![](/docs/chapter3/figures/fig2.png)
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+sessionInfo()
+```

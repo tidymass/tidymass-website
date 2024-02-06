@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories | TidyMass</title>
+    <link>https://www.tidymass.org/zh/categories/</link>
+      <atom:link href="https://www.tidymass.org/zh/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language>
+    <image>
+      <url>https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png</url>
+      <title>Categories</title>
+      <link>https://www.tidymass.org/zh/categories/</link>
+    </image>
+    
+  </channel>
+</rss>

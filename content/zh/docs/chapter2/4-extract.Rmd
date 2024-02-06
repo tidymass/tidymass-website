@@ -1,0 +1,103 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Extract data from mass_dataset"
+linktitle: "4 Extract data"
+author: admin
+type: book
+weight: 4
+commentable: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+
+## Use `extract_xxx` functions
+
+We first created a `mass_dataset` class object.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+library(massdataset)
+library(tidyverse)
+
+data("expression_data")
+data("sample_info")
+data("sample_info_note")
+data("variable_info")
+data("variable_info_note")
+
+object =
+  create_mass_dataset(
+    expression_data = expression_data,
+    sample_info = sample_info,
+    variable_info = variable_info,
+    sample_info_note = sample_info_note,
+    variable_info_note = variable_info_note
+  )
+  
+object
+```
+
+In `massdataset` package, there are a series of functions named as `extract_xxx()`, users can use them to extract data from `mass_dataset` calss object.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+##sample_info
+extract_sample_info(object)
+##variable_info
+extract_variable_info(object) %>% head()
+##expression_data
+extract_expression_data(object) %>% head()
+##sample_info_note
+extract_sample_info_note(object) 
+##variable_info_note
+extract_variable_info_note(object) 
+##ms2_data
+extract_ms2_data(object)
+##process_info
+extract_annotation_table(object)
+##process_info
+extract_process_info(object)
+```
+
+## Use `slot()` function
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+slot(object = object, name = "sample_info")
+slot(object = object, name = "variable_info") %>% head()
+slot(object = object, name = "expression_data") %>% head()
+slot(object = object, name = "sample_info_note") 
+slot(object = object, name = "variable_info_note") 
+slot(object = object, name = "ms2_data") 
+slot(object = object, name = "process_info") 
+slot(object = object, name = "annotation_table") 
+```
+
+## Use `@`
+
+`mass_data` class is a S4 object. So we can also use `@`.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+object@expression_data %>% head()
+object@sample_info
+object@variable_info %>% head()
+object@sample_info_note
+object@variable_info_note
+object@process_info
+object@ms2_data
+object@annotation_table
+```
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+sessionInfo()
+```

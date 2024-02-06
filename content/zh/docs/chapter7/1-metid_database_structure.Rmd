@@ -1,0 +1,183 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "Databases for metID"
+linktitle: "1 Databases for metID"
+author: admin
+type: book
+weight: 1
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+
+## Introduction
+
+The database class in `metid` is `databaseClass`. You can use the demo database in `metid` to explore it.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(metid)
+data("snyder_database_rplc0.0.3")
+snyder_database_rplc0.0.3
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+class(snyder_database_rplc0.0.3)
+```
+
+It contains three parts:
+
+1. spectra.info: The information for all the metabolites/compounds in the database.
+
+```{r,eval=TRUE, echo=FALSE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+library(kableExtra)
+library(magrittr)
+kbl(snyder_database_rplc0.0.3@spectra.info) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+                fixed_thead = TRUE) %>% 
+  scroll_box(width = "100%", height = "600px")
+```
+
+2. database.info: The information of the database.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+snyder_database_rplc0.0.3@database.info
+```
+
+3. spectra.data: The spectra of the metabolites in database.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+names(snyder_database_rplc0.0.3@spectra.data)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+head(names(snyder_database_rplc0.0.3@spectra.data$Spectra.positive))
+```
+
+One metabolite may contains multiple spectra.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+snyder_database_rplc0.0.3@spectra.data$Spectra.positive$RPLC_1$NCE25
+```
+
+You can use [the function from masstools](https://masstools.tidymass.org/reference/ms2_plot) to visualize the ms2 spectra.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+if(!require(masstools)){
+  remotes::install_gitlab("tidymass/masstools")
+}
+library(masstools)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+ms2_plot(
+  snyder_database_rplc0.0.3@spectra.data$Spectra.positive$RPLC_1$NCE25
+)
+```
+
+## Extract spectra from database
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+ms2 <-
+  get_ms2_spectrum(lab.id = "RPLC_1", 
+                   database = snyder_database_rplc0.0.3,
+                   polarity = "positive", 
+                   ce = "NCE25"
+                    )
+ms2
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+ms2_plot(ms2)
+```
+
+## Convert `databaseClass` to other database format
+
+[`MassBank`](https://massbank.eu/), [`MoNA`](https://mona.fiehnlab.ucdavis.edu/) and some other public databases provide `msp` format database of metabolites. So you can use the functions in `metid` to output `metid` format database to `msp` format which can be used for `GNPS`, `MassBank` and `MoNA`.
+
+### MassBank
+
+#### `msp` format
+
+Just use the `write_msp_massbank()` function to output `metid` database to `msp` format for MassBank.
+
+```{r,eval = FALSE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
+library(metid)
+write_msp_massbank(databasae = databasae, path = ".")
+```
+
+The arguments of `write_msp_massbank()` can be found using `?write_msp_massbank()`.
+
+#### `mgf` format
+
+Just use the `write_mgf_massbank()` function to output `metid` database to `mgf` format for MassBank.
+
+```{r,eval = FALSE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
+library(metid)
+write_mgf_massbank(databasae = databasae, path = ".")
+```
+
+The arguments of `write_msp_massbank()` can be found using `?write_msp_massbank()`.
+
+### MoNA
+
+#### `msp` format
+
+Just use the `write_msp_mona()` function to output `metid` database to `msp` format for mona.
+
+```{r,eval = FALSE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
+library(metid)
+write_msp_mona(databasae = databasae, path = ".")
+```
+
+The arguments of `write_msp_mona()` can be found using `?write_msp_mona()`.
+
+#### `mgf` format
+
+Just use the `write_mgf_mona()` function to output `metid` database to `mgf` format for mona.
+
+```{r,eval = FALSE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
+library(metid)
+write_mgf_mona(databasae = databasae, path = ".")
+```
+
+The arguments of `write_msp_mona()` can be found using `?write_msp_mona()`.
+
+### GNPS
+
+#### `msp` format
+
+Just use the `write_msp_gnps()` function to output `metid` database to `msp` format for gnps.
+
+```{r,eval = FALSE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
+library(metid)
+write_msp_gnps(databasae = databasae, path = ".")
+```
+
+The arguments of `write_msp_gnps()` can be found using `?write_msp_gnps()`.
+
+#### `mgf` format
+
+Just use the `write_mgf_gnps()` function to output `metid` database to `mgf` format for gnps.
+
+```{r,eval = FALSE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
+library(metid)
+write_mgf_gnps(databasae = databasae, path = ".")
+```
+
+The arguments of `write_msp_gnps()` can be found using `?write_msp_gnps()`.
+
+## Session information
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+sessionInfo()
+```

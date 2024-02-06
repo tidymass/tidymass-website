@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linlin Xu | TidyMass</title>
+    <link>https://www.tidymass.org/zh/author/linlin-xu/</link>
+      <atom:link href="https://www.tidymass.org/zh/author/linlin-xu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Linlin Xu</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language>
+    <image>
+      <url>https://www.tidymass.org/zh/author/linlin-xu/avatar_hue2305f40c44c12b760318e9950c098ee_22607917_270x270_fill_lanczos_center_3.png</url>
+      <title>Linlin Xu</title>
+      <link>https://www.tidymass.org/zh/author/linlin-xu/</link>
+    </image>
+    
+  </channel>
+</rss>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac Lai | TidyMass</title>
+    <link>https://www.tidymass.org/zh/author/mac-lai/</link>
+      <atom:link href="https://www.tidymass.org/zh/author/mac-lai/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mac Lai</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language>
+    <image>
+      <url>https://www.tidymass.org/zh/author/mac-lai/avatar_hu42f11bfe347b1af457b8ac9ab5758abb_406686_270x270_fill_lanczos_center_3.png</url>
+      <title>Mac Lai</title>
+      <link>https://www.tidymass.org/zh/author/mac-lai/</link>
+    </image>
+    
+  </channel>
+</rss>
