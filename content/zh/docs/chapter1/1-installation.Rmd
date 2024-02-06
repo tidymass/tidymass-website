@@ -13,23 +13,17 @@ commentable: true
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
-If you haven't installed R or RStudio on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.
-
 如果您尚未在您的PC或Mac上安装R或RStudio，请在继续之前先安装它们。否则，您可以跳过这些步骤。
 
 {{< cta cta_text="👉 Update R" cta_link="#update-r" >}}
 
 ## Install R
 
-Download the [R](https://www.r-project.org/) and install it.
-
 下载[R](https://www.r-project.org/)并安装。
 
 [👉 Refer this blog](https://www.dataquest.io/blog/installing-r-on-your-computer/)
 
 ## Install RStudio
-
-Then install RStudio. Download the [RStudio](https://www.rstudio.com/products/rstudio/download/#download) and then install it.
 
 然后安装RStudio。下载[RStudio](https://www.rstudio.com/products/rstudio/download/#download)，然后进行安装。
 
@@ -55,28 +49,28 @@ You can check your R version in your console:
 version
 ```
 
-If your R version is < 4.1, please download and install the [latest version of R](https://cran.r-project.org/mirrors.html), and then restart your R.
+如果您的 R 版本低于 4.1，请下载并安装[最新版本的 R](https://cran.r-project.org/mirrors.html)，然后重新启动 R。
 
-## Install `tidymass` from `tidymass.org`
+## 从 `tidymass.org` 安装 `tidymass`
 
-Copy and paste the below code in your console.
+在控制台中复制并粘贴以下代码。
 
 ```{r, echo=TRUE, eval=FALSE}
 source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
 install_tidymass(from = "tidymass.org")
 ```
 
-You can also use this method to install one specific package. For example, if you only want to install [metID](https://metid.tidymass.org/). 
+您还可以使用此方法安装单个特定的软件包。例如，如果您只想安装[metID](https://metid.tidymass.org/)。
 
 ```{r, echo=TRUE, eval=FALSE}
 install_tidymass(from = "tidymass.org", which_package = "metid")
 ```
 
-Demo video is bellow:
+演示视频如下：
 
 ![](/docs/chapter1/figures/pull_case_study.gif) 
 
-If above code doesn't work, try to change the `method` argument.
+如果上面的代码不起作用，请尝试更改`method`参数。
 
 1. "auto"
 
@@ -88,9 +82,9 @@ If above code doesn't work, try to change the `method` argument.
 
 5. "curl"
 
-## Install `tidymass` from `GitHub`
+## 从 `GitHub` 安装 `tidymass`
 
-Copy and paste the below code in your console.
+在控制台中复制并粘贴以下代码。
 
 ```{r, echo=TRUE, eval=FALSE}
 if(!require(remotes)){
@@ -99,17 +93,17 @@ if(!require(remotes)){
 remotes::install_github("tidymass/tidymass", dependencies = TRUE)
 ```
 
-## Some issues
+## 一些问题
 
-1. During the installation, it will ask if you want to update some packages for few times, just enter `Enter` or `Return` key to skip it.
+1. 在安装过程中，会多次询问是否要更新某些软件包，请直接按下 `Enter` 或 `Return` 键跳过。
 
-2. If there is a error like below:
+2. 如果出现以下错误：
 
 > Error: Failed to install 'tidymass' from GitHub: HTTP error 403. API rate limit exceeded for 171.66.10.237. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)
 
-Try to resolve it by:
+尝试通过以下方式解决：
 
-* In you R console, type this code:
+* 在您的 R 控制台中，输入以下代码：
 
 ```{r, echo=TRUE, eval=FALSE}
 if(!require(usethis)){
@@ -118,29 +112,29 @@ if(!require(usethis)){
 usethis::create_github_token()
 ```
 
-It will open a page in browser, and create a "New personal access token" and copy it.
+它将在浏览器中打开一个页面，并创建一个“新的个人访问令牌”，然后将其复制。
 
 ![](/docs/chapter1/figures/fig3.png) 
 
-* Then type this code:
+* 然后输入以下代码：
 
 ```{r, echo=TRUE, eval=FALSE}
 usethis::edit_r_environ()
 ```
 
-and then add one line like below:
+然后添加一行如下的代码：
 
 ```{r, echo=TRUE, eval=FALSE}
 GITHUB_PAT=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
 ```
 
-> The GITHUB_PAT should be yours that is created in step 1.
+> GITHUB_PAT 应该是您在步骤 1 中创建的个人访问令牌。
 
-And then restart R session and try again.
+然后重新启动 R 会话，再次尝试。
 
-## Install `tidymass` from `GitLab`
+## 从 `GitLab` 安装 `tidymass`
 
-Copy and paste the below code in your console.
+在控制台中复制并粘贴以下代码。
 
 ```{r, echo=TRUE, eval=FALSE}
 if(!require(remotes)){
@@ -150,9 +144,9 @@ remotes::install_gitlab("tidymass/tidymass", dependencies = TRUE)
 ```
 
 
-## Install `tidymass` from `Gitee`
+## 从 `Gitee` 安装 `tidymass`
 
-If you are in China, you can try to install `tidymass` from Gitee. Copy and paste the below code in your console.
+如果您在中国，请尝试从 Gitee 安装 `tidymass`。将以下代码复制并粘贴到您的控制台中。
 
 ```{r, echo=TRUE, eval=FALSE}
 if(!require(remotes)){
@@ -162,7 +156,7 @@ remotes::install_git(url = "https://gitee.com/tidymass/tidymass", dependencies =
 ```
 
 
-If you can't install `tidymass` successfully, please contact us by
+如果您无法成功安装 `tidymass`，请通过以下方式与我们联系：
 
 {{< cta cta_text="📥 Contact us" cta_link="https://www.tidymass.org/#contact" >}}
 
