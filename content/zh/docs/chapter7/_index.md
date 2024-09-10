@@ -26,7 +26,7 @@ You can install `metid` from [GitLab](https://gitlab.com/tidymass/metid).
 if(!require(remotes)){
 install.packages("remotes")
 }
-remotes::install_gitlab("jaspershen/metid")
+remotes::install_gitlab("tidymass/metid")
 ```
 
 or [GitHub](https://github.com/tidymass/metid)

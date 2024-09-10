@@ -56,7 +56,7 @@ Suggests:
     testthat (>= 3.0.0)
 Note:
 Remotes: 
-    gitlab::jaspershen/masstools
+    gitlab::tidymass/masstools
 biocViews: Metabolomics, MassSpectrometry
 Config/testthat/edition: 3
 Collate: 

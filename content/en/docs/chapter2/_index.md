@@ -18,13 +18,13 @@ weight: 2
 
 ## Install `massdataset`
 
-You can install `massdataset` from [GitLab](https://gitlab.com/jaspershen/massdataset).
+You can install `massdataset` from [GitLab](https://gitlab.com/tidymass/massdataset).
 
 ```
 if(!require(remotes)){
 install.packages("remotes")
 }
-remotes::install_gitlab("jaspershen/massdataset")
+remotes::install_gitlab("tidymass/massdataset")
 ```
 
 or [GitHub](https://github.com/tidymass/massdataset)

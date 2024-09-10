@@ -24,7 +24,7 @@ You can install `massconverter` from [GitLab](https://gitlab.com/tidymass/massco
 if(!require(remotes)){
 install.packages("remotes")
 }
-remotes::install_gitlab("jaspershen/massconverter")
+remotes::install_gitlab("tidymass/massconverter")
 ```
 
 or [GitHub](https://github.com/tidymass/massconverter)

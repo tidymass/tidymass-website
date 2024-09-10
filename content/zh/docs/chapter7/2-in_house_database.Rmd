@@ -62,7 +62,7 @@ to construct database.
 
 We first prepare dataset.
 
-Download the data [here](https://github.com/jaspershen/demoData/tree/master/inst/database_construction). and then put all of them in the "database_construction" folder.
+Download the data [here](https://github.com/tidymass/demoData/tree/master/inst/database_construction). and then put all of them in the "database_construction" folder.
 
 Then there will be a folder named as `database_construction` in your work directory like below figure shows:
 

@@ -25,7 +25,7 @@ You can install `massdatabase` from [GitLab](https://gitlab.com/tidymass/massdat
 if(!require(remotes)){
 install.packages("remotes")
 }
-remotes::install_gitlab("jaspershen/massdatabase")
+remotes::install_gitlab("tidymass/massdatabase")
 ```
 
 or [GitHub](https://github.com/tidymass/massdatabase)

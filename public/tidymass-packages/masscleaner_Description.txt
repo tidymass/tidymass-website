@@ -53,6 +53,6 @@ Note:
 biocViews: Metabolomics, MassSpectrometry
 Encoding: UTF-8
 Remotes: 
-    gitlab::jaspershen/masstools,
-    gitlab::jaspershen/massdataset
+    gitlab::tidymass/masstools,
+    gitlab::tidymass/massdataset
 Config/testthat/edition: 3
