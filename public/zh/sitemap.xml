@@ -184,20 +184,6 @@
                 href="https://www.tidymass.org/zh/docs/chapter2/2-add_ms2/"
                 />
   </url><url>
-    <loc>https://www.tidymass.org/zh/docs/chapter7/2-in_house_database/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/docs/chapter7/2-in_house_database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/docs/chapter7/2-in_house_database/"
-                />
-  </url><url>
     <loc>https://www.tidymass.org/zh/docs/chapter3/2-data_convert/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -210,6 +196,20 @@
                 rel="alternate"
                 hreflang="zh-Hans"
                 href="https://www.tidymass.org/zh/docs/chapter3/2-data_convert/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/zh/docs/chapter7/2-in_house_database/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/docs/chapter7/2-in_house_database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/docs/chapter7/2-in_house_database/"
                 />
   </url><url>
     <loc>https://www.tidymass.org/zh/docs/chapter1/2-update/</loc>
@@ -296,20 +296,6 @@
                 href="https://www.tidymass.org/zh/docs/chapter3/"
                 />
   </url><url>
-    <loc>https://www.tidymass.org/zh/docs/chapter1/4-build_own_docker/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/docs/chapter1/4-build_own_docker/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/docs/chapter1/4-build_own_docker/"
-                />
-  </url><url>
     <loc>https://www.tidymass.org/zh/docs/chapter2/4-extract/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -324,9 +310,33 @@
                 href="https://www.tidymass.org/zh/docs/chapter2/4-extract/"
                 />
   </url><url>
-    <loc>https://www.tidymass.org/zh/docs/chapter7/4-metabolite_annotation/</loc>
+    <loc>https://www.tidymass.org/zh/docs/chapter7/4-public_databases/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/docs/chapter7/4-public_databases/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/docs/chapter7/4-public_databases/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/zh/docs/chapter1/4-build_own_docker/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/docs/chapter1/4-build_own_docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/docs/chapter1/4-build_own_docker/"
+                />
   </url><url>
     <loc>https://www.tidymass.org/zh/docs/chapter4/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
@@ -342,10 +352,6 @@
                 href="https://www.tidymass.org/zh/docs/chapter4/"
                 />
   </url><url>
-    <loc>https://www.tidymass.org/zh/docs/chapter7/5-identify_single_peak/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://www.tidymass.org/zh/docs/chapter2/5-processing_information/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -360,6 +366,20 @@
                 href="https://www.tidymass.org/zh/docs/chapter2/5-processing_information/"
                 />
   </url><url>
+    <loc>https://www.tidymass.org/zh/docs/chapter7/5-metabolite_annotation/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/docs/chapter7/5-metabolite_annotation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/docs/chapter7/5-metabolite_annotation/"
+                />
+  </url><url>
     <loc>https://www.tidymass.org/zh/docs/chapter5/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -372,6 +392,20 @@
                 rel="alternate"
                 hreflang="zh-Hans"
                 href="https://www.tidymass.org/zh/docs/chapter5/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/zh/docs/chapter7/6-identify_single_peak/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/docs/chapter7/6-identify_single_peak/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/docs/chapter7/6-identify_single_peak/"
                 />
   </url><url>
     <loc>https://www.tidymass.org/zh/docs/chapter6/</loc>

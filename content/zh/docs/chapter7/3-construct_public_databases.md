@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Construct public databases"
-linktitle: "3 Public databases"
+title: "构建公共数据库"
+linktitle: "3 公共数据库"
 author: admin
 type: book
 weight: 3
@@ -10,15 +10,15 @@ commentable: true
 
 
 
-## Introduction
+## 介绍
 
-If you want to construct databases for `metid`, you can use the [massDatabase](https://massdatabase.tidymass.org/) package. `massdatabase` is an R package that operates the online public databases and combines with other tools for streamlined compound annotation and pathway enrichment analysis. `massdatabase` is a flexible, simple, and powerful tool that can be installed on all platforms, allowing the users to leverage all the online public databases for biological function mining.
+如果你想为 `metID` 构建数据库，可以使用 [massDatabase](https://massdatabase.tidymass.org/) 包。`massdatabase` 是一个 R 包，用于操作在线公共数据库，并结合其他工具进行化合物注释和通路富集分析。`massdatabase` 是一个灵活、简单且强大的工具，可以在所有平台上安装，使用户能够利用所有在线公共数据库进行生物功能挖掘。
 
 ![](/docs/chapter7/figures/Figure_massdatabase.png)
 
-## Install `massdatabase`
+## 安装 `massdatabase`
 
-You can install `massdatabase` from [GitLab](https://gitlab.com/tidymass/massdatabase).
+你可以从 [GitLab](https://gitlab.com/tidymass/massdatabase) 安装 `massdatabase`。
 
 
 ``` r
@@ -28,14 +28,14 @@ install.packages("remotes")
 remotes::install_gitlab("tidymass/massdatabase")
 ```
 
-or [GitHub](https://github.com/tidymass/massdatabase)
+或从 [GitHub](https://github.com/tidymass/massdatabase) 安装
 
 
 ``` r
 remotes::install_github("tidymass/massdatabase")
 ```
 
-or tidymass.org
+或者从 tidymass.org 安装
 
 
 ``` r
@@ -43,11 +43,11 @@ source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
 install_tidymass(from = "tidymass.org", which_package = "massdatabase")
 ```
 
-## BIGG database
+## BIGG 数据库
 
-[BIGG model](http://bigg.ucsd.edu/)is a knowledge base of genome-scale metabolic network reconstructions.
+[BIGG model](http://bigg.ucsd.edu/) 是一个基于基因组规模的代谢网络重建知识库。
 
-Download the BIGG universal metabolite database:
+下载 BIGG 通用代谢物数据库：
 
 
 ``` r
@@ -66,7 +66,7 @@ download_bigg_universal_metabolite(path = "database_construction/",
                                    sleep = 1)
 ```
 
-Then read and convert it to `databaseClass` format.
+然后读取并将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -74,9 +74,9 @@ data <-
   read_bigg_universal_metabolite(path = ".")
 ```
 
-> It may take a while to download the database.
+> 下载数据库可能需要一段时间。
 
-Then convert it to `databaseClass` format.
+然后将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -89,18 +89,18 @@ bigg_database <-
 bigg_database
 ```
 
-You can save the database to use later.
+你可以将数据库保存以供以后使用。
 
 
 ``` r
 save(bigg_database, file = "database_construction/bigg_database")
 ```
 
-## ChEBI database
+## ChEBI 数据库
 
-Chemical Entities of Biological Interest ([ChEBI](https://www.ebi.ac.uk/chebi/)) is a freely available dictionary of molecular entities focused on ‘small’ chemical compounds.
+Chemical Entities of Biological Interest ([ChEBI](https://www.ebi.ac.uk/chebi/)) 是一个专注于“小”化学化合物的分子实体的免费字典。
 
-Download the ChEBI compound database:
+下载 ChEBI 化合物数据库：
 
 
 ``` r
@@ -112,7 +112,7 @@ library(massdatabase)
 download_chebi_compound(path = "database_construction/")
 ```
 
-Then read and convert it to `databaseClass` format.
+然后读取并将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -121,7 +121,7 @@ data <-
 #> Reading data...
 ```
 
-Then convert it to `databaseClass` format.
+然后将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -160,18 +160,18 @@ chebi_database
 #> 
 ```
 
-You can save the database to use later.
+你可以将数据库保存以供以后使用。
 
 
 ``` r
 save(chebi_database, file = "database_construction/chebi_database")
 ```
 
-## FooDB database
+## FooDB 数据库
 
-[FooDB](https://foodb.ca/) is the world’s largest and most comprehensive resource on food constituents, chemistry and biology.
+[FooDB](https://foodb.ca/) 是全球最大且最全面的食物成分、化学和生物学资源。
 
-Download the FooDB database:
+下载 FooDB 数据库：
 
 
 ``` r
@@ -183,9 +183,9 @@ library(massdatabase)
 download_foodb_compound(compound_id = "all", path = "database_construction/")
 ```
 
-> It may take a while to download the database.
+> 下载数据库可能需要一段时间。
 
-Then read and convert it to `databaseClass` format.
+然后读取并将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -193,7 +193,7 @@ data <-
   read_foodb_compound(path = "database_construction")
 ```
 
-Then convert it to `databaseClass` format.
+然后将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -206,20 +206,18 @@ foodb_dataabse <-
 foodb_dataabse
 ```
 
-You can save the database to use later.
+你可以将数据库保存以供以后使用。
 
 
 ``` r
 save(foodb_dataabse, file = "database_construction/foodb_dataabse")
 ```
 
+## GNPS 数据库
 
-## GNPS database
+[GNPS](https://gnps-external.ucsd.edu/gnpslibrary) 是一个基于网络的质谱生态系统，旨在成为全社区范围内的开放访问知识库，用于组织和共享原始、处理过的或带有注释的质谱数据（MS/MS）。GNPS 在数据的整个生命周期内（从最初的数据采集/分析到发布后）都有助于鉴定和发现。
 
-The [GNPS](https://gnps-external.ucsd.edu/gnpslibrary) GNPS is a web-based mass spectrometry ecosystem that aims to be an open-access knowledge base for community-wide organization and sharing of raw, processed, or annotated fragmentation mass spectrometry data (MS/MS). GNPS aids in identification and discovery throughout the entire life cycle of data; from initial data acquisition/analysis to post publication.
-
-
-Download the database:
+下载数据库：
 
 
 ``` r
@@ -232,15 +230,15 @@ download_gnps_spectral_library(gnps_library = "HMDB",
                                path = "database_construction")
 ```
 
-The argument `gnps_library` should be one of the `GNPS Library` one this website.
+参数 `gnps_library` 应是此网站上的 `GNPS Library` 之一。
 
 https://gnps-external.ucsd.edu/gnpslibrary
 
 ![](/docs/chapter7/figures/Screen-Shot.png)
 
-> It may take a while to download the database.
+> 下载数据库可能需要一段时间。
 
-Then read and convert it to `databaseClass` format.
+然后读取并将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -252,7 +250,7 @@ indexing HMDB.msp [=======================================] 274.90GB/s, eta:  0s
 #> 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
 ```
 
-Then convert it to `databaseClass` format.
+然后将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -300,19 +298,18 @@ gnps_database
 #> Unknown_1
 ```
 
-You can save the database to use later.
+你可以将数据库保存以供以后使用。
 
 
 ``` r
 save(gnps_database, file = "database_construction/gnps_database")
 ```
 
+## KEGG 数据库
 
-## KEGG database
+[KEGG](https://www.genome.jp/kegg/) 是一个数据库资源，用于从分子层面信息中理解生物系统（如细胞、个体和生态系统）的高级功能和用途，特别是通过基因组测序和其他高通量实验技术生成的大规模分子数据集。
 
-[KEGG](https://www.genome.jp/kegg/) is a database resource for understanding high-level functions and utilities of the biological system, such as the cell, the organism and the ecosystem, from molecular-level information, especially large-scale molecular datasets generated by genome sequencing and other high-throughput experimental technologies.
-
-Download the database:
+下载数据库：
 
 
 ``` r
@@ -324,9 +321,11 @@ library(massdatabase)
 download_kegg_compound(path = "database_construction/")
 ```
 
-> It may take a while to download the database.
+> 下载数据库可能需要一段时间。
 
-Then read and convert it to `databaseClass` format.
+然后读取并将其转换为 `database
+
+Class` 格式。
 
 
 ``` r
@@ -334,7 +333,7 @@ data <-
   read_kegg_compound(path = "database_construction/")
 ```
 
-Then convert it to `databaseClass` format.
+然后将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -347,18 +346,18 @@ kegg_database <-
 kegg_database
 ```
 
-You can save the database to use later.
+你可以将数据库保存以供以后使用。
 
 
 ``` r
 save(kegg_database, file = "database_construction/kegg_database")
 ```
 
-## LipidMaps
+## LipidMaps 数据库
 
-[LIPID MAPS Lipidomics Gateway](https://www.lipidmaps.org/) was created in 2003 via an NIH “Glue Grant” to provide access to lipid nomenclature, databases, tools, protocols, standards, tutorials, meetings, publications, and other resources and serving the international lipid research community.
+[LIPID MAPS Lipidomics Gateway](https://www.lipidmaps.org/) 创建于2003年，通过 NIH 的“胶水资助”项目，为国际脂质研究社区提供脂质命名法、数据库、工具、标准、教程等资源。
 
-Download the database:
+下载数据库：
 
 
 ``` r
@@ -370,9 +369,9 @@ library(massdatabase)
 download_lipidmaps_lipid(path = "database_construction")
 ```
 
-> It may take a while to download the database.
+> 下载数据库可能需要一段时间。
 
-Uncompress the downloaded zip file.
+解压下载的 zip 文件。
 
 
 ``` r
@@ -380,7 +379,7 @@ unzip(zipfile = "database_construction/LMSD.sdf.zip",
       exdir = "database_construction/")
 ```
 
-Then read and convert it to `databaseClass` format.
+然后读取并将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -392,7 +391,7 @@ data <-
 #> Done.
 ```
 
-Then convert it to `databaseClass` format.
+然后将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -432,18 +431,18 @@ lipidmaps_database
 #> 
 ```
 
-You can save the database to use later.
+你可以将数据库保存以供以后使用。
 
 
 ``` r
 save(lipidmaps_database, file = "database_construction/lipidmaps_database")
 ```
 
-## MassBank
+## MassBank 数据库
 
-[MassBank](https://massbank.eu/MassBank/) is a community effort and you are invited to contribute. Please refer to our contributor documentation and get in touch via github or email.
+[MassBank](https://massbank.eu/MassBank/) 是一个社区合作项目，欢迎大家贡献。请参考我们的贡献文档，并通过 GitHub 或电子邮件与我们联系。
 
-Download the database:
+下载数据库：
 
 
 ``` r
@@ -455,9 +454,9 @@ library(massdatabase)
 download_massbank_compound(source = "nist", path = "database_construction/")
 ```
 
-> It may take a while to download the database.
+> 下载数据库可能需要一段时间。
 
-Then read and convert it to `databaseClass` format.
+然后读取并将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -465,9 +464,9 @@ data <- read_msp_data_massbank(file = "database_construction/massbank_compound/M
 #> 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
 ```
 
-> It may take a while to read the data.
+> 读取数据可能需要一段时间。
 
-Then convert it to `databaseClass` format.
+然后将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -475,25 +474,25 @@ massbank_database <-
   convert_massbank2metid_nist(data = data, path = "database_construction/")
 ```
 
-> It may take a while to convert the data.
+> 转换数据可能需要一段时间。
 
 
 ``` r
 massbank_database
 ```
 
-You can save the database to use later.
+你可以将数据库保存以供以后使用。
 
 
 ``` r
 save(massbank_database, file = "database_construction/massbank_database")
 ```
 
-## SMPDB
+## SMPDB 数据库
 
-[SMPDB](https://www.smpdb.ca/) is an interactive, visual database containing more than 30000 small molecule pathways found in humans only.
+[SMPDB](https://www.smpdb.ca/) 是一个交互式、可视化的数据库，包含30000多个仅在人体中发现的小分子通路。
 
-Download the database:
+下载数据库：
 
 
 ``` r
@@ -505,9 +504,9 @@ library(massdatabase)
 download_smpdb_pathway(path = "database_construction/")
 ```
 
-> It may take a while to download the database.
+> 下载数据库可能需要一段时间。
 
-Then read and convert it to `databaseClass` format.
+然后读取并将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -515,7 +514,7 @@ data <-
   read_smpdb_pathway(path = "database_construction/", only_primarity_pathway = TRUE)
 ```
 
-Then convert it to `databaseClass` format.
+然后将其转换为 `databaseClass` 格式。
 
 
 ``` r
@@ -528,20 +527,20 @@ smpdb_pathway_database <-
 smpdb_pathway_database
 ```
 
-You can save the database to use later.
+你可以将数据库保存以供以后使用。
 
 
 ``` r
 save(smpdb_pathway_database, file = "database_construction/smpdb_pathway_database")
 ```
 
-## Citation
+## 引用
 
-If you use `massdatabase` in your studies, please cite this paper:
+如果你在研究中使用了 `massdatabase`，请引用以下论文：
 
 [massDatabase: utilities for the operation of the public compound and pathway database. Bioinformatics (2022).](https://academic.oup.com/bioinformatics/article/38/19/4650/6659093)
 
-## Session information
+## 会话信息
 
 
 ``` r

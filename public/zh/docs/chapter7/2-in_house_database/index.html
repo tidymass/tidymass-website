@@ -274,8 +274,9 @@
 
   
 
-<meta name="description" content="If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the metid package.
-There are no specific requirements on how to run the LC/MS data for users." />
+<meta name="description" content="如果你有内部标准并且已经获取了 MS2 光谱数据，那么你可以使用 metID 包来构建内部 MS2 光谱数据库。
+对于用户如何运行 LC/MS 数据并没有具体的要求。由于在 metID 中的内部数据库构建是为了让用户能够自行获得内部数据库（包括代谢物的 m/z、保留时间和 MS/MS 光谱，用于一级注释 (Sumner et al., 2007)），因此用户只需使用与实验室实际样品相同的色谱柱、LC 梯度和 MS 设置运行标准样品即可。
+数据准备 首先，请使用 ProteoWizard 将原始标准 MS 数据（正负模式）转换为 mzXML 格式。参数设置如下图所示：" />
 
 
 
@@ -319,9 +320,10 @@ There are no specific requirements on how to run the LC/MS data for users." />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/zh/docs/chapter7/2-in_house_database/" />
-<meta property="og:title" content="Construct in-house MS2 database | TidyMass" />
-<meta property="og:description" content="If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the metid package.
-There are no specific requirements on how to run the LC/MS data for users." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+<meta property="og:title" content="构建内部MS2数据库 | TidyMass" />
+<meta property="og:description" content="如果你有内部标准并且已经获取了 MS2 光谱数据，那么你可以使用 metID 包来构建内部 MS2 光谱数据库。
+对于用户如何运行 LC/MS 数据并没有具体的要求。由于在 metID 中的内部数据库构建是为了让用户能够自行获得内部数据库（包括代谢物的 m/z、保留时间和 MS/MS 光谱，用于一级注释 (Sumner et al., 2007)），因此用户只需使用与实验室实际样品相同的色谱柱、LC 梯度和 MS 设置运行标准样品即可。
+数据准备 首先，请使用 ProteoWizard 将原始标准 MS 数据（正负模式）转换为 mzXML 格式。参数设置如下图所示：" /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
 
   
     <meta
@@ -355,7 +357,7 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
 
 
   
-  <title>Construct in-house MS2 database | TidyMass</title>
+  <title>构建内部MS2数据库 | TidyMass</title>
 
   
   
@@ -855,15 +857,15 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/2-update/">2 Update tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/2-update/">2 更新 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker 版本的 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 构建你自己的 docker</a></li>
 
       
         </ul>
@@ -1073,19 +1075,23 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
 
 
 
-  <li class="active"><a href="/zh/docs/chapter7/2-in_house_database/">2 In-house MS2 database</a></li>
+  <li class="active"><a href="/zh/docs/chapter7/2-in_house_database/">2 内部MS2数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 公共数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/zh/docs/chapter7/4-public_databases/">4 公共数据库下载</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+  <li class=""><a href="/zh/docs/chapter7/5-metabolite_annotation/">5 代谢物注释示例</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/6-identify_single_peak/">6 识别单个峰</a></li>
 
       
         </ul>
@@ -1254,11 +1260,11 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#data-preparation">Data preparation</a></li>
-    <li><a href="#data-organization">Data organization</a></li>
-    <li><a href="#run-construct_database-function">Run <code>construct_database()</code> function</a></li>
-    <li><a href="#ms1-database">MS1 database</a></li>
-    <li><a href="#session-information">Session information</a></li>
+    <li><a href="#数据准备">数据准备</a></li>
+    <li><a href="#数据组织">数据组织</a></li>
+    <li><a href="#运行-construct_database-函数">运行 <code>construct_database()</code> 函数</a></li>
+    <li><a href="#ms1-数据库">MS1 数据库</a></li>
+    <li><a href="#会话信息">会话信息</a></li>
   </ul>
 </nav>
 
@@ -1321,7 +1327,7 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        2 In-house MS2 database
+        2 内部MS2数据库
       </li>
     </ol>
   </nav>
@@ -1338,17 +1344,17 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
 
       <div class="docs-article-container">
         
-        <h1>Construct in-house MS2 database</h1>
+        <h1>构建内部MS2数据库</h1>
 
         <article class="article-style">
 
           
           
 
-          <p>If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the <code>metid</code> package.</p>
-<p>There are no specific requirements on how to run the LC/MS data for users. As the in-house database construction in metid is used for users to get the in-house databases for themselves (including m/z, retention time and MS/MS spectra of metabolites, for level 1 annotation (Sumner et al., 2007)), so the users just need to run the standards using the same column, LC-gradient, and MS settings with  their real samples in the lab</p>
-<h2 id="data-preparation">Data preparation</h2>
-<p>Firstly, please transform your raw standard MS data (positive and negative modes) to mzXML format using <a href="http://proteowizard.sourceforge.net/" target="_blank" rel="noopener">ProteoWizard</a>. The parameter setting is shown in the figure below:</p>
+          <p>如果你有内部标准并且已经获取了 MS2 光谱数据，那么你可以使用 <code>metID</code> 包来构建内部 MS2 光谱数据库。</p>
+<p>对于用户如何运行 LC/MS 数据并没有具体的要求。由于在 <code>metID</code> 中的内部数据库构建是为了让用户能够自行获得内部数据库（包括代谢物的 m/z、保留时间和 MS/MS 光谱，用于一级注释 (Sumner et al., 2007)），因此用户只需使用与实验室实际样品相同的色谱柱、LC 梯度和 MS 设置运行标准样品即可。</p>
+<h2 id="数据准备">数据准备</h2>
+<p>首先，请使用 <a href="http://proteowizard.sourceforge.net/" target="_blank" rel="noopener">ProteoWizard</a> 将原始标准 MS 数据（正负模式）转换为 mzXML 格式。参数设置如下图所示：</p>
 <p>
 
 
@@ -1370,27 +1376,27 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
     <div class="w-100" ><img src="/docs/chapter7/figures/parameter_setting_MS_conventer.png" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<h2 id="data-organization">Data organization</h2>
-<p>Secondly, please organize your standard information as a table, and output it in a csv or xlsx format. The format of standard information can refer to our demo data in <code>demoData</code> package.</p>
-<p>From column 1 to 11, the columns are &ldquo;Lab.ID&rdquo;, &ldquo;Compound.name&rdquo;, &ldquo;mz&rdquo;, &ldquo;RT&rdquo;, &ldquo;CAS.ID&rdquo;, &ldquo;HMDB.ID&rdquo;, &ldquo;KEGG.ID&rdquo;, &ldquo;Formula&rdquo;, &ldquo;mz.pos&rdquo;, &ldquo;mz.neg&rdquo;, &ldquo;Submitter&rdquo;, respectively. It is OK if you have other information for the standards. As the demo data show, there are other additional information, namely &ldquo;Family&rdquo;, &ldquo;Sub.pathway&rdquo; and &ldquo;Note&rdquo;.</p>
+<h2 id="数据组织">数据组织</h2>
+<p>其次，请将标准信息整理成表格，并输出为 csv 或 xlsx 格式。标准信息的格式可以参考 <code>demoData</code> 包中的演示数据。</p>
+<p>从第1列到第11列，依次为 &ldquo;Lab.ID&rdquo;、&ldquo;Compound.name&rdquo;、&ldquo;mz&rdquo;、&ldquo;RT&rdquo;、&ldquo;CAS.ID&rdquo;、&ldquo;HMDB.ID&rdquo;、&ldquo;KEGG.ID&rdquo;、&ldquo;Formula&rdquo;、&ldquo;mz.pos&rdquo;、&ldquo;mz.neg&rdquo;、&ldquo;Submitter&rdquo;。如果你有其他的标准信息也没问题。例如演示数据中还有其他附加信息：&ldquo;Family&rdquo;、&ldquo;Sub.pathway&rdquo; 和 &ldquo;Note&rdquo;。</p>
 <ul>
 <li>
-<p>Lab.ID: No duplicated.</p>
+<p>Lab.ID: 无重复。</p>
 </li>
 <li>
-<p>mz: Accurate mass of compounds.</p>
+<p>mz: 化合物的精确质量。</p>
 </li>
 <li>
-<p>RT: Retention time, unit is second.</p>
+<p>RT: 保留时间，单位为秒。</p>
 </li>
 <li>
-<p>mz.pos: Mass to change ratio of compound in positive mode, for example, M+H. <strong>You can set it as NA</strong>.</p>
+<p>mz.pos: 化合物在正模式下的质量电荷比，例如 M+H。<strong>你可以将其设置为 NA</strong>。</p>
 </li>
 <li>
-<p>mz.neg: Mass to change ratio of compound in negative mode, for example, M-H. <strong>You can set it as NA</strong>.</p>
+<p>mz.neg: 化合物在负模式下的质量电荷比，例如 M-H。<strong>你可以将其设置为 NA</strong>。</p>
 </li>
 <li>
-<p>Submitter: The name of person or organization. <strong>You can set it as NA</strong>.</p>
+<p>Submitter: 提交者的名字或组织名称。<strong>你可以将其设置为 NA</strong>。</p>
 </li>
 </ul>
 <p>
@@ -1414,8 +1420,8 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
     <div class="w-100" ><img src="/docs/chapter7/figures/compound_information.PNG" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<p>Then create a folder and put your mzXML format datasets (positive mode in &lsquo;POS&rsquo; folder and negative mode in &lsquo;NEG&rsquo; folder) and compound information in it. The mzXML file should have the collision energy in the name of each file. For example, <code>test_NCE25.mzXML</code>.</p>
-<p>The names of the mzXML files should be like this: <code>xxx_NCE25.mzXML</code>.</p>
+<p>然后创建一个文件夹，将 mzXML 格式的数据集（正模式放入 &lsquo;POS&rsquo; 文件夹，负模式放入 &lsquo;NEG&rsquo; 文件夹）和化合物信息放入其中。mzXML 文件名应包含碰撞能量。例如 <code>test_NCE25.mzXML</code>。</p>
+<p>mzXML 文件的命名应为：<code>xxx_NCE25.mzXML</code>。</p>
 <p>
 
 
@@ -1437,12 +1443,11 @@ There are no specific requirements on how to run the LC/MS data for users." /><m
     <div class="w-100" ><img src="/docs/chapter7/figures/database_construction.png" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<h2 id="run-construct_database-function">Run <code>construct_database()</code> function</h2>
-<p>Here we use the demo data from <code>demoData</code> package to show how to use the <code>construct_database()</code> function
-to construct database.</p>
-<p>We first prepare dataset.</p>
-<p>Download the data <a href="https://github.com/tidymass/demoData/tree/master/inst/database_construction" target="_blank" rel="noopener">here</a>. and then put all of them in the &ldquo;database_construction&rdquo; folder.</p>
-<p>Then there will be a folder named as <code>database_construction</code> in your work directory like below figure shows:</p>
+<h2 id="运行-construct_database-函数">运行 <code>construct_database()</code> 函数</h2>
+<p>这里我们使用 <code>demoData</code> 包中的演示数据来展示如何使用 <code>construct_database()</code> 函数来构建数据库。</p>
+<p>我们首先准备数据集。</p>
+<p><a href="https://github.com/jaspershen/demoData/tree/master/inst/database_construction" target="_blank" rel="noopener">在此下载数据</a>，然后将所有文件放入 &ldquo;database_construction&rdquo; 文件夹。</p>
+<p>然后在你的工作目录中会有一个名为 <code>database_construction</code> 的文件夹，如下图所示：</p>
 <p>
 
 
@@ -1463,8 +1468,8 @@ to construct database.</p>
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img src="/docs/chapter7/figures/Screen-Shot-2021-02-26-9.22.52-PM.png" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
-
-Then we run <code>construct_database()</code> function and then we can get the database.</p>
+</p>
+<p>接下来运行 <code>construct_database()</code> 函数，我们就可以生成数据库。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">new.path</span> <span class="o">&lt;-</span> <span class="nf">file.path</span><span class="p">(</span><span class="s">&#34;./database_construction&#34;</span><span class="p">)</span>
@@ -1482,8 +1487,8 @@ Then we run <code>construct_database()</code> function and then we can get the d
 </span></span><span class="line"><span class="cl">  <span class="n">rt.tol</span> <span class="o">=</span> <span class="m">30</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">threads</span> <span class="o">=</span> <span class="m">3</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span></code></pre></div><p>The arguments of <code>construct_database()</code> can be found by <code>?construct_database()</code>.</p>
-<p>test.database is a <code>databaseClass</code> object, you can print it to see its information.</p>
+</span></span></code></pre></div><p><code>construct_database()</code> 函数的参数可以通过 <code>?construct_database()</code> 查找。</p>
+<p><code>test.database</code> 是一个 <code>databaseClass</code> 对象，你可以打印它来查看其信息。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">test.database</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; -----------Base information------------</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Version:0.0.1</span>
@@ -1504,16 +1509,16 @@ Then we run <code>construct_database()</code> function and then we can get the d
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Total number:1</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; NCE25</span>
 </span></span></code></pre></div><blockquote>
-<p>Note:
-<code>test.database</code> is only a demo database (metIdentifyClass object). We will don&rsquo;t use it for next metabolite identification. Then please save this database in you local folder, please note that the saved file name and database name must be same. For example:</p>
+<p>注意:
+<code>test.database</code> 只是一个演示数据库（metIdentifyClass 对象）。我们不会将其用于后续的代谢物鉴定。请将此数据库保存在你的本地文件夹中，并确保保存的文件名和数据库名称一致。例如：</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">test.database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;test.database&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><blockquote>
-<p>If you save the <code>test.database</code> as a different name, it will be a error when you use it.</p>
+<p>如果你使用不同的名称保存 <code>test.database</code>，在使用时会出现错误。</p>
 </blockquote>
-<h2 id="ms1-database">MS1 database</h2>
-<p>If you do not have MS2 data, you can also use <code>construct_database()</code> function to construct MS1 database.</p>
-<h2 id="session-information">Session information</h2>
+<h2 id="ms1-数据库">MS1 数据库</h2>
+<p>如果你没有 MS2 数据，你仍然可以使用 <code>construct_database()</code> 函数来构建 MS1 数据库。</p>
+<h2 id="会话信息">会话信息</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
@@ -1635,7 +1640,7 @@ Then we run <code>construct_database()</code> function and then we can get the d
   
   <div class="post-nav-item">
     <div class="meta-nav">下一页</div>
-    <a href="/zh/docs/chapter7/3-construct_public_databases/" rel="prev">Construct public databases</a>
+    <a href="/zh/docs/chapter7/3-construct_public_databases/" rel="prev">构建公共数据库</a>
   </div>
   
 </div>

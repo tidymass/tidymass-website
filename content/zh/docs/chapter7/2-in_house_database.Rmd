@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Construct in-house MS2 database"
-linktitle: "2 In-house MS2 database"
+title: "构建内部MS2数据库"
+linktitle: "2 内部MS2数据库"
 author: admin
 type: book
 weight: 2
@@ -19,55 +19,56 @@ knitr::opts_chunk$set(
 knitr::opts_knit$set(root.dir = here::here("content/docs"))
 ```
 
-If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the `metid` package. 
+如果你有内部标准并且已经获取了 MS2 光谱数据，那么你可以使用 `metID` 包来构建内部 MS2 光谱数据库。
 
-There are no specific requirements on how to run the LC/MS data for users. As the in-house database construction in metid is used for users to get the in-house databases for themselves (including m/z, retention time and MS/MS spectra of metabolites, for level 1 annotation (Sumner et al., 2007)), so the users just need to run the standards using the same column, LC-gradient, and MS settings with  their real samples in the lab
+对于用户如何运行 LC/MS 数据并没有具体的要求。由于在 `metID` 中的内部数据库构建是为了让用户能够自行获得内部数据库（包括代谢物的 m/z、保留时间和 MS/MS 光谱，用于一级注释 (Sumner et al., 2007)），因此用户只需使用与实验室实际样品相同的色谱柱、LC 梯度和 MS 设置运行标准样品即可。
 
-## Data preparation
+## 数据准备
 
-Firstly, please transform your raw standard MS data (positive and negative modes) to mzXML format using [ProteoWizard](http://proteowizard.sourceforge.net/). The parameter setting is shown in the figure below:
+首先，请使用 [ProteoWizard](http://proteowizard.sourceforge.net/) 将原始标准 MS 数据（正负模式）转换为 mzXML 格式。参数设置如下图所示：
 
 ![](/docs/chapter7/figures/parameter_setting_MS_conventer.png)
 
-## Data organization
+## 数据组织
 
-Secondly, please organize your standard information as a table, and output it in a csv or xlsx format. The format of standard information can refer to our demo data in `demoData` package. 
+其次，请将标准信息整理成表格，并输出为 csv 或 xlsx 格式。标准信息的格式可以参考 `demoData` 包中的演示数据。
 
-From column 1 to 11, the columns are "Lab.ID", "Compound.name", "mz", "RT", "CAS.ID", "HMDB.ID", "KEGG.ID", "Formula", "mz.pos", "mz.neg", "Submitter", respectively. It is OK if you have other information for the standards. As the demo data show, there are other additional information, namely "Family", "Sub.pathway" and "Note".
+从第1列到第11列，依次为 "Lab.ID"、"Compound.name"、"mz"、"RT"、"CAS.ID"、"HMDB.ID"、"KEGG.ID"、"Formula"、"mz.pos"、"mz.neg"、"Submitter"。如果你有其他的标准信息也没问题。例如演示数据中还有其他附加信息："Family"、"Sub.pathway" 和 "Note"。
 
-- Lab.ID: No duplicated. 
+- Lab.ID: 无重复。
 
-- mz: Accurate mass of compounds.
+- mz: 化合物的精确质量。
 
-- RT: Retention time, unit is second.
+- RT: 保留时间，单位为秒。
 
-- mz.pos: Mass to change ratio of compound in positive mode, for example, M+H. **You can set it as NA**.
+- mz.pos: 化合物在正模式下的质量电荷比，例如 M+H。**你可以将其设置为 NA**。
 
-- mz.neg: Mass to change ratio of compound in negative mode, for example, M-H. **You can set it as NA**.
+- mz.neg: 化合物在负模式下的质量电荷比，例如 M-H。**你可以将其设置为 NA**。
 
-- Submitter: The name of person or organization. **You can set it as NA**.
+- Submitter: 提交者的名字或组织名称。**你可以将其设置为 NA**。
 
 ![](/docs/chapter7/figures/compound_information.PNG)
 
-Then create a folder and put your mzXML format datasets (positive mode in 'POS' folder and negative mode in 'NEG' folder) and compound information in it. The mzXML file should have the collision energy in the name of each file. For example, `test_NCE25.mzXML`.
+然后创建一个文件夹，将 mzXML 格式的数据集（正模式放入 'POS' 文件夹，负模式放入 'NEG' 文件夹）和化合物信息放入其中。mzXML 文件名应包含碰撞能量。例如 `test_NCE25.mzXML`。
 
-The names of the mzXML files should be like this: `xxx_NCE25.mzXML`.
+mzXML 文件的命名应为：`xxx_NCE25.mzXML`。
 
 ![](/docs/chapter7/figures/database_construction.png)
 
-## Run `construct_database()` function
+## 运行 `construct_database()` 函数
 
-Here we use the demo data from `demoData` package to show how to use the `construct_database()` function
-to construct database.
+这里我们使用 `demoData` 包中的演示数据来展示如何使用 `construct_database()` 函数来构建数据库。
 
-We first prepare dataset.
+我们首先准备数据集。
 
-Download the data [here](https://github.com/tidymass/demoData/tree/master/inst/database_construction). and then put all of them in the "database_construction" folder.
+[在此下载数据](https://github.com/jaspershen/demoData/tree/master/inst/database_construction)，然后将所有文件放入 "database_construction" 文件夹。
 
-Then there will be a folder named as `database_construction` in your work directory like below figure shows:
+然后在你的工作目录中会有一个名为 `database_construction` 的文件夹，如下图所示：
 
 ![](/docs/chapter7/figures/Screen-Shot-2021-02-26-9.22.52-PM.png)
-Then we run `construct_database()` function and then we can get the database.
+
+接下来运行 `construct_database()` 函数，我们就可以生成数据库。
+
 ```{r,eval=TRUE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
 library(metid)
 
@@ -88,28 +89,28 @@ test.database <- construct_database(
 )
 ```
 
-The arguments of `construct_database()` can be found by `?construct_database()`.
+`construct_database()` 函数的参数可以通过 `?construct_database()` 查找。
 
-test.database is a `databaseClass` object, you can print it to see its information.
+`test.database` 是一个 `databaseClass` 对象，你可以打印它来查看其信息。
 
 ```{r,eval = TRUE,warning=FALSE, message=TRUE,R.options="",cache=TRUE}
 test.database
 ```
 
-> Note:
-`test.database` is only a demo database (metIdentifyClass object). We will don't use it for next metabolite identification. Then please save this database in you local folder, please note that the saved file name and database name must be same. For example:
+> 注意:
+`test.database` 只是一个演示数据库（metIdentifyClass 对象）。我们不会将其用于后续的代谢物鉴定。请将此数据库保存在你的本地文件夹中，并确保保存的文件名和数据库名称一致。例如：
 
 ```{r,eval = FALSE,warning=FALSE, message=FALSE,R.options="",cache=TRUE}
 save(test.database, file = "test.database")
 ```
 
-> If you save the `test.database` as a different name, it will be a error when you use it.
+> 如果你使用不同的名称保存 `test.database`，在使用时会出现错误。
 
-## MS1 database
+## MS1 数据库
 
-If you do not have MS2 data, you can also use `construct_database()` function to construct MS1 database. 
+如果你没有 MS2 数据，你仍然可以使用 `construct_database()` 函数来构建 MS1 数据库。
 
-## Session information
+## 会话信息
 
 ```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
 sessionInfo()

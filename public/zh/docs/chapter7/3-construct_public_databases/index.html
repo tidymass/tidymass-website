@@ -274,7 +274,11 @@
 
   
 
-<meta name="description" content="Introduction If you want to construct databases for metid, you can use the massDatabase package. massdatabase is an R package that operates the online public databases and combines with other tools for streamlined compound annotation and pathway enrichment analysis." />
+<meta name="description" content="介绍 如果你想为 metID 构建数据库，可以使用 massDatabase 包。massdatabase 是一个 R 包，用于操作在线公共数据库，并结合其他工具进行化合物注释和通路富集分析。massdatabase 是一个灵活、简单且强大的工具，可以在所有平台上安装，使用户能够利用所有在线公共数据库进行生物功能挖掘。
+安装 massdatabase 你可以从 GitLab 安装 massdatabase。
+if(!require(remotes)){ install.packages(&#34;remotes&#34;) } remotes::install_gitlab(&#34;tidymass/massdatabase&#34;) 或从 GitHub 安装
+remotes::install_github(&#34;tidymass/massdatabase&#34;) 或者从 tidymass.org 安装
+source(&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;) install_tidymass(from = &#34;tidymass." />
 
 
 
@@ -318,8 +322,12 @@
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/zh/docs/chapter7/3-construct_public_databases/" />
-<meta property="og:title" content="Construct public databases | TidyMass" />
-<meta property="og:description" content="Introduction If you want to construct databases for metid, you can use the massDatabase package. massdatabase is an R package that operates the online public databases and combines with other tools for streamlined compound annotation and pathway enrichment analysis." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+<meta property="og:title" content="构建公共数据库 | TidyMass" />
+<meta property="og:description" content="介绍 如果你想为 metID 构建数据库，可以使用 massDatabase 包。massdatabase 是一个 R 包，用于操作在线公共数据库，并结合其他工具进行化合物注释和通路富集分析。massdatabase 是一个灵活、简单且强大的工具，可以在所有平台上安装，使用户能够利用所有在线公共数据库进行生物功能挖掘。
+安装 massdatabase 你可以从 GitLab 安装 massdatabase。
+if(!require(remotes)){ install.packages(&#34;remotes&#34;) } remotes::install_gitlab(&#34;tidymass/massdatabase&#34;) 或从 GitHub 安装
+remotes::install_github(&#34;tidymass/massdatabase&#34;) 或者从 tidymass.org 安装
+source(&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;) install_tidymass(from = &#34;tidymass." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
 
   
     <meta
@@ -353,7 +361,7 @@
 
 
   
-  <title>Construct public databases | TidyMass</title>
+  <title>构建公共数据库 | TidyMass</title>
 
   
   
@@ -853,15 +861,15 @@
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/2-update/">2 Update tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/2-update/">2 更新 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker 版本的 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 构建你自己的 docker</a></li>
 
       
         </ul>
@@ -1071,19 +1079,23 @@
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 In-house MS2 database</a></li>
+  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 内部MS2数据库</a></li>
 
 
 
-  <li class="active"><a href="/zh/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+  <li class="active"><a href="/zh/docs/chapter7/3-construct_public_databases/">3 公共数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/zh/docs/chapter7/4-public_databases/">4 公共数据库下载</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+  <li class=""><a href="/zh/docs/chapter7/5-metabolite_annotation/">5 代谢物注释示例</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/6-identify_single_peak/">6 识别单个峰</a></li>
 
       
         </ul>
@@ -1252,18 +1264,18 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#install-massdatabase">Install <code>massdatabase</code></a></li>
-    <li><a href="#bigg-database">BIGG database</a></li>
-    <li><a href="#chebi-database">ChEBI database</a></li>
-    <li><a href="#foodb-database">FooDB database</a></li>
-    <li><a href="#gnps-database">GNPS database</a></li>
-    <li><a href="#kegg-database">KEGG database</a></li>
-    <li><a href="#lipidmaps">LipidMaps</a></li>
-    <li><a href="#massbank">MassBank</a></li>
-    <li><a href="#smpdb">SMPDB</a></li>
-    <li><a href="#citation">Citation</a></li>
-    <li><a href="#session-information">Session information</a></li>
+    <li><a href="#介绍">介绍</a></li>
+    <li><a href="#安装-massdatabase">安装 <code>massdatabase</code></a></li>
+    <li><a href="#bigg-数据库">BIGG 数据库</a></li>
+    <li><a href="#chebi-数据库">ChEBI 数据库</a></li>
+    <li><a href="#foodb-数据库">FooDB 数据库</a></li>
+    <li><a href="#gnps-数据库">GNPS 数据库</a></li>
+    <li><a href="#kegg-数据库">KEGG 数据库</a></li>
+    <li><a href="#lipidmaps-数据库">LipidMaps 数据库</a></li>
+    <li><a href="#massbank-数据库">MassBank 数据库</a></li>
+    <li><a href="#smpdb-数据库">SMPDB 数据库</a></li>
+    <li><a href="#引用">引用</a></li>
+    <li><a href="#会话信息">会话信息</a></li>
   </ul>
 </nav>
 
@@ -1326,7 +1338,7 @@
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        3 Public databases
+        3 公共数据库
       </li>
     </ol>
   </nav>
@@ -1343,15 +1355,15 @@
 
       <div class="docs-article-container">
         
-        <h1>Construct public databases</h1>
+        <h1>构建公共数据库</h1>
 
         <article class="article-style">
 
           
           
 
-          <h2 id="introduction">Introduction</h2>
-<p>If you want to construct databases for <code>metid</code>, you can use the <a href="https://massdatabase.tidymass.org/" target="_blank" rel="noopener">massDatabase</a> package. <code>massdatabase</code> is an R package that operates the online public databases and combines with other tools for streamlined compound annotation and pathway enrichment analysis. <code>massdatabase</code> is a flexible, simple, and powerful tool that can be installed on all platforms, allowing the users to leverage all the online public databases for biological function mining.</p>
+          <h2 id="介绍">介绍</h2>
+<p>如果你想为 <code>metID</code> 构建数据库，可以使用 <a href="https://massdatabase.tidymass.org/" target="_blank" rel="noopener">massDatabase</a> 包。<code>massdatabase</code> 是一个 R 包，用于操作在线公共数据库，并结合其他工具进行化合物注释和通路富集分析。<code>massdatabase</code> 是一个灵活、简单且强大的工具，可以在所有平台上安装，使用户能够利用所有在线公共数据库进行生物功能挖掘。</p>
 <p>
 
 
@@ -1373,20 +1385,20 @@
     <div class="w-100" ><img src="/docs/chapter7/figures/Figure_massdatabase.png" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<h2 id="install-massdatabase">Install <code>massdatabase</code></h2>
-<p>You can install <code>massdatabase</code> from <a href="https://gitlab.com/tidymass/massdatabase" target="_blank" rel="noopener">GitLab</a>.</p>
+<h2 id="安装-massdatabase">安装 <code>massdatabase</code></h2>
+<p>你可以从 <a href="https://gitlab.com/tidymass/massdatabase" target="_blank" rel="noopener">GitLab</a> 安装 <code>massdatabase</code>。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="kr">if</span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">remotes</span><span class="p">)){</span>
 </span></span><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;remotes&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="n">remotes</span><span class="o">::</span><span class="nf">install_gitlab</span><span class="p">(</span><span class="s">&#34;tidymass/massdatabase&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>or <a href="https://github.com/tidymass/massdatabase" target="_blank" rel="noopener">GitHub</a></p>
+</span></span></code></pre></div><p>或从 <a href="https://github.com/tidymass/massdatabase" target="_blank" rel="noopener">GitHub</a> 安装</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#34;tidymass/massdatabase&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>or tidymass.org</p>
+</span></span></code></pre></div><p>或者从 tidymass.org 安装</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">source</span><span class="p">(</span><span class="s">&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">install_tidymass</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="s">&#34;tidymass.org&#34;</span><span class="p">,</span> <span class="n">which_package</span> <span class="o">=</span> <span class="s">&#34;massdatabase&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="bigg-database">BIGG database</h2>
-<p><a href="http://bigg.ucsd.edu/" target="_blank" rel="noopener">BIGG model</a>is a knowledge base of genome-scale metabolic network reconstructions.</p>
-<p>Download the BIGG universal metabolite database:</p>
+</span></span></code></pre></div><h2 id="bigg-数据库">BIGG 数据库</h2>
+<p><a href="http://bigg.ucsd.edu/" target="_blank" rel="noopener">BIGG model</a> 是一个基于基因组规模的代谢网络重建知识库。</p>
+<p>下载 BIGG 通用代谢物数据库：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdatabase</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; massdatabase 1.0.10 (2024-09-25 19:56:56.178093)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
@@ -1396,28 +1408,28 @@
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;     show_progresser</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">download_bigg_universal_metabolite</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">                                   <span class="n">sleep</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
-</span></span></code></pre></div><p>Then read and convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后读取并将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span> 
 </span></span><span class="line"><span class="cl">  <span class="nf">read_bigg_universal_metabolite</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><blockquote>
-<p>It may take a while to download the database.</p>
+<p>下载数据库可能需要一段时间。</p>
 </blockquote>
-<p>Then convert it to <code>databaseClass</code> format.</p>
+<p>然后将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">bigg_database</span> <span class="o">&lt;-</span> 
 </span></span><span class="line"><span class="cl">  <span class="nf">convert_bigg_universal2metid</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">bigg_database</span>
-</span></span></code></pre></div><p>You can save the database to use later.</p>
+</span></span></code></pre></div><p>你可以将数据库保存以供以后使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">bigg_database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/bigg_database&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="chebi-database">ChEBI database</h2>
-<p>Chemical Entities of Biological Interest (<a href="https://www.ebi.ac.uk/chebi/" target="_blank" rel="noopener">ChEBI</a>) is a freely available dictionary of molecular entities focused on ‘small’ chemical compounds.</p>
-<p>Download the ChEBI compound database:</p>
+</span></span></code></pre></div><h2 id="chebi-数据库">ChEBI 数据库</h2>
+<p>Chemical Entities of Biological Interest (<a href="https://www.ebi.ac.uk/chebi/" target="_blank" rel="noopener">ChEBI</a>) 是一个专注于“小”化学化合物的分子实体的免费字典。</p>
+<p>下载 ChEBI 化合物数据库：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdatabase</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">download_chebi_compound</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>Then read and convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后读取并将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">read_chebi_compound</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Reading data...</span>
-</span></span></code></pre></div><p>Then convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">chebi_database</span> <span class="o">&lt;-</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">convert_chebi2metid</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; No POS file in your /var/folders/hh/628g4x5n0ygcv7ql3lsbl1z80000gn/T//Rtmpa1hD39/file55c044148807</span>
@@ -1447,32 +1459,32 @@
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Collision energy in negative mode:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Total number:0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span></code></pre></div><p>You can save the database to use later.</p>
+</span></span></code></pre></div><p>你可以将数据库保存以供以后使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">chebi_database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/chebi_database&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="foodb-database">FooDB database</h2>
-<p><a href="https://foodb.ca/" target="_blank" rel="noopener">FooDB</a> is the world’s largest and most comprehensive resource on food constituents, chemistry and biology.</p>
-<p>Download the FooDB database:</p>
+</span></span></code></pre></div><h2 id="foodb-数据库">FooDB 数据库</h2>
+<p><a href="https://foodb.ca/" target="_blank" rel="noopener">FooDB</a> 是全球最大且最全面的食物成分、化学和生物学资源。</p>
+<p>下载 FooDB 数据库：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdatabase</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">download_foodb_compound</span><span class="p">(</span><span class="n">compound_id</span> <span class="o">=</span> <span class="s">&#34;all&#34;</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><blockquote>
-<p>It may take a while to download the database.</p>
+<p>下载数据库可能需要一段时间。</p>
 </blockquote>
-<p>Then read and convert it to <code>databaseClass</code> format.</p>
+<p>然后读取并将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span> 
 </span></span><span class="line"><span class="cl">  <span class="nf">read_foodb_compound</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>Then convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">foodb_dataabse</span> <span class="o">&lt;-</span> 
 </span></span><span class="line"><span class="cl">  <span class="nf">convert_foodb2metid</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">foodb_dataabse</span>
-</span></span></code></pre></div><p>You can save the database to use later.</p>
+</span></span></code></pre></div><p>你可以将数据库保存以供以后使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">foodb_dataabse</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/foodb_dataabse&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="gnps-database">GNPS database</h2>
-<p>The <a href="https://gnps-external.ucsd.edu/gnpslibrary" target="_blank" rel="noopener">GNPS</a> GNPS is a web-based mass spectrometry ecosystem that aims to be an open-access knowledge base for community-wide organization and sharing of raw, processed, or annotated fragmentation mass spectrometry data (MS/MS). GNPS aids in identification and discovery throughout the entire life cycle of data; from initial data acquisition/analysis to post publication.</p>
-<p>Download the database:</p>
+</span></span></code></pre></div><h2 id="gnps-数据库">GNPS 数据库</h2>
+<p><a href="https://gnps-external.ucsd.edu/gnpslibrary" target="_blank" rel="noopener">GNPS</a> 是一个基于网络的质谱生态系统，旨在成为全社区范围内的开放访问知识库，用于组织和共享原始、处理过的或带有注释的质谱数据（MS/MS）。GNPS 在数据的整个生命周期内（从最初的数据采集/分析到发布后）都有助于鉴定和发现。</p>
+<p>下载数据库：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdatabase</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">download_gnps_spectral_library</span><span class="p">(</span><span class="n">gnps_library</span> <span class="o">=</span> <span class="s">&#34;HMDB&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">                               <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>The argument <code>gnps_library</code> should be one of the <code>GNPS Library</code> one this website.</p>
+</span></span></code></pre></div><p>参数 <code>gnps_library</code> 应是此网站上的 <code>GNPS Library</code> 之一。</p>
 <p><a href="https://gnps-external.ucsd.edu/gnpslibrary" target="_blank" rel="noopener">https://gnps-external.ucsd.edu/gnpslibrary</a></p>
 <p>
 
@@ -1496,16 +1508,16 @@
   </div></figure>
 </p>
 <blockquote>
-<p>It may take a while to download the database.</p>
+<p>下载数据库可能需要一段时间。</p>
 </blockquote>
-<p>Then read and convert it to <code>databaseClass</code> format.</p>
+<p>然后读取并将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">read_msp_data_gnps</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/HMDB.msp&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="n">indexing</span> <span class="n">HMDB.msp</span> <span class="n">[</span><span class="o">=======================================</span><span class="n">]</span> <span class="m">274.90</span><span class="n">GB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">eta</span><span class="o">:</span>  <span class="m">0</span><span class="n">s</span>
 </span></span><span class="line"><span class="cl">                                                                                
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%</span>
-</span></span></code></pre></div><p>Then convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">gnps_database</span> <span class="o">&lt;-</span> 
 </span></span><span class="line"><span class="cl">  <span class="nf">convert_gnps2metid</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Extracting MS1 inforamtion...</span>
@@ -1544,44 +1556,45 @@
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Collision energy in negative mode:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Total number:1</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Unknown_1</span>
-</span></span></code></pre></div><p>You can save the database to use later.</p>
+</span></span></code></pre></div><p>你可以将数据库保存以供以后使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">gnps_database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/gnps_database&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="kegg-database">KEGG database</h2>
-<p><a href="https://www.genome.jp/kegg/" target="_blank" rel="noopener">KEGG</a> is a database resource for understanding high-level functions and utilities of the biological system, such as the cell, the organism and the ecosystem, from molecular-level information, especially large-scale molecular datasets generated by genome sequencing and other high-throughput experimental technologies.</p>
-<p>Download the database:</p>
+</span></span></code></pre></div><h2 id="kegg-数据库">KEGG 数据库</h2>
+<p><a href="https://www.genome.jp/kegg/" target="_blank" rel="noopener">KEGG</a> 是一个数据库资源，用于从分子层面信息中理解生物系统（如细胞、个体和生态系统）的高级功能和用途，特别是通过基因组测序和其他高通量实验技术生成的大规模分子数据集。</p>
+<p>下载数据库：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdatabase</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">download_kegg_compound</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><blockquote>
-<p>It may take a while to download the database.</p>
+<p>下载数据库可能需要一段时间。</p>
 </blockquote>
-<p>Then read and convert it to <code>databaseClass</code> format.</p>
+<p>然后读取并将其转换为 `database</p>
+<p>Class` 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span> 
 </span></span><span class="line"><span class="cl">  <span class="nf">read_kegg_compound</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>Then convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">kegg_database</span> <span class="o">&lt;-</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">convert_kegg2metid</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">kegg_database</span>
-</span></span></code></pre></div><p>You can save the database to use later.</p>
+</span></span></code></pre></div><p>你可以将数据库保存以供以后使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">kegg_database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/kegg_database&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="lipidmaps">LipidMaps</h2>
-<p><a href="https://www.lipidmaps.org/" target="_blank" rel="noopener">LIPID MAPS Lipidomics Gateway</a> was created in 2003 via an NIH “Glue Grant” to provide access to lipid nomenclature, databases, tools, protocols, standards, tutorials, meetings, publications, and other resources and serving the international lipid research community.</p>
-<p>Download the database:</p>
+</span></span></code></pre></div><h2 id="lipidmaps-数据库">LipidMaps 数据库</h2>
+<p><a href="https://www.lipidmaps.org/" target="_blank" rel="noopener">LIPID MAPS Lipidomics Gateway</a> 创建于2003年，通过 NIH 的“胶水资助”项目，为国际脂质研究社区提供脂质命名法、数据库、工具、标准、教程等资源。</p>
+<p>下载数据库：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdatabase</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">download_lipidmaps_lipid</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><blockquote>
-<p>It may take a while to download the database.</p>
+<p>下载数据库可能需要一段时间。</p>
 </blockquote>
-<p>Uncompress the downloaded zip file.</p>
+<p>解压下载的 zip 文件。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">unzip</span><span class="p">(</span><span class="n">zipfile</span> <span class="o">=</span> <span class="s">&#34;database_construction/LMSD.sdf.zip&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">      <span class="n">exdir</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>Then read and convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后读取并将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">read_sdf_data_lipidmaps</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/structures.sdf&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Reading data, it may take a while...</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done.</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Organizing...</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Done.</span>
-</span></span></code></pre></div><p>Then convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">lipidmaps_database</span> <span class="o">&lt;-</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">convert_lipidmaps2metid</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Organizing...</span>
@@ -1612,52 +1625,52 @@
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Collision energy in negative mode:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Total number:0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span></code></pre></div><p>You can save the database to use later.</p>
+</span></span></code></pre></div><p>你可以将数据库保存以供以后使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">lipidmaps_database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/lipidmaps_database&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="massbank">MassBank</h2>
-<p><a href="https://massbank.eu/MassBank/" target="_blank" rel="noopener">MassBank</a> is a community effort and you are invited to contribute. Please refer to our contributor documentation and get in touch via github or email.</p>
-<p>Download the database:</p>
+</span></span></code></pre></div><h2 id="massbank-数据库">MassBank 数据库</h2>
+<p><a href="https://massbank.eu/MassBank/" target="_blank" rel="noopener">MassBank</a> 是一个社区合作项目，欢迎大家贡献。请参考我们的贡献文档，并通过 GitHub 或电子邮件与我们联系。</p>
+<p>下载数据库：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdatabase</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">download_massbank_compound</span><span class="p">(</span><span class="n">source</span> <span class="o">=</span> <span class="s">&#34;nist&#34;</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><blockquote>
-<p>It may take a while to download the database.</p>
+<p>下载数据库可能需要一段时间。</p>
 </blockquote>
-<p>Then read and convert it to <code>databaseClass</code> format.</p>
+<p>然后读取并将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span> <span class="nf">read_msp_data_massbank</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/massbank_compound/MassBank_NIST.msp&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%</span>
 </span></span></code></pre></div><blockquote>
-<p>It may take a while to read the data.</p>
+<p>读取数据可能需要一段时间。</p>
 </blockquote>
-<p>Then convert it to <code>databaseClass</code> format.</p>
+<p>然后将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">massbank_database</span> <span class="o">&lt;-</span> 
 </span></span><span class="line"><span class="cl">  <span class="nf">convert_massbank2metid_nist</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><blockquote>
-<p>It may take a while to convert the data.</p>
+<p>转换数据可能需要一段时间。</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">massbank_database</span>
-</span></span></code></pre></div><p>You can save the database to use later.</p>
+</span></span></code></pre></div><p>你可以将数据库保存以供以后使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">massbank_database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/massbank_database&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="smpdb">SMPDB</h2>
-<p><a href="https://www.smpdb.ca/" target="_blank" rel="noopener">SMPDB</a> is an interactive, visual database containing more than 30000 small molecule pathways found in humans only.</p>
-<p>Download the database:</p>
+</span></span></code></pre></div><h2 id="smpdb-数据库">SMPDB 数据库</h2>
+<p><a href="https://www.smpdb.ca/" target="_blank" rel="noopener">SMPDB</a> 是一个交互式、可视化的数据库，包含30000多个仅在人体中发现的小分子通路。</p>
+<p>下载数据库：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdatabase</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">download_smpdb_pathway</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><blockquote>
-<p>It may take a while to download the database.</p>
+<p>下载数据库可能需要一段时间。</p>
 </blockquote>
-<p>Then read and convert it to <code>databaseClass</code> format.</p>
+<p>然后读取并将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span> 
 </span></span><span class="line"><span class="cl">  <span class="nf">read_smpdb_pathway</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">,</span> <span class="n">only_primarity_pathway</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</span></span></code></pre></div><p>Then convert it to <code>databaseClass</code> format.</p>
+</span></span></code></pre></div><p>然后将其转换为 <code>databaseClass</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">smpdb_pathway_database</span> <span class="o">&lt;-</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">convert_smpdb2metpath</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;database_construction/&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">smpdb_pathway_database</span>
-</span></span></code></pre></div><p>You can save the database to use later.</p>
+</span></span></code></pre></div><p>你可以将数据库保存以供以后使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">smpdb_pathway_database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;database_construction/smpdb_pathway_database&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="citation">Citation</h2>
-<p>If you use <code>massdatabase</code> in your studies, please cite this paper:</p>
+</span></span></code></pre></div><h2 id="引用">引用</h2>
+<p>如果你在研究中使用了 <code>massdatabase</code>，请引用以下论文：</p>
 <p><a href="https://academic.oup.com/bioinformatics/article/38/19/4650/6659093" target="_blank" rel="noopener">massDatabase: utilities for the operation of the public compound and pathway database. Bioinformatics (2022).</a></p>
-<h2 id="session-information">Session information</h2>
+<h2 id="会话信息">会话信息</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
@@ -1783,14 +1796,14 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">上一页</div>
-    <a href="/zh/docs/chapter7/2-in_house_database/" rel="next">Construct in-house MS2 database</a>
+    <a href="/zh/docs/chapter7/2-in_house_database/" rel="next">构建内部MS2数据库</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">下一页</div>
-    <a href="/zh/docs/chapter7/4-metabolite_annotation/" rel="prev">Metabolite annotation: An example</a>
+    <a href="/zh/docs/chapter7/4-public_databases/" rel="prev">构建公共数据库</a>
   </div>
   
 </div>

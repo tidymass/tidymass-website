@@ -12,10 +12,9 @@ commentable: true
 
 
 
+## 介绍
 
-## Introduction
-
-The database class in `metid` is `databaseClass`. You can use the demo database in `metid` to explore it.
+`metID` 中的数据库类为 `databaseClass`。你可以使用 `metID` 中的演示数据库来进行探索。
 
 
 ``` r
@@ -62,9 +61,9 @@ class(snyder_database_rplc0.0.3)
 #> [1] "metid"
 ```
 
-It contains three parts:
+它包含三个部分：
 
-1. spectra.info: The information for all the metabolites/compounds in the database.
+1. spectra.info: 数据库中所有代谢物/化合物的信息。
 
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:600px; overflow-x: scroll; width:100%; "><table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
  <thead>
@@ -14763,7 +14762,7 @@ It contains three parts:
 
 
 
-2. database.info: The information of the database.
+2. database.info: 数据库的信息。
 
 
 ``` r
@@ -14787,7 +14786,7 @@ snyder_database_rplc0.0.3@database.info
 #> [1] TRUE
 ```
 
-3. spectra.data: The spectra of the metabolites in database.
+3. spectra.data: 数据库中代谢物的光谱信息。
 
 
 ``` r
@@ -14801,7 +14800,7 @@ head(names(snyder_database_rplc0.0.3@spectra.data$Spectra.positive))
 #> [1] "RPLC_1"  "RPLC_4"  "RPLC_5"  "RPLC_6"  "RPLC_8"  "RPLC_11"
 ```
 
-One metabolite may contains multiple spectra.
+一个代谢物可能包含多个光谱。
 
 
 ``` r
@@ -14822,7 +14821,7 @@ snyder_database_rplc0.0.3@spectra.data$Spectra.positive$RPLC_1$NCE25
 #> 13 122.42378   1972.688
 ```
 
-You can use [the function from masstools](https://masstools.tidymass.org/reference/ms2_plot) to visualize the ms2 spectra.
+你可以使用 [masstools 中的函数](https://masstools.tidymass.org/reference/ms2_plot) 来可视化 MS2 光谱。
 
 
 ``` r
@@ -14841,7 +14840,7 @@ ms2_plot(
 
 <img src="/zh/docs/chapter7/1-metid_database_structure_files/figure-html/unnamed-chunk-9-1.png" width="100%" />
 
-## Extract spectra from database
+## 从数据库中提取光谱
 
 
 ``` r
@@ -14875,15 +14874,15 @@ ms2_plot(ms2)
 
 <img src="/zh/docs/chapter7/1-metid_database_structure_files/figure-html/unnamed-chunk-11-1.png" width="100%" />
 
-## Convert `databaseClass` to other database format
+## 将 `databaseClass` 转换为其他数据库格式
 
-[`MassBank`](https://massbank.eu/), [`MoNA`](https://mona.fiehnlab.ucdavis.edu/) and some other public databases provide `msp` format database of metabolites. So you can use the functions in `metid` to output `metid` format database to `msp` format which can be used for `GNPS`, `MassBank` and `MoNA`.
+[`MassBank`](https://massbank.eu/)、[`MoNA`](https://mona.fiehnlab.ucdavis.edu/) 和其他一些公共数据库提供代谢物的 `msp` 格式数据库。因此你可以使用 `metID` 中的函数将 `metID` 格式的数据库输出为 `msp` 格式，以便用于 `GNPS`、`MassBank` 和 `MoNA`。
 
 ### MassBank
 
-#### `msp` format
+#### `msp` 格式
 
-Just use the `write_msp_massbank()` function to output `metid` database to `msp` format for MassBank.
+只需使用 `write_msp_massbank()` 函数将 `metID` 数据库输出为 MassBank 的 `msp` 格式。
 
 
 ``` r
@@ -14891,11 +14890,11 @@ library(metid)
 write_msp_massbank(databasae = databasae, path = ".")
 ```
 
-The arguments of `write_msp_massbank()` can be found using `?write_msp_massbank()`.
+`write_msp_massbank()` 函数的参数可以通过 `?write_msp_massbank()` 查找。
 
-#### `mgf` format
+#### `mgf` 格式
 
-Just use the `write_mgf_massbank()` function to output `metid` database to `mgf` format for MassBank.
+只需使用 `write_mgf_massbank()` 函数将 `metID` 数据库输出为 MassBank 的 `mgf` 格式。
 
 
 ``` r
@@ -14903,13 +14902,13 @@ library(metid)
 write_mgf_massbank(databasae = databasae, path = ".")
 ```
 
-The arguments of `write_msp_massbank()` can be found using `?write_msp_massbank()`.
+`write_mgf_massbank()` 函数的参数可以通过 `?write_msp_massbank()` 查找。
 
 ### MoNA
 
-#### `msp` format
+#### `msp` 格式
 
-Just use the `write_msp_mona()` function to output `metid` database to `msp` format for mona.
+只需使用 `write_msp_mona()` 函数将 `metID` 数据库输出为 MoNA 的 `msp` 格式。
 
 
 ``` r
@@ -14917,11 +14916,11 @@ library(metid)
 write_msp_mona(databasae = databasae, path = ".")
 ```
 
-The arguments of `write_msp_mona()` can be found using `?write_msp_mona()`.
+`write_msp_mona()` 函数的参数可以通过 `?write_msp_mona()` 查找。
 
-#### `mgf` format
+#### `mgf` 格式
 
-Just use the `write_mgf_mona()` function to output `metid` database to `mgf` format for mona.
+只需使用 `write_mgf_mona()` 函数将 `metID` 数据库输出为 MoNA 的 `mgf` 格式。
 
 
 ``` r
@@ -14929,13 +14928,13 @@ library(metid)
 write_mgf_mona(databasae = databasae, path = ".")
 ```
 
-The arguments of `write_msp_mona()` can be found using `?write_msp_mona()`.
+`write_mgf_mona()` 函数的参数可以通过 `?write_msp_mona()` 查找。
 
 ### GNPS
 
-#### `msp` format
+#### `msp` 格式
 
-Just use the `write_msp_gnps()` function to output `metid` database to `msp` format for gnps.
+只需使用 `write_msp_gnps()` 函数将 `metID` 数据库输出为 GNPS 的 `msp` 格式。
 
 
 ``` r
@@ -14943,11 +14942,11 @@ library(metid)
 write_msp_gnps(databasae = databasae, path = ".")
 ```
 
-The arguments of `write_msp_gnps()` can be found using `?write_msp_gnps()`.
+`write_msp_gnps()` 函数的参数可以通过 `?write_msp_gnps()` 查找。
 
-#### `mgf` format
+#### `mgf` 格式
 
-Just use the `write_mgf_gnps()` function to output `metid` database to `mgf` format for gnps.
+只需使用 `write_mgf_gnps()` 函数将 `metID` 数据库输出为 GNPS 的 `mgf` 格式。
 
 
 ``` r
@@ -14955,9 +14954,9 @@ library(metid)
 write_mgf_gnps(databasae = databasae, path = ".")
 ```
 
-The arguments of `write_msp_gnps()` can be found using `?write_msp_gnps()`.
+`write_mgf_gnps()` 函数的参数可以通过 `?write_msp_gnps()` 查找。
 
-## Session information
+## 会话信息
 
 
 ``` r

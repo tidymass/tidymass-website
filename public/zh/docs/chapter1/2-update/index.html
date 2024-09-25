@@ -274,7 +274,8 @@
 
   
 
-<meta name="description" content="Check tidymass version The tidymass package allows you to check the version of all packages and update them. To check for updates specifically for tidymass and its associated packages, you can use the following code." />
+<meta name="description" content="检查 tidymass 版本 tidymass 包允许您检查所有包的版本并更新它们。要专门检查 tidymass 及其相关包的更新，可以使用以下代码。
+tidymass::check_tidymass_version() ## Warning in fun(libname, pkgname): mzR has been built against a different Rcpp version (1.0.12) ## than is installed on your system (1." />
 
 
 
@@ -318,8 +319,9 @@
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/zh/docs/chapter1/2-update/" />
-<meta property="og:title" content="Update tidymass | TidyMass" />
-<meta property="og:description" content="Check tidymass version The tidymass package allows you to check the version of all packages and update them. To check for updates specifically for tidymass and its associated packages, you can use the following code." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+<meta property="og:title" content="更新 tidymass | TidyMass" />
+<meta property="og:description" content="检查 tidymass 版本 tidymass 包允许您检查所有包的版本并更新它们。要专门检查 tidymass 及其相关包的更新，可以使用以下代码。
+tidymass::check_tidymass_version() ## Warning in fun(libname, pkgname): mzR has been built against a different Rcpp version (1.0.12) ## than is installed on your system (1." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
 
   
     <meta
@@ -353,7 +355,7 @@
 
 
   
-  <title>Update tidymass | TidyMass</title>
+  <title>更新 tidymass | TidyMass</title>
 
   
   
@@ -853,15 +855,15 @@
 
 
 
-  <li class="active"><a href="/zh/docs/chapter1/2-update/">2 Update tidymass</a></li>
+  <li class="active"><a href="/zh/docs/chapter1/2-update/">2 更新 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker 版本的 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 构建你自己的 docker</a></li>
 
       
         </ul>
@@ -1071,19 +1073,23 @@
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 In-house MS2 database</a></li>
+  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 内部MS2数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 公共数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/zh/docs/chapter7/4-public_databases/">4 公共数据库下载</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+  <li class=""><a href="/zh/docs/chapter7/5-metabolite_annotation/">5 代谢物注释示例</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/6-identify_single_peak/">6 识别单个峰</a></li>
 
       
         </ul>
@@ -1252,9 +1258,9 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#check-tidymass-version">Check <code>tidymass</code> version</a></li>
-    <li><a href="#update-tidymass">Update <code>tidymass</code></a></li>
-    <li><a href="#session-information">Session information</a></li>
+    <li><a href="#检查-tidymass-版本">检查 <code>tidymass</code> 版本</a></li>
+    <li><a href="#更新-tidymass">更新 <code>tidymass</code></a></li>
+    <li><a href="#会话信息">会话信息</a></li>
   </ul>
 </nav>
 
@@ -1317,7 +1323,7 @@
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        2 Update tidymass
+        2 更新 tidymass
       </li>
     </ol>
   </nav>
@@ -1334,15 +1340,15 @@
 
       <div class="docs-article-container">
         
-        <h1>Update tidymass</h1>
+        <h1>更新 tidymass</h1>
 
         <article class="article-style">
 
           
           
 
-          <h2 id="check-tidymass-version">Check <code>tidymass</code> version</h2>
-<p>The <code>tidymass</code> package allows you to check the version of all packages and update them. To check for updates specifically for <code>tidymass</code> and its associated packages, you can use the following code.</p>
+          <h2 id="检查-tidymass-版本">检查 <code>tidymass</code> 版本</h2>
+<p><code>tidymass</code> 包允许您检查所有包的版本并更新它们。要专门检查 <code>tidymass</code> 及其相关包的更新，可以使用以下代码。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">tidymass</span><span class="o">::</span><span class="nf">check_tidymass_version</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## Warning in fun(libname, pkgname): mzR has been built against a different Rcpp version (1.0.12)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## than is installed on your system (1.0.13). This might lead to errors</span>
@@ -1368,11 +1374,11 @@
 </span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/metpath is up-to-date devel version</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## ##tidymass/masstools is up-to-date devel version</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## No package to update.</span>
-</span></span></code></pre></div><p>This will list all the packages version and if there are some new versions can be updated.</p>
-<h2 id="update-tidymass">Update <code>tidymass</code></h2>
-<p>The <code>update_tidymass()</code> function can be used to update <code>tidymass</code> and packages within it.</p>
+</span></span></code></pre></div><p>这将列出所有包的版本，并显示是否有可更新的新版本。</p>
+<h2 id="更新-tidymass">更新 <code>tidymass</code></h2>
+<p><code>update_tidymass()</code> 函数可以用于更新 <code>tidymass</code> 及其相关的包。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">tidymass</span><span class="o">::</span><span class="nf">update_tidymass</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="s">&#34;gitlab&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>You can change the <code>from</code> argument if <code>from = &quot;gitlab&quot;</code> doesn&rsquo;t work.</p>
+</span></span></code></pre></div><p>如果 <code>from = &quot;gitlab&quot;</code> 不起作用，您可以更改 <code>from</code> 参数。</p>
 <ol>
 <li>
 <p>&ldquo;github&rdquo;</p>
@@ -1384,10 +1390,10 @@
 <p>&ldquo;tidymass.org&rdquo;</p>
 </li>
 </ol>
-<p>If all the options of <code>from</code> don&rsquo;t work, you can try to set <code>fastgit</code> as <code>TRUE</code>.</p>
+<p>如果所有 <code>from</code> 参数的选项都不起作用，您可以尝试将 <code>fastgit</code> 设置为 <code>TRUE</code>。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">tidymass</span><span class="o">::</span><span class="nf">update_tidymass</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="s">&#34;gitlab&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                          <span class="n">fastgit</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="session-information">Session information</h2>
+</span></span></code></pre></div><h2 id="会话信息">会话信息</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## R version 4.4.1 (2024-06-14)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## Platform: aarch64-apple-darwin20</span>
@@ -1535,7 +1541,7 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">下一页</div>
-    <a href="/zh/docs/chapter1/3-docker_tidymass/" rel="prev">Docker version of tidymass</a>
+    <a href="/zh/docs/chapter1/3-docker_tidymass/" rel="prev">Docker 版本的 tidymass</a>
   </div>
   
 </div>

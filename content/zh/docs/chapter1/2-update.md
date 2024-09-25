@@ -1,7 +1,7 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
-title: "Update tidymass"
-linktitle: "2 Update tidymass"
+title: "更新 tidymass"
+linktitle: "2 更新 tidymass"
 author: admin
 type: book
 weight: 2
@@ -10,9 +10,9 @@ commentable: true
 
 
 
-## Check `tidymass` version
+## 检查 `tidymass` 版本
 
-The `tidymass` package allows you to check the version of all packages and update them. To check for updates specifically for `tidymass` and its associated packages, you can use the following code.
+`tidymass` 包允许您检查所有包的版本并更新它们。要专门检查 `tidymass` 及其相关包的更新，可以使用以下代码。
 
 
 ``` r
@@ -43,18 +43,18 @@ tidymass::check_tidymass_version()
 ## No package to update.
 ```
 
-This will list all the packages version and if there are some new versions can be updated.
+这将列出所有包的版本，并显示是否有可更新的新版本。
 
-## Update `tidymass`
+## 更新 `tidymass`
 
-The `update_tidymass()` function can be used to update `tidymass` and packages within it.
+`update_tidymass()` 函数可以用于更新 `tidymass` 及其相关的包。
 
 
 ``` r
 tidymass::update_tidymass(from = "gitlab")
 ```
 
-You can change the `from` argument if `from = "gitlab"` doesn't work.
+如果 `from = "gitlab"` 不起作用，您可以更改 `from` 参数。
 
 1. "github"
 
@@ -62,7 +62,7 @@ You can change the `from` argument if `from = "gitlab"` doesn't work.
 
 3. "tidymass.org"
 
-If all the options of `from` don't work, you can try to set `fastgit` as `TRUE`.
+如果所有 `from` 参数的选项都不起作用，您可以尝试将 `fastgit` 设置为 `TRUE`。
 
 
 ``` r
@@ -70,7 +70,7 @@ tidymass::update_tidymass(from = "gitlab",
                           fastgit = TRUE)
 ```
 
-## Session information
+## 会话信息
 
 
 ``` r

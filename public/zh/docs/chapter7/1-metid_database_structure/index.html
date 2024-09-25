@@ -274,7 +274,7 @@
 
   
 
-<meta name="description" content="Introduction The database class in metid is databaseClass. You can use the demo database in metid to explore it.
+<meta name="description" content="介绍 metID 中的数据库类为 databaseClass。你可以使用 metID 中的演示数据库来进行探索。
 library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attaching package: &#39;metid&#39; #&gt; The following object is masked _by_ &#39;package:massdataset&#39;: #&gt; #&gt; check_mass_dataset #&gt; The following object is masked _by_ &#39;package:masstools&#39;: #&gt; #&gt; remove_noise #&gt; The following object is masked from &#39;package:stats&#39;: #&gt; #&gt; filter data(&#34;snyder_database_rplc0." />
 
 
@@ -320,7 +320,7 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/zh/docs/chapter7/1-metid_database_structure/" />
 <meta property="og:title" content="Databases for metID | TidyMass" />
-<meta property="og:description" content="Introduction The database class in metid is databaseClass. You can use the demo database in metid to explore it.
+<meta property="og:description" content="介绍 metID 中的数据库类为 databaseClass。你可以使用 metID 中的演示数据库来进行探索。
 library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attaching package: &#39;metid&#39; #&gt; The following object is masked _by_ &#39;package:massdataset&#39;: #&gt; #&gt; check_mass_dataset #&gt; The following object is masked _by_ &#39;package:masstools&#39;: #&gt; #&gt; remove_noise #&gt; The following object is masked from &#39;package:stats&#39;: #&gt; #&gt; filter data(&#34;snyder_database_rplc0." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
 
   
@@ -855,15 +855,15 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/2-update/">2 Update tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/2-update/">2 更新 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker 版本的 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 构建你自己的 docker</a></li>
 
       
         </ul>
@@ -1073,19 +1073,23 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 In-house MS2 database</a></li>
+  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 内部MS2数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 公共数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/zh/docs/chapter7/4-public_databases/">4 公共数据库下载</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+  <li class=""><a href="/zh/docs/chapter7/5-metabolite_annotation/">5 代谢物注释示例</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/6-identify_single_peak/">6 识别单个峰</a></li>
 
       
         </ul>
@@ -1254,16 +1258,16 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#extract-spectra-from-database">Extract spectra from database</a></li>
-    <li><a href="#convert-databaseclass-to-other-database-format">Convert <code>databaseClass</code> to other database format</a>
+    <li><a href="#介绍">介绍</a></li>
+    <li><a href="#从数据库中提取光谱">从数据库中提取光谱</a></li>
+    <li><a href="#将-databaseclass-转换为其他数据库格式">将 <code>databaseClass</code> 转换为其他数据库格式</a>
       <ul>
         <li><a href="#massbank">MassBank</a></li>
         <li><a href="#mona">MoNA</a></li>
         <li><a href="#gnps">GNPS</a></li>
       </ul>
     </li>
-    <li><a href="#session-information">Session information</a></li>
+    <li><a href="#会话信息">会话信息</a></li>
   </ul>
 </nav>
 
@@ -1352,8 +1356,8 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 
           <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
-<h2 id="introduction">Introduction</h2>
-<p>The database class in <code>metid</code> is <code>databaseClass</code>. You can use the demo database in <code>metid</code> to explore it.</p>
+<h2 id="介绍">介绍</h2>
+<p><code>metID</code> 中的数据库类为 <code>databaseClass</code>。你可以使用 <code>metID</code> 中的演示数据库来进行探索。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; metid 1.2.34 (2024-09-25 20:39:25.601661)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
@@ -1391,9 +1395,9 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;databaseClass&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; attr(,&#34;package&#34;)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;metid&#34;</span>
-</span></span></code></pre></div><p>It contains three parts:</p>
+</span></span></code></pre></div><p>它包含三个部分：</p>
 <ol>
-<li>spectra.info: The information for all the metabolites/compounds in the database.</li>
+<li>spectra.info: 数据库中所有代谢物/化合物的信息。</li>
 </ol>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:600px; overflow-x: scroll; width:100%; "><table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
  <thead>
@@ -16090,7 +16094,7 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 </tbody>
 </table></div>
 <ol start="2">
-<li>database.info: The information of the database.</li>
+<li>database.info: 数据库的信息。</li>
 </ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">snyder_database_rplc0.0.3</span><span class="o">@</span><span class="n">database.info</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; $Version</span>
@@ -16111,13 +16115,13 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; $RT</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] TRUE</span>
 </span></span></code></pre></div><ol start="3">
-<li>spectra.data: The spectra of the metabolites in database.</li>
+<li>spectra.data: 数据库中代谢物的光谱信息。</li>
 </ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">names</span><span class="p">(</span><span class="n">snyder_database_rplc0.0.3</span><span class="o">@</span><span class="n">spectra.data</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;Spectra.positive&#34; &#34;Spectra.negative&#34;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="nf">names</span><span class="p">(</span><span class="n">snyder_database_rplc0.0.3</span><span class="o">@</span><span class="n">spectra.data</span><span class="o">$</span><span class="n">Spectra.positive</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;RPLC_1&#34;  &#34;RPLC_4&#34;  &#34;RPLC_5&#34;  &#34;RPLC_6&#34;  &#34;RPLC_8&#34;  &#34;RPLC_11&#34;</span>
-</span></span></code></pre></div><p>One metabolite may contains multiple spectra.</p>
+</span></span></code></pre></div><p>一个代谢物可能包含多个光谱。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">snyder_database_rplc0.0.3</span><span class="o">@</span><span class="n">spectra.data</span><span class="o">$</span><span class="n">Spectra.positive</span><span class="o">$</span><span class="n">RPLC_1</span><span class="o">$</span><span class="n">NCE25</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;           mz  intensity</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1   75.39029   2039.701</span>
@@ -16133,7 +16137,7 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 11 119.66673   1851.687</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 12 121.27402   1928.461</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 13 122.42378   1972.688</span>
-</span></span></code></pre></div><p>You can use <a href="https://masstools.tidymass.org/reference/ms2_plot" target="_blank" rel="noopener">the function from masstools</a> to visualize the ms2 spectra.</p>
+</span></span></code></pre></div><p>你可以使用 <a href="https://masstools.tidymass.org/reference/ms2_plot" target="_blank" rel="noopener">masstools 中的函数</a> 来可视化 MS2 光谱。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="kr">if</span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">masstools</span><span class="p">)){</span>
 </span></span><span class="line"><span class="cl">  <span class="n">remotes</span><span class="o">::</span><span class="nf">install_gitlab</span><span class="p">(</span><span class="s">&#34;tidymass/masstools&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -16142,7 +16146,7 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 </span></span><span class="line"><span class="cl">  <span class="n">snyder_database_rplc0.0.3</span><span class="o">@</span><span class="n">spectra.data</span><span class="o">$</span><span class="n">Spectra.positive</span><span class="o">$</span><span class="n">RPLC_1</span><span class="o">$</span><span class="n">NCE25</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span></code></pre></div><img src="/zh/docs/chapter7/1-metid_database_structure_files/figure-html/unnamed-chunk-9-1.png" width="100%" />
-<h2 id="extract-spectra-from-database">Extract spectra from database</h2>
+<h2 id="从数据库中提取光谱">从数据库中提取光谱</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">ms2</span> <span class="o">&lt;-</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">get_ms2_spectrum</span><span class="p">(</span><span class="n">lab.id</span> <span class="o">=</span> <span class="s">&#34;RPLC_1&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">                   <span class="n">database</span> <span class="o">=</span> <span class="n">snyder_database_rplc0.0.3</span><span class="p">,</span>
@@ -16166,42 +16170,42 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 13 122.42378   1972.688</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">ms2_plot</span><span class="p">(</span><span class="n">ms2</span><span class="p">)</span>
 </span></span></code></pre></div><img src="/zh/docs/chapter7/1-metid_database_structure_files/figure-html/unnamed-chunk-11-1.png" width="100%" />
-<h2 id="convert-databaseclass-to-other-database-format">Convert <code>databaseClass</code> to other database format</h2>
-<p><a href="https://massbank.eu/" target="_blank" rel="noopener"><code>MassBank</code></a>, <a href="https://mona.fiehnlab.ucdavis.edu/" target="_blank" rel="noopener"><code>MoNA</code></a> and some other public databases provide <code>msp</code> format database of metabolites. So you can use the functions in <code>metid</code> to output <code>metid</code> format database to <code>msp</code> format which can be used for <code>GNPS</code>, <code>MassBank</code> and <code>MoNA</code>.</p>
+<h2 id="将-databaseclass-转换为其他数据库格式">将 <code>databaseClass</code> 转换为其他数据库格式</h2>
+<p><a href="https://massbank.eu/" target="_blank" rel="noopener"><code>MassBank</code></a>、<a href="https://mona.fiehnlab.ucdavis.edu/" target="_blank" rel="noopener"><code>MoNA</code></a> 和其他一些公共数据库提供代谢物的 <code>msp</code> 格式数据库。因此你可以使用 <code>metID</code> 中的函数将 <code>metID</code> 格式的数据库输出为 <code>msp</code> 格式，以便用于 <code>GNPS</code>、<code>MassBank</code> 和 <code>MoNA</code>。</p>
 <h3 id="massbank">MassBank</h3>
-<h4 id="msp-format"><code>msp</code> format</h4>
-<p>Just use the <code>write_msp_massbank()</code> function to output <code>metid</code> database to <code>msp</code> format for MassBank.</p>
+<h4 id="msp-格式"><code>msp</code> 格式</h4>
+<p>只需使用 <code>write_msp_massbank()</code> 函数将 <code>metID</code> 数据库输出为 MassBank 的 <code>msp</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">write_msp_massbank</span><span class="p">(</span><span class="n">databasae</span> <span class="o">=</span> <span class="n">databasae</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>The arguments of <code>write_msp_massbank()</code> can be found using <code>?write_msp_massbank()</code>.</p>
-<h4 id="mgf-format"><code>mgf</code> format</h4>
-<p>Just use the <code>write_mgf_massbank()</code> function to output <code>metid</code> database to <code>mgf</code> format for MassBank.</p>
+</span></span></code></pre></div><p><code>write_msp_massbank()</code> 函数的参数可以通过 <code>?write_msp_massbank()</code> 查找。</p>
+<h4 id="mgf-格式"><code>mgf</code> 格式</h4>
+<p>只需使用 <code>write_mgf_massbank()</code> 函数将 <code>metID</code> 数据库输出为 MassBank 的 <code>mgf</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">write_mgf_massbank</span><span class="p">(</span><span class="n">databasae</span> <span class="o">=</span> <span class="n">databasae</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>The arguments of <code>write_msp_massbank()</code> can be found using <code>?write_msp_massbank()</code>.</p>
+</span></span></code></pre></div><p><code>write_mgf_massbank()</code> 函数的参数可以通过 <code>?write_msp_massbank()</code> 查找。</p>
 <h3 id="mona">MoNA</h3>
-<h4 id="msp-format-1"><code>msp</code> format</h4>
-<p>Just use the <code>write_msp_mona()</code> function to output <code>metid</code> database to <code>msp</code> format for mona.</p>
+<h4 id="msp-格式-1"><code>msp</code> 格式</h4>
+<p>只需使用 <code>write_msp_mona()</code> 函数将 <code>metID</code> 数据库输出为 MoNA 的 <code>msp</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">write_msp_mona</span><span class="p">(</span><span class="n">databasae</span> <span class="o">=</span> <span class="n">databasae</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>The arguments of <code>write_msp_mona()</code> can be found using <code>?write_msp_mona()</code>.</p>
-<h4 id="mgf-format-1"><code>mgf</code> format</h4>
-<p>Just use the <code>write_mgf_mona()</code> function to output <code>metid</code> database to <code>mgf</code> format for mona.</p>
+</span></span></code></pre></div><p><code>write_msp_mona()</code> 函数的参数可以通过 <code>?write_msp_mona()</code> 查找。</p>
+<h4 id="mgf-格式-1"><code>mgf</code> 格式</h4>
+<p>只需使用 <code>write_mgf_mona()</code> 函数将 <code>metID</code> 数据库输出为 MoNA 的 <code>mgf</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">write_mgf_mona</span><span class="p">(</span><span class="n">databasae</span> <span class="o">=</span> <span class="n">databasae</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>The arguments of <code>write_msp_mona()</code> can be found using <code>?write_msp_mona()</code>.</p>
+</span></span></code></pre></div><p><code>write_mgf_mona()</code> 函数的参数可以通过 <code>?write_msp_mona()</code> 查找。</p>
 <h3 id="gnps">GNPS</h3>
-<h4 id="msp-format-2"><code>msp</code> format</h4>
-<p>Just use the <code>write_msp_gnps()</code> function to output <code>metid</code> database to <code>msp</code> format for gnps.</p>
+<h4 id="msp-格式-2"><code>msp</code> 格式</h4>
+<p>只需使用 <code>write_msp_gnps()</code> 函数将 <code>metID</code> 数据库输出为 GNPS 的 <code>msp</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">write_msp_gnps</span><span class="p">(</span><span class="n">databasae</span> <span class="o">=</span> <span class="n">databasae</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>The arguments of <code>write_msp_gnps()</code> can be found using <code>?write_msp_gnps()</code>.</p>
-<h4 id="mgf-format-2"><code>mgf</code> format</h4>
-<p>Just use the <code>write_mgf_gnps()</code> function to output <code>metid</code> database to <code>mgf</code> format for gnps.</p>
+</span></span></code></pre></div><p><code>write_msp_gnps()</code> 函数的参数可以通过 <code>?write_msp_gnps()</code> 查找。</p>
+<h4 id="mgf-格式-2"><code>mgf</code> 格式</h4>
+<p>只需使用 <code>write_mgf_gnps()</code> 函数将 <code>metID</code> 数据库输出为 GNPS 的 <code>mgf</code> 格式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">write_mgf_gnps</span><span class="p">(</span><span class="n">databasae</span> <span class="o">=</span> <span class="n">databasae</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>The arguments of <code>write_msp_gnps()</code> can be found using <code>?write_msp_gnps()</code>.</p>
-<h2 id="session-information">Session information</h2>
+</span></span></code></pre></div><p><code>write_mgf_gnps()</code> 函数的参数可以通过 <code>?write_msp_gnps()</code> 查找。</p>
+<h2 id="会话信息">会话信息</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
@@ -16317,7 +16321,7 @@ library(metid) #&gt; metid 1.2.34 (2024-09-25 20:39:25.601661) #&gt; #&gt; Attac
   
   <div class="post-nav-item">
     <div class="meta-nav">下一页</div>
-    <a href="/zh/docs/chapter7/2-in_house_database/" rel="prev">Construct in-house MS2 database</a>
+    <a href="/zh/docs/chapter7/2-in_house_database/" rel="prev">构建内部MS2数据库</a>
   </div>
   
 </div>

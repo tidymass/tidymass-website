@@ -259,12 +259,12 @@
     </item>
     
     <item>
-      <title>Update tidymass</title>
+      <title>更新 tidymass</title>
       <link>https://www.tidymass.org/zh/docs/chapter1/2-update/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/zh/docs/chapter1/2-update/</guid>
-      <description>&lt;h2 id=&#34;check-tidymass-version&#34;&gt;Check &lt;code&gt;tidymass&lt;/code&gt; version&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;tidymass&lt;/code&gt; package allows you to check the version of all packages and update them. To check for updates specifically for &lt;code&gt;tidymass&lt;/code&gt; and its associated packages, you can use the following code.&lt;/p&gt;
+      <description>&lt;h2 id=&#34;检查-tidymass-版本&#34;&gt;检查 &lt;code&gt;tidymass&lt;/code&gt; 版本&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tidymass&lt;/code&gt; 包允许您检查所有包的版本并更新它们。要专门检查 &lt;code&gt;tidymass&lt;/code&gt; 及其相关包的更新，可以使用以下代码。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tidymass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;check_tidymass_version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Warning in fun(libname, pkgname): mzR has been built against a different Rcpp version (1.0.12)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## than is installed on your system (1.0.13). This might lead to errors&lt;/span&gt;
@@ -290,11 +290,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/metpath is up-to-date devel version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ##tidymass/masstools is up-to-date devel version&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## No package to update.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will list all the packages version and if there are some new versions can be updated.&lt;/p&gt;
-&lt;h2 id=&#34;update-tidymass&#34;&gt;Update &lt;code&gt;tidymass&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;update_tidymass()&lt;/code&gt; function can be used to update &lt;code&gt;tidymass&lt;/code&gt; and packages within it.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这将列出所有包的版本，并显示是否有可更新的新版本。&lt;/p&gt;
+&lt;h2 id=&#34;更新-tidymass&#34;&gt;更新 &lt;code&gt;tidymass&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;update_tidymass()&lt;/code&gt; 函数可以用于更新 &lt;code&gt;tidymass&lt;/code&gt; 及其相关的包。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tidymass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;update_tidymass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;gitlab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can change the &lt;code&gt;from&lt;/code&gt; argument if &lt;code&gt;from = &amp;quot;gitlab&amp;quot;&lt;/code&gt; doesn&amp;rsquo;t work.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果 &lt;code&gt;from = &amp;quot;gitlab&amp;quot;&lt;/code&gt; 不起作用，您可以更改 &lt;code&gt;from&lt;/code&gt; 参数。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&amp;ldquo;github&amp;rdquo;&lt;/p&gt;
@@ -306,10 +306,10 @@
 &lt;p&gt;&amp;ldquo;tidymass.org&amp;rdquo;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;If all the options of &lt;code&gt;from&lt;/code&gt; don&amp;rsquo;t work, you can try to set &lt;code&gt;fastgit&lt;/code&gt; as &lt;code&gt;TRUE&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;如果所有 &lt;code&gt;from&lt;/code&gt; 参数的选项都不起作用，您可以尝试将 &lt;code&gt;fastgit&lt;/code&gt; 设置为 &lt;code&gt;TRUE&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tidymass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;update_tidymass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;gitlab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                          &lt;span class=&#34;n&#34;&gt;fastgit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;会话信息&#34;&gt;会话信息&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## R version 4.4.1 (2024-06-14)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Platform: aarch64-apple-darwin20&lt;/span&gt;
@@ -430,24 +430,24 @@
     </item>
     
     <item>
-      <title>Docker version of tidymass</title>
+      <title>Docker 版本的 tidymass</title>
       <link>https://www.tidymass.org/zh/docs/chapter1/3-docker_tidymass/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/zh/docs/chapter1/3-docker_tidymass/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.docker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker&lt;/a&gt; is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. So it is useful for people who want to share the code, data, and even analysis environment with other people to repeat their analysis and results.&lt;/p&gt;
-&lt;p&gt;We provide a docker version of &lt;code&gt;tidymass&lt;/code&gt;, all the packages in &lt;code&gt;tidymass&lt;/code&gt; and the dependent packages have been installed.&lt;/p&gt;
-&lt;h2 id=&#34;install-docker&#34;&gt;Install docker&lt;/h2&gt;
-&lt;p&gt;Please refer to the &lt;a href=&#34;https://www.docker.com/get-started&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;offical website&lt;/a&gt; to download and install docker. And then run docker.&lt;/p&gt;
-&lt;h2 id=&#34;pull-the-tidymass-image&#34;&gt;Pull the &lt;code&gt;tidymass&lt;/code&gt; image&lt;/h2&gt;
-&lt;p&gt;Open you terminal and then type code below:&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.docker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker&lt;/a&gt; 是一套平台即服务（PaaS）产品，使用操作系统级别的虚拟化将软件打包在称为容器的包中交付。因此，它对于想与他人共享代码、数据，甚至分析环境以重复他们的分析和结果的人非常有用。&lt;/p&gt;
+&lt;p&gt;我们提供了 &lt;code&gt;tidymass&lt;/code&gt; 的 Docker 版本，其中 &lt;code&gt;tidymass&lt;/code&gt; 及其依赖包已全部安装。&lt;/p&gt;
+&lt;h2 id=&#34;安装-docker&#34;&gt;安装 Docker&lt;/h2&gt;
+&lt;p&gt;请参考 &lt;a href=&#34;https://www.docker.com/get-started&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网&lt;/a&gt; 下载并安装 Docker。然后运行 Docker。&lt;/p&gt;
+&lt;h2 id=&#34;拉取-tidymass-镜像&#34;&gt;拉取 &lt;code&gt;tidymass&lt;/code&gt; 镜像&lt;/h2&gt;
+&lt;p&gt;打开终端并输入以下代码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull jaspershen/tidymass:latest
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;run-tidymass-docker-image&#34;&gt;Run &lt;code&gt;tidymass&lt;/code&gt; docker image&lt;/h2&gt;
-&lt;p&gt;In you terminal, run the code below:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;运行-tidymass-docker-镜像&#34;&gt;运行 &lt;code&gt;tidymass&lt;/code&gt; Docker 镜像&lt;/h2&gt;
+&lt;p&gt;在终端中运行以下代码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -e PASSWORD=tidymass -p 8787:8787 jaspershen/tidymass:latest
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The below command will link the RStudio home folder with the desktop of the local machine running the container. Anything saved or edited in the home folder when using the container will be stored on the local desktop.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下命令会将 RStudio 的主文件夹与运行容器的本地机器桌面连接。使用容器时，保存在主文件夹中的任何内容都会存储在本地桌面上。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -e PASSWORD=tidymass -v ~/Desktop:/home/rstudio/ -p 8787:8787 jaspershen/tidymass:latest
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;open-the-rstudio-server&#34;&gt;Open the RStudio server&lt;/h2&gt;
-&lt;p&gt;Then open the browser and visit http://localhost:8787 to power on RStudio server. The user name is &lt;code&gt;rstudio&lt;/code&gt; and the password is &lt;code&gt;tidymass&lt;/code&gt;.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;打开-rstudio-服务器&#34;&gt;打开 RStudio 服务器&lt;/h2&gt;
+&lt;p&gt;然后打开浏览器并访问 http://localhost:8787 来启动 RStudio 服务器。用户名为 &lt;code&gt;rstudio&lt;/code&gt;，密码为 &lt;code&gt;tidymass&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -469,9 +469,9 @@
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/docs/chapter1/figures/Untitled.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;demo-data-and-example-analysis-code&#34;&gt;Demo data and example analysis code&lt;/h2&gt;
-&lt;p&gt;In this &lt;code&gt;tidymass&lt;/code&gt; docker image, a folder named &amp;ldquo;demo_data&amp;rdquo; is included to help users to learn how to use &lt;code&gt;tidymass&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Open the &lt;code&gt;tidymass_demo.Rmd&lt;/code&gt; file in &lt;code&gt;demo_data&lt;/code&gt; folder, and then run it code chunk by chunk or just render it by clicking &lt;code&gt;Knit&lt;/code&gt; on RStudio, you will get a reporting result (HTML format) of all the whole workflow.&lt;/p&gt;
+&lt;h2 id=&#34;示例数据和示例分析代码&#34;&gt;示例数据和示例分析代码&lt;/h2&gt;
+&lt;p&gt;在此 &lt;code&gt;tidymass&lt;/code&gt; Docker 镜像中，包含一个名为 &amp;ldquo;demo_data&amp;rdquo; 的文件夹，帮助用户学习如何使用 &lt;code&gt;tidymass&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;打开 &lt;code&gt;demo_data&lt;/code&gt; 文件夹中的 &lt;code&gt;tidymass_demo.Rmd&lt;/code&gt; 文件，逐段运行代码，或直接在 RStudio 中点击 &lt;code&gt;Knit&lt;/code&gt; 来生成报告结果（HTML 格式），展示整个工作流程。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -493,7 +493,7 @@
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/docs/chapter1/figures/Untitled-2.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
+&lt;h2 id=&#34;会话信息&#34;&gt;会话信息&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; R version 4.4.1 (2024-06-14)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Platform: aarch64-apple-darwin20&lt;/span&gt;
@@ -523,13 +523,13 @@
     </item>
     
     <item>
-      <title>Build your own docker image based on tidymass</title>
+      <title>基于 tidymass 构建你自己的 docker 镜像</title>
       <link>https://www.tidymass.org/zh/docs/chapter1/4-build_own_docker/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://www.tidymass.org/zh/docs/chapter1/4-build_own_docker/</guid>
-      <description>&lt;p&gt;You can build your own docker image, which contains all your &lt;code&gt;code&lt;/code&gt;, &lt;code&gt;data&lt;/code&gt; and &lt;code&gt;analysis environment&lt;/code&gt;, which is more efficient for reproducible analysis.&lt;/p&gt;
-&lt;h2 id=&#34;create-dockerfile&#34;&gt;Create &lt;code&gt;dockerfile&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Create a &lt;code&gt;dockerfile&lt;/code&gt; without extension. And then open and modify it.&lt;/p&gt;
+      <description>&lt;p&gt;你可以构建你自己的 docker 镜像，其中包含所有的 &lt;code&gt;代码&lt;/code&gt;、&lt;code&gt;数据&lt;/code&gt; 和 &lt;code&gt;分析环境&lt;/code&gt;，这样在进行可重复性分析时效率更高。&lt;/p&gt;
+&lt;h2 id=&#34;创建-dockerfile&#34;&gt;创建 &lt;code&gt;dockerfile&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;创建一个没有扩展名的 &lt;code&gt;dockerfile&lt;/code&gt;。然后打开并进行修改。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM jaspershen/tidymass:latest
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MAINTAINER &amp;#34;Xiaotao Shen&amp;#34; shenxt1990@outlook.com
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -542,21 +542,21 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN R -e &amp;#39;install.packages(&amp;#34;remotes&amp;#34;)&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN R -e &amp;#34;remotes::install_gitlab(&amp;#39;jaspershen/tidymass&amp;#39;)&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you want to install packages (for example ggraph) which are necessary for you analysis, please add a new line:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果你想安装一些对分析有用的包（例如 ggraph），可以添加一行新代码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN R -e &amp;#39;install.packages(&amp;#34;ggraph&amp;#34;)&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And you also need to copy your data to the image use the &lt;code&gt;COPY&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;build-image&#34;&gt;Build image&lt;/h2&gt;
-&lt;p&gt;In the &lt;code&gt;terminal&lt;/code&gt;, use below code to build the image.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你还需要使用 &lt;code&gt;COPY&lt;/code&gt; 命令将数据复制到镜像中。&lt;/p&gt;
+&lt;h2 id=&#34;构建镜像&#34;&gt;构建镜像&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;终端&lt;/code&gt; 中，使用以下代码构建镜像。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build -t image-name -f Dockerfile .
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Change the &lt;code&gt;image-name&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;use-the-docker-tag-command-to-give-the-tidymass-image-a-new-name&#34;&gt;Use the &lt;code&gt;docker tag&lt;/code&gt; command to give the &lt;code&gt;tidymass&lt;/code&gt; image a new name&lt;/h2&gt;
-&lt;p&gt;We need to create a account on the docker hub (&lt;a href=&#34;https://hub.docker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://hub.docker.com/&lt;/a&gt;) and then use the next code to link the local image to our account.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将 &lt;code&gt;image-name&lt;/code&gt; 替换为你的镜像名称。&lt;/p&gt;
+&lt;h2 id=&#34;使用-docker-tag-命令为-tidymass-镜像指定新名称&#34;&gt;使用 &lt;code&gt;docker tag&lt;/code&gt; 命令为 &lt;code&gt;tidymass&lt;/code&gt; 镜像指定新名称&lt;/h2&gt;
+&lt;p&gt;我们需要在 docker hub (&lt;a href=&#34;https://hub.docker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://hub.docker.com/&lt;/a&gt;) 上创建一个账号，然后使用以下代码将本地镜像与我们的账号链接。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker tag image-name your-account/image-name:latest
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;push-image-to-docker-hub&#34;&gt;Push image to docker hub&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;将镜像推送到-docker-hub&#34;&gt;将镜像推送到 docker hub&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker push your-account/image-name:latest
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then other people can download your image which contains your code, data and analysis environment, which make it is pretty easy to repeat your analysis and results.&lt;/p&gt;
-&lt;p&gt;How to pull docker image and run it can &lt;a href=&#34;https://tidymass.github.io/tidymass/articles/docker.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;refer this document&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后其他人就可以下载你的镜像，其中包含代码、数据和分析环境，这使得重复你的分析和结果变得非常容易。&lt;/p&gt;
+&lt;p&gt;如何拉取 docker 镜像并运行它，可以&lt;a href=&#34;https://tidymass.github.io/tidymass/articles/docker.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考此文档&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;会话信息&#34;&gt;会话信息&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; R version 4.4.1 (2024-06-14)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; Platform: aarch64-apple-darwin20&lt;/span&gt;

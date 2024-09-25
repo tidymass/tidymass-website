@@ -327,6 +327,16 @@
     <loc>https://www.tidymass.org/docs/chapter7/4-public_databases/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/docs/chapter7/4-public_databases/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/docs/chapter7/4-public_databases/"
+                />
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter4/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
@@ -345,6 +355,16 @@
     <loc>https://www.tidymass.org/docs/chapter7/5-metabolite_annotation/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/docs/chapter7/5-metabolite_annotation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/docs/chapter7/5-metabolite_annotation/"
+                />
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter2/5-processing_information/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
@@ -377,6 +397,16 @@
     <loc>https://www.tidymass.org/docs/chapter7/6-identify_single_peak/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/docs/chapter7/6-identify_single_peak/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/docs/chapter7/6-identify_single_peak/"
+                />
   </url><url>
     <loc>https://www.tidymass.org/docs/chapter6/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>

@@ -274,8 +274,9 @@
 
   
 
-<meta name="description" content="You can build your own docker image, which contains all your code, data and analysis environment, which is more efficient for reproducible analysis.
-Create dockerfile Create a dockerfile without extension. And then open and modify it." />
+<meta name="description" content="你可以构建你自己的 docker 镜像，其中包含所有的 代码、数据 和 分析环境，这样在进行可重复性分析时效率更高。
+创建 dockerfile 创建一个没有扩展名的 dockerfile。然后打开并进行修改。
+FROM jaspershen/tidymass:latest MAINTAINER &#34;Xiaotao Shen&#34; shenxt1990@outlook.com RUN apt-get update &amp;&amp; apt-get install -y curl COPY demo_data/ /home/rstudio/demo_data/ RUN chmod 777 /home/rstudio/demo_data/ RUN R -e &#39;install." />
 
 
 
@@ -319,9 +320,10 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/zh/docs/chapter1/4-build_own_docker/" />
-<meta property="og:title" content="Build your own docker image based on tidymass | TidyMass" />
-<meta property="og:description" content="You can build your own docker image, which contains all your code, data and analysis environment, which is more efficient for reproducible analysis.
-Create dockerfile Create a dockerfile without extension. And then open and modify it." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+<meta property="og:title" content="基于 tidymass 构建你自己的 docker 镜像 | TidyMass" />
+<meta property="og:description" content="你可以构建你自己的 docker 镜像，其中包含所有的 代码、数据 和 分析环境，这样在进行可重复性分析时效率更高。
+创建 dockerfile 创建一个没有扩展名的 dockerfile。然后打开并进行修改。
+FROM jaspershen/tidymass:latest MAINTAINER &#34;Xiaotao Shen&#34; shenxt1990@outlook.com RUN apt-get update &amp;&amp; apt-get install -y curl COPY demo_data/ /home/rstudio/demo_data/ RUN chmod 777 /home/rstudio/demo_data/ RUN R -e &#39;install." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
 
   
     <meta
@@ -355,7 +357,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
 
   
-  <title>Build your own docker image based on tidymass | TidyMass</title>
+  <title>基于 tidymass 构建你自己的 docker 镜像 | TidyMass</title>
 
   
   
@@ -855,15 +857,15 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/2-update/">2 Update tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/2-update/">2 更新 tidymass</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker 版本的 tidymass</a></li>
 
 
 
-  <li class="active"><a href="/zh/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+  <li class="active"><a href="/zh/docs/chapter1/4-build_own_docker/">4 构建你自己的 docker</a></li>
 
       
         </ul>
@@ -1073,19 +1075,23 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 In-house MS2 database</a></li>
+  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 内部MS2数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 公共数据库</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/zh/docs/chapter7/4-public_databases/">4 公共数据库下载</a></li>
 
 
 
-  <li class=""><a href="/zh/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+  <li class=""><a href="/zh/docs/chapter7/5-metabolite_annotation/">5 代谢物注释示例</a></li>
+
+
+
+  <li class=""><a href="/zh/docs/chapter7/6-identify_single_peak/">6 识别单个峰</a></li>
 
       
         </ul>
@@ -1254,11 +1260,11 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#create-dockerfile">Create <code>dockerfile</code></a></li>
-    <li><a href="#build-image">Build image</a></li>
-    <li><a href="#use-the-docker-tag-command-to-give-the-tidymass-image-a-new-name">Use the <code>docker tag</code> command to give the <code>tidymass</code> image a new name</a></li>
-    <li><a href="#push-image-to-docker-hub">Push image to docker hub</a></li>
-    <li><a href="#session-information">Session information</a></li>
+    <li><a href="#创建-dockerfile">创建 <code>dockerfile</code></a></li>
+    <li><a href="#构建镜像">构建镜像</a></li>
+    <li><a href="#使用-docker-tag-命令为-tidymass-镜像指定新名称">使用 <code>docker tag</code> 命令为 <code>tidymass</code> 镜像指定新名称</a></li>
+    <li><a href="#将镜像推送到-docker-hub">将镜像推送到 docker hub</a></li>
+    <li><a href="#会话信息">会话信息</a></li>
   </ul>
 </nav>
 
@@ -1321,7 +1327,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        4 Build your own docker
+        4 构建你自己的 docker
       </li>
     </ol>
   </nav>
@@ -1338,16 +1344,16 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
       <div class="docs-article-container">
         
-        <h1>Build your own docker image based on tidymass</h1>
+        <h1>基于 tidymass 构建你自己的 docker 镜像</h1>
 
         <article class="article-style">
 
           
           
 
-          <p>You can build your own docker image, which contains all your <code>code</code>, <code>data</code> and <code>analysis environment</code>, which is more efficient for reproducible analysis.</p>
-<h2 id="create-dockerfile">Create <code>dockerfile</code></h2>
-<p>Create a <code>dockerfile</code> without extension. And then open and modify it.</p>
+          <p>你可以构建你自己的 docker 镜像，其中包含所有的 <code>代码</code>、<code>数据</code> 和 <code>分析环境</code>，这样在进行可重复性分析时效率更高。</p>
+<h2 id="创建-dockerfile">创建 <code>dockerfile</code></h2>
+<p>创建一个没有扩展名的 <code>dockerfile</code>。然后打开并进行修改。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM jaspershen/tidymass:latest
 </span></span><span class="line"><span class="cl">MAINTAINER &#34;Xiaotao Shen&#34; shenxt1990@outlook.com
 </span></span><span class="line"><span class="cl">
@@ -1360,21 +1366,21 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 </span></span><span class="line"><span class="cl">RUN R -e &#39;install.packages(&#34;remotes&#34;)&#39;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">RUN R -e &#34;remotes::install_gitlab(&#39;jaspershen/tidymass&#39;)&#34;
-</span></span></code></pre></div><p>If you want to install packages (for example ggraph) which are necessary for you analysis, please add a new line:</p>
+</span></span></code></pre></div><p>如果你想安装一些对分析有用的包（例如 ggraph），可以添加一行新代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">RUN R -e &#39;install.packages(&#34;ggraph&#34;)&#39;
-</span></span></code></pre></div><p>And you also need to copy your data to the image use the <code>COPY</code>.</p>
-<h2 id="build-image">Build image</h2>
-<p>In the <code>terminal</code>, use below code to build the image.</p>
+</span></span></code></pre></div><p>你还需要使用 <code>COPY</code> 命令将数据复制到镜像中。</p>
+<h2 id="构建镜像">构建镜像</h2>
+<p>在 <code>终端</code> 中，使用以下代码构建镜像。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker build -t image-name -f Dockerfile .
-</span></span></code></pre></div><p>Change the <code>image-name</code>.</p>
-<h2 id="use-the-docker-tag-command-to-give-the-tidymass-image-a-new-name">Use the <code>docker tag</code> command to give the <code>tidymass</code> image a new name</h2>
-<p>We need to create a account on the docker hub (<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a>) and then use the next code to link the local image to our account.</p>
+</span></span></code></pre></div><p>将 <code>image-name</code> 替换为你的镜像名称。</p>
+<h2 id="使用-docker-tag-命令为-tidymass-镜像指定新名称">使用 <code>docker tag</code> 命令为 <code>tidymass</code> 镜像指定新名称</h2>
+<p>我们需要在 docker hub (<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a>) 上创建一个账号，然后使用以下代码将本地镜像与我们的账号链接。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker tag image-name your-account/image-name:latest
-</span></span></code></pre></div><h2 id="push-image-to-docker-hub">Push image to docker hub</h2>
+</span></span></code></pre></div><h2 id="将镜像推送到-docker-hub">将镜像推送到 docker hub</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker push your-account/image-name:latest
-</span></span></code></pre></div><p>Then other people can download your image which contains your code, data and analysis environment, which make it is pretty easy to repeat your analysis and results.</p>
-<p>How to pull docker image and run it can <a href="https://tidymass.github.io/tidymass/articles/docker.html" target="_blank" rel="noopener">refer this document</a>.</p>
-<h2 id="session-information">Session information</h2>
+</span></span></code></pre></div><p>然后其他人就可以下载你的镜像，其中包含代码、数据和分析环境，这使得重复你的分析和结果变得非常容易。</p>
+<p>如何拉取 docker 镜像并运行它，可以<a href="https://tidymass.github.io/tidymass/articles/docker.html" target="_blank" rel="noopener">参考此文档</a>。</p>
+<h2 id="会话信息">会话信息</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
@@ -1424,7 +1430,7 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
   
   <div class="post-nav-item">
     <div class="meta-nav">上一页</div>
-    <a href="/zh/docs/chapter1/3-docker_tidymass/" rel="next">Docker version of tidymass</a>
+    <a href="/zh/docs/chapter1/3-docker_tidymass/" rel="next">Docker 版本的 tidymass</a>
   </div>
   
   

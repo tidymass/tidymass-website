@@ -1,0 +1,124 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "构建公共数据库"
+linktitle: "4 公共数据库下载"
+author: admin
+type: book
+weight: 4
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+## **来自 [Michael Snyder 实验室](http://med.stanford.edu/snyderlab.html) 的内部 MS2 数据库**
+
+### 1. Michael Snyder HILIC 数据库
+
+* <i class="fa fa-info"></i> 由 Michael Snyder 教授实验室提供，包含超过 1,000 种代谢物。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/mpsnyder_hilic_ms2.rda)
+
+
+### 2. Michael Snyder RPLC 数据库
+
+* <i class="fa fa-info"></i> 由 Michael Snyder 教授实验室提供，包含超过 1,000 种代谢物。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/mpsnyder_rplc_ms2.rda)
+
+
+## **来自 [Caroline Johnson 实验室](https://medicine.yale.edu/lab/cjohnson/) 的内部 MS2 数据库**
+
+### 1. Caroline Johnson HILIC 数据库
+
+* <i class="fa fa-info"></i> 由 Caroline Johnson 教授实验室提供。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/HILIC.database)
+
+
+### 2. Caroline Johnson RPLC 数据库
+
+* <i class="fa fa-info"></i> 由 Caroline Johnson 教授实验室提供。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/RPLC.database)
+
+
+***
+
+## **公共 MS2 数据库**
+
+### 1. [HMDB 数据库](https://hmdb.ca/downloads)
+
+* <i class="fa fa-info"></i> HMDB 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/hmdb_ms2.rda)
+
+### 2. [MassBank 数据库](https://massbank.eu/MassBank/)
+
+* <i class="fa fa-info"></i> MassBank 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/massbank_ms2.rda)
+
+### 3. [MoNA 数据库](https://mona.fiehnlab.ucdavis.edu/)
+
+* <i class="fa fa-info"></i> MoNA 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/mona_ms2.rda)
+
+### 4. [Orbitrap 数据库](https://mona.fiehnlab.ucdavis.edu/)
+
+* <i class="fa fa-info"></i> 来自 MoNA 的 Orbitrap 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/orbitrap_database0.0.3.rda)
+
+### 5. [Fiehn HILIC 数据库](https://fiehnlab.ucdavis.edu/staff/kind/publications)
+
+* <i class="fa fa-info"></i> Fiehn 实验室的 HILIC MS2 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/fiehn_hilic_database0.0.3.rda)
+
+> 如果你需要此数据库，请联系 shenxt@stanford.edu。
+
+***
+
+## **公共 MS1 数据库**
+
+### 1. [HMDB MS1 数据库](https://hmdb.ca/downloads)
+
+* <i class="fa fa-info"></i> HMDB MS1 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/hmdb_ms1.rda)
+
+
+### 2. [KEGG MS1 数据库](https://www.genome.jp/kegg/compound/)
+
+* <i class="fa fa-info"></i> KEGG MS1 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/kegg_ms1.rda)
+
+
+### 3. [T3DB 数据库](http://www.t3db.ca/downloads)
+
+* <i class="fa fa-info"></i> T3DB MS1 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/t3db_ms1.rda)
+
+### 4. [血液暴露组数据库](https://bloodexposome.org/#/download)
+
+* <i class="fa fa-info"></i> 血液暴露组 MS1 数据库。
+
+* <i class="fa fa-download"></i> [点击下载](https://www.shen-lab.org/ms2_data/bloodexposome_ms1.rda)
+
+## 会话信息
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+sessionInfo()
+```

@@ -1,0 +1,269 @@
+---
+date: "2019-05-05T00:00:00+01:00"
+title: "代谢物注释示例"
+linktitle: "5 代谢物注释示例"
+author: admin
+type: book
+weight: 5
+commentable: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+knitr::opts_knit$set(root.dir = here::here("content/docs"))
+```
+
+## 数据准备
+
+我们将使用 [前一步](https://tidymass.github.io/tidymass/articles/data_cleaning.html) 中的数据集。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+library(tidymass)
+load("data_cleaning/POS/object_pos2")
+load("data_cleaning/NEG/object_neg2")
+```
+
+## 将 MS2 光谱数据添加到 `mass_dataset` 类
+
+下载 [MS2 数据](https://drive.google.com/file/d/1FY3x7q5i1g3oSLaVej__ZaZ4XSX-mWBQ/view?usp=sharing)。
+
+解压数据。
+
+![](/docs/chapter7/figures/fig1.png)
+
+### 正模式
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_pos2 <-
+  mutate_ms2(
+    object = object_pos2,
+    column = "rp",
+    polarity = "positive",
+    ms1.ms2.match.mz.tol = 15,
+    ms1.ms2.match.rt.tol = 30,
+    path = "mgf_ms2_data/POS"
+  )
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_pos2
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+extract_ms2_data(object_pos2)
+```
+
+
+### 负模式
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_neg2 <-
+  mutate_ms2(
+    object = object_neg2,
+    column = "rp",
+    polarity = "negative",
+    ms1.ms2.match.mz.tol = 15,
+    ms1.ms2.match.rt.tol = 30,
+    path = "mgf_ms2_data/NEG"
+  )
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_neg2
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+extract_ms2_data(object_neg2)
+```
+
+## 代谢物注释
+
+代谢物注释基于 [`metID` 包](https://tidymass.github.io/metid/)。
+
+### 下载数据库
+
+我们需要从 [`metID` 网站](https://tidymass.github.io/metid/articles/public_databases.html) 下载 MS2 数据库。
+
+这里我们下载 `Michael Snyder RPLC 数据库`、`Orbitrap 数据库` 和 `MoNA 数据库`，并将它们放入名为 `metabolite_annotation` 的新文件夹中。
+
+![](/docs/chapter7/figures/fig2.png)
+
+### 正模式
+
+### 使用 `snyder_database_rplc0.0.3` 注释特征。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("metabolite_annotation/snyder_database_rplc0.0.3.rda")
+snyder_database_rplc0.0.3
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_pos2 <-
+  annotate_metabolites(
+    object = object_pos2,
+    database = snyder_database_rplc0.0.3,
+    based_on = c("ms1", "rt", "ms2"),
+    polarity = "positive",
+    column = "rp",
+    adduct.table = NULL
+  )
+```
+
+### 使用 `orbitrap_database0.0.3` 注释特征。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("metabolite_annotation/orbitrap_database0.0.3.rda")
+orbitrap_database0.0.3
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_pos2 <-
+  annotate_metabolites(
+    object = object_pos2,
+    ms1.match.ppm = 15,
+    polarity = "positive",
+    column = "rp",
+    database = orbitrap_database0.0.3,
+    based_on = c("ms1", "ms2"),
+    adduct.table = NULL
+  )
+```
+
+### 使用 `mona_database0.0.3` 注释特征。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("metabolite_annotation/mona_database0.0.3.rda")
+mona_database0.0.3
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_pos2 <-
+  annotate_metabolites(
+    object = object_pos2,
+    ms1.match.ppm = 15,
+    polarity = "positive",
+    column = "rp",
+    database = mona_database0.0.3,
+    based_on = c("ms1", "ms2"),
+    adduct.table = NULL
+  )
+```
+
+### 负模式
+
+### 使用 `snyder_database_rplc0.0.3` 注释特征。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_neg2 <-
+  annotate_metabolites(
+    object = object_neg2,
+    ms1.match.ppm = 15,
+    rt.match.tol = 30,
+    polarity = "negative",
+    column = "rp",
+    database = snyder_database_rplc0.0.3,
+    based_on = c("ms1", "rt", "ms2"),
+    adduct.table = NULL
+  )
+```
+
+### 使用 `orbitrap_database0.0.3` 注释特征。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_neg2 <-
+  annotate_metabolites(
+    object = object_neg2,
+    ms1.match.ppm = 15,
+    polarity = "negative",
+    column = "rp",
+    database = orbitrap_database0.0.3,
+    based_on = c("ms1", "ms2"),
+    adduct.table = NULL
+  )
+```
+
+### 使用 `mona_database0.0.3` 注释特征。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+object_neg2 <-
+  annotate_metabolites(
+    object = object_neg2,
+    ms1.match.ppm = 15,
+    polarity = "negative",
+    column = "rp",
+    database = mona_database0.0.3,
+    based_on = c("ms1", "ms2"),
+    adduct.table = NULL
+  )
+```
+
+```{r,eval=TRUE,echo=FALSE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+load("metabolite_annotation/object_pos2")
+load("metabolite_annotation/object_neg2")
+```
+
+### 注释结果
+
+注释结果将作为 `mass_dataset` 类中的 `annotation_table` 插槽分配。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+head(extract_annotation_table(object = object_pos2))
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+variable_info_pos <-
+  extract_variable_info(object = object_pos2)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+head(variable_info_pos)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+table(variable_info_pos$Level)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+table(variable_info_pos$Database)
+```
+
+使用 `ms2_plot_mass_dataset()` 函数获取 MS2 匹配图。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+ms2_plot_mass_dataset(object = object_pos2, 
+                      variable_id = "M86T95_POS", 
+                      database = mona_database0.0.3)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+ms2_plot_mass_dataset(object = object_pos2, 
+                      variable_id = "M86T95_POS", 
+                      database = mona_database0.0.3, 
+                      interactive_plot = TRUE)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+ms2_plot_mass_dataset(object = object_pos2, 
+                      variable_id = "M147T54_POS", 
+                      database = snyder_database_rplc0.0.3, 
+                      interactive_plot = FALSE)
+```
+
+保存数据以供后续分析。
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+save(object_pos2, file = "metabolite_annotation/object_pos2")
+save(object_neg2, file = "metabolite_annotation/object_neg2")
+```
+
+## 会话信息
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=TRUE, cache=TRUE}
+sessionInfo()
+```
