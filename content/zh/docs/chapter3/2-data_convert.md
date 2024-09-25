@@ -12,9 +12,9 @@ commentable: true
 
 
 
-```r
+``` r
 getwd()
-#> [1] "/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3"
+#> [1] "/Users/xiaotaoshen/project/tidymass/tidymass-website/content/docs/chapter3"
 ```
 
 ## Introduction
@@ -35,19 +35,19 @@ We need the docker image:
 https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses. So first we need use the `docker_pull_pwiz()` to pull this image.
 
 
-```r
+``` r
 library(massconverter)
 ```
 
 
-```r
+``` r
 docker_pull_pwiz()
 ```
 
 If you want to pull the latest version, set `force = TRUE`
 
 
-```r
+``` r
 docker_pull_pwiz(force = TRUE)
 ```
 
@@ -56,7 +56,7 @@ docker_pull_pwiz(force = TRUE)
 The we need to set parameters for `massconvert`.
 
 
-```r
+``` r
  parameter =
    massconverter::create_msconvert_parameter(
      output_format = "mzXML",
@@ -79,12 +79,12 @@ The we need to set parameters for `massconvert`.
 ```
 
 
-```r
+``` r
 parameter
 #> -------------------- 
 #> pacakge_name: massconverter 
 #> function_name: create_msconvert_parameter 
-#> time: 2023-09-03 20:09:02.150448 
+#> time: 2024-09-25 21:02:36.322322 
 #> parameters:
 #> output_format : mzXML 
 #> binary_encoding_precision : 32 
@@ -111,7 +111,7 @@ Just put the raw data into one folder, and then begin to convert data.
 Here we use the demo data, please download them [here](). And then put them in one folder named as `demo_data/raw_data`.
 
 
-```r
+``` r
 convert_raw_data(input_path = "demo_data/raw_data", 
                  output_path = "demo_data/mzxml", 
                  msconvert_parameter = parameter, 
@@ -127,7 +127,7 @@ Then the converted data will be in the `demo_data/mzxml`
 If you want to run it in bash, you can also use the `get_run_code()` to get the code that can run in bash.
 
 
-```r
+``` r
 get_run_code(
   input_path = "demo_data/raw_data",
   output_path = "demo_data/mzxml",
@@ -760,20 +760,20 @@ docker run --rm -e WINEDEBUG=-all -v /Users/xiaotaoshen/tidymass/massconverter/v
 ## Session information
 
 
-```r
+``` r
 sessionInfo()
-#> R version 4.3.0 (2023-04-21)
-#> Platform: x86_64-apple-darwin20 (64-bit)
-#> Running under: macOS Ventura 13.5.1
+#> R version 4.4.1 (2024-06-14)
+#> Platform: aarch64-apple-darwin20
+#> Running under: macOS 15.0
 #> 
 #> Matrix products: default
-#> BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib 
-#> LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+#> BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+#> LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
 #> 
 #> locale:
 #> [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 #> 
-#> time zone: America/Los_Angeles
+#> time zone: Asia/Singapore
 #> tzcode source: internal
 #> 
 #> attached base packages:
@@ -783,15 +783,15 @@ sessionInfo()
 #> [1] magrittr_2.0.3      massconverter_1.0.3
 #> 
 #> loaded via a namespace (and not attached):
-#>  [1] crayon_1.5.2     vctrs_0.6.2      cli_3.6.1        knitr_1.43      
-#>  [5] rlang_1.1.1      xfun_0.39        stringi_1.7.12   purrr_1.0.1     
-#>  [9] jsonlite_1.8.5   glue_1.6.2       rprojroot_2.0.3  htmltools_0.5.5 
-#> [13] sass_0.4.6       rmarkdown_2.22   evaluate_0.21    jquerylib_0.1.4 
-#> [17] fastmap_1.1.1    lifecycle_1.0.3  yaml_2.3.7       stevedore_0.9.5 
-#> [21] bookdown_0.34    stringr_1.5.0    compiler_4.3.0   codetools_0.2-19
-#> [25] here_1.0.1       rstudioapi_0.14  blogdown_1.18.1  digest_0.6.31   
-#> [29] R6_2.5.1         curl_5.0.1       bslib_0.5.0      tools_4.3.0     
-#> [33] cachem_1.0.8
+#>  [1] vctrs_0.6.5       crayon_1.5.3      cli_3.6.3         knitr_1.48       
+#>  [5] rlang_1.1.4       xfun_0.47         stringi_1.8.4     purrr_1.0.2      
+#>  [9] jsonlite_1.8.8    glue_1.7.0        rprojroot_2.0.4   htmltools_0.5.8.1
+#> [13] sass_0.4.9        rmarkdown_2.28    evaluate_0.24.0   jquerylib_0.1.4  
+#> [17] fastmap_1.2.0     yaml_2.3.10       lifecycle_1.0.4   stevedore_0.9.6  
+#> [21] bookdown_0.40     stringr_1.5.1     compiler_4.4.1    codetools_0.2-20 
+#> [25] here_1.0.1        rstudioapi_0.16.0 blogdown_1.19     digest_0.6.37    
+#> [29] R6_2.5.1          curl_5.2.2        bslib_0.8.0       tools_4.4.1      
+#> [33] cachem_1.1.0
 ```
 
 

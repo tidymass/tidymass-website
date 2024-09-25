@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: September 10, 2024 --><html lang="en-us" >
+<!-- Last Published: September 25, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -1081,11 +1081,15 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 
 
 
-  <li class=""><a href="/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/docs/chapter7/4-public_databases/">4 Public databases download</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+  <li class=""><a href="/docs/chapter7/5-metabolite_annotation/">5 Metabolite annotation: An example</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/6-identify_single_peak/">6 Identify single peak</a></li>
 
       
         </ul>
@@ -1376,30 +1380,30 @@ Create dockerfile Create a dockerfile without extension. And then open and modif
 <p>How to pull docker image and run it can <a href="https://tidymass.github.io/tidymass/articles/docker.html" target="_blank" rel="noopener">refer this document</a>.</p>
 <h2 id="session-information">Session information</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS 15.0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: Asia/Singapore</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.31   R6_2.5.1        bookdown_0.34   fastmap_1.1.1  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] xfun_0.39       blogdown_1.18.1 cachem_1.0.8    knitr_1.43     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] htmltools_0.5.5 rmarkdown_2.22  cli_3.6.1       sass_0.4.6     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] jquerylib_0.1.4 compiler_4.3.0  rstudioapi_0.14 tools_4.3.0    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] evaluate_0.21   bslib_0.5.0     yaml_2.3.7      jsonlite_1.8.5 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] rlang_1.1.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.37     R6_2.5.1          bookdown_0.40     fastmap_1.2.0    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] xfun_0.47         blogdown_1.19     cachem_1.1.0      knitr_1.48       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] htmltools_0.5.8.1 rmarkdown_2.28    lifecycle_1.0.4   cli_3.6.3        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] sass_0.4.9        jquerylib_0.1.4   compiler_4.4.1    rstudioapi_0.16.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] tools_4.4.1       evaluate_0.24.0   bslib_0.8.0       yaml_2.3.10      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] jsonlite_1.8.8    rlang_1.1.4</span>
 </span></span></code></pre></div>
 
         </article>

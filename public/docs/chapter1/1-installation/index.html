@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: September 10, 2024 --><html lang="en-us" >
+<!-- Last Published: September 25, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -274,7 +274,8 @@
 
   
 
-<meta name="description" content="If you do not have R or RStudio installed on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.
+<meta name="description" content="If you haven&rsquo;t installed R or RStudio on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.
+如果您尚未在您的PC或Mac上安装R或RStudio，请在继续之前先安装它们。否则，您可以跳过这些步骤。
 👉 Update R Install R Download the R and install it." />
 
 
@@ -320,7 +321,8 @@
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/docs/chapter1/1-installation/" />
 <meta property="og:title" content="Install tidymass | TidyMass" />
-<meta property="og:description" content="If you do not have R or RStudio installed on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.
+<meta property="og:description" content="If you haven&rsquo;t installed R or RStudio on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.
+如果您尚未在您的PC或Mac上安装R或RStudio，请在继续之前先安装它们。否则，您可以跳过这些步骤。
 👉 Update R Install R Download the R and install it." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
@@ -1081,11 +1083,15 @@
 
 
 
-  <li class=""><a href="/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/docs/chapter7/4-public_databases/">4 Public databases download</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+  <li class=""><a href="/docs/chapter7/5-metabolite_annotation/">5 Metabolite annotation: An example</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/6-identify_single_peak/">6 Identify single peak</a></li>
 
       
         </ul>
@@ -1350,7 +1356,8 @@
           
           
 
-          <p>If you do not have R or RStudio installed on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.</p>
+          <p>If you haven&rsquo;t installed R or RStudio on your PC or Mac, please install them before proceeding. Otherwise, you can skip these steps.</p>
+<p>如果您尚未在您的PC或Mac上安装R或RStudio，请在继续之前先安装它们。否则，您可以跳过这些步骤。</p>
 
 
 <ul class="cta-group">
@@ -1364,9 +1371,11 @@
 
 <h2 id="install-r">Install R</h2>
 <p>Download the <a href="https://www.r-project.org/" target="_blank" rel="noopener">R</a> and install it.</p>
+<p>下载<a href="https://www.r-project.org/" target="_blank" rel="noopener">R</a>并安装。</p>
 <p><a href="https://www.dataquest.io/blog/installing-r-on-your-computer/" target="_blank" rel="noopener">👉 Refer this blog</a></p>
 <h2 id="install-rstudio">Install RStudio</h2>
 <p>Then install RStudio. Download the <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank" rel="noopener">RStudio</a> and then install it.</p>
+<p>然后安装RStudio。下载<a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank" rel="noopener">RStudio</a>，然后进行安装。</p>
 <p>Select the free version of RStudio Desktop.</p>
 <p>
 
@@ -1414,24 +1423,24 @@
   </div></figure>
 </p>
 <h2 id="update-r">Update R</h2>
-<p>To use <code>tidymass</code>, your R version must be greater than 4.1. If your R version is lower than 4.1, please update it.</p>
+<p><code>tidymass</code> require R version &gt; 4.1. Please update your R if the version &lt; 4.1.</p>
 <p>You can check your R version in your console:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">version</span>
 </span></span><span class="line"><span class="cl"><span class="c1">##                _                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## platform       x86_64-apple-darwin20       </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## arch           x86_64                      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## platform       aarch64-apple-darwin20      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## arch           aarch64                     </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## os             darwin20                    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## system         x86_64, darwin20            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## system         aarch64, darwin20           </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## status                                     </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## major          4                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## minor          3.0                         </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## year           2023                        </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## month          04                          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## day            21                          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## svn rev        84292                       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## minor          4.1                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## year           2024                        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## month          06                          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## day            14                          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## svn rev        86737                       </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## language       R                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## version.string R version 4.3.0 (2023-04-21)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## nickname       Already Tomorrow</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## version.string R version 4.4.1 (2024-06-14)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## nickname       Race for Your Life</span>
 </span></span></code></pre></div><p>If your R version is &lt; 4.1, please download and install the <a href="https://cran.r-project.org/mirrors.html" target="_blank" rel="noopener">latest version of R</a>, and then restart your R.</p>
 <h2 id="install-tidymass-from-tidymassorg">Install <code>tidymass</code> from <code>tidymass.org</code></h2>
 <p>Copy and paste the below code in your console.</p>
@@ -1564,30 +1573,30 @@
 <p>or leave me a comment below.</p>
 <h2 id="session-information">Session information</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## R version 4.3.0 (2023-04-21)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## Platform: x86_64-apple-darwin20 (64-bit)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## R version 4.4.1 (2024-06-14)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Platform: aarch64-apple-darwin20</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Running under: macOS 15.0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## Matrix products: default</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## locale:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## time zone: Asia/Singapore</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## tzcode source: internal</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## attached base packages:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## </span>
 </span></span><span class="line"><span class="cl"><span class="c1">## loaded via a namespace (and not attached):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">##  [1] digest_0.6.31   R6_2.5.1        bookdown_0.34   fastmap_1.1.1  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">##  [5] xfun_0.39       blogdown_1.18.1 cachem_1.0.8    knitr_1.43     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">##  [9] htmltools_0.5.5 rmarkdown_2.22  cli_3.6.1       sass_0.4.6     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## [13] jquerylib_0.1.4 compiler_4.3.0  rstudioapi_0.14 tools_4.3.0    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## [17] evaluate_0.21   bslib_0.5.0     yaml_2.3.7      jsonlite_1.8.5 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## [21] rlang_1.1.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  [1] digest_0.6.37     R6_2.5.1          bookdown_0.40     fastmap_1.2.0    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  [5] xfun_0.47         blogdown_1.19     cachem_1.1.0      knitr_1.48       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  [9] htmltools_0.5.8.1 rmarkdown_2.28    lifecycle_1.0.4   cli_3.6.3        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## [13] sass_0.4.9        jquerylib_0.1.4   compiler_4.4.1    rstudioapi_0.16.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## [17] tools_4.4.1       evaluate_0.24.0   bslib_0.8.0       yaml_2.3.10      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## [21] jsonlite_1.8.8    rlang_1.1.4</span>
 </span></span></code></pre></div>
 
         </article>

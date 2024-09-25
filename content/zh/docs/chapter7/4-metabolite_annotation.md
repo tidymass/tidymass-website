@@ -16,17 +16,17 @@ commentable: true
 We just use the dataset which are from [previous step](https://tidymass.github.io/tidymass/articles/data_cleaning.html).
 
 
-```r
+``` r
 library(tidymass)
 #> Registered S3 method overwritten by 'Hmisc':
 #>   method       from      
 #>   vcov.default fit.models
-#> ── Attaching packages ──────────────────────────────────────── tidymass 1.0.8 ──
-#> ✔ massdataset   1.0.25     ✔ metid         1.2.29
-#> ✔ massprocesser 1.0.10     ✔ masstools     1.0.10
-#> ✔ masscleaner   1.0.11     ✔ dplyr         1.1.2 
-#> ✔ massqc        1.0.6      ✔ ggplot2       3.4.2 
-#> ✔ massstat      1.0.5      ✔ magrittr      2.0.3 
+#> ── Attaching packages ──────────────────────────────────────── tidymass 1.0.9 ──
+#> ✔ massdataset   1.0.34     ✔ metid         1.2.34
+#> ✔ massprocesser 1.0.10     ✔ masstools     1.0.13
+#> ✔ masscleaner   1.0.12     ✔ dplyr         1.1.4 
+#> ✔ massqc        1.0.7      ✔ ggplot2       3.5.1 
+#> ✔ massstat      1.0.6      ✔ magrittr      2.0.3 
 #> ✔ metpath       1.0.8
 load("data_cleaning/POS/object_pos2")
 load("data_cleaning/NEG/object_neg2")
@@ -43,7 +43,7 @@ Uncompress it.
 ### Positive mode
 
 
-```r
+``` r
 object_pos2 <-
   mutate_ms2(
     object = object_pos2,
@@ -62,7 +62,7 @@ object_pos2 <-
 ```
 
 
-```r
+``` r
 object_pos2
 #> -------------------- 
 #> massdataset version: 0.99.8 
@@ -81,17 +81,17 @@ object_pos2
 #> Latest 3 processings show
 #> normalize_data ---------- 
 #>       Package    Function.used                Time
-#> 1 masscleaner normalize_data() 2023-08-30 23:10:01
+#> 1 masscleaner normalize_data() 2024-09-25 21:03:38
 #> integrate_data ---------- 
 #>       Package    Function.used                Time
-#> 1 masscleaner integrate_data() 2023-08-30 23:10:03
+#> 1 masscleaner integrate_data() 2024-09-25 21:03:38
 #> mutate_ms2 ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset  mutate_ms2() 2023-09-02 10:24:42
+#> 1 massdataset  mutate_ms2() 2024-09-25 21:09:39
 ```
 
 
-```r
+``` r
 extract_ms2_data(object_pos2)
 #> $`QEP_SGA_QC_posi_ms2_ce25_01.mgf;QEP_SGA_QC_posi_ms2_ce25_02.mgf;QEP_SGA_QC_posi_ms2_ce50_01.mgf;QEP_SGA_QC_posi_ms2_ce50_02.mgf`
 #> -------------------- 
@@ -110,7 +110,7 @@ extract_ms2_data(object_pos2)
 ### Negative mode
 
 
-```r
+``` r
 object_neg2 <-
   mutate_ms2(
     object = object_neg2,
@@ -129,7 +129,7 @@ object_neg2 <-
 ```
 
 
-```r
+``` r
 object_neg2
 #> -------------------- 
 #> massdataset version: 0.99.8 
@@ -148,17 +148,17 @@ object_neg2
 #> Latest 3 processings show
 #> normalize_data ---------- 
 #>       Package    Function.used                Time
-#> 1 masscleaner normalize_data() 2023-08-30 23:10:13
+#> 1 masscleaner normalize_data() 2024-09-25 21:03:40
 #> integrate_data ---------- 
 #>       Package    Function.used                Time
-#> 1 masscleaner integrate_data() 2023-08-30 23:10:14
+#> 1 masscleaner integrate_data() 2024-09-25 21:03:40
 #> mutate_ms2 ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset  mutate_ms2() 2023-09-02 10:25:08
+#> 1 massdataset  mutate_ms2() 2024-09-25 21:09:50
 ```
 
 
-```r
+``` r
 extract_ms2_data(object_neg2)
 #> $`QEP_SGA_QC_neg_ms2_ce25_01.mgf;QEP_SGA_QC_neg_ms2_ce25_02.mgf;QEP_SGA_QC_neg_ms2_ce50_01.mgf;QEP_SGA_QC_neg_ms2_ce50_02.mgf`
 #> -------------------- 
@@ -190,7 +190,7 @@ Here we download the `Michael Snyder RPLC databases`, `Orbitrap database` and `M
 ### Annotate features using `snyder_database_rplc0.0.3`.
 
 
-```r
+``` r
 load("metabolite_annotation/snyder_database_rplc0.0.3.rda")
 snyder_database_rplc0.0.3
 #> -----------Base information------------
@@ -214,7 +214,7 @@ snyder_database_rplc0.0.3
 ```
 
 
-```r
+``` r
 object_pos2 <-
   annotate_metabolites_mass_dataset(object = object_pos2, 
                                     ms1.match.ppm = 15, 
@@ -226,7 +226,7 @@ object_pos2 <-
 ### Annotate features using `orbitrap_database0.0.3`.
 
 
-```r
+``` r
 load("metabolite_annotation/orbitrap_database0.0.3.rda")
 orbitrap_database0.0.3
 #> -----------Base information------------
@@ -250,7 +250,7 @@ orbitrap_database0.0.3
 ```
 
 
-```r
+``` r
 object_pos2 <- 
   annotate_metabolites_mass_dataset(object = object_pos2, 
                                     ms1.match.ppm = 15, 
@@ -261,7 +261,7 @@ object_pos2 <-
 ### Annotate features using `mona_database0.0.3`.
 
 
-```r
+``` r
 load("metabolite_annotation/mona_database0.0.3.rda")
 orbitrap_database0.0.3
 #> -----------Base information------------
@@ -285,7 +285,7 @@ orbitrap_database0.0.3
 ```
 
 
-```r
+``` r
 object_pos2 <- 
   annotate_metabolites_mass_dataset(object = object_pos2, 
                                     ms1.match.ppm = 15, 
@@ -298,7 +298,7 @@ object_pos2 <-
 ### Annotate features using `snyder_database_rplc0.0.3`.
 
 
-```r
+``` r
 object_neg2 <- 
   annotate_metabolites_mass_dataset(object = object_neg2, 
                                     ms1.match.ppm = 15, 
@@ -310,7 +310,7 @@ object_neg2 <-
 ### Annotate features using `orbitrap_database0.0.3`.
 
 
-```r
+``` r
 object_neg2 <- 
   annotate_metabolites_mass_dataset(object = object_neg2, 
                                     ms1.match.ppm = 15, 
@@ -321,7 +321,7 @@ object_neg2 <-
 ### Annotate features using `mona_database0.0.3`.
 
 
-```r
+``` r
 object_neg2 <- 
   annotate_metabolites_mass_dataset(object = object_neg2, 
                                     ms1.match.ppm = 15, 
@@ -336,14 +336,14 @@ object_neg2 <-
 The annotation result will assign into `mass_dataset` class as the `annotation_table` slot.
 
 
-```r
+``` r
 head(extract_annotation_table(object = object_pos2))
 #>    variable_id
 #> 1 M100T160_POS
-#> 2 M103T100_POS
-#> 3 M103T100_POS
-#> 4  M104T51_POS
-#> 5 M113T187_POS
+#> 2  M104T51_POS
+#> 3 M113T187_POS
+#> 4  M113T81_POS
+#> 5  M113T81_POS
 #> 6  M113T81_POS
 #>                                                                                                                      ms2_files_id
 #> 1 QEP_SGA_QC_posi_ms2_ce25_01.mgf;QEP_SGA_QC_posi_ms2_ce25_02.mgf;QEP_SGA_QC_posi_ms2_ce50_01.mgf;QEP_SGA_QC_posi_ms2_ce50_02.mgf
@@ -352,37 +352,37 @@ head(extract_annotation_table(object = object_pos2))
 #> 4 QEP_SGA_QC_posi_ms2_ce25_01.mgf;QEP_SGA_QC_posi_ms2_ce25_02.mgf;QEP_SGA_QC_posi_ms2_ce50_01.mgf;QEP_SGA_QC_posi_ms2_ce50_02.mgf
 #> 5 QEP_SGA_QC_posi_ms2_ce25_01.mgf;QEP_SGA_QC_posi_ms2_ce25_02.mgf;QEP_SGA_QC_posi_ms2_ce50_01.mgf;QEP_SGA_QC_posi_ms2_ce50_02.mgf
 #> 6 QEP_SGA_QC_posi_ms2_ce25_01.mgf;QEP_SGA_QC_posi_ms2_ce25_02.mgf;QEP_SGA_QC_posi_ms2_ce50_01.mgf;QEP_SGA_QC_posi_ms2_ce50_02.mgf
-#>                  ms2_spectrum_id           Compound.name    CAS.ID   HMDB.ID
-#> 1 mz100.076248168945rt158.377638  N-Methyl-2-pyrrolidone  872-50-4      <NA>
-#> 2   mz103.054814801682rt96.92601      Phenylacetaldehyde  122-78-1 HMDB06236
-#> 3   mz103.054814801682rt96.92601 3-Amino-2-oxazolidinone   80-65-9      <NA>
-#> 4  mz104.107467651367rt49.510314      5-Amino-1-pentanol 2508-29-4      <NA>
-#> 5 mz113.060150146484rt188.406384    1,4-Cyclohexanedione      <NA>      <NA>
-#> 6   mz113.035087585449rt77.20827                  URACIL      <NA>      <NA>
-#>   KEGG.ID     Lab.ID     Adduct  mz.error mz.match.score RT.error
-#> 1  C11118 MONA_11509     (M+H)+  1.335652      0.9960435       NA
-#> 2  C00601    NO07389 (M+H-H2O)+  1.537004      0.9947640       NA
-#> 3    <NA>    NO07231     (M+H)+ 11.537004      0.7439487       NA
-#> 4    <NA>    NO07238     (M+H)+  1.169128      0.9969671       NA
-#> 5    <NA> MONA_14519     (M+H)+  1.051626      0.9975454       NA
-#> 6    <NA> MONA_18148     (M+H)+  1.275544      0.9963909       NA
-#>   RT.match.score                  CE        SS Total.score   Database Level
-#> 1             NA       35  (nominal) 0.6871252   0.8029696 MoNA_0.0.1     2
-#> 2             NA                  10 0.5748835   0.7323387 NIST_0.0.1     2
-#> 3             NA                  20 0.5020256   0.5927468 NIST_0.0.1     2
-#> 4             NA                   5 0.5971697   0.7470937 NIST_0.0.1     2
-#> 5             NA HCD (NCE 20-30-40%) 0.5401414   0.7116679 MoNA_0.0.1     2
-#> 6             NA                  10 0.6889885   0.8042644 MoNA_0.0.1     2
+#>                  ms2_spectrum_id          Compound.name    CAS.ID   HMDB.ID
+#> 1 mz100.076248168945rt158.377638 N-Methyl-2-pyrrolidone  872-50-4      <NA>
+#> 2  mz104.107467651367rt49.510314     5-Amino-1-pentanol 2508-29-4      <NA>
+#> 3 mz113.060150146484rt188.406384   1,4-Cyclohexanedione      <NA>      <NA>
+#> 4   mz113.035087585449rt77.20827                 Uracil   66-22-8 HMDB00300
+#> 5   mz113.035087585449rt77.20827       Maleic hydrazide  123-33-1      <NA>
+#> 6   mz113.035087585449rt77.20827                 Uracil   66-22-8      <NA>
+#>   KEGG.ID     Lab.ID Adduct mz.error mz.match.score RT.error RT.match.score
+#> 1  C11118 MONA_11509 (M+H)+ 1.335652      0.9960435       NA             NA
+#> 2    <NA>    NO07238 (M+H)+ 1.169128      0.9969671       NA             NA
+#> 3    <NA> MONA_14519 (M+H)+ 1.051626      0.9975454       NA             NA
+#> 4  C00106    NO07292 (M+H)+ 1.218964      0.9967035       NA             NA
+#> 5    <NA>    NO07300 (M+H)+ 1.218964      0.9967035       NA             NA
+#> 6  C00106  MONA_2762 (M+H)+ 1.275544      0.9963909       NA             NA
+#>                    CE        SS Total.score   Database Level
+#> 1       35  (nominal) 0.6871252   0.7442896 MoNA_0.0.1     2
+#> 2                   5 0.5971697   0.6906242 NIST_0.0.1     2
+#> 3 HCD (NCE 20-30-40%) 0.5401414   0.6566000 MoNA_0.0.1     2
+#> 4                  10 0.6484578   0.7213092 NIST_0.0.1     2
+#> 5                  20 0.5486434   0.6614205 NIST_0.0.1     2
+#> 6           Ramp 5-60 0.5404285   0.6563874 MoNA_0.0.1     2
 ```
 
 
-```r
+``` r
 variable_info_pos <- 
 extract_variable_info(object = object_pos2)
 ```
 
 
-```r
+``` r
 head(variable_info_pos)
 #>   variable_id       mz        rt    na_freq  na_freq.1  na_freq.2 Compound.name
 #> 1  M70T53_POS 70.06596  52.78542 0.00000000 0.14545455 0.00000000          <NA>
@@ -408,62 +408,44 @@ head(variable_info_pos)
 ```
 
 
-```r
+``` r
 table(variable_info_pos$Level)
 #> 
 #>   1   2 
-#>  23 183
+#>  23 114
 ```
 
 
-```r
+``` r
 table(variable_info_pos$Database)
 #> 
 #> MoNA_0.0.1   MS_0.0.2 NIST_0.0.1 
-#>         78         23        105
+#>         43         23         71
 ```
 
 Use the `ms2_plot_mass_dataset()` function to get the MS2 matching plot.
 
 
-```r
+``` r
 ms2_plot_mass_dataset(object = object_pos2, 
                       variable_id = "M86T95_POS", 
                       database = mona_database0.0.3)
 #> $M86T95_POS_1
 ```
 
-<img src="/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-23-1.png" width="100%" />
-
-```
-#> 
-#> $M86T95_POS_2
-```
-
-<img src="/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-23-2.png" width="100%" />
-
-```
-#> 
-#> $M86T95_POS_3
-```
-
-<img src="/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-23-3.png" width="100%" />
+<img src="/zh/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-23-1.png" width="100%" />
 
 
-```r
+``` r
 ms2_plot_mass_dataset(object = object_pos2, 
                       variable_id = "M86T95_POS", 
                       database = mona_database0.0.3, 
                       interactive_plot = TRUE)
 #> $M86T95_POS_1
-#> 
-#> $M86T95_POS_2
-#> 
-#> $M86T95_POS_3
 ```
 
 
-```r
+``` r
 ms2_plot_mass_dataset(object = object_pos2, 
                       variable_id = "M147T54_POS", 
                       database = snyder_database_rplc0.0.3, 
@@ -473,26 +455,26 @@ ms2_plot_mass_dataset(object = object_pos2,
 #> $M147T54_POS_1
 ```
 
-<img src="/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-25-1.png" width="100%" />
+<img src="/zh/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-25-1.png" width="100%" />
 
 ```
 #> 
 #> $M147T54_POS_2
 ```
 
-<img src="/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-25-2.png" width="100%" />
+<img src="/zh/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-25-2.png" width="100%" />
 
 ```
 #> 
 #> $M147T54_POS_3
 ```
 
-<img src="/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-25-3.png" width="100%" />
+<img src="/zh/docs/chapter7/4-metabolite_annotation_files/figure-html/unnamed-chunk-25-3.png" width="100%" />
 
 Save data for subsequent analysis.
 
 
-```r
+``` r
 save(object_pos2, file = "metabolite_annotation/object_pos2")
 save(object_neg2, file = "metabolite_annotation/object_neg2")
 ```
@@ -500,20 +482,20 @@ save(object_neg2, file = "metabolite_annotation/object_neg2")
 ## Session information
 
 
-```r
+``` r
 sessionInfo()
-#> R version 4.3.0 (2023-04-21)
-#> Platform: x86_64-apple-darwin20 (64-bit)
-#> Running under: macOS Ventura 13.5.1
+#> R version 4.4.1 (2024-06-14)
+#> Platform: aarch64-apple-darwin20
+#> Running under: macOS 15.0
 #> 
 #> Matrix products: default
-#> BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib 
-#> LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+#> BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+#> LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
 #> 
 #> locale:
 #> [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 #> 
-#> time zone: America/Los_Angeles
+#> time zone: Asia/Singapore
 #> tzcode source: internal
 #> 
 #> attached base packages:
@@ -521,96 +503,100 @@ sessionInfo()
 #> [8] methods   base     
 #> 
 #> other attached packages:
-#>  [1] metid_1.2.29          metpath_1.0.8         ComplexHeatmap_2.16.0
-#>  [4] mixOmics_6.24.0       lattice_0.21-8        MASS_7.3-58.4        
-#>  [7] massstat_1.0.5        tidyr_1.3.0           ggfortify_0.4.16     
-#> [10] massqc_1.0.6          masscleaner_1.0.11    xcms_3.22.0          
-#> [13] MSnbase_2.26.0        ProtGenerics_1.32.0   S4Vectors_0.38.1     
-#> [16] mzR_2.34.0            Rcpp_1.0.10           Biobase_2.60.0       
-#> [19] BiocGenerics_0.46.0   BiocParallel_1.34.2   massprocesser_1.0.10 
-#> [22] ggplot2_3.4.2         dplyr_1.1.2           magrittr_2.0.3       
-#> [25] masstools_1.0.10      massdataset_1.0.25    tidymass_1.0.8       
+#>  [1] metid_1.2.34          metpath_1.0.8         ComplexHeatmap_2.20.0
+#>  [4] mixOmics_6.28.0       lattice_0.22-6        MASS_7.3-61          
+#>  [7] massstat_1.0.6        tidyr_1.3.1           ggfortify_0.4.17     
+#> [10] massqc_1.0.7          masscleaner_1.0.12    MSnbase_2.30.1       
+#> [13] ProtGenerics_1.36.0   S4Vectors_0.42.1      Biobase_2.64.0       
+#> [16] BiocGenerics_0.50.0   mzR_2.38.0            Rcpp_1.0.13          
+#> [19] xcms_4.2.3            BiocParallel_1.38.0   massprocesser_1.0.10 
+#> [22] ggplot2_3.5.1         dplyr_1.1.4           magrittr_2.0.3       
+#> [25] masstools_1.0.13      massdataset_1.0.34    tidymass_1.0.9       
 #> 
 #> loaded via a namespace (and not attached):
-#>   [1] splines_4.3.0               bitops_1.0-7               
-#>   [3] cellranger_1.1.0            tibble_3.2.1               
-#>   [5] polyclip_1.10-4             preprocessCore_1.62.1      
-#>   [7] XML_3.99-0.14               rpart_4.1.19               
-#>   [9] fastDummies_1.6.3           lifecycle_1.0.3            
-#>  [11] doParallel_1.0.17           rprojroot_2.0.3            
-#>  [13] globals_0.16.2              crosstalk_1.2.0            
-#>  [15] backports_1.4.1             plotly_4.10.2              
-#>  [17] openxlsx_4.2.5.2            limma_3.56.2               
-#>  [19] Hmisc_5.1-0                 sass_0.4.6                 
-#>  [21] rmarkdown_2.22              jquerylib_0.1.4            
-#>  [23] yaml_2.3.7                  remotes_2.4.2              
-#>  [25] doRNG_1.8.6                 zip_2.3.0                  
-#>  [27] MsCoreUtils_1.12.0          pbapply_1.7-0              
-#>  [29] RColorBrewer_1.1-3          zlibbioc_1.46.0            
-#>  [31] GenomicRanges_1.52.0        purrr_1.0.1                
-#>  [33] ggraph_2.1.0                itertools_0.1-3            
-#>  [35] RCurl_1.98-1.12             nnet_7.3-18                
-#>  [37] tweenr_2.0.2                circlize_0.4.15            
-#>  [39] GenomeInfoDbData_1.2.10     IRanges_2.34.0             
-#>  [41] ggrepel_0.9.3               listenv_0.9.0              
-#>  [43] ellipse_0.4.5               RSpectra_0.16-1            
-#>  [45] missForest_1.5              parallelly_1.36.0          
-#>  [47] ncdf4_1.21                  codetools_0.2-19           
-#>  [49] DelayedArray_0.26.3         ggforce_0.4.1              
-#>  [51] tidyselect_1.2.0            shape_1.4.6                
-#>  [53] farver_2.1.1                viridis_0.6.3              
-#>  [55] matrixStats_1.0.0           base64enc_0.1-3            
-#>  [57] jsonlite_1.8.5              GetoptLong_1.0.5           
-#>  [59] multtest_2.56.0             e1071_1.7-13               
-#>  [61] ellipsis_0.3.2              tidygraph_1.2.3            
-#>  [63] Formula_1.2-5               survival_3.5-5             
-#>  [65] iterators_1.0.14            foreach_1.5.2              
-#>  [67] progress_1.2.2              tools_4.3.0                
-#>  [69] glue_1.6.2                  rARPACK_0.11-0             
-#>  [71] gridExtra_2.3               xfun_0.39                  
-#>  [73] here_1.0.1                  MatrixGenerics_1.12.2      
-#>  [75] GenomeInfoDb_1.36.0         withr_2.5.0                
-#>  [77] BiocManager_1.30.21         fastmap_1.1.1              
-#>  [79] fansi_1.0.4                 blogdown_1.18.1            
-#>  [81] digest_0.6.31               R6_2.5.1                   
-#>  [83] colorspace_2.1-0            utf8_1.2.3                 
-#>  [85] generics_0.1.3              data.table_1.14.8          
-#>  [87] corpcor_1.6.10              robustbase_0.95-1          
-#>  [89] class_7.3-21                graphlayouts_1.0.0         
-#>  [91] prettyunits_1.1.1           httr_1.4.6                 
-#>  [93] htmlwidgets_1.6.2           S4Arrays_1.0.4             
-#>  [95] pkgconfig_2.0.3             gtable_0.3.3               
-#>  [97] robust_0.7-1                impute_1.74.1              
-#>  [99] MassSpecWavelet_1.66.0      XVector_0.40.0             
-#> [101] furrr_0.3.1                 pcaPP_2.0-3                
-#> [103] htmltools_0.5.5             bookdown_0.34              
-#> [105] MALDIquant_1.22.1           clue_0.3-64                
-#> [107] scales_1.2.1                png_0.1-8                  
-#> [109] knitr_1.43                  rstudioapi_0.14            
-#> [111] reshape2_1.4.4              tzdb_0.4.0                 
-#> [113] rjson_0.2.21                checkmate_2.2.0            
-#> [115] ggcorrplot_0.1.4            proxy_0.4-27               
-#> [117] cachem_1.0.8                GlobalOptions_0.1.2        
-#> [119] stringr_1.5.0               parallel_4.3.0             
-#> [121] foreign_0.8-84              mzID_1.38.0                
-#> [123] vsn_3.68.0                  pillar_1.9.0               
-#> [125] vctrs_0.6.2                 MsFeatures_1.8.0           
-#> [127] RANN_2.6.1                  pcaMethods_1.92.0          
-#> [129] randomForest_4.7-1.1        cluster_2.1.4              
-#> [131] htmlTable_2.4.1             evaluate_0.21              
-#> [133] readr_2.1.4                 mvtnorm_1.2-2              
-#> [135] cli_3.6.1                   compiler_4.3.0             
-#> [137] rlang_1.1.1                 crayon_1.5.2               
-#> [139] rngtools_1.5.2              Rdisop_1.60.0              
-#> [141] rrcov_1.7-3                 labeling_0.4.2             
-#> [143] affy_1.78.0                 plyr_1.8.8                 
-#> [145] stringi_1.7.12              viridisLite_0.4.2          
-#> [147] Biostrings_2.68.1           munsell_0.5.0              
-#> [149] lazyeval_0.2.2              fit.models_0.64            
-#> [151] Matrix_1.5-4                hms_1.1.3                  
-#> [153] patchwork_1.1.2             future_1.32.0              
-#> [155] KEGGREST_1.40.0             highr_0.10                 
-#> [157] SummarizedExperiment_1.30.2 igraph_1.4.3               
-#> [159] affyio_1.70.0               bslib_0.5.0                
-#> [161] DEoptimR_1.0-14             readxl_1.4.2
+#>   [1] fs_1.6.4                    matrixStats_1.3.0          
+#>   [3] bitops_1.0-8                fit.models_0.64            
+#>   [5] httr_1.4.7                  RColorBrewer_1.1-3         
+#>   [7] doParallel_1.0.17           tools_4.4.1                
+#>   [9] doRNG_1.8.6                 backports_1.5.0            
+#>  [11] utf8_1.2.4                  R6_2.5.1                   
+#>  [13] lazyeval_0.2.2              GetoptLong_1.0.5           
+#>  [15] withr_3.0.1                 prettyunits_1.2.0          
+#>  [17] gridExtra_2.3               preprocessCore_1.66.0      
+#>  [19] cli_3.6.3                   fastDummies_1.7.4          
+#>  [21] labeling_0.4.3              sass_0.4.9                 
+#>  [23] mvtnorm_1.3-1               robustbase_0.99-4          
+#>  [25] readr_2.1.5                 randomForest_4.7-1.1       
+#>  [27] proxy_0.4-27                pbapply_1.7-2              
+#>  [29] foreign_0.8-87              rrcov_1.7-6                
+#>  [31] MetaboCoreUtils_1.12.0      parallelly_1.38.0          
+#>  [33] itertools_0.1-3             limma_3.60.4               
+#>  [35] readxl_1.4.3                rstudioapi_0.16.0          
+#>  [37] impute_1.78.0               generics_0.1.3             
+#>  [39] shape_1.4.6.1               crosstalk_1.2.1            
+#>  [41] zip_2.3.1                   Matrix_1.7-0               
+#>  [43] MALDIquant_1.22.3           fansi_1.0.6                
+#>  [45] abind_1.4-5                 lifecycle_1.0.4            
+#>  [47] yaml_2.3.10                 SummarizedExperiment_1.34.0
+#>  [49] SparseArray_1.4.8           crayon_1.5.3               
+#>  [51] PSMatch_1.8.0               KEGGREST_1.44.1            
+#>  [53] pillar_1.9.0                knitr_1.48                 
+#>  [55] GenomicRanges_1.56.1        rjson_0.2.22               
+#>  [57] corpcor_1.6.10              codetools_0.2-20           
+#>  [59] glue_1.7.0                  pcaMethods_1.96.0          
+#>  [61] data.table_1.16.0           remotes_2.5.0              
+#>  [63] MultiAssayExperiment_1.30.3 vctrs_0.6.5                
+#>  [65] png_0.1-8                   cellranger_1.1.0           
+#>  [67] gtable_0.3.5                cachem_1.1.0               
+#>  [69] xfun_0.47                   openxlsx_4.2.7             
+#>  [71] S4Arrays_1.4.1              tidygraph_1.3.1            
+#>  [73] pcaPP_2.0-5                 ncdf4_1.23                 
+#>  [75] iterators_1.0.14            statmod_1.5.0              
+#>  [77] robust_0.7-5                progress_1.2.3             
+#>  [79] GenomeInfoDb_1.40.1         rprojroot_2.0.4            
+#>  [81] bslib_0.8.0                 affyio_1.74.0              
+#>  [83] rpart_4.1.23                colorspace_2.1-1           
+#>  [85] DBI_1.2.3                   Hmisc_5.1-3                
+#>  [87] nnet_7.3-19                 tidyselect_1.2.1           
+#>  [89] compiler_4.4.1              MassSpecWavelet_1.70.0     
+#>  [91] htmlTable_2.4.3             DelayedArray_0.30.1        
+#>  [93] plotly_4.10.4               bookdown_0.40              
+#>  [95] checkmate_2.3.2             scales_1.3.0               
+#>  [97] DEoptimR_1.1-3              affy_1.82.0                
+#>  [99] stringr_1.5.1               digest_0.6.37              
+#> [101] rmarkdown_2.28              XVector_0.44.0             
+#> [103] htmltools_0.5.8.1           pkgconfig_2.0.3            
+#> [105] base64enc_0.1-3             MatrixGenerics_1.16.0      
+#> [107] highr_0.11                  fastmap_1.2.0              
+#> [109] rlang_1.1.4                 GlobalOptions_0.1.2        
+#> [111] htmlwidgets_1.6.4           UCSC.utils_1.0.0           
+#> [113] farver_2.1.2                jquerylib_0.1.4            
+#> [115] jsonlite_1.8.8              MsExperiment_1.6.0         
+#> [117] mzID_1.42.0                 RCurl_1.98-1.16            
+#> [119] Formula_1.2-5               GenomeInfoDbData_1.2.12    
+#> [121] patchwork_1.2.0             munsell_0.5.1              
+#> [123] viridis_0.6.5               MsCoreUtils_1.16.1         
+#> [125] vsn_3.72.0                  furrr_0.3.1                
+#> [127] stringi_1.8.4               ggraph_2.2.1               
+#> [129] zlibbioc_1.50.0             plyr_1.8.9                 
+#> [131] parallel_4.4.1              listenv_0.9.1              
+#> [133] ggrepel_0.9.5               Biostrings_2.72.1          
+#> [135] MsFeatures_1.12.0           graphlayouts_1.1.1         
+#> [137] hms_1.1.3                   Spectra_1.14.1             
+#> [139] circlize_0.4.16             igraph_2.0.3               
+#> [141] QFeatures_1.14.2            rngtools_1.5.2             
+#> [143] reshape2_1.4.4              XML_3.99-0.17              
+#> [145] evaluate_0.24.0             blogdown_1.19              
+#> [147] BiocManager_1.30.25         tzdb_0.4.0                 
+#> [149] foreach_1.5.2               missForest_1.5             
+#> [151] tweenr_2.0.3                purrr_1.0.2                
+#> [153] polyclip_1.10-7             future_1.34.0              
+#> [155] clue_0.3-65                 ggforce_0.4.2              
+#> [157] AnnotationFilter_1.28.0     e1071_1.7-14               
+#> [159] RSpectra_0.16-2             ggcorrplot_0.1.4.1         
+#> [161] viridisLite_0.4.2           class_7.3-22               
+#> [163] rARPACK_0.11-0              tibble_3.2.1               
+#> [165] memoise_2.0.1               ellipse_0.5.0              
+#> [167] IRanges_2.38.1              cluster_2.1.6              
+#> [169] globals_0.16.3              here_1.0.1
 ```

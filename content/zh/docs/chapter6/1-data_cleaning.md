@@ -16,17 +16,17 @@ commentable: true
 We just use the dataset which are from [this step](https://tidymass.github.io/tidymass/articles/explore_data.html).
 
 
-```r
+``` r
 library(tidymass)
 #> Registered S3 method overwritten by 'Hmisc':
 #>   method       from      
 #>   vcov.default fit.models
-#> ── Attaching packages ────────────────────────────── tidymass 1.0.8 ──
-#> ✔ massdataset   1.0.25     ✔ metid         1.2.28
-#> ✔ massprocesser 1.0.10     ✔ masstools     1.0.10
-#> ✔ masscleaner   1.0.11     ✔ dplyr         1.1.2 
-#> ✔ massqc        1.0.6      ✔ ggplot2       3.4.2 
-#> ✔ massstat      1.0.5      ✔ magrittr      2.0.3 
+#> ── Attaching packages ────────────────────────────── tidymass 1.0.9 ──
+#> ✔ massdataset   1.0.34     ✔ metid         1.2.34
+#> ✔ massprocesser 1.0.10     ✔ masstools     1.0.13
+#> ✔ masscleaner   1.0.12     ✔ dplyr         1.1.4 
+#> ✔ massqc        1.0.7      ✔ ggplot2       3.5.1 
+#> ✔ massstat      1.0.6      ✔ magrittr      2.0.3 
 #> ✔ metpath       1.0.8
 load("data_cleaning/POS/object_pos")
 load("data_cleaning/NEG/object_neg")
@@ -34,7 +34,7 @@ load("data_cleaning/NEG/object_neg")
 Change batch to character.
 
 
-```r
+``` r
 object_pos <- 
   object_pos %>% 
   activate_mass_dataset(what = "sample_info") %>% 
@@ -47,7 +47,7 @@ object_neg <-
 ```
 
 
-```r
+``` r
 object_pos
 #> -------------------- 
 #> massdataset version: 0.99.8 
@@ -65,17 +65,17 @@ object_pos
 #> 3 processings in total
 #> create_mass_dataset ---------- 
 #>       Package         Function.used                Time
-#> 1 massdataset create_mass_dataset() 2022-02-22 16:37:06
+#> 1 massdataset create_mass_dataset() 2022-02-23 08:37:06
 #> process_data ---------- 
 #>         Package Function.used                Time
-#> 1 massprocesser  process_data 2022-02-22 16:36:42
+#> 1 massprocesser  process_data 2022-02-23 08:36:42
 #> mutate ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset      mutate() 2023-08-30 23:09:11
+#> 1 massdataset      mutate() 2024-09-25 21:03:29
 ```
 
 
-```r
+``` r
 object_neg
 #> -------------------- 
 #> massdataset version: 0.99.8 
@@ -93,13 +93,13 @@ object_neg
 #> 3 processings in total
 #> create_mass_dataset ---------- 
 #>       Package         Function.used                Time
-#> 1 massdataset create_mass_dataset() 2022-02-22 16:38:19
+#> 1 massdataset create_mass_dataset() 2022-02-23 08:38:19
 #> process_data ---------- 
 #>         Package Function.used                Time
-#> 1 massprocesser  process_data 2022-02-22 16:38:02
+#> 1 massprocesser  process_data 2022-02-23 08:38:02
 #> mutate ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset      mutate() 2023-08-30 23:09:11
+#> 1 massdataset      mutate() 2024-09-25 21:03:29
 ```
 
 ## Data quality assessment before data cleaning
@@ -109,7 +109,7 @@ Here, we can use the `massqc` package to [assess the data quality](https://tidym
 We can just use the `massqc_report()` function to get a html format quality assessment report.
 
 
-```r
+``` r
 massqc::massqc_report(object = object_pos,
                       path = "data_cleaning/POS/data_quality_before_data_cleaning")
 ```
@@ -125,7 +125,7 @@ The html report is below:
 Negative mode.
 
 
-```r
+``` r
 massqc::massqc_report(object = object_neg, 
                       path = "data_cleaning/NEG/data_quality_before_data_cleaning")
 ```
@@ -148,7 +148,7 @@ Remove variables which have MVs in more than 20% QC samples and in at lest 50% s
 ### Positive mode
 
 
-```r
+``` r
 object_pos %>% 
   activate_mass_dataset(what = "sample_info") %>% 
   dplyr::count(group)
@@ -160,7 +160,7 @@ object_pos %>%
 MV percentage in QC samples.
 
 
-```r
+``` r
 show_variable_missing_values(object = object_pos %>% 
                                activate_mass_dataset(what = "sample_info") %>% 
                                filter(class == "QC"), 
@@ -168,10 +168,10 @@ show_variable_missing_values(object = object_pos %>%
   scale_size_continuous(range = c(0.01, 2))
 ```
 
-<img src="/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-8-1.svg" width="100%" />
+<img src="/zh/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-8-1.svg" width="100%" />
 
 
-```r
+``` r
 qc_id =
   object_pos %>%
   activate_mass_dataset(what = "sample_info") %>%
@@ -209,7 +209,7 @@ head(extract_variable_info(object_pos))
 Remove variables.
 
 
-```r
+``` r
 object_pos <- 
   object_pos %>% 
   activate_mass_dataset(what = "variable_info") %>%
@@ -231,21 +231,21 @@ object_pos
 #> 5 processings in total
 #> create_mass_dataset ---------- 
 #>       Package         Function.used                Time
-#> 1 massdataset create_mass_dataset() 2022-02-22 16:37:06
+#> 1 massdataset create_mass_dataset() 2022-02-23 08:37:06
 #> process_data ---------- 
 #>         Package Function.used                Time
-#> 1 massprocesser  process_data 2022-02-22 16:36:42
+#> 1 massprocesser  process_data 2022-02-23 08:36:42
 #> mutate ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset      mutate() 2023-08-30 23:09:11
+#> 1 massdataset      mutate() 2024-09-25 21:03:29
 #> mutate_variable_na_freq ---------- 
 #>       Package             Function.used                       Time
-#> 1 massdataset mutate_variable_na_freq() 2023-08-30 23:09:18.894398
-#> 2 massdataset mutate_variable_na_freq() 2023-08-30 23:09:19.168037
-#> 3 massdataset mutate_variable_na_freq() 2023-08-30 23:09:19.470392
+#> 1 massdataset mutate_variable_na_freq() 2024-09-25 21:03:31.071267
+#> 2 massdataset mutate_variable_na_freq() 2024-09-25 21:03:31.094613
+#> 3 massdataset mutate_variable_na_freq() 2024-09-25 21:03:31.133535
 #> filter ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset      filter() 2023-08-30 23:09:22
+#> 1 massdataset      filter() 2024-09-25 21:03:31
 ```
 
 Only 5,101 variables left.
@@ -253,7 +253,7 @@ Only 5,101 variables left.
 ### Negative mode
 
 
-```r
+``` r
 object_neg %>% 
   activate_mass_dataset(what = "sample_info") %>% 
   dplyr::count(group)
@@ -266,7 +266,7 @@ object_neg %>%
 MV percentage in QC samples.
 
 
-```r
+``` r
 show_variable_missing_values(object = object_neg %>% 
                                activate_mass_dataset(what = "sample_info") %>% 
                                filter(class == "QC"), 
@@ -274,10 +274,10 @@ show_variable_missing_values(object = object_neg %>%
   scale_size_continuous(range = c(0.01, 2))
 ```
 
-<img src="/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-12-1.svg" width="100%" />
+<img src="/zh/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-12-1.svg" width="100%" />
 
 
-```r
+``` r
 qc_id =
   object_neg %>%
   activate_mass_dataset(what = "sample_info") %>%
@@ -315,7 +315,7 @@ head(extract_variable_info(object_neg))
 Remove variables.
 
 
-```r
+``` r
 object_neg <- 
   object_neg %>% 
   activate_mass_dataset(what = "variable_info") %>%
@@ -337,21 +337,21 @@ object_neg
 #> 5 processings in total
 #> create_mass_dataset ---------- 
 #>       Package         Function.used                Time
-#> 1 massdataset create_mass_dataset() 2022-02-22 16:38:19
+#> 1 massdataset create_mass_dataset() 2022-02-23 08:38:19
 #> process_data ---------- 
 #>         Package Function.used                Time
-#> 1 massprocesser  process_data 2022-02-22 16:38:02
+#> 1 massprocesser  process_data 2022-02-23 08:38:02
 #> mutate ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset      mutate() 2023-08-30 23:09:11
+#> 1 massdataset      mutate() 2024-09-25 21:03:29
 #> mutate_variable_na_freq ---------- 
 #>       Package             Function.used                       Time
-#> 1 massdataset mutate_variable_na_freq() 2023-08-30 23:09:24.869972
-#> 2 massdataset mutate_variable_na_freq() 2023-08-30 23:09:25.134699
-#> 3 massdataset mutate_variable_na_freq() 2023-08-30 23:09:25.375996
+#> 1 massdataset mutate_variable_na_freq() 2024-09-25 21:03:32.018418
+#> 2 massdataset mutate_variable_na_freq()   2024-09-25 21:03:32.0471
+#> 3 massdataset mutate_variable_na_freq() 2024-09-25 21:03:32.066715
 #> filter ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset      filter() 2023-08-30 23:09:27
+#> 1 massdataset      filter() 2024-09-25 21:03:32
 ```
 4104 features left.
 
@@ -365,7 +365,7 @@ More information about how to detect outlier samples can be found [here](https:/
 ### Positive mode
 
 
-```r
+``` r
 massdataset::show_sample_missing_values(object = object_pos,
                                         color_by = "group",
                                         order_by = "injection.order",
@@ -375,12 +375,12 @@ massdataset::show_sample_missing_values(object = object_pos,
   ggsci::scale_color_aaas()
 ```
 
-<img src="/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-15-1.svg" width="100%" />
+<img src="/zh/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-15-1.svg" width="100%" />
 
 Detect outlier samples.
 
 
-```r
+``` r
 outlier_samples =
   object_pos %>%
   `+`(1) %>% 
@@ -400,7 +400,7 @@ outlier_samples
 ```
 
 
-```r
+``` r
 
 outlier_table <-
 extract_outlier_table(outlier_samples)
@@ -429,7 +429,7 @@ No outlier samples in positive mode.
 ### Negative mode
 
 
-```r
+``` r
 massdataset::show_sample_missing_values(object = object_neg,
                                         color_by = "group",
                                         order_by = "injection.order",
@@ -439,12 +439,12 @@ massdataset::show_sample_missing_values(object = object_neg,
   ggsci::scale_color_aaas()
 ```
 
-<img src="/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-18-1.svg" width="100%" />
+<img src="/zh/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-18-1.svg" width="100%" />
 
 Detect outlier samples.
 
 
-```r
+``` r
 outlier_samples =
   object_neg %>%
   `+`(1) %>% 
@@ -464,7 +464,7 @@ outlier_samples
 ```
 
 
-```r
+``` r
 
 outlier_table <-
 extract_outlier_table(outlier_samples)
@@ -493,7 +493,7 @@ No outlier samples in negative mode.
 ### Missing value imputation
 
 
-```r
+``` r
 get_mv_number(object_pos)
 #> [1] 148965
 object_pos <- 
@@ -523,7 +523,7 @@ get_mv_number(object_pos)
 
 
 
-```r
+``` r
 get_mv_number(object_neg)
 #> [1] 146427
 
@@ -557,7 +557,7 @@ get_mv_number(object_neg)
 ### Positive mode
 
 
-```r
+``` r
 object_pos <- 
   normalize_data(object_pos, method = "median")
 
@@ -566,19 +566,19 @@ object_pos2 <-
 ```
 
 
-```r
+``` r
 object_pos2 %>% 
   `+`(1) %>% 
   log(2) %>% 
   massqc::massqc_pca(color_by = "batch", line = FALSE)
 ```
 
-<img src="/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-24-1.svg" width="100%" />
+<img src="/zh/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-24-1.svg" width="100%" />
 
 ### Negative mode
 
 
-```r
+``` r
 object_neg <- 
   normalize_data(object_neg, method = "median")
 
@@ -587,19 +587,19 @@ object_neg2 <-
 ```
 
 
-```r
+``` r
 object_neg2 %>% 
   `+`(1) %>% 
   log(2) %>% 
   massqc::massqc_pca(color_by = "batch", line = FALSE)
 ```
 
-<img src="/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-26-1.svg" width="100%" />
+<img src="/zh/docs/chapter6/1-data_cleaning_files/figure-html/unnamed-chunk-26-1.svg" width="100%" />
 
 Save data for subsequent analysis.
 
 
-```r
+``` r
 save(object_pos2, file = "data_cleaning/POS/object_pos2")
 save(object_neg2, file = "data_cleaning/NEG/object_neg2")
 ```
@@ -607,20 +607,20 @@ save(object_neg2, file = "data_cleaning/NEG/object_neg2")
 ## Session information
 
 
-```r
+``` r
 sessionInfo()
-#> R version 4.3.0 (2023-04-21)
-#> Platform: x86_64-apple-darwin20 (64-bit)
-#> Running under: macOS Ventura 13.5.1
+#> R version 4.4.1 (2024-06-14)
+#> Platform: aarch64-apple-darwin20
+#> Running under: macOS 15.0
 #> 
 #> Matrix products: default
-#> BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib 
-#> LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+#> BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+#> LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
 #> 
 #> locale:
 #> [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 #> 
-#> time zone: America/Los_Angeles
+#> time zone: Asia/Singapore
 #> tzcode source: internal
 #> 
 #> attached base packages:
@@ -628,97 +628,101 @@ sessionInfo()
 #> [8] methods   base     
 #> 
 #> other attached packages:
-#>  [1] metid_1.2.28          metpath_1.0.8         ComplexHeatmap_2.16.0
-#>  [4] mixOmics_6.24.0       lattice_0.21-8        MASS_7.3-58.4        
-#>  [7] massstat_1.0.5        tidyr_1.3.0           ggfortify_0.4.16     
-#> [10] massqc_1.0.6          masscleaner_1.0.11    xcms_3.22.0          
-#> [13] MSnbase_2.26.0        ProtGenerics_1.32.0   S4Vectors_0.38.1     
-#> [16] mzR_2.34.0            Rcpp_1.0.10           Biobase_2.60.0       
-#> [19] BiocGenerics_0.46.0   BiocParallel_1.34.2   massprocesser_1.0.10 
-#> [22] ggplot2_3.4.2         dplyr_1.1.2           magrittr_2.0.3       
-#> [25] masstools_1.0.10      massdataset_1.0.25    tidymass_1.0.8       
+#>  [1] metid_1.2.34          metpath_1.0.8         ComplexHeatmap_2.20.0
+#>  [4] mixOmics_6.28.0       lattice_0.22-6        MASS_7.3-61          
+#>  [7] massstat_1.0.6        tidyr_1.3.1           ggfortify_0.4.17     
+#> [10] massqc_1.0.7          masscleaner_1.0.12    MSnbase_2.30.1       
+#> [13] ProtGenerics_1.36.0   S4Vectors_0.42.1      Biobase_2.64.0       
+#> [16] BiocGenerics_0.50.0   mzR_2.38.0            Rcpp_1.0.13          
+#> [19] xcms_4.2.3            BiocParallel_1.38.0   massprocesser_1.0.10 
+#> [22] ggplot2_3.5.1         dplyr_1.1.4           magrittr_2.0.3       
+#> [25] masstools_1.0.13      massdataset_1.0.34    tidymass_1.0.9       
 #> 
 #> loaded via a namespace (and not attached):
-#>   [1] splines_4.3.0               bitops_1.0-7               
-#>   [3] cellranger_1.1.0            tibble_3.2.1               
-#>   [5] polyclip_1.10-4             preprocessCore_1.62.1      
-#>   [7] XML_3.99-0.14               rpart_4.1.19               
-#>   [9] fastDummies_1.6.3           lifecycle_1.0.3            
-#>  [11] doParallel_1.0.17           rprojroot_2.0.3            
-#>  [13] globals_0.16.2              backports_1.4.1            
-#>  [15] plotly_4.10.2               openxlsx_4.2.5.2           
-#>  [17] limma_3.56.2                Hmisc_5.1-0                
-#>  [19] sass_0.4.6                  rmarkdown_2.22             
-#>  [21] jquerylib_0.1.4             yaml_2.3.7                 
-#>  [23] remotes_2.4.2               doRNG_1.8.6                
-#>  [25] zip_2.3.0                   MsCoreUtils_1.12.0         
-#>  [27] pbapply_1.7-0               RColorBrewer_1.1-3         
-#>  [29] zlibbioc_1.46.0             GenomicRanges_1.52.0       
-#>  [31] purrr_1.0.1                 ggraph_2.1.0               
-#>  [33] itertools_0.1-3             RCurl_1.98-1.12            
-#>  [35] nnet_7.3-18                 tweenr_2.0.2               
-#>  [37] circlize_0.4.15             GenomeInfoDbData_1.2.10    
-#>  [39] IRanges_2.34.0              ggrepel_0.9.3              
-#>  [41] listenv_0.9.0               ellipse_0.4.5              
-#>  [43] RSpectra_0.16-1             missForest_1.5             
-#>  [45] parallelly_1.36.0           svglite_2.1.1              
-#>  [47] ncdf4_1.21                  codetools_0.2-19           
-#>  [49] DelayedArray_0.26.3         ggforce_0.4.1              
-#>  [51] tidyselect_1.2.0            shape_1.4.6                
-#>  [53] farver_2.1.1                viridis_0.6.3              
-#>  [55] matrixStats_1.0.0           base64enc_0.1-3            
-#>  [57] jsonlite_1.8.5              GetoptLong_1.0.5           
-#>  [59] multtest_2.56.0             e1071_1.7-13               
-#>  [61] tidygraph_1.2.3             Formula_1.2-5              
-#>  [63] survival_3.5-5              iterators_1.0.14           
-#>  [65] systemfonts_1.0.4           foreach_1.5.2              
-#>  [67] progress_1.2.2              tools_4.3.0                
-#>  [69] glue_1.6.2                  rARPACK_0.11-0             
-#>  [71] gridExtra_2.3               xfun_0.39                  
-#>  [73] here_1.0.1                  MatrixGenerics_1.12.2      
-#>  [75] GenomeInfoDb_1.36.0         withr_2.5.0                
-#>  [77] BiocManager_1.30.21         fastmap_1.1.1              
-#>  [79] fansi_1.0.4                 blogdown_1.18.1            
-#>  [81] digest_0.6.31               R6_2.5.1                   
-#>  [83] colorspace_2.1-0            ggsci_3.0.0                
-#>  [85] utf8_1.2.3                  generics_0.1.3             
-#>  [87] data.table_1.14.8           corpcor_1.6.10             
-#>  [89] robustbase_0.95-1           class_7.3-21               
-#>  [91] graphlayouts_1.0.0          prettyunits_1.1.1          
-#>  [93] httr_1.4.6                  htmlwidgets_1.6.2          
-#>  [95] S4Arrays_1.0.4              pkgconfig_2.0.3            
-#>  [97] gtable_0.3.3                robust_0.7-1               
-#>  [99] impute_1.74.1               MassSpecWavelet_1.66.0     
-#> [101] XVector_0.40.0              furrr_0.3.1                
-#> [103] pcaPP_2.0-3                 htmltools_0.5.5            
-#> [105] bookdown_0.34               MALDIquant_1.22.1          
-#> [107] clue_0.3-64                 scales_1.2.1               
-#> [109] png_0.1-8                   knitr_1.43                 
-#> [111] rstudioapi_0.14             reshape2_1.4.4             
-#> [113] tzdb_0.4.0                  rjson_0.2.21               
-#> [115] checkmate_2.2.0             ggcorrplot_0.1.4           
-#> [117] proxy_0.4-27                cachem_1.0.8               
-#> [119] GlobalOptions_0.1.2         stringr_1.5.0              
-#> [121] parallel_4.3.0              foreign_0.8-84             
-#> [123] mzID_1.38.0                 vsn_3.68.0                 
-#> [125] pillar_1.9.0                vctrs_0.6.2                
-#> [127] MsFeatures_1.8.0            RANN_2.6.1                 
-#> [129] pcaMethods_1.92.0           randomForest_4.7-1.1       
-#> [131] cluster_2.1.4               htmlTable_2.4.1            
-#> [133] evaluate_0.21               readr_2.1.4                
-#> [135] mvtnorm_1.2-2               cli_3.6.1                  
-#> [137] compiler_4.3.0              rlang_1.1.1                
-#> [139] crayon_1.5.2                rngtools_1.5.2             
-#> [141] Rdisop_1.60.0               rrcov_1.7-3                
-#> [143] labeling_0.4.2              affy_1.78.0                
-#> [145] plyr_1.8.8                  stringi_1.7.12             
-#> [147] viridisLite_0.4.2           Biostrings_2.68.1          
-#> [149] munsell_0.5.0               lazyeval_0.2.2             
-#> [151] fit.models_0.64             Matrix_1.5-4               
-#> [153] hms_1.1.3                   patchwork_1.1.2            
-#> [155] future_1.32.0               KEGGREST_1.40.0            
-#> [157] highr_0.10                  SummarizedExperiment_1.30.2
-#> [159] igraph_1.4.3                affyio_1.70.0              
-#> [161] bslib_0.5.0                 DEoptimR_1.0-14            
-#> [163] readxl_1.4.2
+#>   [1] fs_1.6.4                    matrixStats_1.3.0          
+#>   [3] bitops_1.0-8                fit.models_0.64            
+#>   [5] httr_1.4.7                  RColorBrewer_1.1-3         
+#>   [7] doParallel_1.0.17           ggsci_3.2.0                
+#>   [9] tools_4.4.1                 doRNG_1.8.6                
+#>  [11] backports_1.5.0             utf8_1.2.4                 
+#>  [13] R6_2.5.1                    lazyeval_0.2.2             
+#>  [15] GetoptLong_1.0.5            withr_3.0.1                
+#>  [17] prettyunits_1.2.0           gridExtra_2.3              
+#>  [19] preprocessCore_1.66.0       cli_3.6.3                  
+#>  [21] fastDummies_1.7.4           labeling_0.4.3             
+#>  [23] sass_0.4.9                  mvtnorm_1.3-1              
+#>  [25] robustbase_0.99-4           readr_2.1.5                
+#>  [27] randomForest_4.7-1.1        proxy_0.4-27               
+#>  [29] pbapply_1.7-2               systemfonts_1.1.0          
+#>  [31] foreign_0.8-87              svglite_2.1.3              
+#>  [33] rrcov_1.7-6                 MetaboCoreUtils_1.12.0     
+#>  [35] parallelly_1.38.0           itertools_0.1-3            
+#>  [37] limma_3.60.4                readxl_1.4.3               
+#>  [39] rstudioapi_0.16.0           impute_1.78.0              
+#>  [41] generics_0.1.3              shape_1.4.6.1              
+#>  [43] zip_2.3.1                   Matrix_1.7-0               
+#>  [45] MALDIquant_1.22.3           fansi_1.0.6                
+#>  [47] abind_1.4-5                 lifecycle_1.0.4            
+#>  [49] yaml_2.3.10                 SummarizedExperiment_1.34.0
+#>  [51] SparseArray_1.4.8           crayon_1.5.3               
+#>  [53] PSMatch_1.8.0               KEGGREST_1.44.1            
+#>  [55] pillar_1.9.0                knitr_1.48                 
+#>  [57] GenomicRanges_1.56.1        rjson_0.2.22               
+#>  [59] corpcor_1.6.10              codetools_0.2-20           
+#>  [61] glue_1.7.0                  pcaMethods_1.96.0          
+#>  [63] data.table_1.16.0           remotes_2.5.0              
+#>  [65] MultiAssayExperiment_1.30.3 vctrs_0.6.5                
+#>  [67] png_0.1-8                   cellranger_1.1.0           
+#>  [69] gtable_0.3.5                cachem_1.1.0               
+#>  [71] xfun_0.47                   openxlsx_4.2.7             
+#>  [73] S4Arrays_1.4.1              tidygraph_1.3.1            
+#>  [75] pcaPP_2.0-5                 ncdf4_1.23                 
+#>  [77] iterators_1.0.14            statmod_1.5.0              
+#>  [79] robust_0.7-5                progress_1.2.3             
+#>  [81] GenomeInfoDb_1.40.1         rprojroot_2.0.4            
+#>  [83] bslib_0.8.0                 affyio_1.74.0              
+#>  [85] rpart_4.1.23                colorspace_2.1-1           
+#>  [87] DBI_1.2.3                   Hmisc_5.1-3                
+#>  [89] nnet_7.3-19                 tidyselect_1.2.1           
+#>  [91] compiler_4.4.1              MassSpecWavelet_1.70.0     
+#>  [93] htmlTable_2.4.3             DelayedArray_0.30.1        
+#>  [95] plotly_4.10.4               bookdown_0.40              
+#>  [97] checkmate_2.3.2             scales_1.3.0               
+#>  [99] DEoptimR_1.1-3              affy_1.82.0                
+#> [101] stringr_1.5.1               digest_0.6.37              
+#> [103] rmarkdown_2.28              XVector_0.44.0             
+#> [105] htmltools_0.5.8.1           pkgconfig_2.0.3            
+#> [107] base64enc_0.1-3             MatrixGenerics_1.16.0      
+#> [109] highr_0.11                  fastmap_1.2.0              
+#> [111] rlang_1.1.4                 GlobalOptions_0.1.2        
+#> [113] htmlwidgets_1.6.4           UCSC.utils_1.0.0           
+#> [115] farver_2.1.2                jquerylib_0.1.4            
+#> [117] jsonlite_1.8.8              MsExperiment_1.6.0         
+#> [119] mzID_1.42.0                 RCurl_1.98-1.16            
+#> [121] Formula_1.2-5               GenomeInfoDbData_1.2.12    
+#> [123] patchwork_1.2.0             munsell_0.5.1              
+#> [125] viridis_0.6.5               MsCoreUtils_1.16.1         
+#> [127] vsn_3.72.0                  furrr_0.3.1                
+#> [129] stringi_1.8.4               ggraph_2.2.1               
+#> [131] zlibbioc_1.50.0             plyr_1.8.9                 
+#> [133] parallel_4.4.1              listenv_0.9.1              
+#> [135] ggrepel_0.9.5               Biostrings_2.72.1          
+#> [137] MsFeatures_1.12.0           graphlayouts_1.1.1         
+#> [139] hms_1.1.3                   Spectra_1.14.1             
+#> [141] circlize_0.4.16             igraph_2.0.3               
+#> [143] QFeatures_1.14.2            rngtools_1.5.2             
+#> [145] reshape2_1.4.4              XML_3.99-0.17              
+#> [147] evaluate_0.24.0             blogdown_1.19              
+#> [149] BiocManager_1.30.25         tzdb_0.4.0                 
+#> [151] foreach_1.5.2               missForest_1.5             
+#> [153] tweenr_2.0.3                purrr_1.0.2                
+#> [155] polyclip_1.10-7             future_1.34.0              
+#> [157] clue_0.3-65                 ggforce_0.4.2              
+#> [159] AnnotationFilter_1.28.0     e1071_1.7-14               
+#> [161] RSpectra_0.16-2             ggcorrplot_0.1.4.1         
+#> [163] viridisLite_0.4.2           class_7.3-22               
+#> [165] rARPACK_0.11-0              tibble_3.2.1               
+#> [167] memoise_2.0.1               ellipse_0.5.0              
+#> [169] IRanges_2.38.1              cluster_2.1.6              
+#> [171] globals_0.16.3              here_1.0.1
 ```

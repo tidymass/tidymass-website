@@ -21,9 +21,9 @@ In the realm of computational chemistry and bioinformatics, handling and analyzi
 The `is_valid_chemical_formula` function allows users to quickly verify if a given formula is valid based on known chemical elements.
 
 
-```r
+``` r
 library(masstools)
-#> masstools 1.0.11 (2023-09-29 11:09:36.494214)
+#> masstools 1.0.13 (2024-09-10 08:55:57.163523)
 # Function definition here...
 # Copy and paste the 'is_valid_chemical_formula' function here
 is_valid_chemical_formula("H2O")      # TRUE
@@ -39,7 +39,7 @@ This function returns TRUE if all elements in the formula are recognized and FAL
 With the `parse_chemical_formula` function, you can break down a chemical formula into its individual elements and their respective counts.
 
 
-```r
+``` r
 # Function definition here...
 # Copy and paste the 'parse_chemical_formula' function here
 
@@ -61,7 +61,7 @@ The result is presented in a user-friendly data frame format.
 The `get_mass` function computes the mass of a given formula based on either its exact mass or its average mass.
 
 
-```r
+``` r
 # Function definition here...
 # Copy and paste the 'get_mass' function here
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: September 10, 2024 --><html lang="en-us" >
+<!-- Last Published: September 25, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -274,7 +274,7 @@
 
   
 
-<meta name="description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Install Proteowizard Proteowizard only supports Windows OS. So if you don&rsquo;t use Windows OS, consider massconverter.
+<meta name="description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/project/tidymass/tidymass-website/content/docs/chapter3&#34; Install Proteowizard Proteowizard only supports Windows OS. So if you don&rsquo;t use Windows OS, consider massconverter.
 Download Proteowizard and install it.
 Data preparation Please place the raw data in one folder according to MS1 and MS2." />
 
@@ -321,7 +321,7 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
 <meta property="og:site_name" content="TidyMass" />
 <meta property="og:url" content="https://www.tidymass.org/docs/chapter3/1-proteowizard/" />
 <meta property="og:title" content="Convert data using proteowizard | TidyMass" />
-<meta property="og:description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Install Proteowizard Proteowizard only supports Windows OS. So if you don&rsquo;t use Windows OS, consider massconverter.
+<meta property="og:description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/project/tidymass/tidymass-website/content/docs/chapter3&#34; Install Proteowizard Proteowizard only supports Windows OS. So if you don&rsquo;t use Windows OS, consider massconverter.
 Download Proteowizard and install it.
 Data preparation Please place the raw data in one folder according to MS1 and MS2." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
@@ -1083,11 +1083,15 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
 
 
 
-  <li class=""><a href="/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/docs/chapter7/4-public_databases/">4 Public databases download</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+  <li class=""><a href="/docs/chapter7/5-metabolite_annotation/">5 Metabolite annotation: An example</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/6-identify_single_peak/">6 Identify single peak</a></li>
 
       
         </ul>
@@ -1348,7 +1352,7 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
           
 
           <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">getwd</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;/Users/xiaotaoshen/project/tidymass/tidymass-website/content/docs/chapter3&#34;</span>
 </span></span></code></pre></div><h2 id="install-proteowizard">Install <code>Proteowizard</code></h2>
 <p><code>Proteowizard</code> only supports Windows OS. So if you don&rsquo;t use Windows OS, consider <a href="../2-data_convert">massconverter</a>.</p>
 <p>Download <a href="https://proteowizard.sourceforge.io/" target="_blank" rel="noopener">Proteowizard</a> and install it.</p>
@@ -1402,30 +1406,31 @@ Data preparation Please place the raw data in one folder according to MS1 and MS
 </p>
 <h2 id="session-information">Session information</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS 15.0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: Asia/Singapore</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.31    R6_2.5.1         codetools_0.2-19 bookdown_0.34   </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] fastmap_1.1.1    xfun_0.39        blogdown_1.18.1  cachem_1.0.8    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] knitr_1.43       htmltools_0.5.5  rmarkdown_2.22   cli_3.6.1       </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] sass_0.4.6       jquerylib_0.1.4  compiler_4.3.0   rprojroot_2.0.3 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] here_1.0.1       rstudioapi_0.14  tools_4.3.0      evaluate_0.21   </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] bslib_0.5.0      yaml_2.3.7       jsonlite_1.8.5   rlang_1.1.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.37     R6_2.5.1          codetools_0.2-20  bookdown_0.40    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] fastmap_1.2.0     xfun_0.47         blogdown_1.19     cachem_1.1.0     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] knitr_1.48        htmltools_0.5.8.1 rmarkdown_2.28    lifecycle_1.0.4  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] cli_3.6.3         sass_0.4.9        jquerylib_0.1.4   compiler_4.4.1   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] rprojroot_2.0.4   here_1.0.1        rstudioapi_0.16.0 tools_4.4.1      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] evaluate_0.24.0   bslib_0.8.0       yaml_2.3.10       jsonlite_1.8.8   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [25] rlang_1.1.4</span>
 </span></span></code></pre></div>
 
         </article>

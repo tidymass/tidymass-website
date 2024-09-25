@@ -15,23 +15,23 @@ commentable: true
 Now the positive mode and negative mode have been annotated respectively. We need to merge positive and negative mode data.
 
 
-```r
+``` r
 library(tidymass)
 #> Registered S3 method overwritten by 'Hmisc':
 #>   method       from      
 #>   vcov.default fit.models
-#> ── Attaching packages ──────────────────────────────────────── tidymass 1.0.8 ──
-#> ✔ massdataset   1.0.25     ✔ metid         1.2.28
-#> ✔ massprocesser 1.0.10     ✔ masstools     1.0.10
-#> ✔ masscleaner   1.0.11     ✔ dplyr         1.1.2 
-#> ✔ massqc        1.0.6      ✔ ggplot2       3.4.2 
-#> ✔ massstat      1.0.5      ✔ magrittr      2.0.3 
+#> ── Attaching packages ──────────────────────────────────────── tidymass 1.0.9 ──
+#> ✔ massdataset   1.0.34     ✔ metid         1.2.34
+#> ✔ massprocesser 1.0.10     ✔ masstools     1.0.13
+#> ✔ masscleaner   1.0.12     ✔ dplyr         1.1.4 
+#> ✔ massqc        1.0.7      ✔ ggplot2       3.5.1 
+#> ✔ massstat      1.0.6      ✔ magrittr      2.0.3 
 #> ✔ metpath       1.0.8
 library(tidyverse)
 #> ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-#> ✔ forcats   1.0.0     ✔ readr     2.1.4
-#> ✔ lubridate 1.9.2     ✔ stringr   1.5.0
-#> ✔ purrr     1.0.1     ✔ tibble    3.2.1
+#> ✔ forcats   1.0.0     ✔ readr     2.1.5
+#> ✔ lubridate 1.9.3     ✔ stringr   1.5.1
+#> ✔ purrr     1.0.2     ✔ tibble    3.2.1
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> ✖ xcms::collect()          masks dplyr::collect()
 #> ✖ MSnbase::combine()       masks Biobase::combine(), BiocGenerics::combine(), dplyr::combine()
@@ -55,7 +55,7 @@ library(tidyverse)
 ### Load data
 
 
-```r
+``` r
 load("metabolite_annotation/object_pos2")
 load("metabolite_annotation/object_neg2")
 ```
@@ -65,7 +65,7 @@ load("metabolite_annotation/object_neg2")
 ### Positive mode
 
 
-```r
+``` r
 object_pos2 <- 
   object_pos2 %>% 
   activate_mass_dataset(what = "annotation_table") %>% 
@@ -74,40 +74,40 @@ object_pos2 <-
 ```
 
 
-```r
+``` r
 object_pos2
 #> -------------------- 
-#> massdataset version: 0.99.1 
+#> massdataset version: 0.99.8 
 #> -------------------- 
-#> 1.expression_data:[ 206 x 259 data.frame]
+#> 1.expression_data:[ 137 x 259 data.frame]
 #> 2.sample_info:[ 259 x 6 data.frame]
 #> 259 samples:sample_06 sample_103 sample_11 ... sample_QC_38 sample_QC_39
-#> 3.variable_info:[ 206 x 6 data.frame]
-#> 206 variables:M86T95_POS M95T100_1_POS M100T160_POS ... M568T622_POS M609T427_POS
+#> 3.variable_info:[ 137 x 6 data.frame]
+#> 137 variables:M86T95_POS M95T100_1_POS M100T160_POS ... M568T622_POS M609T427_POS
 #> 4.sample_info_note:[ 6 x 2 data.frame]
 #> 5.variable_info_note:[ 6 x 2 data.frame]
 #> 6.ms2_data:[ 1042 variables x 951 MS2 spectra]
 #> -------------------- 
 #> Processing information
-#> 11 processings in total
+#> 10 processings in total
 #> Latest 3 processings show
-#> update_mass_dataset ---------- 
-#>       Package         Function.used                Time
-#> 1 massdataset update_mass_dataset() 2022-01-19 21:53:01
+#> integrate_data ---------- 
+#>       Package    Function.used                Time
+#> 1 masscleaner integrate_data() 2024-09-25 19:53:32
 #> mutate_ms2 ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset  mutate_ms2() 2022-01-19 21:53:36
-#> annotate_metabolites_mass_dataset ---------- 
+#> 1 massdataset  mutate_ms2() 2024-09-25 20:43:24
+#> annotate_metabolites ---------- 
 #>   Package                       Function.used                       Time
-#> 1   metid annotate_metabolites_mass_dataset()  2022-02-22 21:16:23.17454
-#> 2   metid annotate_metabolites_mass_dataset() 2022-02-22 21:30:10.706486
-#> 3   metid annotate_metabolites_mass_dataset() 2022-02-22 21:47:59.474422
+#> 1   metid annotate_metabolites_mass_dataset() 2024-09-25 20:44:08.051042
+#> 2   metid annotate_metabolites_mass_dataset() 2024-09-25 20:45:30.750549
+#> 3   metid annotate_metabolites_mass_dataset()  2024-09-25 20:46:27.89833
 ```
 
 ### Negative mode
 
 
-```r
+``` r
 object_neg2 <- 
   object_neg2 %>% 
   activate_mass_dataset(what = "annotation_table") %>% 
@@ -116,34 +116,34 @@ object_neg2 <-
 ```
 
 
-```r
+``` r
 object_neg2
 #> -------------------- 
-#> massdataset version: 0.99.1 
+#> massdataset version: 0.99.8 
 #> -------------------- 
-#> 1.expression_data:[ 165 x 259 data.frame]
+#> 1.expression_data:[ 125 x 259 data.frame]
 #> 2.sample_info:[ 259 x 6 data.frame]
 #> 259 samples:sample_06 sample_103 sample_11 ... sample_QC_38 sample_QC_39
-#> 3.variable_info:[ 165 x 6 data.frame]
-#> 165 variables:M73T74_NEG M75T52_NEG M85T99_NEG ... M480T641_NEG M514T611_NEG
+#> 3.variable_info:[ 125 x 6 data.frame]
+#> 125 variables:M75T52_NEG M89T57_1_NEG M93T204_NEG ... M478T658_NEG M480T641_NEG
 #> 4.sample_info_note:[ 6 x 2 data.frame]
 #> 5.variable_info_note:[ 6 x 2 data.frame]
 #> 6.ms2_data:[ 1092 variables x 988 MS2 spectra]
 #> -------------------- 
 #> Processing information
-#> 11 processings in total
+#> 10 processings in total
 #> Latest 3 processings show
-#> update_mass_dataset ---------- 
-#>       Package         Function.used                Time
-#> 1 massdataset update_mass_dataset() 2022-01-19 21:53:37
+#> integrate_data ---------- 
+#>       Package    Function.used                Time
+#> 1 masscleaner integrate_data() 2024-09-25 19:53:34
 #> mutate_ms2 ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset  mutate_ms2() 2022-01-19 21:54:06
-#> annotate_metabolites_mass_dataset ---------- 
+#> 1 massdataset  mutate_ms2() 2024-09-25 20:43:34
+#> annotate_metabolites ---------- 
 #>   Package                       Function.used                       Time
-#> 1   metid annotate_metabolites_mass_dataset() 2022-02-22 21:50:29.759271
-#> 2   metid annotate_metabolites_mass_dataset() 2022-02-22 22:08:10.771619
-#> 3   metid annotate_metabolites_mass_dataset() 2022-02-22 22:26:33.968578
+#> 1   metid annotate_metabolites_mass_dataset() 2024-09-25 20:47:07.586516
+#> 2   metid annotate_metabolites_mass_dataset()  2024-09-25 20:47:44.92965
+#> 3   metid annotate_metabolites_mass_dataset() 2024-09-25 20:49:01.646808
 ```
 
 ### Merge data
@@ -151,7 +151,7 @@ object_neg2
 We need to merge positive and negative mode data as one `mass_dataset` class.
 
 
-```r
+``` r
 head(colnames(object_pos2))
 #> [1] "sample_06"  "sample_103" "sample_11"  "sample_112" "sample_117"
 #> [6] "sample_12"
@@ -159,14 +159,14 @@ head(colnames(object_pos2))
 
 
 
-```r
+``` r
 head(colnames(object_neg2))
 #> [1] "sample_06"  "sample_103" "sample_11"  "sample_112" "sample_117"
 #> [6] "sample_12"
 ```
 
 
-```r
+``` r
 object <- 
 merge_mass_dataset(x = object_pos2, 
                    y = object_neg2, 
@@ -177,34 +177,34 @@ merge_mass_dataset(x = object_pos2,
 ```
 
 
-```r
+``` r
 object
 #> -------------------- 
-#> massdataset version: 1.0.25 
+#> massdataset version: 1.0.34 
 #> -------------------- 
-#> 1.expression_data:[ 371 x 259 data.frame]
+#> 1.expression_data:[ 262 x 259 data.frame]
 #> 2.sample_info:[ 259 x 11 data.frame]
 #> 259 samples:sample_06 sample_103 sample_11 ... sample_QC_38 sample_QC_39
-#> 3.variable_info:[ 371 x 9 data.frame]
-#> 371 variables:M86T95_POS M95T100_1_POS M100T160_POS ... M480T641_NEG M514T611_NEG
+#> 3.variable_info:[ 262 x 9 data.frame]
+#> 262 variables:M86T95_POS M95T100_1_POS M100T160_POS ... M478T658_NEG M480T641_NEG
 #> 4.sample_info_note:[ 11 x 2 data.frame]
 #> 5.variable_info_note:[ 9 x 2 data.frame]
-#> 6.ms2_data:[ 2084 variables x 1902 MS2 spectra]
+#> 6.ms2_data:[ 2134 variables x 1939 MS2 spectra]
 #> -------------------- 
 #> Processing information
-#> 23 processings in total
+#> 21 processings in total
 #> Latest 3 processings show
 #> mutate_ms2 ---------- 
 #>       Package Function.used                Time
-#> 1 massdataset  mutate_ms2() 2022-01-19 21:54:06
-#> annotate_metabolites_mass_dataset ---------- 
+#> 1 massdataset  mutate_ms2() 2024-09-25 20:43:34
+#> annotate_metabolites ---------- 
 #>   Package                       Function.used                       Time
-#> 1   metid annotate_metabolites_mass_dataset() 2022-02-22 21:50:29.759271
-#> 2   metid annotate_metabolites_mass_dataset() 2022-02-22 22:08:10.771619
-#> 3   metid annotate_metabolites_mass_dataset() 2022-02-22 22:26:33.968578
+#> 1   metid annotate_metabolites_mass_dataset() 2024-09-25 20:47:07.586516
+#> 2   metid annotate_metabolites_mass_dataset()  2024-09-25 20:47:44.92965
+#> 3   metid annotate_metabolites_mass_dataset() 2024-09-25 20:49:01.646808
 #> merge_mass_dataset ---------- 
 #>       Package      Function.used                Time
-#> 1 massdataset merge_mass_dataset 2023-08-31 00:00:35
+#> 1 massdataset merge_mass_dataset 2024-09-25 20:59:42
 ```
 
 ## Trace processing information of object
@@ -214,12 +214,12 @@ Then we can use the `report_parameters()` function to trace processing informati
 All the analysis results will be placed in a folder named as `statistical_analysis`.
 
 
-```r
+``` r
 dir.create(path = "statistical_analysis", showWarnings = FALSE)
 ```
 
 
-```r
+``` r
 report_parameters(object = object, path = "statistical_analysis/")
 ```
 
@@ -232,7 +232,7 @@ A html format file named as `parameter_report.html` will be generated.
 Remove the redundant annotated metabolites bases on `Level` and score.
 
 
-```r
+``` r
 object <-
   object %>% 
   activate_mass_dataset(what = "annotation_table") %>% 
@@ -243,7 +243,7 @@ object <-
 ```
 
 
-```r
+``` r
 object <-
   object %>% 
   activate_mass_dataset(what = "annotation_table") %>% 
@@ -258,7 +258,7 @@ object <-
 Calculate the fold changes.
 
 
-```r
+``` r
 control_sample_id =
   object %>%
   activate_mass_dataset(what = "sample_info") %>%
@@ -273,7 +273,7 @@ case_sample_id =
 ```
 
 
-```r
+``` r
 object <-
   mutate_fc(object = object, 
             control_sample_id = control_sample_id, 
@@ -287,7 +287,7 @@ object <-
 Calculate p values.
 
 
-```r
+``` r
 object <-
   mutate_p_value(
     object = object,
@@ -303,7 +303,7 @@ object <-
 Volcano plot.
 
 
-```r
+``` r
 volcano_plot(object = object,
              add_text = TRUE,
              text_from = "Compound.name", 
@@ -311,14 +311,14 @@ volcano_plot(object = object,
   scale_size_continuous(range = c(0.5, 5))
 ```
 
-<img src="/docs/chapter8/1-statistical_analysis_files/figure-html/unnamed-chunk-18-1.png" width="100%" />
+<img src="/en/docs/chapter8/1-statistical_analysis_files/figure-html/unnamed-chunk-18-1.png" width="100%" />
 
 ## Output result
 
 Output the differential expression metabolites.
 
 
-```r
+``` r
 differential_metabolites <- 
   extract_variable_info(object = object) %>% 
   filter(fc > 2 | fc < 0.5) %>% 
@@ -331,7 +331,7 @@ readr::write_csv(differential_metabolites,
 Save result for subsequent analysis.
 
 
-```r
+``` r
 object_final <- object
 save(object_final, file = "statistical_analysis/object_final")
 ```
@@ -339,20 +339,20 @@ save(object_final, file = "statistical_analysis/object_final")
 ## Session information
 
 
-```r
+``` r
 sessionInfo()
-#> R version 4.3.0 (2023-04-21)
-#> Platform: x86_64-apple-darwin20 (64-bit)
-#> Running under: macOS Ventura 13.5.1
+#> R version 4.4.1 (2024-06-14)
+#> Platform: aarch64-apple-darwin20
+#> Running under: macOS 15.0
 #> 
 #> Matrix products: default
-#> BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib 
-#> LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+#> BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+#> LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
 #> 
 #> locale:
 #> [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 #> 
-#> time zone: America/Los_Angeles
+#> time zone: Asia/Singapore
 #> tzcode source: internal
 #> 
 #> attached base packages:
@@ -360,99 +360,104 @@ sessionInfo()
 #> [8] methods   base     
 #> 
 #> other attached packages:
-#>  [1] lubridate_1.9.2       forcats_1.0.0         stringr_1.5.0        
-#>  [4] purrr_1.0.1           readr_2.1.4           tibble_3.2.1         
-#>  [7] tidyverse_2.0.0       metid_1.2.28          metpath_1.0.8        
-#> [10] ComplexHeatmap_2.16.0 mixOmics_6.24.0       lattice_0.21-8       
-#> [13] MASS_7.3-58.4         massstat_1.0.5        tidyr_1.3.0          
-#> [16] ggfortify_0.4.16      massqc_1.0.6          masscleaner_1.0.11   
-#> [19] xcms_3.22.0           MSnbase_2.26.0        ProtGenerics_1.32.0  
-#> [22] S4Vectors_0.38.1      mzR_2.34.0            Rcpp_1.0.10          
-#> [25] Biobase_2.60.0        BiocGenerics_0.46.0   BiocParallel_1.34.2  
-#> [28] massprocesser_1.0.10  ggplot2_3.4.2         dplyr_1.1.2          
-#> [31] magrittr_2.0.3        masstools_1.0.10      massdataset_1.0.25   
-#> [34] tidymass_1.0.8       
+#>  [1] lubridate_1.9.3       forcats_1.0.0         stringr_1.5.1        
+#>  [4] purrr_1.0.2           readr_2.1.5           tibble_3.2.1         
+#>  [7] tidyverse_2.0.0       metid_1.2.34          metpath_1.0.8        
+#> [10] ComplexHeatmap_2.20.0 mixOmics_6.28.0       lattice_0.22-6       
+#> [13] MASS_7.3-61           massstat_1.0.6        tidyr_1.3.1          
+#> [16] ggfortify_0.4.17      massqc_1.0.7          masscleaner_1.0.12   
+#> [19] MSnbase_2.30.1        ProtGenerics_1.36.0   S4Vectors_0.42.1     
+#> [22] Biobase_2.64.0        BiocGenerics_0.50.0   mzR_2.38.0           
+#> [25] Rcpp_1.0.13           xcms_4.2.3            BiocParallel_1.38.0  
+#> [28] massprocesser_1.0.10  ggplot2_3.5.1         dplyr_1.1.4          
+#> [31] magrittr_2.0.3        masstools_1.0.13      massdataset_1.0.34   
+#> [34] tidymass_1.0.9       
 #> 
 #> loaded via a namespace (and not attached):
-#>   [1] splines_4.3.0               bitops_1.0-7               
-#>   [3] cellranger_1.1.0            polyclip_1.10-4            
-#>   [5] preprocessCore_1.62.1       XML_3.99-0.14              
-#>   [7] rpart_4.1.19                fastDummies_1.6.3          
-#>   [9] lifecycle_1.0.3             doParallel_1.0.17          
-#>  [11] rprojroot_2.0.3             vroom_1.6.3                
-#>  [13] globals_0.16.2              backports_1.4.1            
-#>  [15] plotly_4.10.2               openxlsx_4.2.5.2           
-#>  [17] limma_3.56.2                Hmisc_5.1-0                
-#>  [19] sass_0.4.6                  rmarkdown_2.22             
-#>  [21] jquerylib_0.1.4             yaml_2.3.7                 
-#>  [23] remotes_2.4.2               doRNG_1.8.6                
-#>  [25] zip_2.3.0                   MsCoreUtils_1.12.0         
-#>  [27] pbapply_1.7-0               RColorBrewer_1.1-3         
-#>  [29] zlibbioc_1.46.0             GenomicRanges_1.52.0       
-#>  [31] ggraph_2.1.0                itertools_0.1-3            
-#>  [33] RCurl_1.98-1.12             nnet_7.3-18                
-#>  [35] tweenr_2.0.2                circlize_0.4.15            
-#>  [37] GenomeInfoDbData_1.2.10     IRanges_2.34.0             
-#>  [39] ggrepel_0.9.3               listenv_0.9.0              
-#>  [41] ellipse_0.4.5               RSpectra_0.16-1            
-#>  [43] missForest_1.5              parallelly_1.36.0          
-#>  [45] ncdf4_1.21                  codetools_0.2-19           
-#>  [47] DelayedArray_0.26.3         ggforce_0.4.1              
-#>  [49] tidyselect_1.2.0            shape_1.4.6                
-#>  [51] farver_2.1.1                viridis_0.6.3              
-#>  [53] matrixStats_1.0.0           base64enc_0.1-3            
-#>  [55] jsonlite_1.8.5              GetoptLong_1.0.5           
-#>  [57] multtest_2.56.0             e1071_1.7-13               
-#>  [59] tidygraph_1.2.3             Formula_1.2-5              
-#>  [61] survival_3.5-5              iterators_1.0.14           
-#>  [63] foreach_1.5.2               progress_1.2.2             
-#>  [65] tools_4.3.0                 glue_1.6.2                 
-#>  [67] rARPACK_0.11-0              gridExtra_2.3              
-#>  [69] xfun_0.39                   here_1.0.1                 
-#>  [71] MatrixGenerics_1.12.2       GenomeInfoDb_1.36.0        
-#>  [73] withr_2.5.0                 BiocManager_1.30.21        
-#>  [75] fastmap_1.1.1               fansi_1.0.4                
-#>  [77] blogdown_1.18.1             digest_0.6.31              
-#>  [79] timechange_0.2.0            R6_2.5.1                   
-#>  [81] colorspace_2.1-0            utf8_1.2.3                 
-#>  [83] generics_0.1.3              data.table_1.14.8          
-#>  [85] corpcor_1.6.10              robustbase_0.95-1          
-#>  [87] class_7.3-21                graphlayouts_1.0.0         
-#>  [89] prettyunits_1.1.1           httr_1.4.6                 
-#>  [91] htmlwidgets_1.6.2           S4Arrays_1.0.4             
-#>  [93] pkgconfig_2.0.3             gtable_0.3.3               
-#>  [95] robust_0.7-1                impute_1.74.1              
-#>  [97] MassSpecWavelet_1.66.0      XVector_0.40.0             
-#>  [99] furrr_0.3.1                 pcaPP_2.0-3                
-#> [101] htmltools_0.5.5             bookdown_0.34              
-#> [103] MALDIquant_1.22.1           clue_0.3-64                
-#> [105] scales_1.2.1                png_0.1-8                  
-#> [107] knitr_1.43                  rstudioapi_0.14            
-#> [109] reshape2_1.4.4              tzdb_0.4.0                 
-#> [111] rjson_0.2.21                checkmate_2.2.0            
-#> [113] ggcorrplot_0.1.4            proxy_0.4-27               
-#> [115] cachem_1.0.8                GlobalOptions_0.1.2        
-#> [117] parallel_4.3.0              foreign_0.8-84             
-#> [119] mzID_1.38.0                 vsn_3.68.0                 
-#> [121] pillar_1.9.0                vctrs_0.6.2                
-#> [123] MsFeatures_1.8.0            RANN_2.6.1                 
-#> [125] pcaMethods_1.92.0           randomForest_4.7-1.1       
-#> [127] cluster_2.1.4               htmlTable_2.4.1            
-#> [129] evaluate_0.21               mvtnorm_1.2-2              
-#> [131] cli_3.6.1                   compiler_4.3.0             
-#> [133] rlang_1.1.1                 crayon_1.5.2               
-#> [135] rngtools_1.5.2              Rdisop_1.60.0              
-#> [137] rrcov_1.7-3                 labeling_0.4.2             
-#> [139] affy_1.78.0                 plyr_1.8.8                 
-#> [141] stringi_1.7.12              viridisLite_0.4.2          
-#> [143] Biostrings_2.68.1           munsell_0.5.0              
-#> [145] lazyeval_0.2.2              fit.models_0.64            
-#> [147] Matrix_1.5-4                hms_1.1.3                  
-#> [149] patchwork_1.1.2             bit64_4.0.5                
-#> [151] future_1.32.0               KEGGREST_1.40.0            
-#> [153] highr_0.10                  SummarizedExperiment_1.30.2
-#> [155] igraph_1.4.3                affyio_1.70.0              
-#> [157] bslib_0.5.0                 bit_4.0.5                  
-#> [159] DEoptimR_1.0-14             readxl_1.4.2
+#>   [1] fs_1.6.4                    matrixStats_1.3.0          
+#>   [3] bitops_1.0-8                fit.models_0.64            
+#>   [5] httr_1.4.7                  RColorBrewer_1.1-3         
+#>   [7] doParallel_1.0.17           tools_4.4.1                
+#>   [9] doRNG_1.8.6                 backports_1.5.0            
+#>  [11] utf8_1.2.4                  R6_2.5.1                   
+#>  [13] lazyeval_0.2.2              GetoptLong_1.0.5           
+#>  [15] withr_3.0.1                 prettyunits_1.2.0          
+#>  [17] gridExtra_2.3               preprocessCore_1.66.0      
+#>  [19] cli_3.6.3                   fastDummies_1.7.4          
+#>  [21] labeling_0.4.3              sass_0.4.9                 
+#>  [23] mvtnorm_1.3-1               robustbase_0.99-4          
+#>  [25] randomForest_4.7-1.1        proxy_0.4-27               
+#>  [27] pbapply_1.7-2               foreign_0.8-87             
+#>  [29] rrcov_1.7-6                 MetaboCoreUtils_1.12.0     
+#>  [31] parallelly_1.38.0           itertools_0.1-3            
+#>  [33] limma_3.60.4                readxl_1.4.3               
+#>  [35] rstudioapi_0.16.0           impute_1.78.0              
+#>  [37] generics_0.1.3              shape_1.4.6.1              
+#>  [39] vroom_1.6.5                 zip_2.3.1                  
+#>  [41] Matrix_1.7-0                MALDIquant_1.22.3          
+#>  [43] fansi_1.0.6                 abind_1.4-5                
+#>  [45] lifecycle_1.0.4             yaml_2.3.10                
+#>  [47] SummarizedExperiment_1.34.0 SparseArray_1.4.8          
+#>  [49] crayon_1.5.3                PSMatch_1.8.0              
+#>  [51] KEGGREST_1.44.1             pillar_1.9.0               
+#>  [53] knitr_1.48                  GenomicRanges_1.56.1       
+#>  [55] rjson_0.2.22                corpcor_1.6.10             
+#>  [57] codetools_0.2-20            glue_1.7.0                 
+#>  [59] pcaMethods_1.96.0           data.table_1.16.0          
+#>  [61] remotes_2.5.0               MultiAssayExperiment_1.30.3
+#>  [63] vctrs_0.6.5                 png_0.1-8                  
+#>  [65] cellranger_1.1.0            gtable_0.3.5               
+#>  [67] cachem_1.1.0                xfun_0.47                  
+#>  [69] openxlsx_4.2.7              S4Arrays_1.4.1             
+#>  [71] tidygraph_1.3.1             pcaPP_2.0-5                
+#>  [73] ncdf4_1.23                  iterators_1.0.14           
+#>  [75] statmod_1.5.0               bit64_4.0.5                
+#>  [77] robust_0.7-5                progress_1.2.3             
+#>  [79] GenomeInfoDb_1.40.1         rprojroot_2.0.4            
+#>  [81] bslib_0.8.0                 affyio_1.74.0              
+#>  [83] rpart_4.1.23                colorspace_2.1-1           
+#>  [85] DBI_1.2.3                   Hmisc_5.1-3                
+#>  [87] nnet_7.3-19                 tidyselect_1.2.1           
+#>  [89] bit_4.0.5                   compiler_4.4.1             
+#>  [91] MassSpecWavelet_1.70.0      htmlTable_2.4.3            
+#>  [93] DelayedArray_0.30.1         plotly_4.10.4              
+#>  [95] bookdown_0.40               checkmate_2.3.2            
+#>  [97] scales_1.3.0                DEoptimR_1.1-3             
+#>  [99] affy_1.82.0                 digest_0.6.37              
+#> [101] rmarkdown_2.28              XVector_0.44.0             
+#> [103] htmltools_0.5.8.1           pkgconfig_2.0.3            
+#> [105] base64enc_0.1-3             MatrixGenerics_1.16.0      
+#> [107] highr_0.11                  fastmap_1.2.0              
+#> [109] rlang_1.1.4                 GlobalOptions_0.1.2        
+#> [111] htmlwidgets_1.6.4           UCSC.utils_1.0.0           
+#> [113] farver_2.1.2                jquerylib_0.1.4            
+#> [115] jsonlite_1.8.8              MsExperiment_1.6.0         
+#> [117] mzID_1.42.0                 RCurl_1.98-1.16            
+#> [119] Formula_1.2-5               GenomeInfoDbData_1.2.12    
+#> [121] patchwork_1.2.0             munsell_0.5.1              
+#> [123] viridis_0.6.5               MsCoreUtils_1.16.1         
+#> [125] vsn_3.72.0                  furrr_0.3.1                
+#> [127] stringi_1.8.4               ggraph_2.2.1               
+#> [129] zlibbioc_1.50.0             plyr_1.8.9                 
+#> [131] parallel_4.4.1              listenv_0.9.1              
+#> [133] ggrepel_0.9.5               Biostrings_2.72.1          
+#> [135] MsFeatures_1.12.0           graphlayouts_1.1.1         
+#> [137] hms_1.1.3                   Spectra_1.14.1             
+#> [139] circlize_0.4.16             igraph_2.0.3               
+#> [141] QFeatures_1.14.2            rngtools_1.5.2             
+#> [143] reshape2_1.4.4              XML_3.99-0.17              
+#> [145] evaluate_0.24.0             blogdown_1.19              
+#> [147] BiocManager_1.30.25         tzdb_0.4.0                 
+#> [149] foreach_1.5.2               missForest_1.5             
+#> [151] tweenr_2.0.3                polyclip_1.10-7            
+#> [153] future_1.34.0               clue_0.3-65                
+#> [155] ggforce_0.4.2               AnnotationFilter_1.28.0    
+#> [157] e1071_1.7-14                RSpectra_0.16-2            
+#> [159] ggcorrplot_0.1.4.1          viridisLite_0.4.2          
+#> [161] class_7.3-22                rARPACK_0.11-0             
+#> [163] memoise_2.0.1               ellipse_0.5.0              
+#> [165] IRanges_2.38.1              cluster_2.1.6              
+#> [167] timechange_0.3.0            globals_0.16.3             
+#> [169] here_1.0.1
 ```
 

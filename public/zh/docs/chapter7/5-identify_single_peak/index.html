@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: 2024年9月10日 --><html lang="zh-Hans" >
+<!-- Last Published: 2024年9月25日 --><html lang="zh-Hans" >
 
 
 <head>
@@ -278,8 +278,6 @@
 Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data = readr::read_csv(file.path( system.file(&#34;ms1_peak&#34;, package = &#34;metid&#34;), &#34;ms1." />
 
 
-
-  <link rel="alternate" hreflang="en" href="https://www.tidymass.org/docs/chapter7/5-identify_single_peak/" />
 
 <link rel="alternate" hreflang="zh-Hans" href="https://www.tidymass.org/zh/docs/chapter7/5-identify_single_peak/" />
 <link rel="canonical" href="https://www.tidymass.org/zh/docs/chapter7/5-identify_single_peak/" />
@@ -737,22 +735,6 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
         
 
         
-        
-        <li class="nav-item dropdown i18n-dropdown">
-          <a href="#" class="nav-link " data-toggle="dropdown"
-             aria-haspopup="true" aria-label="语言">
-            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
-          <div class="dropdown-menu">
-            <div class="dropdown-item dropdown-item-active">
-              <span>中文 (简体)</span>
-            </div>
-            
-            <a class="dropdown-item" href="https://www.tidymass.org/docs/chapter7/5-identify_single_peak/">
-              <span>English</span>
-            </a>
-            
-          </div>
-        </li>
         
 
       </ul>
@@ -1384,7 +1366,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">object</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; massdataset version: 1.0.25 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; massdataset version: 1.0.34 </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1.expression_data:[ 100 x 2 data.frame]</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2.sample_info:[ 2 x 4 data.frame]</span>
@@ -1399,7 +1381,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 processings in total</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; create_mass_dataset ---------- </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package         Function.used                Time</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2023-09-02 10:42:06</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2024-09-25 21:10:05</span>
 </span></span></code></pre></div><h2 id="add-ms2-to-mass_dataset-object">Add MS2 to <code>mass_dataset</code> object</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;./metabolite_annotation&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nf">dir.create</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
@@ -1411,7 +1393,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl">  <span class="n">overwrite</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">recursive</span> <span class="o">=</span> <span class="kc">TRUE</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] FALSE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] TRUE</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">object</span> <span class="o">=</span>
 </span></span><span class="line"><span class="cl">  <span class="n">massdataset</span><span class="o">::</span><span class="nf">mutate_ms2</span><span class="p">(</span>
@@ -1425,7 +1407,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">object</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; massdataset version: 1.0.25 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; massdataset version: 1.0.34 </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; -------------------- </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1.expression_data:[ 100 x 2 data.frame]</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2.sample_info:[ 2 x 4 data.frame]</span>
@@ -1440,10 +1422,10 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2 processings in total</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; create_mass_dataset ---------- </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package         Function.used                Time</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2023-09-02 10:42:06</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2024-09-25 21:10:05</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; mutate_ms2 ---------- </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package Function.used                Time</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset  mutate_ms2() 2023-09-02 10:52:12</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset  mutate_ms2() 2024-09-25 21:10:06</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">object</span><span class="o">@</span><span class="n">ms2_data</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; $QC1_MSMS_NCE25.mgf</span>
@@ -1613,117 +1595,95 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2   0.9971995 MS_0.0.2     2</span>
 </span></span></code></pre></div><h2 id="session-information">Session information</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS 15.0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: Asia/Singapore</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] grid      stats4    stats     graphics  grDevices utils     datasets </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [8] methods   base     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats4    stats     graphics  grDevices utils     datasets  methods  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [8] base     </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; other attached packages:</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] lubridate_1.9.2       forcats_1.0.0         stringr_1.5.0        </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [4] purrr_1.0.1           readr_2.1.4           tibble_3.2.1         </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [7] tidyverse_2.0.0       metid_1.2.29          metpath_1.0.8        </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [10] ComplexHeatmap_2.16.0 mixOmics_6.24.0       lattice_0.21-8       </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] MASS_7.3-58.4         massstat_1.0.5        tidyr_1.3.0          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [16] ggfortify_0.4.16      massqc_1.0.6          masscleaner_1.0.11   </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [19] xcms_3.22.0           MSnbase_2.26.0        ProtGenerics_1.32.0  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [22] S4Vectors_0.38.1      mzR_2.34.0            Rcpp_1.0.10          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [25] Biobase_2.60.0        BiocGenerics_0.46.0   BiocParallel_1.34.2  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [28] massprocesser_1.0.10  ggplot2_3.4.2         dplyr_1.1.2          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [31] magrittr_2.0.3        masstools_1.0.10      massdataset_1.0.25   </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [34] tidymass_1.0.8       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] MSnbase_2.30.1      ProtGenerics_1.36.0 S4Vectors_0.42.1   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [4] mzR_2.38.0          Rcpp_1.0.13         Biobase_2.64.0     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [7] BiocGenerics_0.50.0 metid_1.2.34        lubridate_1.9.3    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [10] forcats_1.0.0       stringr_1.5.1       purrr_1.0.2        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] readr_2.1.5         tidyr_1.3.1         tibble_3.2.1       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [16] tidyverse_2.0.0     ggplot2_3.5.1       dplyr_1.1.4        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [19] magrittr_2.0.3      masstools_1.0.13    massdataset_1.0.34 </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [1] splines_4.3.0               bitops_1.0-7               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [3] cellranger_1.1.0            polyclip_1.10-4            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [5] preprocessCore_1.62.1       XML_3.99-0.14              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [7] rpart_4.1.19                fastDummies_1.6.3          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [9] lifecycle_1.0.3             doParallel_1.0.17          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [11] rprojroot_2.0.3             globals_0.16.2             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [13] backports_1.4.1             plotly_4.10.2              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [15] openxlsx_4.2.5.2            limma_3.56.2               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [17] Hmisc_5.1-0                 sass_0.4.6                 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [19] rmarkdown_2.22              jquerylib_0.1.4            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [21] yaml_2.3.7                  remotes_2.4.2              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [23] doRNG_1.8.6                 zip_2.3.0                  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [25] MsCoreUtils_1.12.0          pbapply_1.7-0              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [27] RColorBrewer_1.1-3          zlibbioc_1.46.0            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [29] GenomicRanges_1.52.0        ggraph_2.1.0               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [31] itertools_0.1-3             RCurl_1.98-1.12            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [33] nnet_7.3-18                 tweenr_2.0.2               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [35] circlize_0.4.15             GenomeInfoDbData_1.2.10    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [37] IRanges_2.34.0              ggrepel_0.9.3              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [39] listenv_0.9.0               ellipse_0.4.5              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [41] RSpectra_0.16-1             missForest_1.5             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [43] parallelly_1.36.0           ncdf4_1.21                 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [45] codetools_0.2-19            DelayedArray_0.26.3        </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [47] ggforce_0.4.1               tidyselect_1.2.0           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [49] shape_1.4.6                 farver_2.1.1               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [51] viridis_0.6.3               matrixStats_1.0.0          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [53] base64enc_0.1-3             jsonlite_1.8.5             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [55] GetoptLong_1.0.5            multtest_2.56.0            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [57] e1071_1.7-13                tidygraph_1.2.3            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [59] Formula_1.2-5               survival_3.5-5             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [61] iterators_1.0.14            foreach_1.5.2              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [63] progress_1.2.2              tools_4.3.0                </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [65] glue_1.6.2                  rARPACK_0.11-0             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [67] gridExtra_2.3               xfun_0.39                  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [69] here_1.0.1                  MatrixGenerics_1.12.2      </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [71] GenomeInfoDb_1.36.0         withr_2.5.0                </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [73] BiocManager_1.30.21         fastmap_1.1.1              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [75] fansi_1.0.4                 blogdown_1.18.1            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [77] digest_0.6.31               timechange_0.2.0           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [79] R6_2.5.1                    colorspace_2.1-0           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [81] utf8_1.2.3                  generics_0.1.3             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [83] data.table_1.14.8           corpcor_1.6.10             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [85] robustbase_0.95-1           class_7.3-21               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [87] graphlayouts_1.0.0          prettyunits_1.1.1          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [89] httr_1.4.6                  htmlwidgets_1.6.2          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [91] S4Arrays_1.0.4              pkgconfig_2.0.3            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [93] gtable_0.3.3                robust_0.7-1               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [95] impute_1.74.1               MassSpecWavelet_1.66.0     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [97] XVector_0.40.0              furrr_0.3.1                </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [99] pcaPP_2.0-3                 htmltools_0.5.5            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [101] bookdown_0.34               MALDIquant_1.22.1          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [103] clue_0.3-64                 scales_1.2.1               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [105] png_0.1-8                   knitr_1.43                 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [107] rstudioapi_0.14             reshape2_1.4.4             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [109] tzdb_0.4.0                  rjson_0.2.21               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [111] checkmate_2.2.0             ggcorrplot_0.1.4           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [113] proxy_0.4-27                cachem_1.0.8               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [115] GlobalOptions_0.1.2         parallel_4.3.0             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [117] foreign_0.8-84              mzID_1.38.0                </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [119] vsn_3.68.0                  pillar_1.9.0               </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [121] vctrs_0.6.2                 MsFeatures_1.8.0           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [123] RANN_2.6.1                  pcaMethods_1.92.0          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [125] randomForest_4.7-1.1        cluster_2.1.4              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [127] htmlTable_2.4.1             evaluate_0.21              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [129] mvtnorm_1.2-2               cli_3.6.1                  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [131] compiler_4.3.0              rlang_1.1.1                </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [133] crayon_1.5.2                rngtools_1.5.2             </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [135] Rdisop_1.60.0               rrcov_1.7-3                </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [137] affy_1.78.0                 plyr_1.8.8                 </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [139] stringi_1.7.12              viridisLite_0.4.2          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [141] Biostrings_2.68.1           munsell_0.5.0              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [143] lazyeval_0.2.2              fit.models_0.64            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [145] Matrix_1.5-4                hms_1.1.3                  </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [147] patchwork_1.1.2             future_1.32.0              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [149] KEGGREST_1.40.0             SummarizedExperiment_1.30.2</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [151] igraph_1.4.3                affyio_1.70.0              </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [153] bslib_0.5.0                 DEoptimR_1.0-14            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [155] readxl_1.4.2</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [1] RColorBrewer_1.1-3          rstudioapi_0.16.0          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [3] jsonlite_1.8.8              shape_1.4.6.1              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [5] MultiAssayExperiment_1.30.3 MALDIquant_1.22.3          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [7] rmarkdown_2.28              GlobalOptions_0.1.2        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;   [9] zlibbioc_1.50.0             vctrs_0.6.5                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [11] RCurl_1.98-1.16             blogdown_1.19              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [13] progress_1.2.3              htmltools_0.5.8.1          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [15] S4Arrays_1.4.1              cellranger_1.1.0           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [17] SparseArray_1.4.8           mzID_1.42.0                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [19] sass_0.4.9                  parallelly_1.38.0          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [21] bslib_0.8.0                 htmlwidgets_1.6.4          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [23] plyr_1.8.9                  impute_1.78.0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [25] plotly_4.10.4               cachem_1.1.0               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [27] igraph_2.0.3                lifecycle_1.0.4            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [29] iterators_1.0.14            pkgconfig_2.0.3            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [31] Matrix_1.7-0                R6_2.5.1                   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [33] fastmap_1.2.0               GenomeInfoDbData_1.2.12    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [35] MatrixGenerics_1.16.0       future_1.34.0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [37] clue_0.3-65                 digest_0.6.37              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [39] pcaMethods_1.96.0           colorspace_2.1-1           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [41] furrr_0.3.1                 rprojroot_2.0.4            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [43] GenomicRanges_1.56.1        fansi_1.0.6                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [45] timechange_0.3.0            httr_1.4.7                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [47] abind_1.4-5                 compiler_4.4.1             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [49] here_1.0.1                  remotes_2.5.0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [51] bit64_4.0.5                 withr_3.0.1                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [53] doParallel_1.0.17           BiocParallel_1.38.0        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [55] MASS_7.3-61                 DelayedArray_0.30.1        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [57] rjson_0.2.22                tools_4.4.1                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [59] PSMatch_1.8.0               zip_2.3.1                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [61] glue_1.7.0                  QFeatures_1.14.2           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [63] grid_4.4.1                  cluster_2.1.6              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [65] reshape2_1.4.4              generics_0.1.3             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [67] gtable_0.3.5                tzdb_0.4.0                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [69] preprocessCore_1.66.0       data.table_1.16.0          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [71] hms_1.1.3                   utf8_1.2.4                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [73] XVector_0.44.0              foreach_1.5.2              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [75] pillar_1.9.0                vroom_1.6.5                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [77] limma_3.60.4                circlize_0.4.16            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [79] lattice_0.22-6              bit_4.0.5                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [81] tidyselect_1.2.1            ComplexHeatmap_2.20.0      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [83] pbapply_1.7-2               knitr_1.48                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [85] bookdown_0.40               IRanges_2.38.1             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [87] SummarizedExperiment_1.34.0 xfun_0.47                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [89] statmod_1.5.0               matrixStats_1.3.0          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [91] stringi_1.8.4               UCSC.utils_1.0.0           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [93] lazyeval_0.2.2              yaml_2.3.10                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [95] evaluate_0.24.0             codetools_0.2-20           </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [97] MsCoreUtils_1.16.1          BiocManager_1.30.25        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [99] cli_3.6.3                   affyio_1.74.0              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [101] munsell_0.5.1               jquerylib_0.1.4            </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [103] readxl_1.4.3                GenomeInfoDb_1.40.1        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [105] globals_0.16.3              png_0.1-8                  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [107] XML_3.99-0.17               parallel_4.4.1             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [109] prettyunits_1.2.0           AnnotationFilter_1.28.0    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [111] bitops_1.0-8                listenv_0.9.1              </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [113] viridisLite_0.4.2           scales_1.3.0               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [115] affy_1.82.0                 openxlsx_4.2.7             </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [117] ncdf4_1.23                  crayon_1.5.3               </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [119] GetoptLong_1.0.5            rlang_1.1.4                </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [121] vsn_3.72.0</span>
 </span></span></code></pre></div>
 
         </article>
