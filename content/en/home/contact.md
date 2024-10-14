@@ -6,7 +6,7 @@ title: 📥 Contact
 subtitle: 
 content:
   email: xiaotao.shen@outlook.com
-  phone: +68 83042333
+  phone: +65 83042333
   form:
     formspree:
       id: xpzgpjby

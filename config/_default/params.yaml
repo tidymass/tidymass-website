@@ -40,10 +40,11 @@ header:
     show_day_night: true
     show_search: true
     highlight_active_link: true
+    show_theme_chooser: true
 
 footer:
   copyright:
-    notice: '© 2022-2023 Xiaotao Shen'
+    notice: '© 2022-2024 Shen Lab'
     license:
       enable: false
       allow_derivatives: false

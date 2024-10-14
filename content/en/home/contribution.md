@@ -17,7 +17,7 @@ We still need more volunteers to help use to maintain and improve this open proj
 
 📕 You need to:
 
-1. Know basic knowledge of R and tidymas.
+1. Know basic knowledge of R and tidymass.
 
 2. Be interested in method development for mass spectrometry data.
 
