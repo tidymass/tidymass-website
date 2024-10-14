@@ -10,7 +10,7 @@ last_name: Yang
 superuser: false
 title: Yunong Yang
 user_groups:
-- contributors
+- no
 ---
 
 

@@ -10,7 +10,7 @@ last_name: Li
 superuser: false
 title: Kexin Li
 user_groups:
-- contributors
+- no
 ---
 
 

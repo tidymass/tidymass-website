@@ -10,7 +10,7 @@ last_name: Zhang
 superuser: false
 title: Yongxia Zhang
 user_groups:
-- contributors
+- no
 ---
 
 

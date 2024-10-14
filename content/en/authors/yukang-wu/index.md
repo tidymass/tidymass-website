@@ -10,7 +10,7 @@ social:
 superuser: false
 title: YuKang Wu
 user_groups:
-- contributors
+- no
 ---
 
 

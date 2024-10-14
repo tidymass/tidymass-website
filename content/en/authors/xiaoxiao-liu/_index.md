@@ -10,7 +10,7 @@ social:
 superuser: false
 title: Xiaoxiao Liu
 user_groups:
-- contributors
+- no
 ---
 
 

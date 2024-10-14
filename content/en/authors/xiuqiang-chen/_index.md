@@ -6,5 +6,5 @@ last_name: Chen
 superuser: false
 title: Xiuqiang Chen
 user_groups:
-- contributors
+- no
 ---

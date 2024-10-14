@@ -10,7 +10,7 @@ social:
 superuser: false
 title: Jiahui Zhao
 user_groups:
-- contributors
+- no
 ---
 
 

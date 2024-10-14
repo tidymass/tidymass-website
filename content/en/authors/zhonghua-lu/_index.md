@@ -10,7 +10,7 @@ social:
 superuser: false
 title: ZhongHua Lu
 user_groups:
-- contributors
+- no
 ---
 
 

@@ -10,7 +10,7 @@ social:
 superuser: false
 title: Yang Ni
 user_groups:
-- contributors
+- no
 ---
 
 

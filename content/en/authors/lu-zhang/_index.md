@@ -6,7 +6,7 @@ last_name: Zhang
 superuser: false
 title: Lu Zhang
 user_groups:
-- contributors
+- no
 ---
 
 

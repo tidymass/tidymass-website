@@ -10,7 +10,7 @@ social:
 superuser: false
 title: Lesong Mo
 user_groups:
-- contributors
+- no
 ---
 
 

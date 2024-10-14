@@ -10,7 +10,7 @@ social:
 superuser: false
 title: Li Yan
 user_groups:
-- contributors
+- no
 ---
 
 

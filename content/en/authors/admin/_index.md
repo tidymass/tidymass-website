@@ -8,7 +8,7 @@ bio: Metabolomics, Multi-omics, Bioinformatics, Systems Biology.
 #   - course: BSc
 #     institution: Inner Mongolia University
 #     year: 2009-2013
-email: "shenxt@stanford.edu"
+email: "xiaotao.shen@outlook.com"
 first_name: Xiaotao
 highlight_name: true
 # interests:
@@ -22,9 +22,9 @@ highlight_name: true
 
 last_name: a
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Postdoctoral Research Fellow
+- name: Nanyang Technological University, Singapore
+  url: 
+role: Assistant Professor
 social:
 - icon: home
   icon_pack: fas
@@ -53,9 +53,6 @@ user_groups:
 - maintainers
 ---
 
-I am a Postdoctoral Research Fellow in [Prof. Michael Snyder's lab](https://med.stanford.edu/snyderlab/about.html) at Stanford University School of Medicine. My overarching research interests are bioinformatics algorithms development for multi-omics data, and their application to precision medicine. Specifically, I am interested in bioinformatics algorithm development, including 1) Comprehensive analysis workflow and deep learning for LC-MS data, 2) Metabolic network analysis, 3) Wearable and multi-omics data integration, and 4) microbiome and metabolome data integration. I also employed the developed bioinformatics algorithms as a unique systems biology approach to study the potential biomarkers and mechanisms of 1) pregnancy and related diseases, 2) aging and related diseases, and 3) cancer. 
-More tools and projects I developed can be found in the `Projects` part.
-
-Now I am also the member of [Stanford Chinese Postdoctral Association (SCPA)](https://scpa.netlify.app/). Feel free to let me know if you want to join us and work for the amazing community!
+My overarching research interests are bioinformatics algorithms development for multi-omics data, and their application to precision medicine. Specifically, I am interested in bioinformatics algorithm development, including 1) Comprehensive analysis workflow and deep learning for LC-MS data, 2) Metabolic network analysis, 3) Wearable and multi-omics data integration, and 4) microbiome and metabolome data integration. I also employed the developed bioinformatics algorithms as a unique systems biology approach to study the potential biomarkers and mechanisms of 1) pregnancy and related diseases, 2) aging and related diseases, and 3) cancer.
 
  :dog: :school: :u7533: :smile: :facepunch: :fist: :family: :panda_face: :earth_asia: :tada: :cn:

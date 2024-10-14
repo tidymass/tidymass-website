@@ -10,7 +10,7 @@ social:
 superuser: false
 title: Shuohan Cheng
 user_groups:
-- contributors
+- no
 ---
 
 

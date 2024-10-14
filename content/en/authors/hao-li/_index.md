@@ -7,7 +7,7 @@ last_name: Li
 superuser: false
 title: Hao Li
 user_groups:
-- contributors
+- no
 ---
 
 

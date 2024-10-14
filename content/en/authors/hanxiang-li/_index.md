@@ -6,5 +6,5 @@ last_name: Li
 superuser: false
 title: Hanxiang Li
 user_groups:
-- contributors
+- no
 ---

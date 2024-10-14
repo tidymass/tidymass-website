@@ -10,7 +10,7 @@ social:
 superuser: false
 title: Linlin Xu
 user_groups:
-- contributors
+- no
 ---
 
 

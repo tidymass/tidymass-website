@@ -6,7 +6,7 @@ last_name: Wang
 superuser: false
 title: Lu Wang
 user_groups:
-- contributors
+- no
 ---
 
 
