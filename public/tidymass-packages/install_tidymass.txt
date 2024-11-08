@@ -26,6 +26,14 @@ install_tidymass <-
       BiocManager::install("Rdisop", ask = FALSE, update = FALSE)
     }
     
+    if (!require(MSnbase)) {
+      BiocManager::install("MSnbase", ask = FALSE, update = FALSE)
+    }
+    
+    if (!require(ProtGenerics)) {
+      BiocManager::install("ProtGenerics", ask = FALSE, update = FALSE)
+    }
+    
     installed_packages <-
       utils::installed.packages() %>%
       as.data.frame()

@@ -29,6 +29,19 @@ file <-
   file1 %>%
   dplyr::left_join(file2, by = "package")
 
+file <-
+  file %>% 
+  dplyr::mutate(version.y = 
+                  case_when(
+                    is.na(version.y) ~ version.x,
+                    TRUE ~ version.y
+                  ),
+                file_name.y =
+                  case_when(
+                    is.na(file_name.y) ~ file_name.x,
+                    TRUE ~ file_name.y
+                  ))
+
 ###move new package
 seq_len(nrow(file)) %>%
   purrr::walk(function(i) {
