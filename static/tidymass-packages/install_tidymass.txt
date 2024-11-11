@@ -22,6 +22,10 @@ install_tidymass <-
       install.packages("BiocManager")
     }
     
+    if (!require(Rcpp)) {
+      install.packages("Rcpp")
+    }
+    
     if (!require(Rdisop)) {
       BiocManager::install("Rdisop", ask = FALSE, update = FALSE)
     }
@@ -33,6 +37,20 @@ install_tidymass <-
     if (!require(ProtGenerics)) {
       BiocManager::install("ProtGenerics", ask = FALSE, update = FALSE)
     }
+    
+    if (!require(mzR)) {
+      BiocManager::install("mzR", ask = FALSE, update = FALSE)
+    }
+    
+    ###check if mzR is outdated
+    outdated_packages <- 
+      BiocManager::valid()$out_of_date
+
+    if("mzR" %in% rownames(outdated_packages)){
+        BiocManager::install("mzR")
+    }
+    
+    
     
     installed_packages <-
       utils::installed.packages() %>%
