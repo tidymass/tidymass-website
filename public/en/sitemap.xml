@@ -492,6 +492,66 @@
                 href="https://www.tidymass.org/docs/chapter11/"
                 />
   </url><url>
+    <loc>https://www.tidymass.org/databases/</loc>
+    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://www.tidymass.org/authors/</loc>
+    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/authors/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/authors/</loc>
+    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/authors/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/</loc>
+    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
+    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/author/xiaotao-shen/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/author/xiaotao-shen/"
+                />
+  </url><url>
     <loc>https://www.tidymass.org/docs/</loc>
     <lastmod>2023-09-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -504,20 +564,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.tidymass.org/docs/"
-                />
-  </url><url>
-    <loc>https://www.tidymass.org/</loc>
-    <lastmod>2023-09-29T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/"
                 />
   </url><url>
     <loc>https://www.tidymass.org/team/</loc>
@@ -795,32 +841,6 @@
                 href="https://www.tidymass.org/admin/"
                 />
   </url><url>
-    <loc>https://www.tidymass.org/authors/</loc>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/authors/"
-                />
-  </url><url>
-    <loc>https://www.tidymass.org/authors/</loc>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/authors/"
-                />
-  </url><url>
     <loc>https://www.tidymass.org/author/chuchu-wang/</loc>
     <changefreq>weekly</changefreq>
     <xhtml:link
@@ -1014,19 +1034,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.tidymass.org/author/shuohan-cheng/"
-                />
-  </url><url>
-    <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/author/xiaotao-shen/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/author/xiaotao-shen/"
                 />
   </url><url>
     <loc>https://www.tidymass.org/author/xiaoxiao-liu/</loc>

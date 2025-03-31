@@ -5,12 +5,38 @@
     <link>https://www.tidymass.org/author/xiaotao-shen/</link>
       <atom:link href="https://www.tidymass.org/author/xiaotao-shen/index.xml" rel="self" type="application/rss+xml" />
     <description>Xiaotao Shen</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 23 Nov 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://www.tidymass.org/author/xiaotao-shen/avatar_hu86242519a21313948ac7dc77e0a27da6_1568301_270x270_fill_q75_lanczos_center.jpg</url>
       <title>Xiaotao Shen</title>
       <link>https://www.tidymass.org/author/xiaotao-shen/</link>
     </image>
+    
+    <item>
+      <title>💾 Databases</title>
+      <link>https://www.tidymass.org/databases/</link>
+      <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/databases/</guid>
+      <description>&lt;h1 id=&#34;ms1-compound-database&#34;&gt;MS1 Compound database&lt;/h1&gt;
+&lt;p&gt;MS1 Compound databases with metabolite source information&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/17pOxQt9KM5Y_IGrSxk8GM2QukRUqm4E-?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/1s11anuFDw_GCTlOFghexiA?pwd=nttj&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;ms2-compound-database&#34;&gt;MS2 Compound database&lt;/h1&gt;
+&lt;p&gt;MS2 Compound databases with metabolite source information&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/1I9O3pq4qPG6qtZ7g3Pb2pYJ_ELyz4CsC?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/1p_bKNBHcz4Ff6mfxzLHcxw?pwd=enkr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;pathway-databases&#34;&gt;Pathway databases&lt;/h1&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/1eDy7ZUZRthHihTUAyymkrogpP5yyJoTK?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/1qumYDIYHgzIDzjku-u6Fjw?pwd=5twv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;metabolic-network&#34;&gt;Metabolic network&lt;/h1&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/1NqtvW7tBa2hvdEbXJRuHHz_JmzesnkFU?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/16D1teILFv4Gy2ocen2DOzQ?pwd=wwnh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;demo-data&#34;&gt;Demo Data&lt;/h1&gt;
+&lt;h2 id=&#34;tidymass2-manuscript&#34;&gt;TidyMass2 manuscript&lt;/h2&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/1LED872Wm22r9EhbbyXnk7klNL6JpJYHD?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/1_y39XavnY5UkmlcyuLGxZA?pwd=3tai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

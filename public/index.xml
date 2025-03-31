@@ -5,7 +5,7 @@
     <link>https://www.tidymass.org/</link>
       <atom:link href="https://www.tidymass.org/index.xml" rel="self" type="application/rss+xml" />
     <description>TidyMass</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 29 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 23 Nov 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png</url>
       <title>TidyMass</title>
@@ -26841,6 +26841,32 @@ Then we run &lt;code&gt;construct_database()&lt;/code&gt; function and then we c
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; [119] GetoptLong_1.0.5            rlang_1.1.4                &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; [121] vsn_3.72.0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>💾 Databases</title>
+      <link>https://www.tidymass.org/databases/</link>
+      <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/databases/</guid>
+      <description>&lt;h1 id=&#34;ms1-compound-database&#34;&gt;MS1 Compound database&lt;/h1&gt;
+&lt;p&gt;MS1 Compound databases with metabolite source information&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/17pOxQt9KM5Y_IGrSxk8GM2QukRUqm4E-?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/1s11anuFDw_GCTlOFghexiA?pwd=nttj&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;ms2-compound-database&#34;&gt;MS2 Compound database&lt;/h1&gt;
+&lt;p&gt;MS2 Compound databases with metabolite source information&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/1I9O3pq4qPG6qtZ7g3Pb2pYJ_ELyz4CsC?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/1p_bKNBHcz4Ff6mfxzLHcxw?pwd=enkr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;pathway-databases&#34;&gt;Pathway databases&lt;/h1&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/1eDy7ZUZRthHihTUAyymkrogpP5yyJoTK?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/1qumYDIYHgzIDzjku-u6Fjw?pwd=5twv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;metabolic-network&#34;&gt;Metabolic network&lt;/h1&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/1NqtvW7tBa2hvdEbXJRuHHz_JmzesnkFU?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/16D1teILFv4Gy2ocen2DOzQ?pwd=wwnh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;demo-data&#34;&gt;Demo Data&lt;/h1&gt;
+&lt;h2 id=&#34;tidymass2-manuscript&#34;&gt;TidyMass2 manuscript&lt;/h2&gt;
+&lt;p&gt;&lt;i class=&#34;fa-brands fa-google-drive&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://drive.google.com/drive/folders/1LED872Wm22r9EhbbyXnk7klNL6JpJYHD?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google drive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa-solid fa-cloud-arrow-down&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://pan.baidu.com/s/1_y39XavnY5UkmlcyuLGxZA?pwd=3tai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Baidu netdisk&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>

@@ -19,6 +19,9 @@ main:
   - name: Contribution
     url: "#contribution"
     weight: 50
+  - name: Databases
+    url: databases/
+    weight: 50
   - name: Tutorials
     url: docs/
     weight: 60
