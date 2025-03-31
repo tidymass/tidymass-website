@@ -21,7 +21,7 @@ main:
     weight: 50
   - name: Databases
     url: databases/
-    weight: 50
+    weight: 51
   - name: Tutorials
     url: docs/
     weight: 60
