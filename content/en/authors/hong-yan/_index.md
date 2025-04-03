@@ -1,12 +1,12 @@
 ---
 organizations:
-- name: Yale University
-role: Postdoctoral Research Fellow
+- name: Hong Kong Baptist University
+role: Research assistant Professor
 last_name: b
 social:
 - icon: link
   icon_pack: fas
-  link: https://medicine.yale.edu/lab/cjohnson/profile/hong_yan/
+  link: https://scholars.hkbu.edu.hk/en/persons/HONGYAN
 superuser: false
 title: Hong Yan
 user_groups:
