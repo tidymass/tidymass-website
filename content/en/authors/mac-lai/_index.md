@@ -10,7 +10,7 @@ social:
 superuser: false
 title: Mac Lai
 user_groups:
-- contributors
+- Contributors2
 ---
 
 

@@ -492,12 +492,8 @@
                 href="https://www.tidymass.org/docs/chapter11/"
                 />
   </url><url>
-    <loc>https://www.tidymass.org/databases/</loc>
-    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://www.tidymass.org/authors/</loc>
-    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
@@ -511,7 +507,7 @@
                 />
   </url><url>
     <loc>https://www.tidymass.org/authors/</loc>
-    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
@@ -523,9 +519,13 @@
                 hreflang="en-us"
                 href="https://www.tidymass.org/authors/"
                 />
+  </url><url>
+    <loc>https://www.tidymass.org/news/</loc>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/</loc>
-    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
@@ -538,8 +538,12 @@
                 href="https://www.tidymass.org/"
                 />
   </url><url>
+    <loc>https://www.tidymass.org/news/2025-5-1-tidymass2/</loc>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/author/xiaotao-shen/</loc>
-    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
@@ -551,6 +555,10 @@
                 hreflang="en-us"
                 href="https://www.tidymass.org/author/xiaotao-shen/"
                 />
+  </url><url>
+    <loc>https://www.tidymass.org/databases/</loc>
+    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/docs/</loc>
     <lastmod>2023-09-29T00:00:00+00:00</lastmod>
@@ -1022,6 +1030,9 @@
                 hreflang="en-us"
                 href="https://www.tidymass.org/author/peidong-song/"
                 />
+  </url><url>
+    <loc>https://www.tidymass.org/author/peng-gao/</loc>
+    <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://www.tidymass.org/author/shuohan-cheng/</loc>
     <changefreq>weekly</changefreq>

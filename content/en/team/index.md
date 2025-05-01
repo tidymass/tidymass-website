@@ -14,9 +14,9 @@ sections:
     sort_by: Params.last_name
     title: Team
     user_groups:
-    - authors
-    - maintainers
-    - contributors
+    - Authors
+    - Maintainers
+    - Contributors
   design:
     show_interests: true
     show_role: true

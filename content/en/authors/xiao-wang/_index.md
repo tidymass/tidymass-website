@@ -37,8 +37,8 @@ status:
 superuser: false
 title: Xiao Wang
 user_groups:
-- authors
-- maintainers
+- Authors
+- Maintainers
 ---
 
 My primary research focuses on plant metabolomics data mining and bioinformatics tool development. Key projects include:

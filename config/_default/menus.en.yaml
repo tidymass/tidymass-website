@@ -25,3 +25,6 @@ main:
   - name: Tutorials
     url: docs/
     weight: 60
+  - name: News
+    url: news/
+    weight: 70    

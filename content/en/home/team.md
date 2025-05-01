@@ -9,7 +9,7 @@ content:
   sort_ascending: true
   sort_by: Params.last_name
   user_groups:
-    - authors
+    - Authors
 design:
   columns: "1"
   show_interests: true

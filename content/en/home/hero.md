@@ -25,6 +25,8 @@ cta:
 #     </span>
 ---
 
+📢 **TidyMass2 is released**, [read more here.]() 😄🤗
+
 TidyMass is a comprehensive computational framework for data processing and analysis of LC-MS data using [tidyverse](https://www.tidyverse.org/) principles. 
 It is developed by the [Shen Lab at Nanyang Technological University, Singapore](https://www.shen-lab.org/).
 

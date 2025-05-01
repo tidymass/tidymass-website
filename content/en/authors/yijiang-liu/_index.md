@@ -20,7 +20,7 @@ highlight_name: false
 organizations:
 - name: Nanyang Technological University
   url: ""
-role: Incoming PhD Candidate
+role: PhD Candidate
 social:
 - icon: house
   icon_pack: fas
@@ -44,8 +44,8 @@ status:
 superuser: false
 title: Yijiang LIU
 user_groups:
-- authors
-- maintainers
+- Authors
+- Maintainers
 ---
 
 My research interests include bioinformatics, biostatistics and machine learning. Inspired by the rapid development of artificial intelligence, I am particularly interested in combining biology and data science to provide solutions to health-related problems.

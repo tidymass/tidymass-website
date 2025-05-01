@@ -10,6 +10,6 @@ social:
 superuser: false
 title: Hong Yan
 user_groups:
-- authors
+- Authors
 ---
 

@@ -5,12 +5,39 @@
     <link>https://www.tidymass.org/author/xiaotao-shen/</link>
       <atom:link href="https://www.tidymass.org/author/xiaotao-shen/index.xml" rel="self" type="application/rss+xml" />
     <description>Xiaotao Shen</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 23 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://www.tidymass.org/author/xiaotao-shen/avatar_hu86242519a21313948ac7dc77e0a27da6_1568301_270x270_fill_q75_lanczos_center.jpg</url>
       <title>Xiaotao Shen</title>
       <link>https://www.tidymass.org/author/xiaotao-shen/</link>
     </image>
+    
+    <item>
+      <title>TidyMass2 is released</title>
+      <link>https://www.tidymass.org/news/2025-5-1-tidymass2/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/news/2025-5-1-tidymass2/</guid>
+      <description>&lt;img src=&#34;tidymass2.png&#34; width=&#34;100%&#34; alt=&#34;Description&#34;&gt;
+&lt;p&gt;We are very excited to release TidyMass2, a major update to the TidyMass.&lt;/p&gt;
+&lt;p&gt;TidyMass2 introduces three major innovations compared TidyMass:&lt;/p&gt;
+&lt;p&gt;(1) a comprehensive metabolite origin analysis capability that traces metabolites to human, microbial,
+dietary, pharmaceutical, and environmental sources through integration of 11 metabolite databases containing
+532,488 metabolites with source information;&lt;/p&gt;
+&lt;p&gt;(2) a metabolic feature-based functional module analysis approach that bypasses the annotation bottleneck
+by leveraging network topology to extract biological insights from unannotated metabolic features;&lt;/p&gt;
+&lt;p&gt;and (3) an intuitive graphical interface that makes advanced metabolomics analyses accessible to researchers without programming expertise.&lt;/p&gt;
+&lt;p&gt;When applied to longitudinal urine metabolomics data from human pregnancy,
+TidyMass2 identified metabolites from human, microbiome, and environment,
+and identified 27 dysregulated metabolic modules. It increased the proportion
+of biologically interpretable metabolic features from 5.8% to 58.8%,
+revealing coordinated changes in steroid hormone biosynthesis,
+carbohydrate metabolism, and amino acid processing.
+By expanding biological interpretation beyond conventionally annotated metabolites,
+TidyMass2 enables more comprehensive metabolic phenotyping while maintaining
+open-source principles of reproducibility, traceability, and transparency.&lt;/p&gt;
+&lt;p&gt;The help documents of TidyMass 2 could be found here: &lt;a href=&#34;https://www.tidymass.org/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.tidymass.org/docs/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>💾 Databases</title>
