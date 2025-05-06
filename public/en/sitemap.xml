@@ -492,6 +492,66 @@
                 href="https://www.tidymass.org/docs/chapter11/"
                 />
   </url><url>
+    <loc>https://www.tidymass.org/tag/metabolomics/</loc>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/tag/metabolomics/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/tag/metabolomics/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/packages/</loc>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/packages/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/packages/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/tags/</loc>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/tags/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/</loc>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://www.tidymass.org/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.tidymass.org/"
+                />
+  </url><url>
+    <loc>https://www.tidymass.org/packages/tidymassshiny/</loc>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://www.tidymass.org/authors/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -523,20 +583,6 @@
     <loc>https://www.tidymass.org/news/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://www.tidymass.org/</loc>
-    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/"
-                />
   </url><url>
     <loc>https://www.tidymass.org/news/2025-5-1-tidymass2/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
@@ -626,34 +672,6 @@
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://www.tidymass.org/tags/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/tags/"
-                />
-  </url><url>
-    <loc>https://www.tidymass.org/tag/metabolomics/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/tag/metabolomics/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/tag/metabolomics/"
-                />
-  </url><url>
     <loc>https://www.tidymass.org/packages/metnormalizer/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -666,20 +684,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.tidymass.org/packages/metnormalizer/"
-                />
-  </url><url>
-    <loc>https://www.tidymass.org/packages/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://www.tidymass.org/zh/packages/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.tidymass.org/packages/"
                 />
   </url><url>
     <loc>https://www.tidymass.org/packages/massconverter/</loc>

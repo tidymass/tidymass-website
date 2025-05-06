@@ -5,7 +5,7 @@
     <link>https://www.tidymass.org/</link>
       <atom:link href="https://www.tidymass.org/index.xml" rel="self" type="application/rss+xml" />
     <description>TidyMass</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 06 May 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png</url>
       <title>TidyMass</title>
@@ -26841,6 +26841,14 @@ Then we run &lt;code&gt;construct_database()&lt;/code&gt; function and then we c
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; [119] GetoptLong_1.0.5            rlang_1.1.4                &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&amp;gt; [121] vsn_3.72.0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>TidyMassShiny</title>
+      <link>https://www.tidymass.org/packages/tidymassshiny/</link>
+      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.tidymass.org/packages/tidymassshiny/</guid>
+      <description></description>
     </item>
     
     <item>
