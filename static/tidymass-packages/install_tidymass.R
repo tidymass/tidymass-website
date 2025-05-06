@@ -2,8 +2,7 @@ install_tidymass <-
   function(packages = c("core", "all"),
            which_package,
            from = c("tidymass.org", "gitlab", "github", "gitee", "shen"),
-           method = c("auto", "internal", "libcurl",
-                      "wget", "curl")) {
+           method = c("auto", "internal", "libcurl", "wget", "curl")) {
     if (!require(remotes)) {
       install.packages("remotes")
     }
@@ -114,9 +113,7 @@ install_tidymass <-
           core_package_list
       } else{
         package_list <-
-          c(core_package_list,
-            "massconverter",
-            "massdatabase")
+          c(core_package_list, "massconverter", "massdatabase")
       }
     }
     
