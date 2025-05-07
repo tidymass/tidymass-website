@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Snyder | TidyMass</title>
+    <link>https://www.tidymass.org/author/michael-snyder/</link>
+      <atom:link href="https://www.tidymass.org/author/michael-snyder/index.xml" rel="self" type="application/rss+xml" />
+    <description>Michael Snyder</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.tidymass.org/author/michael-snyder/avatar_hu527448401235e03aef8528dedc285b73_1061381_270x270_fill_lanczos_center_3.png</url>
+      <title>Michael Snyder</title>
+      <link>https://www.tidymass.org/author/michael-snyder/</link>
+    </image>
+    
+  </channel>
+</rss>

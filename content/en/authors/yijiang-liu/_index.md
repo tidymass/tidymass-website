@@ -11,7 +11,7 @@ education:
 email: "LIUY0292@e.ntu.edu.sg"
 commentable: true
 first_name: Yijiang
-last_name: LIU
+last_name: b
 highlight_name: false
 # interests:
 # - 🖥 Bioinformatics

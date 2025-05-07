@@ -1,7 +1,7 @@
 ---
 organizations:
 - name: Hong Kong Baptist University
-role: Research assistant Professor
+role: Research Assistant Professor
 last_name: b
 social:
 - icon: link

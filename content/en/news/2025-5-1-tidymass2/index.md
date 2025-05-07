@@ -44,4 +44,4 @@ By expanding biological interpretation beyond conventionally annotated metabolit
 TidyMass2 enables more comprehensive metabolic phenotyping while maintaining 
 open-source principles of reproducibility, traceability, and transparency.
 
-The help documents of TidyMass 2 could be found here: https://www.tidymass.org/docs/
+The help documents of TidyMass 2 could be found here: https://www.tidymass.org/tidymassshiny-tutorial/

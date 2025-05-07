@@ -24,8 +24,8 @@ design:
   # background:
   #   image:
   #     filename: code.jpg
-    #   filters:
-    #     brightness: 0.5
+    # filters:
+    #   brightness: 0.5
     #  Image fit. Options are `cover` (default), `contain`, or `actual` size.
     # size: cover
     # Image focal point. Options include `left`, `center` (default), or `right`.

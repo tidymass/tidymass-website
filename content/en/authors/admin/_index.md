@@ -22,7 +22,7 @@ highlight_name: true
 
 last_name: a
 organizations:
-- name: Nanyang Technological University, Singapore
+- name: Nanyang Technological University
   url: 
 role: Assistant Professor
 social:
@@ -32,8 +32,11 @@ social:
 - icon: envelope
   icon_pack: fas
   link: /#contact
-- icon: github
+- display:
+    header: true
+  icon: github
   icon_pack: fab
+  label: Follow us on GitHub
   link: https://github.com/tidymass
 - icon: linkedin
   icon_pack: fab
