@@ -4,27 +4,27 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
+  - name: HOME
     url: "#hero"
     weight: 10
-  - name: Packages
+  - name: PACKAGES
     url: "#packages"
     weight: 20
-  - name: Team
+  - name: TEAM
     url: "#team"
     weight: 30
-  - name: Contact
+  - name: CONTACT
     url: "#contact"
     weight: 40
-  - name: Contribution
+  - name: CONTRIBUTION
     url: "#contribution"
     weight: 50
-  - name: Databases
+  - name: DATABASES
     url: databases/
     weight: 51
-  - name: Tutorials
+  - name: TUTORIALS
     url: docs/
     weight: 60
-  - name: News
+  - name: NEWS
     url: news/
     weight: 70    

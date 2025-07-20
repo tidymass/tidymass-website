@@ -30,27 +30,6 @@ cta:
 TidyMass is a comprehensive computational framework for data processing and analysis of LC-MS data using [tidyverse](https://www.tidyverse.org/) principles. 
 It is developed by the [Shen Lab at Nanyang Technological University, Singapore](https://www.shen-lab.org/).
 
-Install tidymass:
-
-```
-remotes::install_gitlab("tidymass/tidymass")
-```
-
-or
-
-```
-remotes::install_github("tidymass/tidymass")
-```
-
-or
-
-```
-source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
-install_tidymass(from = "tidymass.org")
-```
-
-[More here](https://www.tidymass.org/docs/chapter1/)
-
 Citation: [1 tidymass](https://pubmed.ncbi.nlm.nih.gov/35902589/)
 [2 metid](https://pubmed.ncbi.nlm.nih.gov/34432001/)
 [3 massdatabase](https://pubmed.ncbi.nlm.nih.gov/35944213/)
