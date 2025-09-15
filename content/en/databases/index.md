@@ -9,11 +9,15 @@ commentable: true
 title: 💾 Databases
 ---
 
-# MS1 Compound database
+# MetOriginDB (MS1 Compound database)
 
 MS1 Compound databases with metabolite source information
 
-<i class="fa-brands fa-google-drive"></i> [Google drive](https://drive.google.com/drive/folders/17pOxQt9KM5Y_IGrSxk8GM2QukRUqm4E-?usp=sharing)
+<i class="fa-brands fa-google-drive"></i> [Google drive (.rda)](https://drive.google.com/file/d/1IIztZFOxLiqNY9fjd5Y4YkZ-S0HSo2y8/view?usp=sharing)
+
+<i class="fa-brands fa-google-drive"></i> [Google drive (.csv)](https://drive.google.com/file/d/1o-Kwjgx7pvhkIVKzmbDF9l8Le0xs_nxb/view?usp=sharing)
+
+<i class="fa-brands fa-google-drive"></i> [Google drive (.tsv)](https://drive.google.com/file/d/15g-ZacVdE_9-5jfzcR6jcC1zq2w-XWGe/view?usp=sharing)
 
 <i class="fa-solid fa-cloud-arrow-down"></i> [Baidu netdisk](https://pan.baidu.com/s/1s11anuFDw_GCTlOFghexiA?pwd=nttj)
 
