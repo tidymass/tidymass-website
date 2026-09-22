@@ -22,22 +22,26 @@ main:
   - name: DATABASES
     url: databases/
     weight: 51
-  - name: TUTORIAL
-    identifier: tutorial
-    url: docs/
+  - name: TUTORIALS
+    identifier: tutorials
+    url: r-package/
     weight: 60
-  - name: R packages (old version)
-    parent: tutorial
-    url: docs/
+  - name: R package
+    parent: tutorials
+    url: r-package/
     weight: 61
-  - name: R packages (new version)
-    parent: tutorial
-    url: https://www.tidymass.org/tidymass-tutorial/
+  - name: MacOS
+    parent: tutorials
+    url: macos/
     weight: 62
-  - name: tidymass shiny
-    parent: tutorial
-    url: https://www.tidymass.org/tidymassshiny-tutorial/
+  - name: Windows
+    parent: tutorials
+    url: windows/
     weight: 63
+  - name: R shiny
+    parent: tutorials
+    url: r-shiny/
+    weight: 64
   - name: NEWS
     url: news/
     weight: 70    

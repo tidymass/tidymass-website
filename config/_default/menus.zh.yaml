@@ -19,6 +19,23 @@ main:
   - name: 贡献
     url: "#contribution"
     weight: 50
-  - name: 文档
-    url: docs/
+  - name: 教程
+    identifier: tutorials
+    url: r-package/
     weight: 60
+  - name: R package
+    parent: tutorials
+    url: r-package/
+    weight: 61
+  - name: MacOS
+    parent: tutorials
+    url: macos/
+    weight: 62
+  - name: Windows
+    parent: tutorials
+    url: windows/
+    weight: 63
+  - name: R shiny
+    parent: tutorials
+    url: r-shiny/
+    weight: 64
