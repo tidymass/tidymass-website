@@ -19,6 +19,12 @@ MetNormalizer 是官网包目录列出的独立 QC 归一化工具，其文件�
 
 当前接口中 `multiple = 1` 使用基于进样顺序的 SVR，更大的值使用相关峰，应根据采集与研究设计选择。新的对象式 TidyMass 流程通常可以直接采用 masscleaner 的归一化入口。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-metnormalizer-zh.svg" caption="独立的文件式处理路线。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+按 MetNormalizer 文档准备两张 CSV，包含 QC 与采集元数据。使用独立输出目录，检查保存的诊断图和特征保留情况后再把标准化强度用于其他流程；其文件格式不等同于 mass_dataset。
+
 ## 功能范围
 
 输入校验与独立的 QC/SVR 归一化流程。

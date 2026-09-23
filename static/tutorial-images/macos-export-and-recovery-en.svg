@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+<title id="title">Export the run you actually reviewed</title><desc id="desc">Choose run scope → Include data and provenance → Open exported files to verify</desc>
+<rect width="800" height="500" rx="20" fill="#f6f7fc"/>
+<g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+<text x="40" y="52" font-size="25" font-weight="700" fill="#202753">Export the run you actually reviewed</text>
+<rect x="40" y="86" width="720" height="92" rx="14" fill="white" stroke="#d5dbea"/>
+<circle cx="81" cy="132" r="22" fill="#303c78"/>
+<text x="81" y="140" text-anchor="middle" font-size="23" fill="white">1</text>
+<text x="121" y="140" font-size="25" fill="#202753">Choose run scope</text>
+<path d="M400 184 v22 m-7 -7 l7 7 7 -7" fill="none" stroke="#7784ac" stroke-width="3"/>
+<rect x="40" y="214" width="720" height="92" rx="14" fill="white" stroke="#d5dbea"/>
+<circle cx="81" cy="260" r="22" fill="#303c78"/>
+<text x="81" y="268" text-anchor="middle" font-size="23" fill="white">2</text>
+<text x="121" y="268" font-size="25" fill="#202753">Include data and provenance</text>
+<path d="M400 312 v22 m-7 -7 l7 7 7 -7" fill="none" stroke="#7784ac" stroke-width="3"/>
+<rect x="40" y="342" width="720" height="92" rx="14" fill="white" stroke="#d5dbea"/>
+<circle cx="81" cy="388" r="22" fill="#303c78"/>
+<text x="81" y="396" text-anchor="middle" font-size="23" fill="white">3</text>
+<text x="121" y="396" font-size="25" fill="#202753">Open exported files to verify</text>
+</g></svg>

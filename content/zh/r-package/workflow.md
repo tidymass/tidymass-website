@@ -23,6 +23,12 @@ library(tidymass)
 library(dplyr)
 ```
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-workflow-zh.svg" caption="完整流程的检查点。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+分段运行下载脚本，不要未经修改就整段提交。替换路径和分组，核对每个中间对象并保存后再继续。原始数据、注释与通路部分需要自己的文件或数据库。下方小示例用于说明操作机制，不代表生物学发现。
+
 ## 1. 准备数据与原始处理
 
 示例从正离子 mzML/mzXML 开始，负离子模式另建分析。样品表至少有 sample_id、group、class；QC 使用定量 QC，研究样品用 Subject。路径中 QC/Subject 子目录的文件名去扩展名后必须唯一。参数只是起点，先在代表性文件上验证。
@@ -199,3 +205,21 @@ if (file.exists(query_csv) && file.exists(pathway_rds)) {
 writeLines(capture.output(sessionInfo()), file.path(output_dir, "sessionInfo.txt"))
 # Back up this script, parameter choices, all inputs/reference versions and all results.
 ```
+
+## 看图操作：阅读包内示例的缺失情况
+
+{{< tutorial-figure src="/tutorial-images/r/missingness.png" caption="阅读包内示例的缺失情况。使用 massdataset 的 expression_data 实际生成：1,000 个特征 × 8 个样本；这些是教学数据。" >}}
+
+1. 左图以 1,000 个特征为分母显示每个样本的缺失比例，应先比较各样本再判断是否异常。
+2. 右图汇总每个特征在八个样本中的缺失比例；全部样本都缺失的特征不提供定量证据。
+3. 结合诊断选择并记录过滤条件；此图不规定通用阈值。
+
+## 看图操作：比较强度分布
+
+{{< tutorial-figure src="/tutorial-images/r/normalization.png" caption="比较强度分布。四个 Subject 示例样本先保留至少两个样本观测到的特征，再中位数填补和中位数标准化后实际生成。" >}}
+
+1. 两图展示 log10(intensity + 1)，左图输入已经过滤和填补。
+2. 右图为中位数标准化后的结果。中位数接近是该方法的预期结果，不是技术偏差已消除的独立证据。
+3. 在真实数据中选择标准化方法前，核对实验设计，并在有合适定量 QC 时检查其表现。
+
+[下载本页诊断图的可复现 R 脚本](/tutorial-files/make-tutorial-figures.R)。脚本输出目录请替换为自己的可写目录。

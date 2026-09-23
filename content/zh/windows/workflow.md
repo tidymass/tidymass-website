@@ -13,6 +13,12 @@ translationKey: "windows-workflow"
 
 [返回教程目录](/zh/windows/) · 适用版本：0.1.63
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/windows-workflow-zh.svg" caption="八阶段分析路线。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+每一阶段先展开设置并核对输入，再运行、等待完成、查看警告和数据摘要。确认样本/特征数量与图形合理后继续。保存参数草稿不会重新计算当前显示的结果。
+
 ## 1. Data import
 
 选择 mzML/mzXML 文件和样品信息，检查分组，点击 **Import raw files**。这一步登记原始文件，不执行色谱峰检测。
@@ -89,3 +95,12 @@ translationKey: "windows-workflow"
 重跑上游步骤成功后，依赖旧结果的下游步骤会变为过期，需要重新运行。旧结果仍在 **Run history** 中。失败或取消的重试不会把之前成功的结果当作新结果覆盖掉。
 
 这里的恢复是从已保存的步骤继续，不代表可以从某一次峰检测内部的任意扫描点恢复。
+
+## 看图操作：阅读已保存的流程结果
+
+{{< tutorial-figure src="/tutorial-images/desktop/workflow-saved.png" caption="阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。 截图来自 macOS，仅说明共用控件，并非 Windows 安装界面。" >}}
+
+1. 先看左侧阶段列表：当前选中 Data exploration；Data cleaning 标记为 Stale，表示上游输入已改变。Blocked 阶段尚无可用的前置输入。
+2. 在 Displayed dataset 核对运行标识、Samples、Features 和 Missing values。图中 24 个矩阵单元中有 7 个缺失，即 29.17%；这不是整份缺失样本的比例。
+3. 选择已保存运行，展开 Settings used for this result。比较两份结果前确认它们的输入和参数能够回答同一问题。
+4. 复核后按顺序重跑过期的下游阶段；若失败，先检查第一条错误再调整参数或重试。

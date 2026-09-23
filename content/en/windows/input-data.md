@@ -13,6 +13,12 @@ translationKey: "windows-input-data"
 
 [Tutorial contents](/windows/) · Applies to: 0.1.63
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/windows-input-data-en.svg" caption="Match files to the sample sheet. Numbers show the reading order; this is a schematic." >}}
+
+Make a list of raw file basenames and compare it with sample_id. Resolve duplicates, missing files and unexpected files first. Set biological groups independently of class: QC and Blank describe sample roles, while Control and Treatment describe the comparison.
+
 ## Raw files
 
 The untargeted workflow and **Raw chromatograms** read **mzML / mzXML**. Convert proprietary vendor files with a suitable instrument-compatible converter first. Process positive and negative ion modes as separate projects. Keep each file's basename unique, including across subfolders; do not distinguish samples only by letter case.
@@ -59,3 +65,11 @@ Each feature ID must be unique; intensity columns must match the sample informat
 ## MS2 and input checks
 
 Attach MS2 using a supported import, builder or annotation entry. Association with a feature depends on precursor m/z and RT, and does not establish a unique structure. Use **Sample & file checker** to detect duplicates, missing files and unexpected files before a large run. RDS/RData imports must contain the supported object type, such as a single `mass_dataset`.
+
+## Walkthrough: Understand feature rows and sample columns
+
+{{< tutorial-figure src="/tutorial-images/shiny/table_upload.png" caption="Understand feature rows and sample columns. Table example from the published Shiny tutorial, used to explain data layout; it is not a desktop import screen." >}}
+
+1. Each row is a feature with its own ID, m/z and RT. Sample columns contain intensities.
+2. For the desktop peak-table route, follow the required fields in the template; ion handling differs from the Shiny importer. Do not paste metadata columns into the intensity matrix.
+3. Match each intensity column to one sample-sheet row and inspect missing values before importing.

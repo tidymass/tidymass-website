@@ -19,6 +19,12 @@ massconverter 用于配置 ProteoWizard/msconvert，将厂商文件转换为开�
 
 下例构建参数对象；配置 Docker/ProteoWizard 并替换路径后，才能执行注释掉的转换调用。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-massconverter-zh.svg" caption="峰检测前的格式转换。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+使用原始文件副本。转换后打开一个代表性文件，检查极性、扫描数、保留时间范围和 MS 层级。修改扩展名不是格式转换；确认文件可读后才开始峰检测。
+
 ## 功能范围
 
 转换参数构建与校验、命令生成、容器准备和批量文件转换。

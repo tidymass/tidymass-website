@@ -19,6 +19,12 @@ Begin with a validated `mass_dataset` and sample classes, batches and injection 
 
 Preserve the input object, inspect missingness and QC metrics afterwards and compare before/after plots. For predictive modeling, fit preprocessing within each training fold to avoid leakage. The example uses median imputation and median normalization only to illustrate the API.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-masscleaner-en.svg" caption="Keep each cleaning checkpoint. Numbers show the reading order; this is a schematic." >}}
+
+Save the unmodified object first. Inspect which rows fail your missingness rule, then impute only the retained data. Compare intensity distributions and QC behavior after normalization. Document the method and excluded IDs; never treat imputed values as independently observed peaks.
+
 ## Functional scope
 
 Outlier detection and reporting; missing-value imputation; sample-wise/QC-based normalization; LOESS optimization; batch alignment and integration.
@@ -48,3 +54,11 @@ The checked source exports the following APIs, including compatibility interface
 </details>
 
 [Package source and reference documentation](https://github.com/tidymass/masscleaner) · [Complete workflow](../workflow/)
+
+## Walkthrough: Compare intensity distributions
+
+{{< tutorial-figure src="/tutorial-images/r/normalization.png" caption="Compare intensity distributions. Actual output from the four Subject samples after retaining features observed in at least two samples, median imputation, then median normalization." >}}
+
+1. Both panels plot log10(intensity + 1) for display; the left input is already filtered and imputed.
+2. The right panel follows median normalization. Similar medians are an expected consequence of this method, not independent proof that technical bias is removed.
+3. Check study design and quantitative QCs where available before choosing normalization for real data.

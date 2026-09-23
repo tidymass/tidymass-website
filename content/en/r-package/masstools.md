@@ -19,6 +19,12 @@ A calculated neutral exact mass is not the measured precursor m/z. Choose the co
 
 ID-conversion helpers depend on their upstream providers. Preserve input, output, service and failures, and verify one-to-many mappings against structure identifiers. Functions that use an LLM or another remote service are optional and require configuration; generated IDs need independent verification before annotation or enrichment.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-masstools-en.svg" caption="Make small calculations explicit. Numbers show the reading order; this is a schematic." >}}
+
+Check units before using a utility result downstream: seconds and minutes are not interchangeable, nor are neutral exact mass and adduct m/z. Try a known formula first and record the requested output type. Use the installed help page to confirm each argument.
+
 ## Functional scope
 
 Formula and adduct operations; mass conversion; spectrum parsing, conversion and similarity; m/z–RT matching; ID services and compound-class lookup.

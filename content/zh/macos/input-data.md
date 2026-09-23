@@ -13,6 +13,12 @@ translationKey: "macos-input-data"
 
 [返回教程目录](/zh/macos/) · 适用版本：0.1.65
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/macos-input-data-zh.svg" caption="原始文件与样本表对应。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+把原始文件基本名列出来，与 sample_id 对照，先解决重复、缺失及意外文件。生物学分组与 class 分开填写：QC、Blank 描述样本用途，Control、Treatment 描述比较分组。
+
 ## 原始数据
 
 非靶向工作流和 Raw chromatograms 使用 **mzML / mzXML**。本版本这些入口不直接处理厂商专有 RAW 文件；请先使用适合仪器和采集方式的转换工具。
@@ -67,3 +73,11 @@ F002,200.2345,120,500,NA
 MS2 可在支持的导入、数据构建或注释入口附加。MS2 与 feature 的关联依赖前体 m/z 和 RT 等条件；有匹配的 MS2 不代表已确认化合物身份。
 
 开始前用 [Sample & file checker](/zh/macos/analysis-tools/) 排查重复、缺失和未预期的文件，尤其适合多批次项目。
+
+## 看图操作：理解特征行与样本列
+
+{{< tutorial-figure src="/tutorial-images/shiny/table_upload.png" caption="理解特征行与样本列。表格示例来自已发布的 Shiny 教程，用于解释数据布局，并非桌面导入界面。" >}}
+
+1. 每行代表一个具有 ID、m/z 和 RT 的特征，样本列保存强度。
+2. 桌面峰表导入应遵循相应模板字段；ion 的处理与 Shiny 导入器不同。不要把元数据列当成强度列。
+3. 让每个强度列对应样本表的一行，导入前检查缺失值。

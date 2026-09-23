@@ -19,6 +19,12 @@ For your data, read the three tables, preserve IDs as text, place numeric intens
 
 Import MS2 with `mutate_ms2()` after checking polarity, RT units and precursor/RT tolerances. Use extraction functions to obtain ordinary tables, `export_mass_dataset()` for interchange and RDS to retain the full R object. Converters support documented MS-DIAL/MZmine, mzTab and SummarizedExperiment routes; inspect their input-specific requirements rather than treating every CSV as interchangeable.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-massdataset-en.svg" caption="Three tables, one object. Numbers show the reading order; this is a schematic." >}}
+
+Read the intensity matrix by rows (features) and columns (samples). Its row names must correspond to variable_info$variable_id and column names to sample_info$sample_id, in the same order. After construction, inspect dimensions and metadata before attaching MS2 or annotation results.
+
 ## Functional scope
 
 Dataset construction and validation; sample/feature editing, filtering, joins and merges; MS2 import and export; annotation and history access; missingness/RSD summaries; data-format conversion.
@@ -51,3 +57,11 @@ The checked source exports the following APIs, including compatibility interface
 </details>
 
 [Package source and reference documentation](https://github.com/tidymass/massdataset) · [Complete workflow](../workflow/)
+
+## Walkthrough: Read missingness in the packaged example
+
+{{< tutorial-figure src="/tutorial-images/r/missingness.png" caption="Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data." >}}
+
+1. The left bars show missing matrix cells per sample as a percentage of 1,000 features. Compare samples before deciding whether one is problematic.
+2. The right histogram summarizes feature-level missingness across eight samples. A feature missing in all samples contributes no quantitative evidence.
+3. Use these diagnostics to choose and document filtering rules. The plot itself does not prescribe a universal threshold.

@@ -44,3 +44,12 @@ Shiny references:
 Edit the Markdown sources in both languages. Preserve matching `translationKey` values. Keep publication dates timezone-qualified so a local early-morning date is not accidentally treated as a future UTC date. Check actual platform builds and APIs before updating version labels.
 
 Render with the project's pinned Hugo 0.122.0 and verify both languages, links, search index and screenshots. The source repository uses its `develop` branch; GitHub Pages is served by `tidymass/tidymass.github.io` on `main`. Inspect both repository states before publishing. Existing local generated-output changes must not be swept into an unrelated commit.
+
+
+## Illustrated edition (2026-09-23)
+
+All 84 English/Chinese pages include a localized SVG route map and explanatory prose. A reusable `tutorial-figure` shortcode provides descriptive alt text, captions, lazy loading, and a full-resolution link. Desktop screenshots are real local test captures, not generated mockups. Version and fixture caveats appear in captions. Windows uses explicitly attributed macOS shared-control examples; no Windows-native screenshot is claimed. The 0.1.65 trial/component controls are illustrated only in macOS.
+
+Shiny images are mirrored from the existing public `tidymassshiny-tutorial/figures/` archive, retaining original filenames and pixels. They describe published-interface examples rather than guaranteeing every current deployment's appearance. Numeric thresholds visible in screenshots are explained as examples, including the permissive FDR=1.
+
+R plots were executed against the bundled package example (1,000 features, eight samples). Four Subject samples retained 675 features observed in at least two samples; median imputation reduced 473 missing cells to zero. Diagnostic generation is reproducible through `static/tutorial-files/make-tutorial-figures.R`; this is descriptive tutorial output, not a biological contrast.

@@ -13,6 +13,12 @@ translationKey: "windows-getting-started"
 
 [返回教程目录](/zh/windows/) · 适用版本：0.1.63
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/windows-getting-started-zh.svg" caption="第一个项目。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+等待 R 环境就绪。选择非靶向流程，填写易辨认的项目名称并选择可写的上级目录。导入后先把界面样本数与样本表核对，再进入峰检测。
+
 ## 安装 Windows 版本
 
 本教程对应 **0.1.63 Windows x64 预览版**。向维护者获取预览 ZIP，完整解压后运行 `TidyMass-0.1.63-windows-x64-setup.exe`，按安装向导完成安装。当前尚未核实可供公众直接访问的下载链接；已有 CI 构建产物需要 GitHub 仓库访问权限。
@@ -50,3 +56,12 @@ translationKey: "windows-getting-started"
 ## 第一次运行后的检查
 
 确认导入样品数、分组和文件匹配正确，再查看结果中的 feature 数、缺失值、峰形及警告。仅显示 completed 表示程序执行完成，不代表分析参数或生物学结论已经验证。
+
+## 看图操作：阅读已保存的流程结果
+
+{{< tutorial-figure src="/tutorial-images/desktop/workflow-saved.png" caption="阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。 截图来自 macOS，仅说明共用控件，并非 Windows 安装界面。" >}}
+
+1. 先看左侧阶段列表：当前选中 Data exploration；Data cleaning 标记为 Stale，表示上游输入已改变。Blocked 阶段尚无可用的前置输入。
+2. 在 Displayed dataset 核对运行标识、Samples、Features 和 Missing values。图中 24 个矩阵单元中有 7 个缺失，即 29.17%；这不是整份缺失样本的比例。
+3. 选择已保存运行，展开 Settings used for this result。比较两份结果前确认它们的输入和参数能够回答同一问题。
+4. 复核后按顺序重跑过期的下游阶段；若失败，先检查第一条错误再调整参数或重试。

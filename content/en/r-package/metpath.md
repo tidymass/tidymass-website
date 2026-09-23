@@ -19,6 +19,12 @@ For compound-level enrichment, prepare de-duplicated compound IDs, a pathway dat
 
 Feature-based functionality includes isotope annotation, RT grouping, candidate assignment, activity scoring, null distributions and `perform_fpa()`. It extends analysis beyond confidently annotated compounds while retaining annotation uncertainty. Such modules are hypotheses, not confirmation of every compound or pathway activity. Bar, scatter and network displays summarize supported results.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-metpath-en.svg" caption="From compound IDs to pathways. Numbers show the reading order; this is a schematic." >}}
+
+Count mapped compounds before interpreting pathways. Deduplicate multiple ion features representing one compound and retain the original mapping table. Read enrichment with its background definition, multiple-testing correction and unmatched IDs; an empty result may simply reflect limited annotation coverage.
+
 ## Functional scope
 
 Pathway data access/filtering; over-representation tests; enrichment plots/networks; isotope/feature grouping and functional module analysis.

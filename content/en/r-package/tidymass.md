@@ -17,6 +17,12 @@ translationKey: "r-package-tidymass"
 
 Use a fresh R session for installation or updates. Save the old project's package versions before upgrading, restart R afterwards and rerun a representative analysis. A successful update check is not a guarantee that every remote repository was reachable.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-tidymass-en.svg" caption="The ecosystem entry point. Numbers show the reading order; this is a schematic." >}}
+
+Use the startup messages to see which packages are attached. If two packages provide the same function name, use package::function to make the intended implementation explicit. Keep specialist packages available even when they are not attached by the umbrella package.
+
 ## Functional scope
 
 Package discovery; conflict reporting; version checks; coordinated updates.

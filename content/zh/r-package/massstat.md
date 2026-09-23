@@ -19,6 +19,12 @@ translationKey: "r-package-massstat"
 
 其他功能包括热图、相关性、距离、图结构转换、PLS 和 PLS-DA。训练数据上的监督分离不是预测验证，需使用合适的留出或嵌套验证，不能先在全部数据上筛选特征再切分。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-massstat-zh.svg" caption="从实验设计到统计结果。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+检验前明确倍数变化的分子组与分母组，核对样本数、配对关系和变换方式。结合效应量与校正 P 值解释结果，重要特征还要回到峰证据复核。PCA 分离本身不是假设检验。
+
 ## 功能范围
 
 PCA 与缩放、倍数变化和假设检验、火山图与热图、相关性/距离/图结构，以及 PLS/PLS-DA。
@@ -52,3 +58,11 @@ if (length(control) >= 3 && length(case) >= 3) {
 </details>
 
 [包源码与参考文档](https://github.com/tidymass/massstat) · [完整工作流](../workflow/)
+
+## 看图操作：阅读明确进行了缩放的 PCA
+
+{{< tutorial-figure src="/tutorial-images/r/pca.png" caption="阅读明确进行了缩放的 PCA。使用四个 Subject 示例样本实际生成，不暗示存在两组生物学比较。" >}}
+
+1. 每个点代表样本，坐标轴百分比表示相应主成分解释的方差。
+2. 示例预处理后保留有限且非常量特征，使用 prcomp 的 center = TRUE 和 scale. = TRUE。
+3. 不能根据此图宣称某个聚类显著；组间比较需要有效实验设计与适合的推断检验。

@@ -1,0 +1,5 @@
+<figure class="tutorial-figure" style="margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;">
+<a href="{{ .Get "src" }}" target="_blank" rel="noopener" aria-label="{{ if eq .Page.Lang "zh" }}查看原尺寸图片{{ else }}Open full-size image{{ end }}">
+<img src="{{ .Get "src" }}" alt="{{ .Get "caption" }}" loading="lazy" style="display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;" />
+</a><figcaption style="font-size:0.88rem;line-height:1.6;margin-top:0.6rem;">{{ .Get "caption" }} <a href="{{ .Get "src" }}" target="_blank" rel="noopener">{{ if eq .Page.Lang "zh" }}查看原图 ↗{{ else }}Open full-size ↗{{ end }}</a></figcaption>
+</figure>

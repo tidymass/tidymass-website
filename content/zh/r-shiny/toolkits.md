@@ -13,6 +13,12 @@ translationKey: "r-shiny-toolkits"
 
 依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-toolkits-zh.svg" caption="工具箱具有独立分析路线。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+先阅读对应工具的输入面板。fMSEA 使用特征层输入进行模块分析，化合物通路富集使用映射后的化合物 ID。保存参数与映射输出；可选语言模型解读不能替代实验证据。
+
 ## fMSEA
 
 进入 **Tidymass shiny toolkits → fMSEA Analysis**。加载要求的 R 数据文件：处理后的 **Feature Table**、支持的 KEGG/HMDB **MS1 Database** 和 **Pathway Database**。公开模块列出 KEGG、HMDB、IMETPD、Reactome、WikiPathways 资源。按模块 demo 的对象结构准备，不能给任意 CSV 改扩展名后上传。
@@ -45,8 +51,16 @@ translationKey: "r-shiny-toolkits"
 
 在 **Convert Parameters** 选择服务，配置 **Source ID Type**、**Target ID Type**，在 **Conversion Input** 输入查询，再点击 **Convert ID**。检查失败与一对多映射，不要悄悄删除失败条目。API 服务需要配置凭据。实验性 LLM 转换可能产生错误 ID，进入数据库或通路分析前应独立核对结构和标识。
 
-![fMSEA 结果](https://www.tidymass.org/tidymassshiny-tutorial/figures/fmsea_visulization.png)
+
 
 截图来自现有公开教程。
 
 [原教程及操作截图](https://www.tidymass.org/tidymassshiny-tutorial/tidymass-shiny-toolkits.html)
+
+## 看图操作：检查功能模块
+
+{{< tutorial-figure src="/tutorial-images/shiny/fmsea_visulization.png" caption="检查功能模块。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。" >}}
+
+1. 完成 fMSEA 所需输入和分析步骤后再打开模块可视化。
+2. 检查模块中的特征与关系，并比较其统计量和候选注释。图中聚类不自动等于结构确认。
+3. 保存模块表和可视化设置；可选的自动生成解释应与实测证据区分记录。

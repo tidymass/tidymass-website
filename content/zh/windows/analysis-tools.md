@@ -29,6 +29,12 @@ translationKey: "windows-analysis-tools"
 | QC report | 输出样品与 feature 质量报告 |
 | Targeted peak extractor | 提取预定义 m/z–RT 目标的峰面积与峰形 |
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/windows-analysis-tools-zh.svg" caption="选择对应的独立工具。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+打开前阅读工具卡片：原始色谱工具需要原始文件，质控报告需要兼容数据对象。独立工具不会自动重跑完整流程；应单独核对它的输入、参数和输出目录。
+
 ## Sample & file checker
 
 提供样品 CSV 和原始文件目录，选择匹配列。普通样品清单通常用 `sample_id`；进样计划有重复 QC 时通常用唯一的 `file_name`。
@@ -89,3 +95,12 @@ Target_B,300.1234,240
 RT 单位为秒。选择原始文件、m/z 容差和 RT 积分窗口后运行。
 
 当前方法累加容差内的 MS1 信号，并在固定 RT 窗口用梯形法积分。它不是化合物鉴定，也不会自动拆分共洗脱峰。检查峰形后再解释面积结果。预览可限制样品数，导出范围以工具说明为准。
+
+## 看图操作：选择独立工具
+
+{{< tutorial-figure src="/tutorial-images/desktop/analysis-tools.png" caption="选择独立工具。真实 macOS 0.1.56 预览版截图；后续构建的卡片布局可能变化。 截图来自 macOS，仅说明共用控件，并非 Windows 安装界面。" >}}
+
+1. 点击左侧 Analysis tools，先阅读工具标题和输入说明。
+2. 正式处理前可用 Sample & file checker 调查文件不匹配；Raw chromatograms 可在完整特征流程之前检查采集信号。
+3. 点击目标卡片的 Open tool，创建项目，提供相应文件或对象，核对设置后运行。
+4. 使用 Targeted peak extractor 时检查 m/z、RT 窗口和提取的 EIC。固定窗口积分不自动等同于经过验证的定量方法。

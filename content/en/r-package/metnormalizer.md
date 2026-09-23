@@ -19,6 +19,12 @@ Prepare the MS1 table and sample-information CSV according to the package exampl
 
 `multiple = 1` uses injection-order-based SVR in the documented interface; larger values use correlated peaks. Choose according to acquisition and study design, not simply because a larger value looks more powerful. For a new object-based TidyMass workflow, masscleaner usually provides the direct integration point.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-metnormalizer-en.svg" caption="A separate file-based route. Numbers show the reading order; this is a schematic." >}}
+
+Prepare the two CSV files in the documented MetNormalizer format, including QCs and acquisition metadata. Run in a separate output directory. Check the saved diagnostics and feature retention before reusing normalized values in another pipeline; do not assume its file format equals a mass_dataset.
+
 ## Functional scope
 
 Input checks and a standalone QC/SVR normalization workflow.

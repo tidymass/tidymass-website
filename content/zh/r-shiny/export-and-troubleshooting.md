@@ -13,6 +13,12 @@ translationKey: "r-shiny-export-and-troubleshooting"
 
 依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-export-and-troubleshooting-zh.svg" caption="结束会话前下载。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+Success 提示只说明某项操作完成，不代表文件已保存到你的电脑。下载对象与完整结果，检查压缩包，并保留 JOB ID 和设置；预期文件缺失时回到对应模块检查第一条错误。
+
 ## 保存完整分析
 
 保留初始化样品表、原始文件引用、中间 `mass_dataset`、清洗和注释对象、完整统计/富集表、图片及参数。本地版查看界面报告的输出目录；在线版记下 JOB ID，在服务保留时间内 **Download All Data**，并确认压缩包能打开且包含需要的结果。
@@ -37,3 +43,11 @@ translationKey: "r-shiny-export-and-troubleshooting"
 反馈问题时提供应用/包版本、本地/Docker/在线运行方式、模块、复现步骤、日志与脱敏输入示例，不分享 API key 或私人样品标识。
 
 [原教程及操作截图](https://www.tidymass.org/tidymassshiny-tutorial/)
+
+## 看图操作：成功运行后保存结果
+
+{{< tutorial-figure src="/tutorial-images/shiny/online_success.png" caption="成功运行后保存结果。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。" >}}
+
+1. 关闭 Success 提示并核对完成的是哪项操作。历史图中提示指负离子模式参数优化，而非整个研究完成。
+2. 使用 Download mass_dataset 下载对象，使用提供的 Download All Data 保存更完整的结果集合。
+3. 打开下载内容确认预期文件存在，退出在线会话前记录 JOB ID 和当前服务的保留期限提示。

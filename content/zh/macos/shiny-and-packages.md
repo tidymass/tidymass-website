@@ -13,6 +13,12 @@ translationKey: "macos-shiny-and-packages"
 
 [返回教程目录](/zh/macos/) · 适用版本：0.1.65
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/macos-shiny-and-packages-zh.svg" caption="管理可选 R 应用。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+在 R environment 检查安装的包，在 Shiny tools 管理应用启动入口。核对包名称和启动函数；启动失败时先查看工具日志，区分缺包、系统库缺失和启动错误再重试。
+
 ## 两个入口的区别
 
 - **Shiny tools** 安装和启动一个完整的 Shiny 应用。
@@ -65,3 +71,12 @@ GitHub 仓库名不一定等于 R 包名。例如仓库名可能含下划线，�
 额外包库与应用内置库分开管理。Shiny 工具还可能具有自己的私有依赖库；核心分析与第三方工具的库搜索优先级可能不同。因此“某处安装成功”不代表每个进程已经加载同一版本，重启工具后仍报错时应查看日志和实际包版本。
 
 从源码安装的包可能需要编译器或系统依赖。遇到此类失败，安装更多 R 包不一定能解决问题，应先找到日志中的首个实际错误。
+
+## 看图操作：启动已安装 Shiny 工具
+
+{{< tutorial-figure src="/tutorial-images/desktop/shiny-tools.png" caption="启动已安装 Shiny 工具。真实 macOS 0.1.39 截图，使用 MAPA 示例。" >}}
+
+1. 在 Installed tools 核对包名称、版本和启动函数。stopped 表示应用进程未运行。
+2. 点击一次 Launch 并等待；若启动失败，打开 View log，从第一条错误定位依赖或函数问题。
+3. 安装其他工具时正确选择包来源及仓库/包名称；安装成功的 R 包还需要有效的 Shiny 启动函数才能作为应用打开。
+4. 停止前在应用内部保存结果。第三方应用拥有自己的输入格式与导出控件。

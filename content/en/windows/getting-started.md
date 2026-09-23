@@ -13,6 +13,12 @@ translationKey: "windows-getting-started"
 
 [Tutorial contents](/windows/) · Applies to: 0.1.63
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/windows-getting-started-en.svg" caption="Your first project. Numbers show the reading order; this is a schematic." >}}
+
+Wait until the R environment is ready. Choose the untargeted workflow, enter a recognizable name, and select a writable parent folder. After importing files, compare the displayed sample count against your sample sheet before advancing to peak detection.
+
 ## Install on Windows
 
 This guide targets the **0.1.63 Windows x64 preview**. Obtain the preview ZIP from the maintainers, extract it fully, and run `TidyMass-0.1.63-windows-x64-setup.exe`. A public download has not yet been verified; the existing CI artifact requires GitHub repository access. Do not use a macOS DMG or rename an installer to change platforms.
@@ -46,3 +52,12 @@ Use a new project folder. Reopen an existing project with **Projects** or **Open
 A **project** holds analysis records; a **run** is one execution; a **feature** is a detected signal, not automatically an identified compound. Changing parameters affects a new run. Use **Settings used for this result** to inspect how a saved result was produced.
 
 **TidyMass used**, **Computer used** and **Computer total** report different memory quantities. A high system total is not necessarily caused by this app. After your first run, verify sample counts, missingness, peak shapes and warnings. A completed task confirms execution, not scientific validity.
+
+## Walkthrough: Read a saved workflow result
+
+{{< tutorial-figure src="/tutorial-images/desktop/workflow-saved.png" caption="Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen." >}}
+
+1. Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.
+2. In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.
+3. Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.
+4. After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.

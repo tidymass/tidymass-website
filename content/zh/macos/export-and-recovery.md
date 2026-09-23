@@ -13,6 +13,12 @@ translationKey: "macos-export-and-recovery"
 
 [返回教程目录](/zh/macos/) · 适用版本：0.1.65
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/macos-export-and-recovery-zh.svg" caption="导出实际复核过的运行。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+先选定运行范围，再选择文件类型。按需要导出完整表、R 对象、设置、代码与日志。打开一份导出表和对象核对 ID 与维度；外部引用的原始文件及数据库也应随备份保存。
+
 ## 下载单张图片
 
 在图片附近点击 **Download plot**，选择提供的格式。宽高以英寸为单位，PNG 可设置 DPI。部分图还提供 **Download CSV**。
@@ -58,3 +64,12 @@ translationKey: "macos-export-and-recovery"
 通过软件的 **Storage** 查看可管理的缓存，清理前阅读其说明。扫描缓存可减少重复读取；清除后再次提取峰形可能需要重新读取原始数据。
 
 不要在分析运行中手工删除 run 文件夹。多个软件实例也不应同时修改同一个项目；遇到项目锁提示，先关闭另一个实例。
+
+## 看图操作：选择导出范围与内容
+
+{{< tutorial-figure src="/tutorial-images/desktop/export.png" caption="选择导出范围与内容。真实 macOS 0.1.43 示例截图，用于说明导出控件。" >}}
+
+1. 先用 Run scope 选择需要保留的单次或多次运行，再选择输出类型。
+2. R objects 便于重新分析，Complete tables 保存完整数值结果，代码/参数/日志/会话信息用于追溯。图形格式和尺寸影响图文件，不影响完整表格内容。
+3. 若需要保存项目内工件，可选择完整项目副本；外部原始文件和数据库仍需另行备份。
+4. 点击 Export selected content，打开目标目录并核对表、对象和日志。界面分页表只是预览，完整表格导出才保留全部结果。

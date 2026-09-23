@@ -23,3 +23,16 @@ translationKey: "r-shiny-_index"
 6. [保存结果与常见问题](export-and-troubleshooting/)
 
 [应用源码](https://github.com/tidymass/tidymass_shiny) · [原版完整教程](https://www.tidymass.org/tidymassshiny-tutorial/)
+
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-_index-zh.svg" caption="Shiny 分析路线。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+按顶部导航从项目初始化进入下游分析，尽早保存项目位置或在线 JOB ID。正负离子模式具有独立视图；阅读表格或图形前先确认当前极性。
+
+## 看图操作：初始化 Shiny 项目
+
+{{< tutorial-figure src="/tutorial-images/shiny/project_initiate.png" caption="初始化 Shiny 项目。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。" >}}
+
+1. 打开 Initialize project，选择 R 进程可访问的工作目录，并在导入前命名研究。
+2. 确认初始化完成，再从 Data import 选择输入路线；不同分析使用不同项目。

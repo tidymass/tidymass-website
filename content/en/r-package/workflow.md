@@ -23,6 +23,12 @@ library(tidymass)
 library(dplyr)
 ```
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-workflow-en.svg" caption="Checkpoints across the full workflow. Numbers show the reading order; this is a schematic." >}}
+
+Run the downloadable script section by section rather than submitting it unchanged. Replace paths and groups, verify each intermediate object, and save it before moving on. Raw-data, annotation and pathway sections require your own files or databases. The small example below demonstrates mechanics, not a biological discovery.
+
 ## 1. Prepare inputs and process raw files
 
 The example starts with positive-mode mzML/mzXML; analyze negative mode separately. The sample sheet needs sample_id, group and class; use Subject for biological samples and QC only for quantitative QCs. Basenames in the QC/Subject directories must be unique. Validate example processing parameters on representative files first.
@@ -199,3 +205,21 @@ Archive the script, parameters, sample sheet, raw files, reference provenance/ve
 writeLines(capture.output(sessionInfo()), file.path(output_dir, "sessionInfo.txt"))
 # Back up this script, parameter choices, all inputs/reference versions and all results.
 ```
+
+## Walkthrough: Read missingness in the packaged example
+
+{{< tutorial-figure src="/tutorial-images/r/missingness.png" caption="Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data." >}}
+
+1. The left bars show missing matrix cells per sample as a percentage of 1,000 features. Compare samples before deciding whether one is problematic.
+2. The right histogram summarizes feature-level missingness across eight samples. A feature missing in all samples contributes no quantitative evidence.
+3. Use these diagnostics to choose and document filtering rules. The plot itself does not prescribe a universal threshold.
+
+## Walkthrough: Compare intensity distributions
+
+{{< tutorial-figure src="/tutorial-images/r/normalization.png" caption="Compare intensity distributions. Actual output from the four Subject samples after retaining features observed in at least two samples, median imputation, then median normalization." >}}
+
+1. Both panels plot log10(intensity + 1) for display; the left input is already filtered and imputed.
+2. The right panel follows median normalization. Similar medians are an expected consequence of this method, not independent proof that technical bias is removed.
+3. Check study design and quantitative QCs where available before choosing normalization for real data.
+
+[Download the reproducible R script for these diagnostic figures](/tutorial-files/make-tutorial-figures.R). Replace the output directory with your own writable directory.

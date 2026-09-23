@@ -13,6 +13,12 @@ translationKey: "r-shiny-installation"
 
 Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-installation-en.svg" caption="Choose a deployment route. Numbers show the reading order; this is a schematic." >}}
+
+For local use, keep the R console running while the browser is open. The browser shows the interface but R performs the analysis. With Docker, select files under the mounted container path. On a hosted service, upload files and retain the JOB ID.
+
 ## Choose where to run
 
 The [hosted application](https://tidymassshiny.jaspershenlab.com) runs on a remote server. The published guide describes a 512 MB upload limit and deletion of results after 24 hours; these are service settings and can change. Follow the notices shown by the running service, save the **JOB ID**, and download results with **Download All Data** before leaving.
@@ -60,3 +66,10 @@ For a shared server, use a supported R/Shiny Server environment, an application 
 The older tutorial includes Ubuntu-specific deployment examples. Check their suitability for your server instead of copying obsolete OS repository keys or version-pinned installer URLs blindly.
 
 [Original tutorial and screenshots](https://www.tidymass.org/tidymassshiny-tutorial/)
+
+## Walkthrough: Check the project entry after launch
+
+{{< tutorial-figure src="/tutorial-images/shiny/project_initiate.png" caption="Check the project entry after launch. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment." >}}
+
+1. The appearance of the app navigation confirms that the browser has connected to the service; it does not confirm access to your data directory.
+2. Initialize a small project in a writable location. For Docker, use the mounted path; for the hosted app, follow its upload and JOB ID workflow.

@@ -11,6 +11,12 @@ editable: false
 translationKey: "r-package-installation"
 ---
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-installation-zh.svg" caption="验证 R 环境。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+在 R 控制台逐段执行安装代码；出现依赖错误时先解决第一条错误。之后加载 tidymass 并记录 sessionInfo()。下载完成不等于包已能正常加载。
+
 ## 准备环境
 
 本教程核对了 tidymass 2.0.10 及各包的当前源码。虽然部分包声明最低 R 4.1，当前 masstools 要求 R ≥ 4.5；新环境应采用满足整套依赖的 R 4.5 或更高兼容版本。安装 R 和适合自己的 IDE，使用可写用户包库。

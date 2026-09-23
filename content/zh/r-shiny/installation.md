@@ -13,6 +13,12 @@ translationKey: "r-shiny-installation"
 
 依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-installation-zh.svg" caption="选择运行方式。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+本地使用时，浏览器打开期间保持 R 控制台运行：浏览器展示界面，R 执行分析。Docker 内应从挂载路径选择文件；在线服务需要上传文件并保存 JOB ID。
+
 ## 选择运行位置
 
 [在线应用](https://tidymassshiny.jaspershenlab.com)在服务器上运行。现有公开教程说明上传限制为 512 MB、结果在 24 小时后删除；这些属于可变的服务配置，应以实际服务提示为准。记下 **JOB ID**，离开前使用 **Download All Data** 下载结果。
@@ -60,3 +66,10 @@ docker run --rm -p 127.0.0.1:3838:3838   -v "/absolute/path/to/data:/home" tidym
 旧教程包含 Ubuntu 部署示例，使用前先核对系统适用性，不要直接复制已过时的仓库密钥命令或固定版本安装器。
 
 [原教程及操作截图](https://www.tidymass.org/tidymassshiny-tutorial/)
+
+## 看图操作：启动后检查项目入口
+
+{{< tutorial-figure src="/tutorial-images/shiny/project_initiate.png" caption="启动后检查项目入口。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。" >}}
+
+1. 看到应用导航说明浏览器已连接服务，不代表服务已能访问数据目录。
+2. 先在可写位置初始化小项目；Docker 使用挂载路径，在线版遵循上传与 JOB ID 流程。

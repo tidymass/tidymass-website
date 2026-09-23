@@ -29,6 +29,12 @@ Open **Analysis tools**, then **Open tool** on the relevant card. Some tools cre
 | QC report | Report sample and feature quality |
 | Targeted peak extractor | Integrate predefined m/z–RT targets |
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/windows-analysis-tools-en.svg" caption="Choose the smallest relevant tool. Numbers show the reading order; this is a schematic." >}}
+
+Read the tool card before opening it. For raw chromatograms supply raw files; for quality reports supply a compatible dataset. A standalone tool does not automatically rerun the full workflow. Check its own input, parameters and output directory.
+
 ## Sample & file checker
 
 Supply a sample CSV and raw folder; select the matching column. Use `sample_id` for a typical sample sheet, or unique `file_name` for an injection list with repeated QCs. Matching strips extensions and is case-sensitive. The checker recognizes mzML, mzXML and Thermo RAW filenames; recognition does not mean it can read or convert Thermo spectra. Resolve missing, duplicate and unexpected entries before analysis.
@@ -60,3 +66,12 @@ Target_B,300.1234,240
 ```
 
 RT is in seconds. Choose raw files, m/z tolerance and a fixed RT integration window, then run and inspect peak shapes. The current method sums MS1 signal within the tolerance and integrates by the trapezoidal rule. It does not identify compounds or automatically separate coeluting peaks. Check the preview and export scope before interpreting areas.
+
+## Walkthrough: Choose an independent tool
+
+{{< tutorial-figure src="/tutorial-images/desktop/analysis-tools.png" caption="Choose an independent tool. Actual macOS preview 0.1.56 screenshot; card layout may vary in later builds. Captured on macOS; shared controls are illustrated, not a Windows installation screen." >}}
+
+1. Open Analysis tools in the left navigation, then read the card title and input description.
+2. Use Sample & file checker before processing to investigate unmatched files. Use Raw chromatograms to inspect acquisition signals without first completing a full feature workflow.
+3. Click Open tool on the intended card and create its project. Provide its required files or dataset, inspect settings, then run.
+4. For Targeted peak extractor, inspect the requested m/z and RT windows plus the extracted EIC. A fixed-window integral is not automatically a validated quantitative assay.

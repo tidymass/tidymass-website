@@ -19,6 +19,12 @@ Review missingness by sample and feature, intensity distributions, QC RSD, corre
 
 HTML reporting requires the report-rendering dependencies available in your R environment; PDF adds its document toolchain. If rendering fails, inspect the log and produce individual diagnostic plots while resolving the missing renderer.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-massqc-en.svg" caption="Read quality at two levels. Numbers show the reading order; this is a schematic." >}}
+
+A sample with much more missing data may have an acquisition problem; a feature missing from many samples may be unsuitable for the planned analysis. Review these separately. Generate before/after reports from explicitly saved objects, so that any improvement can be traced to a processing step.
+
 ## Functional scope
 
 HTML/PDF reports; sample and feature missingness; m/z–RT distributions; RSD curves; intensity boxplots; PCA and sample correlations.
@@ -44,3 +50,11 @@ The checked source exports the following APIs, including compatibility interface
 </details>
 
 [Package source and reference documentation](https://github.com/tidymass/massqc) · [Complete workflow](../workflow/)
+
+## Walkthrough: Read missingness in the packaged example
+
+{{< tutorial-figure src="/tutorial-images/r/missingness.png" caption="Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data." >}}
+
+1. The left bars show missing matrix cells per sample as a percentage of 1,000 features. Compare samples before deciding whether one is problematic.
+2. The right histogram summarizes feature-level missingness across eight samples. A feature missing in all samples contributes no quantitative evidence.
+3. Use these diagnostics to choose and document filtering rules. The plot itself does not prescribe a universal threshold.

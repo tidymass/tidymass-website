@@ -13,6 +13,12 @@ translationKey: "windows-feature-review"
 
 [返回教程目录](/zh/windows/) · 适用版本：0.1.63
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/windows-feature-review-zh.svg" caption="逐个复核特征。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+若表格意外变空，先 Clear filters。选中特征并加载证据，比较代表性样本中的峰形，保存包含理由的复核备注。Exclude 只是复核标签；若要从后续分析中移除数据，应使用实际清洗或过滤操作。
+
 ## 查找与查看 feature
 
 在 Data exploration 打开 m/z–RT distribution，点击散点或表格中的 feature 查看详情。使用 Find feature by ID 精确查找；Previous feature / Next feature 按当前过滤和排序后的列表切换。表格可以按列排序，并添加少量样品强度列。
@@ -58,3 +64,11 @@ MS1 扫描谱包含该扫描的其他离子，不是分离后的“该化合物�
 - 点击 information icon 查看该图的说明。
 
 保存图可能使用完整范围，而不是当前缩放区域；以图旁的说明为准。表格分页和图形预览不代表完整导出被截断，应使用 **Download complete CSV** 或 Results & export 获取完整数据。
+
+## 看图操作：复核前定位特征数据对象
+
+{{< tutorial-figure src="/tutorial-images/desktop/workflow-saved.png" caption="复核前定位特征数据对象。macOS 0.1.59 共用流程截图，并非 Windows 实机截图。" >}}
+
+1. 选择 Data exploration，核对当前运行与特征数。
+2. 在 Data table 或特征探索图选择 ID，再检查可用的强度、MS2 和色谱证据。
+3. 保存复核时同时记录运行 ID 和特征 ID；复核标签不代表已从下游计算中移除该特征。

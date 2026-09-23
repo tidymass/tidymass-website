@@ -17,6 +17,12 @@ translationKey: "r-package-tidymass"
 
 安装或更新使用新的 R 会话。升级前保存原项目环境，完成后重启 R 并检查代表性数据。更新检查成功不代表每个远程源都已正常访问。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-tidymass-zh.svg" caption="生态系统入口。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+从启动信息确认已加载的包。如果多个包包含同名函数，用 package::function 明确指定实现；总入口没有自动加载的专用包仍可单独调用。
+
 ## 功能范围
 
 包发现、函数冲突提示、版本检查与整套更新。

@@ -19,6 +19,12 @@ translationKey: "r-package-massdataset"
 
 通过 `mutate_ms2()` 加入 MS2，先检查离子模式、RT 单位和前体/RT 匹配容差。extract 系列函数用于取出普通表格；`export_mass_dataset()` 用于交换文件；RDS 保留完整对象。MS-DIAL/MZmine、mzTab 和 SummarizedExperiment 转换器各有输入约定，不能把任意 CSV 当作同一种格式。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-massdataset-zh.svg" caption="三张表与一个对象。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+强度矩阵的行是特征、列是样本。行名与 variable_info$variable_id、列名与 sample_info$sample_id 必须一一对应且顺序相同。构建后先检查维度和元数据，再添加 MS2 或注释结果。
+
 ## 功能范围
 
 数据构建与校验，样品/feature 编辑筛选、连接合并，MS2 读写，注释和历史提取，缺失值/RSD 汇总及格式转换。
@@ -51,3 +57,11 @@ saveRDS(object, "dataset.rds")
 </details>
 
 [包源码与参考文档](https://github.com/tidymass/massdataset) · [完整工作流](../workflow/)
+
+## 看图操作：阅读包内示例的缺失情况
+
+{{< tutorial-figure src="/tutorial-images/r/missingness.png" caption="阅读包内示例的缺失情况。使用 massdataset 的 expression_data 实际生成：1,000 个特征 × 8 个样本；这些是教学数据。" >}}
+
+1. 左图以 1,000 个特征为分母显示每个样本的缺失比例，应先比较各样本再判断是否异常。
+2. 右图汇总每个特征在八个样本中的缺失比例；全部样本都缺失的特征不提供定量证据。
+3. 结合诊断选择并记录过滤条件；此图不规定通用阈值。

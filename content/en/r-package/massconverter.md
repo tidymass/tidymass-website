@@ -19,6 +19,12 @@ Choose mzML/mzXML, centroiding method, polarity and MS levels deliberately. Pres
 
 The example builds a parameter object; the commented call performs file conversion after you configure Docker/ProteoWizard and replace paths.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-massconverter-en.svg" caption="Convert before peak detection. Numbers show the reading order; this is a schematic." >}}
+
+Work on a copy of the raw files. After conversion, open a representative file and verify polarity, scan count, retention-time range and MS levels. A file extension change is not a conversion; peak detection starts only after readable mass-spectrometry data exist.
+
 ## Functional scope
 
 Conversion parameter creation and validation; command generation; container preparation; batch file conversion.

@@ -19,6 +19,12 @@ A typical spectral route downloads a source library, reads its documented MSP/XM
 
 The exported API includes KEGG, HMDB, MassBank, MoNA, GNPS, PubChem, ChEBI, LipidMaps, FooDB, BiGG, SMPDB, Reactome and WikiPathways-related tasks; different sources provide different combinations of download/read/request/convert functions. Network services and file schemas can change. A failed request is not evidence that a metabolite is absent. Inspect source terms and database coverage before redistributing a derived database.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-massdatabase-en.svg" caption="Trace reference data. Numbers show the reading order; this is a schematic." >}}
+
+Choose the database by the task: compound metadata, spectral annotation and pathway analysis need different resources. Check identifier namespaces and coverage after parsing. Save source URLs, release dates and retrieval dates with the result; a mapped ID is not proof of an experimental identification.
+
 ## Functional scope
 
 Source-specific web requests and downloads; spectrum/compound/pathway parsers; conversion to metid and metpath; identifier and source utilities.

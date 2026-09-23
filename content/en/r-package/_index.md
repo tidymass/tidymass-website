@@ -28,6 +28,12 @@ Go from raw LC-MS files to reproducible statistical and pathway results. Learn t
 13. [MetNormalizer — Use the standalone normalization workflow](metnormalizer/)
 14. [Complete LC-MS analysis workflow](workflow/)
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-_index-en.svg" caption="The R analysis route. Numbers show the reading order; this is a schematic." >}}
+
+Start with installation and massdataset if your input is a peak table. Start with massconverter and massprocesser if your input is raw instrument data. Follow the complete workflow to connect the objects; use individual package chapters when you need to change one step.
+
 ## Version basis
 
 Versions reflect official source metadata checked on September 23, 2026. Desktop-bundled versions, development branches, mirrors and installed environments may differ. Save your own sessionInfo for each analysis.

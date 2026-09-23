@@ -13,6 +13,12 @@ translationKey: "r-shiny-toolkits"
 
 Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-toolkits-en.svg" caption="Toolkits are separate analysis routes. Numbers show the reading order; this is a schematic." >}}
+
+Read the input panel for the chosen toolkit. fMSEA uses feature-level inputs and module analysis, while compound-based pathway enrichment uses mapped compound IDs. Save the chosen parameters and mapping outputs; an optional language-model explanation is not experimental evidence.
+
 ## fMSEA
 
 Open **Tidymass shiny toolkits → fMSEA Analysis**. Load the required R data files: a processed **Feature Table**, an **MS1 Database** (KEGG/HMDB as supported) and a **Pathway Database**. The published module lists KEGG, HMDB, IMETPD, Reactome and WikiPathways resources. Use the module's demo/file schema, not an arbitrary renamed CSV.
@@ -45,8 +51,16 @@ Find the intended organism code, for example hsa or mmu, from KEGG's organism li
 
 Select the provider under **Convert Parameters**, choose **Source ID Type** and **Target ID Type**, enter queries in **Conversion Input** and click **Convert ID**. Inspect failed and one-to-many mappings instead of silently dropping them. API-based services require their credentials. The experimental LLM conversion route may produce incorrect identifiers; verify structures/identifiers independently before using them in a database or pathway analysis.
 
-![fMSEA results](https://www.tidymass.org/tidymassshiny-tutorial/figures/fmsea_visulization.png)
+
 
 Screenshot from the existing published tutorial.
 
 [Original tutorial and screenshots](https://www.tidymass.org/tidymassshiny-tutorial/tidymass-shiny-toolkits.html)
+
+## Walkthrough: Inspect a functional module
+
+{{< tutorial-figure src="/tutorial-images/shiny/fmsea_visulization.png" caption="Inspect a functional module. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment." >}}
+
+1. Complete the required fMSEA input and analysis steps before opening module visualization.
+2. Inspect the features and relationships in a module, then compare their statistics and candidate annotations. A cluster in the graph is not automatic structural confirmation.
+3. Save the module tables and visualization settings. Keep optional generated interpretations separate from measured evidence.

@@ -13,6 +13,12 @@ translationKey: "macos-trials-tasks-templates"
 
 [返回教程目录](/zh/macos/) · 适用版本：0.1.65
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/macos-trials-tasks-templates-zh.svg" caption="完整运行前试验参数。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+在 macOS 0.1.65 选择代表性试验样本并检查试验结果。Trial 标签将它与正式流程结果区分。完整运行前恢复所需参数；模板只传递参数草稿，因此新项目仍需重新选择输入路径、数据库和比较分组。
+
 ## 参数试跑：先检查小规模数据
 
 入口：**Workflows → Raw data processing → Analysis settings → Parameter trial**。
@@ -89,3 +95,12 @@ translationKey: "macos-trials-tasks-templates"
 保留可复用的分析参数、TidyMass 版本和来源步骤记录。排除原始文件路径、数据库路径、样品选择、试跑子集和比较组 ID。Results & export 的导出选择仍需单独设置。
 
 模板保存在当前电脑的 TidyMass 用户数据目录，可供其他项目使用；它不是已经发布到云端的方法库。
+
+## 看图操作：检查参数试验与模板
+
+{{< tutorial-figure src="/tutorial-images/desktop/parameter-trial.png" caption="检查参数试验与模板。真实 macOS 0.1.65 截图，使用合成原始数据测试样本，不代表生物学结果。" >}}
+
+1. 在 Workflow templates 先预览模板再 Apply workflow template；顶部提示要求重新核对输入文件、数据库与比较分组。
+2. 结果标签以 Trial 开头。图中单样本、两个特征属于试验运行，不是正式全量分析，也不会解锁所有下游阶段。
+3. 展开 Settings used for this result。Draft differs 表示当前参数草稿与生成这份结果的参数不同。
+4. 在 Inspect trial peak 选择峰，点击 Show peak shape，检查峰顶、基线与提取边界。确认后恢复合适参数，再处理全部导入样本。

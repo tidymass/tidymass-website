@@ -11,6 +11,12 @@ editable: false
 translationKey: "r-package-installation"
 ---
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-installation-en.svg" caption="Verify the R environment. Numbers show the reading order; this is a schematic." >}}
+
+Run installation commands in the R console, one block at a time. Resolve the first dependency error before continuing. Then load tidymass and record sessionInfo(); a successful download alone does not mean the package can load.
+
 ## Prepare R
 
 This guide checks tidymass 2.0.10 and the current source of its companion packages. Some packages declare R 4.1 as a minimum, but current masstools requires R ≥ 4.5. Use R 4.5 or a later compatible release satisfying the full dependency set, with a writable user library and your preferred IDE.

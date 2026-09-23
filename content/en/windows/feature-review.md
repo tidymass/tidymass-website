@@ -13,6 +13,12 @@ translationKey: "windows-feature-review"
 
 [Tutorial contents](/windows/) · Applies to: 0.1.63
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/windows-feature-review-en.svg" caption="Review one feature at a time. Numbers show the reading order; this is a schematic." >}}
+
+Begin with Clear filters if the table unexpectedly becomes empty. Select a feature, load its evidence, and check peak shape across representative samples. Save a review note with a reason. Exclude is a review label; use the cleaning/filtering operation when you intend to remove data from subsequent analysis.
+
 ## Browse features
 
 Open **m/z–RT distribution** in Data exploration and select a point or table row to inspect a feature. Use **Find feature by ID** for exact lookup and **Previous feature / Next feature** to move through the filtered, sorted list. Sort table columns and add a few sample-intensity columns as needed.
@@ -36,3 +42,11 @@ Click **Show peak shape**, then expand **Samples and extraction settings** to ch
 Drag to zoom; use **Reset view** or double-click to reset. **Download plot** offers the supported formats, dimensions and PNG DPI. **Download CSV**, where present, exports plot data. Read the adjacent information icon: some downloads regenerate the full plot instead of preserving the current zoom.
 
 Use **Download complete CSV** or **Results & export** for complete tables. Pagination and limited previews do not define the full export scope.
+
+## Walkthrough: Locate the feature dataset before reviewing
+
+{{< tutorial-figure src="/tutorial-images/desktop/workflow-saved.png" caption="Locate the feature dataset before reviewing. macOS preview 0.1.59 shared-workflow screenshot, not a Windows capture." >}}
+
+1. Select Data exploration and verify the displayed run and feature count.
+2. Open Data table or the feature exploration plot to select an ID, then inspect the available intensities, MS2 and chromatographic evidence.
+3. When saving a review, retain the run ID and feature ID together. Do not assume a review label removes that feature from downstream calculations.

@@ -19,6 +19,12 @@ Use an appropriately cleaned dataset and a prespecified comparison. Keep QC/Blan
 
 Additional functions cover heatmaps, correlations, distances, graph conversion, PLS and PLS-DA. Supervised separation on training data is not predictive validation: use appropriate held-out or nested validation and avoid selecting features before splitting the data.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-massstat-en.svg" caption="From study design to statistics. Numbers show the reading order; this is a schematic." >}}
+
+Before testing, write down which group is numerator and which is denominator. Inspect sample counts, pairing and transformation. Read effect size together with adjusted P values, then return to peak evidence for important features. PCA separation alone is not a hypothesis test.
+
 ## Functional scope
 
 PCA and scaling; fold change and hypothesis tests; volcano plots and heatmaps; correlations, distances and graphs; PLS/PLS-DA.
@@ -52,3 +58,11 @@ The checked source exports the following APIs, including compatibility interface
 </details>
 
 [Package source and reference documentation](https://github.com/tidymass/massstat) · [Complete workflow](../workflow/)
+
+## Walkthrough: Read an explicitly scaled PCA
+
+{{< tutorial-figure src="/tutorial-images/r/pca.png" caption="Read an explicitly scaled PCA. Actual example output using four Subject samples; no two-group biological comparison is implied." >}}
+
+1. Each point is a sample; axis percentages describe variance captured by each principal component.
+2. The example uses prcomp with center = TRUE and scale. = TRUE after preprocessing, retaining finite, nonconstant features.
+3. Do not call a cluster significant from this plot. Use a valid experimental design and the appropriate inferential test for a group comparison.

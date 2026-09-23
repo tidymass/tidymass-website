@@ -19,6 +19,12 @@ Set ppm from instrument performance, peakwidth in seconds from chromatography, a
 
 Review TIC/BPC, RT correction, the peak table and extracted EICs. Preserve intermediate files if later inspection requires them. The parameter values below are an example, not a validated method for your instrument. Inspect output files after the call; do not assume its return value is the final dataset.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-massprocesser-en.svg" caption="From scans to feature intensities. Numbers show the reading order; this is a schematic." >}}
+
+Begin with representative files spanning your batches. Adjust ppm to mass accuracy and peakwidth to observed peak duration. After processing, inspect EIC shapes and RT alignment, then check sample and feature counts. More detected rows alone do not establish better parameters.
+
 ## Functional scope
 
 Raw processing; EIC extraction; chromatogram visualization; adjusted-RT visualization; targeted-table validation.

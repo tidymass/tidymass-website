@@ -13,6 +13,12 @@ translationKey: "macos-workflow"
 
 [Tutorial contents](/macos/) · Applies to: 0.1.65
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/macos-workflow-en.svg" caption="The eight-stage route. Numbers show the reading order; this is a schematic." >}}
+
+At each stage, open the settings and confirm the selected input. Run once, wait for completion, and inspect warnings plus the displayed dataset summary. Continue only after the sample/feature counts and plots make sense. Saving parameter drafts does not recompute the displayed result.
+
 ## 1. Data import
 
 Choose mzML/mzXML files and sample information, review the groups and click **Import raw files**. Import registers files; it does not detect chromatographic peaks. Folder grouping is a convenience, so check it against the biological design.
@@ -58,3 +64,12 @@ Export complete tables, objects, parameters, code, logs and session information 
 Reopen a saved project to continue at the first unfinished step whose prerequisites are satisfied. A successful upstream rerun makes dependent downstream results **stale**; rerun the affected steps. Old results remain in **Run history**. A failed or canceled retry does not replace the previous successful result.
 
 Recovery operates between saved steps, not at an arbitrary scan inside interrupted peak detection.
+
+## Walkthrough: Read a saved workflow result
+
+{{< tutorial-figure src="/tutorial-images/desktop/workflow-saved.png" caption="Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data." >}}
+
+1. Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.
+2. In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.
+3. Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.
+4. After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.

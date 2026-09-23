@@ -23,3 +23,16 @@ The checked public source reports **tidymassshiny 1.0.0**. Hosted deployments an
 6. [Save results and solve problems](export-and-troubleshooting/)
 
 [Application source](https://github.com/tidymass/tidymass_shiny) · [Original complete tutorial](https://www.tidymass.org/tidymassshiny-tutorial/)
+
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-_index-en.svg" caption="The Shiny analysis route. Numbers show the reading order; this is a schematic." >}}
+
+Follow the top navigation from project initialization to downstream analysis. Save the project location or hosted JOB ID early. Positive and negative ion modes have separate views; check the active polarity before reading any table or plot.
+
+## Walkthrough: Initialize a Shiny project
+
+{{< tutorial-figure src="/tutorial-images/shiny/project_initiate.png" caption="Initialize a Shiny project. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment." >}}
+
+1. Open Initialize project and choose a working directory visible to the R process. Name the study before importing data.
+2. Confirm the project is initialized, then choose the input route from Data import. Keep separate projects for independent analyses.

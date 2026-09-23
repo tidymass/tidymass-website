@@ -13,6 +13,12 @@ translationKey: "windows-export-and-recovery"
 
 [Tutorial contents](/windows/) · Applies to: 0.1.63
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/windows-export-and-recovery-en.svg" caption="Export the run you actually reviewed. Numbers show the reading order; this is a schematic." >}}
+
+Select the intended runs before choosing file types. Export full tables, R objects, settings, code and logs where needed. Open one exported table and object to verify the IDs and dimensions. Keep separately referenced raw files and databases with the backup.
+
 ## Save a figure
 
 Click **Download plot** near the figure and choose an available format. Dimensions are in inches; PNG supports DPI. Some figures also provide **Download CSV**. Inspect the exported file: an R-generated export may use the full range rather than the current interactive zoom.
@@ -36,3 +42,12 @@ Choose **Open project** and the folder containing `project.json`. Saved steps re
 Copy the entire project directory and separately account for external raw files and databases. Internal result paths can be relocated with a project; external references may need repair. Use **Storage** for supported cache management and read its scope first. Removing scan caches can make the next EIC extraction slower.
 
 Do not delete run folders during computation or open the same project for modification in multiple app instances. If a project lock is reported, close the other instance first.
+
+## Walkthrough: Choose export scope and contents
+
+{{< tutorial-figure src="/tutorial-images/desktop/export.png" caption="Choose export scope and contents. Actual macOS preview 0.1.43 example screenshot; controls shown remain useful for understanding export. Captured on macOS; shared controls are illustrated, not a Windows installation screen." >}}
+
+1. Set Run scope to the execution or collection of executions you intend to preserve. Do this before choosing individual output types.
+2. Keep R objects for reanalysis, Complete tables for full numeric results, and code/parameters/logs/session information for provenance. Plot formats and dimensions affect figures, not the full table contents.
+3. Select a complete project copy if you need saved project artifacts as well. External raw files and databases must still be backed up separately.
+4. Click Export selected content. Open the destination and verify a table, object, and log. A visible paginated table is only a preview; the complete-table export is the reproducible record.

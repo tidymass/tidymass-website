@@ -13,6 +13,12 @@ translationKey: "r-shiny-inputs-and-processing"
 
 依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-inputs-and-processing-zh.svg" caption="选择正确的导入路线。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+原始文件需要峰处理；已有峰表包含提取后的强度；保存的 mass_dataset 可能包含历史处理记录。选择对应导入模块，检查样本数、特征数和元数据后再进入 Overview。
+
 ## 初始化项目
 
 设置工作目录，上传 `sample_info.csv`，必要时映射列名，再点击 **Initialize Project** 并检查样品信息。样品 ID 必须与强度列或原始文件名准确匹配；区分生物学 group、用途 class、批次和进样顺序。
@@ -52,8 +58,16 @@ F002,200.2345,120,neg,500,600,550
 
 选择 **Start with mass_dataset file**，分别在正负模式入口加载对应对象，再点击 **Check input**。修改扩展名不能把 CSV 变成 R 对象；保留原对象和包版本记录。
 
-![项目初始化](https://www.tidymass.org/tidymassshiny-tutorial/figures/project_initiate.png)
+
 
 截图沿用现有公开 Shiny 教程，不同部署的界面细节可能不同。
 
 [原教程及操作截图](https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html)
+
+## 看图操作：阅读峰表结构
+
+{{< tutorial-figure src="/tutorial-images/shiny/table_upload.png" caption="阅读峰表结构。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。" >}}
+
+1. 黄色列描述每个特征：variable_id、mz、rt 和 ion，其余列各代表一个样本的强度。
+2. 样本列名称必须与样本元数据完全匹配。缺失强度保留 NA，不要仅为让表格完整而改成零。
+3. 当前导入器可映射四个特征字段，并选择正确 RT 单位。旧截图展示一种有效命名，不要求所有原始文件都使用同样的列名。

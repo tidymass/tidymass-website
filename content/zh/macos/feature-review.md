@@ -13,6 +13,12 @@ translationKey: "macos-feature-review"
 
 [返回教程目录](/zh/macos/) · 适用版本：0.1.65
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/macos-feature-review-zh.svg" caption="逐个复核特征。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+若表格意外变空，先 Clear filters。选中特征并加载证据，比较代表性样本中的峰形，保存包含理由的复核备注。Exclude 只是复核标签；若要从后续分析中移除数据，应使用实际清洗或过滤操作。
+
 ## 联动工作台
 
 在 **Data exploration** 中选择 m/z–RT distribution。宽窗口中散点图与 feature table 并排显示，中间控件调整宽度；窄窗口会改为上下布局。
@@ -72,3 +78,12 @@ MS1 扫描谱包含该扫描的其他离子，不是分离后的“该化合物�
 - 点击 information icon 查看该图的说明。
 
 保存图可能使用完整范围，而不是当前缩放区域；以图旁的说明为准。表格分页和图形预览不代表完整导出被截断，应使用 **Download complete CSV** 或 Results & export 获取完整数据。
+
+## 看图操作：筛选、选择并记录特征复核
+
+{{< tutorial-figure src="/tutorial-images/desktop/feature-browser.png" caption="筛选、选择并记录特征复核。来自 0.1.65 源码工作区的真实组件测试截图；1,200 个特征及质量数值均为合成测试数据。" >}}
+
+1. 通过 Feature filters 缩小显示范围；Clear filters 恢复可用特征。显示筛选不会改写分析矩阵。
+2. 点击表格中的特征 ID，图与详情面板同步选中它；图中为 feature_5。Column view 仅改变显示列，不改变数值。
+3. 点击 Load intensities, MS2 & candidates，再查看证据标签。Show peak shape 前展开 Samples and extraction settings，核对样本及提取窗口。
+4. 在 Review note 记录理由，选择 Review status，再点击 Save review。Export reviews CSV 可保存复核轨迹。测试图中的合成 QC 数值不能用于判断真实实验性能。

@@ -13,6 +13,12 @@ translationKey: "r-shiny-inputs-and-processing"
 
 Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-shiny-inputs-and-processing-en.svg" caption="Select the right import route. Numbers show the reading order; this is a schematic." >}}
+
+Raw files need processing; an existing peak table already contains extracted intensities; a saved mass_dataset may contain earlier processing history. Choose the matching import module. Inspect the resulting sample count, feature count and metadata before opening Overview.
+
 ## Initialize a project
 
 Choose a working directory, upload `sample_info.csv`, map its columns when necessary, then click **Initialize Project**. Inspect the resulting sample information. IDs must match the intensity columns or raw filenames exactly; distinguish biological **group**, sample **class**, batch and acquisition order.
@@ -52,8 +58,16 @@ Click **Input file summary** and check matching, polarity, sample counts and fea
 
 Choose **Start with mass_dataset file**, load the positive and negative objects into their respective controls, and use **Check input**. A CSV is not an R object merely because its extension is changed. Keep the original object and its package-version record.
 
-![Project initialization](https://www.tidymass.org/tidymassshiny-tutorial/figures/project_initiate.png)
+
 
 The screenshot is from the existing published Shiny tutorial; minor visual details can differ across deployments.
 
 [Original tutorial and screenshots](https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html)
+
+## Walkthrough: Read the peak-table layout
+
+{{< tutorial-figure src="/tutorial-images/shiny/table_upload.png" caption="Read the peak-table layout. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment." >}}
+
+1. The highlighted columns describe each feature: variable_id, mz, rt and ion. Each remaining column contains one sample’s intensities.
+2. Match sample-column names exactly to sample metadata. Keep missing intensities as NA; do not replace them with zero merely to make the table look complete.
+3. In the current importer, map the four feature fields and select the correct RT unit. The historical screenshot shows one valid naming convention, not a requirement that every original file use these exact names.

@@ -19,6 +19,12 @@ massdatabase 用于获取、解析和转换化合物、谱图及通路资源，�
 
 导出 API 覆盖 KEGG、HMDB、MassBank、MoNA、GNPS、PubChem、ChEBI、LipidMaps、FooDB、BiGG、SMPDB、Reactome、WikiPathways 等相关操作，各来源支持的下载/读取/查询/转换组合不同。在线服务和文件结构可能变化；请求失败不代表化合物不存在。共享衍生数据库前检查来源使用条件和覆盖范围。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-massdatabase-zh.svg" caption="追溯参考数据库。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+按任务选择数据库：化合物元数据、谱图注释和通路分析需要不同资源。解析后核对 ID 命名空间与覆盖率，随结果保存来源链接、版本日期与获取日期。完成 ID 映射不代表实验鉴定成立。
+
 ## 功能范围
 
 来源特定的在线查询下载、谱图/化合物/通路解析、metid/metpath 格式转换及 ID/来源辅助工具。

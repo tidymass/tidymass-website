@@ -13,6 +13,12 @@ translationKey: "macos-troubleshooting"
 
 [返回教程目录](/zh/macos/) · 适用版本：0.1.65
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/macos-troubleshooting-zh.svg" caption="定位第一个失败环节。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+记录版本、项目阶段和第一条错误。先检查文件是否存在及权限，再检查 R 就绪状态与包是否可用。上游结果改变后，重跑依赖它的过期阶段，不要在未改变原因时反复提交同一失败任务。
+
 ## 处理步骤或结果
 
 | 现象 | 检查与处理 |
@@ -57,3 +63,12 @@ translationKey: "macos-troubleshooting"
 请提供软件版本、macOS/Windows 版本、具体工具或 workflow 步骤、运行 ID、复现操作和相关日志。数据问题可附脱敏的样品信息表头与几行示例。
 
 保留出现问题的项目和运行记录，先不要删除缓存或历史结果。日志可能包含本地路径和样品标识，分享前检查其中的敏感信息。
+
+## 看图操作：阅读已保存的流程结果
+
+{{< tutorial-figure src="/tutorial-images/desktop/workflow-saved.png" caption="阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。" >}}
+
+1. 先看左侧阶段列表：当前选中 Data exploration；Data cleaning 标记为 Stale，表示上游输入已改变。Blocked 阶段尚无可用的前置输入。
+2. 在 Displayed dataset 核对运行标识、Samples、Features 和 Missing values。图中 24 个矩阵单元中有 7 个缺失，即 29.17%；这不是整份缺失样本的比例。
+3. 选择已保存运行，展开 Settings used for this result。比较两份结果前确认它们的输入和参数能够回答同一问题。
+4. 复核后按顺序重跑过期的下游阶段；若失败，先检查第一条错误再调整参数或重试。

@@ -19,6 +19,12 @@ translationKey: "r-package-massqc"
 
 HTML 报告需要可用的渲染依赖；PDF 还需要相应文档工具链。渲染失败时先检查日志，可以先输出单独诊断图，再修复缺少的渲染环境。
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-massqc-zh.svg" caption="从两个层面查看质量。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+某个样本的缺失值明显偏多可能提示采集问题；某个特征在许多样本中缺失可能不适合预定分析。应分别检查这两个层面。使用明确保存的对象生成处理前后报告，才能追溯变化由哪一步造成。
+
 ## 功能范围
 
 HTML/PDF 报告、样品与 feature 缺失值、m/z–RT 分布、RSD 曲线、强度箱线图、PCA 和样品相关性。
@@ -44,3 +50,11 @@ massqc::show_variable_missing_values(object)
 </details>
 
 [包源码与参考文档](https://github.com/tidymass/massqc) · [完整工作流](../workflow/)
+
+## 看图操作：阅读包内示例的缺失情况
+
+{{< tutorial-figure src="/tutorial-images/r/missingness.png" caption="阅读包内示例的缺失情况。使用 massdataset 的 expression_data 实际生成：1,000 个特征 × 8 个样本；这些是教学数据。" >}}
+
+1. 左图以 1,000 个特征为分母显示每个样本的缺失比例，应先比较各样本再判断是否异常。
+2. 右图汇总每个特征在八个样本中的缺失比例；全部样本都缺失的特征不提供定量证据。
+3. 结合诊断选择并记录过滤条件；此图不规定通用阈值。

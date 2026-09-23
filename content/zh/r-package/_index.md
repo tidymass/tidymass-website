@@ -28,6 +28,12 @@ translationKey: "r-package-_index"
 13. [MetNormalizer — 使用独立归一化流程](metnormalizer/)
 14. [完整 LC-MS 分析工作流](workflow/)
 
+## 图解：本章操作路线
+
+{{< tutorial-figure src="/tutorial-images/r-package-_index-zh.svg" caption="R 分析路线。步骤编号表示阅读顺序；此图为流程示意。" >}}
+
+峰表用户从安装与 massdataset 开始；原始仪器数据用户先阅读 massconverter 和 massprocesser。完整 workflow 负责把各阶段对象串起来，需要调整某一步时再查相应包的章节。
+
 ## 版本依据
 
 版本按 2026-09-23 核对的官方源码记录，不将桌面软件内置版本等同于 R 包最新版本。开发分支、镜像和已安装环境可能不同，分析时请保存自己的 sessionInfo。

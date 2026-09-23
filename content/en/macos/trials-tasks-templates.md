@@ -13,6 +13,12 @@ translationKey: "macos-trials-tasks-templates"
 
 [Tutorial contents](/macos/) · Applies to: 0.1.65
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/macos-trials-tasks-templates-en.svg" caption="Trial settings before a full run. Numbers show the reading order; this is a schematic." >}}
+
+In macOS 0.1.65, select representative trial samples and inspect the trial result. The trial label distinguishes this from a formal workflow result. Restore the desired settings before the full run. Templates transfer parameter drafts, so reselect input paths, databases and comparison groups in the new project.
+
 ## Try parameters on a small subset
 
 Open **Workflows → Raw data processing → Analysis settings → Parameter trial** after importing files.
@@ -42,3 +48,12 @@ Above the analysis panels, expand **Workflow templates**, enter **New workflow t
 In another project, select the **Workflow template**, inspect **Preview settings** and its source version, and click **Apply workflow template**. Configure this project's files, databases, sample choices and comparison groups before running each step.
 
 Templates retain reusable parameters, software version and source-stage records. They omit raw/database paths, sample choices, trial subsets and comparison-group IDs. Export choices are separate. Applying a template changes parameter drafts; it does not execute the workflow, change historical results or bypass prerequisites. Templates are local to this computer's TidyMass user-data directory.
+
+## Walkthrough: Inspect a parameter trial and template
+
+{{< tutorial-figure src="/tutorial-images/desktop/parameter-trial.png" caption="Inspect a parameter trial and template. Actual macOS preview 0.1.65 screenshot with a synthetic raw-data fixture; it is not a biological result." >}}
+
+1. In Workflow templates, preview a saved template before Apply workflow template. The banner asks you to recheck input files, databases and comparison groups.
+2. The result badge starts with Trial. This distinguishes the one-sample/two-feature example from a full formal run. A trial does not unlock all downstream stages.
+3. Expand Settings used for this result. Draft differs means current parameter drafts differ from those that produced this saved result.
+4. Choose a peak in Inspect trial peak and click Show peak shape. Inspect its apex, baseline and extraction boundaries. Restore suitable settings and process the complete imported dataset when satisfied.

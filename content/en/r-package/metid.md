@@ -19,6 +19,12 @@ The current API includes `annotate_metabolites_mass_dataset()` alongside establi
 
 Inspect all candidate evidence, not just a top score. An MS1 candidate is not a confirmed structure. An in-house database can support stronger identification when standards and measurements meet the actual evidence criteria; the database's name alone does not establish confidence. Retain ambiguous candidates and record any filtering or adduct de-duplication. Origin annotations report database associations, not direct evidence of synthesis in your sample.
 
+## Visual guide: the route through this chapter
+
+{{< tutorial-figure src="/tutorial-images/r-package-metid-en.svg" caption="Build an annotation evidence chain. Numbers show the reading order; this is a schematic." >}}
+
+Inspect a candidate by starting with mass error, then compatible RT evidence, then matched and unmatched MS2 fragments. Check the adduct and polarity. Keep alternatives when the evidence cannot distinguish them; the top score ranks candidates under the chosen settings, not absolute certainty.
+
 ## Functional scope
 
 Database construction and validation; MS1/MS2 annotation; single-peak queries; matching scores and mirror spectra; confidence/candidate/adduct filtering; origin summaries.
